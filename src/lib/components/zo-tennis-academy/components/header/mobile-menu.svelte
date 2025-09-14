@@ -22,10 +22,9 @@
 				</button>
 			{/each}
 
-			<!-- Theme Switcher Menu Item -->
+			<!-- Theme Switcher (icon-only, accessible) -->
 			<div class="pt-2">
-				<div class="flex items-center justify-between rounded-md px-4 py-3 hover:bg-accent">
-					<span class="font-medium text-muted-foreground">Téma</span>
+				<div class="flex items-center justify-end rounded-md px-4 py-3">
 					<ThemeSwitcher mode={themeMode} {setThemeMode} />
 				</div>
 			</div>
