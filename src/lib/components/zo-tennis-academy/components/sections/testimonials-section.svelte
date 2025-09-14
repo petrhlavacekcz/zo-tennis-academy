@@ -20,7 +20,7 @@
 	];
 </script>
 
-<section class="py-20 bg-card relative overflow-hidden">
+<section class="py-24 bg-card relative overflow-hidden">
 	<!-- Tennis Net Background -->
 	<div class="absolute inset-0 opacity-5">
 		<div class="w-full h-full" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(255,106,0,0.3) 10px, rgba(255,106,0,0.3) 11px); background-size: 100% 20px;"></div>

@@ -9,7 +9,7 @@
 	let { navigateTo }: Props = $props();
 </script>
 
-<section class="py-20 bg-primary text-primary-foreground relative overflow-hidden">
+<section class="py-24 bg-primary text-primary-foreground relative overflow-hidden">
 	<!-- Background Pattern -->
 	<div class="absolute inset-0 opacity-10">
 		<div class="w-full h-full" style="background-image: radial-gradient(circle at 25% 25%, white 2px, transparent 2px), radial-gradient(circle at 75% 75%, white 2px, transparent 2px); background-size: 50px 50px;"></div>

@@ -10,7 +10,7 @@
 	}));
 </script>
 
-<section class="py-20 bg-card">
+<section class="py-24 bg-card">
 	<div class="container mx-auto px-4">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
