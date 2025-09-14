@@ -66,7 +66,7 @@
 		<!-- Programs Grid -->
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 mb-12">
 			{#each programs as program}
-				<Card class="group h-full overflow-hidden rounded-2xl bg-white dark:bg-[#1E1E1E] shadow-sm transition hover:shadow-md hover-glow-orange hover-scale">
+				<Card class="group h-full overflow-hidden shadow-sm transition hover:shadow-md hover-scale">
 					<CardHeader class="pb-4">
 						<div class="flex items-center gap-4 mb-4">
 							<div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">

@@ -38,7 +38,7 @@
 		<!-- Testimonials Grid -->
 		<div class="grid md:grid-cols-2 gap-8">
 			{#each testimonials as testimonial}
-				<Card class="group overflow-hidden rounded-2xl bg-white dark:bg-[#1E1E1E] shadow-sm transition hover:shadow-md hover-glow-orange hover-scale">
+				<Card class="group overflow-hidden shadow-sm transition hover:shadow-md hover-scale">
 					<CardContent class="p-8">
 						<!-- Quote Icon -->
 						<div class="flex justify-center mb-6">

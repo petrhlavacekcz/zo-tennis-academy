@@ -125,7 +125,7 @@
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<div class="grid md:grid-cols-2 gap-8 mb-16">
 				{#each programs as program}
-					<Card class="group h-full overflow-hidden rounded-2xl bg-white dark:bg-[#1E1E1E] shadow-sm transition hover:shadow-md hover-glow-orange hover-scale">
+					<Card class="group h-full overflow-hidden shadow-sm transition hover:shadow-md hover-scale">
 						<CardHeader class="pb-6">
 							<div class="flex items-center gap-4 mb-4">
 								<div class="w-16 h-16 bg-accent rounded-xl flex items-center justify-center">

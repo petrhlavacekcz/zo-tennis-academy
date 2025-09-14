@@ -24,11 +24,11 @@
 
 	<!-- Content -->
 	<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
-		<h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
+		<h1 class="font-bold mb-6 text-white text-[clamp(2.5rem,6vw,4rem)]">
 			<span class="text-primary">ZO</span>
 			TENNIS
 			<br />
-			<span class="text-3xl md:text-5xl font-normal">ACADEMY</span>
+			<span class="font-normal text-[clamp(1.75rem,4.5vw,3rem)]">ACADEMY</span>
 		</h1>
 
 		<p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">Zlepšete svou hru s profesionálním koučováním pod vedením bývalé hráčky WTA Zuzany Ondraskové</p>

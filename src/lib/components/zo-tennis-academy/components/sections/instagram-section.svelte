@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
-	import { InstagramIcon, ExternalLinkIcon } from "lucide-svelte";
+	import { Instagram, ExternalLink } from "@lucide/svelte";
 
 	let instagramPosts = Array.from({ length: 6 }, (_, i) => ({
 		id: i + 1,
@@ -15,7 +15,7 @@
 		<!-- Section Header -->
 		<div class="text-center mb-16">
 			<div class="flex items-center justify-center gap-3 mb-4">
-				<InstagramIcon size={32} class="text-primary" />
+				<Instagram size={32} class="text-primary" />
 				<h2 class="text-4xl font-bold">
 					Sledujte nás na <span class="text-primary">Instagramu</span>
 				</h2>
@@ -32,7 +32,7 @@
 
 						<!-- Hover Overlay -->
 						<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-							<InstagramIcon size={32} class="text-white" />
+							<Instagram size={32} class="text-white" />
 						</div>
 					</CardContent>
 				</Card>
@@ -42,9 +42,9 @@
 		<!-- Instagram CTA -->
 		<div class="text-center">
 			<Button size="lg" href="https://www.instagram.com/zo_tennis_academy/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold tennis-hover group">
-				<InstagramIcon size={20} class="mr-2" />
+				<Instagram size={20} class="mr-2" />
 				Sledovat @zo_tennis_academy
-				<ExternalLinkIcon size={16} class="ml-2 group-hover:translate-x-1 transition-transform" />
+				<ExternalLink size={16} class="ml-2 group-hover:translate-x-1 transition-transform" />
 			</Button>
 		</div>
 	</div>
