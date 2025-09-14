@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
-	import { UsersIcon, TargetIcon, TrophyIcon, ClockIcon, ArrowRightIcon } from "lucide-svelte";
+	import { Users, Target, Trophy, Clock, ArrowRight } from "@lucide/svelte";
 
 	interface Props {
 		navigateTo: (page: string) => void;
@@ -14,7 +14,7 @@
 			title: "Juniorský rozvoj",
 			subtitle: "Pro děti a mládež 4–18 let",
 			description: "Komplexní program zaměřený na technický a taktický rozvoj mladých hráčů s důrazem na správné základy.",
-			icon: UsersIcon,
+			icon: Users,
 			color: "text-blue-500",
 			features: ["Skupinové tréninky", "Individuální přístup", "Turnajová příprava"],
 		},
@@ -22,7 +22,7 @@
 			title: "Lekce pro dospělé",
 			subtitle: "Pro začátečníky a pokročilé",
 			description: "Flexibilní program pro dospělé hráče všech úrovní s možností individuálního nebo skupinového tréninku.",
-			icon: TargetIcon,
+			icon: Target,
 			color: "text-green-500",
 			features: ["Všechny úrovně", "Flexibilní časy", "Moderní metody"],
 		},
@@ -30,7 +30,7 @@
 			title: "Soukromé lekce",
 			subtitle: "Individuální přístup",
 			description: "Individuální lekce zaměřené na specifické potřeby každého hráče s maximální pozorností trenéra.",
-			icon: ClockIcon,
+			icon: Clock,
 			color: "text-purple-500",
 			features: ["1:1 trénink", "Rychlý pokrok", "Flexibilní rozvrh"],
 		},
@@ -38,7 +38,7 @@
 			title: "Profesionál",
 			subtitle: "Program šitý na míru",
 			description: "Program zaměřený na tenis na závodní úrovni, který je shodný s tréninkovým procesem špičkových hráčů.",
-			icon: TrophyIcon,
+			icon: Trophy,
 			color: "text-primary",
 			features: ["Závodní úroveň", "Individuální plán", "Profesionální přístup"],
 		},
@@ -46,7 +46,7 @@
 			title: "Letní kempy",
 			subtitle: "Intenzivní týdenní programy",
 			description: "Týdenní kempy kombinující technický trénink, zápasy a zábavné aktivity pro děti všech věkových kategorií.",
-			icon: TrophyIcon,
+			icon: Trophy,
 			color: "text-primary",
 			features: ["Celotýdenní program", "Všestranný rozvoj", "Zábavné aktivity"],
 		},
@@ -103,7 +103,7 @@
 		<div class="text-center">
 			<Button onclick={() => navigateTo("programs")} size="lg" class="tennis-hover group">
 				Zobrazit všechny programy
-				<ArrowRightIcon size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
+				<ArrowRight size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
 			</Button>
 		</div>
 	</div>

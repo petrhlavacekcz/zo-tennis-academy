@@ -4,7 +4,7 @@
 	import { Input } from "$lib/components/ui/input";
 	import { Textarea } from "$lib/components/ui/textarea";
 	import { Label } from "$lib/components/ui/label";
-	import { PhoneIcon, MailIcon, MapPinIcon, ClockIcon, ChevronDownIcon } from "lucide-svelte";
+	import { Phone, Mail, MapPin, Clock, ChevronDown } from "@lucide/svelte";
 
 	let formData = $state({
 		name: "",
@@ -103,7 +103,7 @@
 						</CardHeader>
 						<CardContent class="space-y-6">
 							<div class="flex items-start gap-4">
-								<PhoneIcon size={24} class="text-primary mt-1" />
+								<Phone size={24} class="text-primary mt-1" />
 								<div>
 									<h4 class="font-semibold mb-1">Telefon</h4>
 									<p class="text-muted-foreground">+420 603 441 399</p>
@@ -112,7 +112,7 @@
 							</div>
 
 							<div class="flex items-start gap-4">
-								<MailIcon size={24} class="text-primary mt-1" />
+								<Mail size={24} class="text-primary mt-1" />
 								<div>
 									<h4 class="font-semibold mb-1">Email</h4>
 									<p class="text-muted-foreground">tenis@zotennisacademy.cz</p>
@@ -121,7 +121,7 @@
 							</div>
 
 							<div class="flex items-start gap-4">
-								<MapPinIcon size={24} class="text-primary mt-1" />
+								<MapPin size={24} class="text-primary mt-1" />
 								<div>
 									<h4 class="font-semibold mb-1">Adresa</h4>
 									<p class="text-muted-foreground">
@@ -133,7 +133,7 @@
 							</div>
 
 							<div class="flex items-start gap-4">
-								<ClockIcon size={24} class="text-primary mt-1" />
+								<Clock size={24} class="text-primary mt-1" />
 								<div>
 									<h4 class="font-semibold mb-1">Otevírací doba</h4>
 									<div class="text-muted-foreground space-y-1">
@@ -167,7 +167,7 @@
 								<div class="border border-border rounded-lg">
 									<button onclick={() => toggleFaq(index)} class="w-full p-4 text-left flex items-center justify-between hover:bg-accent transition-colors">
 										<span class="font-medium">{faq.question}</span>
-										<ChevronDownIcon size={20} class={`text-primary transition-transform ${expandedFaq === index ? "rotate-180" : ""}`} />
+										<ChevronDown size={20} class={`text-primary transition-transform ${expandedFaq === index ? "rotate-180" : ""}`} />
 									</button>
 									{#if expandedFaq === index}
 										<div class="px-4 pb-4 text-muted-foreground">

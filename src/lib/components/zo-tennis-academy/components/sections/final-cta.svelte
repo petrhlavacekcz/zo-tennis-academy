@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/button";
-	import { ArrowRightIcon, PhoneIcon } from "lucide-svelte";
+	import { ArrowRight, Phone } from "@lucide/svelte";
 
 	interface Props {
 		navigateTo: (page: string) => void;
@@ -22,9 +22,9 @@
 
 		<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
 			<Button onclick={() => navigateTo("contact")} size="lg" variant="secondary" class="bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 text-lg tennis-hover group">
-				<PhoneIcon size={20} class="mr-2" />
+				<Phone size={20} class="mr-2" />
 				Rezervovat zkušební lekci
-				<ArrowRightIcon size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
+				<ArrowRight size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
 			</Button>
 
 			<Button onclick={() => navigateTo("programs")} size="lg" variant="outline" class="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg tennis-hover">Prohlédnout programy</Button>

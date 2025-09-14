@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
-	import { QuoteIcon, StarIcon } from "lucide-svelte";
+	import { Quote, Star } from "@lucide/svelte";
 
 	let testimonials = [
 		{
@@ -43,14 +43,14 @@
 						<!-- Quote Icon -->
 						<div class="flex justify-center mb-6">
 							<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-								<QuoteIcon size={24} class="text-primary" />
+								<Quote size={24} class="text-primary" />
 							</div>
 						</div>
 
 						<!-- Rating -->
 						<div class="flex justify-center gap-1 mb-6">
 							{#each Array(testimonial.rating) as _}
-								<StarIcon size={20} class="text-primary fill-current" />
+								<Star size={20} class="text-primary fill-current" />
 							{/each}
 						</div>
 

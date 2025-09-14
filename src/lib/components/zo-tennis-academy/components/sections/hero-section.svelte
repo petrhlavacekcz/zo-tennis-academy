@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/button";
-	import { ArrowRightIcon } from "lucide-svelte";
+	import { ArrowRight } from "@lucide/svelte";
 	import { base } from "$app/paths";
 
 	interface Props {
@@ -36,7 +36,7 @@
 		<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
 			<Button onclick={() => navigateTo("contact")} size="lg" class="tennis-hover group btn-press">
 				Začněte dnes
-				<ArrowRightIcon size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
+				<ArrowRight size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
 			</Button>
 
 			<Button onclick={() => navigateTo("programs")} variant="outline" size="lg" class="tennis-hover btn-press">Naše programy</Button>

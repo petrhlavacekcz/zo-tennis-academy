@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/button";
-	import { MenuIcon, XIcon } from "lucide-svelte";
+	import { Menu, X } from "@lucide/svelte";
 	import MobileMenu from "./mobile-menu.svelte";
 	import ThemeSwitcher from "../theme/theme-switcher.svelte";
 
@@ -54,9 +54,9 @@
 			<!-- Mobile Menu Button -->
 			<button onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)} class="md:hidden p-2 hover:bg-accent rounded-md transition-colors">
 				{#if isMobileMenuOpen}
-					<XIcon size={24} />
+					<X size={24} />
 				{:else}
-					<MenuIcon size={24} />
+					<Menu size={24} />
 				{/if}
 			</button>
 		</div>

@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
-	import { AwardIcon, PhoneIcon } from "lucide-svelte";
+	import { Badge } from "$lib/components/ui/badge";
+	import { Award, Phone, Star } from "@lucide/svelte";
 	import { base } from "$app/paths";
 
 
@@ -29,8 +30,8 @@
 
 <div class="min-h-screen bg-background">
 	<!-- Page Header -->
-	<section class="py-16 bg-card border-b border-primary/20">
-		<div class="container mx-auto px-4 text-center">
+	<section class="py-24 bg-card border-b border-primary/20">
+		<div class="mx-auto max-w-[1320px] px-6 md:px-12 text-center">
 			<h1 class="text-5xl md:text-6xl font-bold mb-4">
 				NAŠI <span class="text-primary">TRENÉŘI</span>
 			</h1>
@@ -39,11 +40,11 @@
 	</section>
 
 	<!-- Coaches Profiles -->
-	<section class="py-20">
-		<div class="container mx-auto px-4">
+	<section class="py-24">
+		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<div class="space-y-16">
 				{#each coaches as coach}
-					<Card class="overflow-hidden rounded-2xl bg-white dark:bg-[#1E1E1E] shadow-sm transition hover:shadow-md hover-glow-orange hover-scale">
+					<Card class="overflow-hidden shadow-sm transition hover:shadow-md hover-scale">
 						<CardContent class="p-0">
 							<div class="grid lg:grid-cols-5 gap-0">
 								<!-- Coach Image -->
@@ -69,7 +70,7 @@
 									<!-- Specializations -->
 									<div class="mb-8 hidden">
 										<h3 class="text-2xl md:text-3xl font-semibold mb-4 flex items-center gap-2">
-											<StarIcon size={20} class="text-primary" />
+											<Star size={20} class="text-primary" />
 											Specializace
 										</h3>
 										<div class="flex flex-wrap gap-2">
@@ -99,7 +100,7 @@
 									<!-- Achievements -->
 									<div class="mb-8">
 										<h3 class="text-2xl md:text-3xl font-semibold mb-4 flex items-center gap-2">
-											<AwardIcon size={20} class="text-primary" />
+											<Award size={20} class="text-primary" />
 											Úspěchy a zkušenosti
 										</h3>
 										<ul class="space-y-2">
@@ -115,7 +116,7 @@
 									<!-- Contact CTA -->
 									<div class="flex flex-col sm:flex-row gap-4">
 										<Button class="bg-primary hover:bg-primary/90 text-primary-foreground tennis-hover">
-											<PhoneIcon size={16} class="mr-2" />
+											<Phone size={16} class="mr-2" />
 											Rezervovat lekci
 										</Button>
 														<!--

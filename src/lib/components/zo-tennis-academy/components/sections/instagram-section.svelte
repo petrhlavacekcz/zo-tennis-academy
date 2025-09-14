@@ -15,7 +15,7 @@
 		<!-- Section Header -->
 		<div class="text-center mb-16">
 			<div class="flex items-center justify-center gap-3 mb-4">
-				<Instagram size={32} class="text-primary" />
+				<Instagram size={24} class="text-primary" />
 				<h2 class="text-4xl font-bold">
 					Sledujte nás na <span class="text-primary">Instagramu</span>
 				</h2>
@@ -32,7 +32,7 @@
 
 						<!-- Hover Overlay -->
 						<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-							<Instagram size={32} class="text-white" />
+							<Instagram size={24} class="text-white" />
 						</div>
 					</CardContent>
 				</Card>

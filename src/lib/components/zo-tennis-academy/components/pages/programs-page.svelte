@@ -2,7 +2,7 @@
 	import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
 
-	import { UsersIcon, TargetIcon, TrophyIcon, ClockIcon, ArrowRightIcon, CheckIcon } from "lucide-svelte";
+	import { Users, Target, Trophy, Clock, ArrowRight, Check } from "@lucide/svelte";
 
 	interface Props {
 		navigateTo: (page: string) => void;
@@ -16,7 +16,7 @@
 			title: "Juniorský rozvoj",
 			subtitle: "Pro děti a mládež 4–18 let",
 			description: "Komplexní program zaměřený na technický a taktický rozvoj mladých hráčů s důrazem na správné základy.",
-			icon: UsersIcon,
+			icon: Users,
 			color: "text-blue-500",
 			duration: "60–90 minut",
 			groupSize: "3–5 hráčů",
@@ -34,7 +34,7 @@
 			title: "Lekce pro dospělé",
 			subtitle: "Pro začátečníky a pokročilé",
 			description: "Flexibilní program pro dospělé hráče všech úrovní s možností individuálního nebo skupinového tréninku.",
-			icon: TargetIcon,
+			icon: Target,
 			color: "text-green-500",
 			duration: "60–90 minut",
 			groupSize: "1–4 hráči",
@@ -53,7 +53,7 @@
 			title: "Soukromé lekce",
 			subtitle: "Individuální přístup",
 			description: "Individuální lekce zaměřené na specifické potřeby každého hráče s maximální pozorností trenéra.",
-			icon: ClockIcon,
+			icon: Clock,
 			color: "text-purple-500",
 			duration: "60–90 minut",
 			groupSize: "1 hráč",
@@ -72,7 +72,7 @@
 			title: "Profesionál",
 			subtitle: "Program šitý na míru",
 			description: "Program zaměřený na tenis na závodní úrovni, který je shodný s tréninkovým procesem špičkových hráčů.",
-			icon: TrophyIcon,
+			icon: Trophy,
 			color: "text-primary",
 			duration: "Denní / Týdenní / Měsíční – program šitý na míru",
 			groupSize: "Individuální",
@@ -91,7 +91,7 @@
 			title: "Letní kempy",
 			subtitle: "Intenzivní týdenní programy",
 			description: "Týdenní kempy kombinující technický trénink, zápasy a zábavné aktivity pro děti všech věkových kategorií.",
-			icon: TrophyIcon,
+			icon: Trophy,
 			color: "text-primary",
 			duration: "5 dní",
 			groupSize: "12–16 dětí",
@@ -146,15 +146,15 @@
 							<!-- Program Details -->
 							<div class="grid grid-cols-3 gap-4 mb-6 p-4 bg-accent/50 rounded-lg">
 								<div class="text-center">
-									<ClockIcon size={20} class="text-primary mx-auto mb-1" />
+									<Clock size={20} class="text-primary mx-auto mb-1" />
 									<div class="text-sm font-medium">{program.duration}</div>
 								</div>
 								<div class="text-center">
-									<UsersIcon size={20} class="text-primary mx-auto mb-1" />
+									<Users size={20} class="text-primary mx-auto mb-1" />
 									<div class="text-sm font-medium">{program.groupSize}</div>
 								</div>
 								<div class="text-center">
-									<TargetIcon size={20} class="text-primary mx-auto mb-1" />
+									<Target size={20} class="text-primary mx-auto mb-1" />
 									<div class="text-sm font-medium text-primary">{program.price}</div>
 								</div>
 							</div>
@@ -163,7 +163,7 @@
 							<div class="space-y-3 mb-8">
 								{#each program.features as feature}
 									<div class="flex items-start gap-3">
-										<CheckIcon size={16} class="text-primary mt-0.5 flex-shrink-0" />
+										<Check size={16} class="text-primary mt-0.5 flex-shrink-0" />
 										<span class="text-sm">{feature}</span>
 									</div>
 								{/each}
@@ -187,7 +187,7 @@
 					<p class="text-lg mb-6 opacity-90">Kontaktujte nás a my vám pomůžeme vybrat ideální program podle vašich potřeb a cílů.</p>
 					<Button onclick={() => navigateTo("contact")} variant="secondary" size="lg" class="bg-white text-primary hover:bg-gray-100 font-semibold tennis-hover">
 						Kontaktovat nás
-						<ArrowRightIcon size={20} class="ml-2" />
+						<ArrowRight size={20} class="ml-2" />
 					</Button>
 				</CardContent>
 			</Card>

@@ -14,7 +14,7 @@
 </script>
 
 <div class="md:hidden bg-background border-t border-border">
-	<div class="container mx-auto px-4 py-6">
+	<div class="mx-auto max-w-[1320px] px-6 md:px-12 py-6">
 		<nav class="flex flex-col gap-4">
 			{#each navItems as item, index}
 				<button onclick={() => handleNavigation(item.id)} class={`text-left py-3 px-4 rounded-md font-medium transition-all duration-300 hover:bg-accent ${currentPage === item.id ? "text-primary bg-accent" : "text-muted-foreground"}`} style={`animation-delay: ${index * 100}ms`}>
