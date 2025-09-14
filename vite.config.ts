@@ -11,5 +11,6 @@ export default defineConfig({
 			project: './project.inlang',
 			outdir: './src/lib/paraglide'
 		})
-	]
+	],
+	base: process.env.NODE_ENV === 'development' ? '/' : '/zo-tennis-academy/'
 });
