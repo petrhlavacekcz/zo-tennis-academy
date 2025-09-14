@@ -41,7 +41,7 @@
 
 		<!-- Instagram CTA -->
 		<div class="text-center">
-			<Button size="lg" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold tennis-hover group">
+			<Button size="lg" href="https://www.instagram.com/zo_tennis_academy/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold tennis-hover group">
 				<InstagramIcon size={20} class="mr-2" />
 				Sledovat @zo_tennis_academy
 				<ExternalLinkIcon size={16} class="ml-2 group-hover:translate-x-1 transition-transform" />

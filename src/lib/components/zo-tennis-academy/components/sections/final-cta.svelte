@@ -34,7 +34,7 @@
 		<div class="mt-12 pt-8 border-t border-white/20">
 			<p class="text-lg opacity-90">
 				Máte otázky? Zavolejte nám na
-				<a href="tel:+420123456789" class="font-semibold hover:underline">+420 123 456 789</a>
+				<a href="tel:+420603441399" class="font-semibold hover:underline">+420 603 441 399</a>
 			</p>
 		</div>
 	</div>
