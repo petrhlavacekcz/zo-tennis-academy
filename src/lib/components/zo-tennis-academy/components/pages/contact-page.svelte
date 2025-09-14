@@ -75,7 +75,7 @@
 								</div>
 								<div>
 									<Label for="phone">Telefon</Label>
-									<Input id="phone" bind:value={formData.phone} placeholder="+420 123 456 789" class="mt-1" />
+									<Input id="phone" bind:value={formData.phone} placeholder="+420 603 441 399" class="mt-1" />
 								</div>
 							</div>
 
@@ -106,7 +106,7 @@
 								<PhoneIcon size={24} class="text-primary mt-1" />
 								<div>
 									<h4 class="font-semibold mb-1">Telefon</h4>
-									<p class="text-muted-foreground">+420 123 456 789</p>
+									<p class="text-muted-foreground">+420 603 441 399</p>
 									<p class="text-sm text-muted-foreground">Po-Pá: 8:00-20:00, So-Ne: 9:00-18:00</p>
 								</div>
 							</div>
@@ -115,7 +115,7 @@
 								<MailIcon size={24} class="text-primary mt-1" />
 								<div>
 									<h4 class="font-semibold mb-1">Email</h4>
-									<p class="text-muted-foreground">info@zotennisacademy.cz</p>
+									<p class="text-muted-foreground">tenis@zotennisacademy.cz</p>
 									<p class="text-sm text-muted-foreground">Odpovídáme do 24 hodin</p>
 								</div>
 							</div>
@@ -125,11 +125,9 @@
 								<div>
 									<h4 class="font-semibold mb-1">Adresa</h4>
 									<p class="text-muted-foreground">
-										Tenisové kurty Štítina
+										Ivana Kubince
 										<br />
-										123 45 Štítina
-										<br />
-										Česká republika
+										747 91 Štítina
 									</p>
 								</div>
 							</div>
@@ -154,7 +152,7 @@
 						</CardHeader>
 						<CardContent class="p-0">
 							<div class="h-80 bg-muted rounded-b-lg overflow-hidden">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.123456789!2d14.4378!3d50.0755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDA0JzMxLjgiTiAxNMKwMjYnMTYuMSJF!5e0!3m2!1sen!2scz!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ZO Tennis Academy Location"></iframe>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164414.26148944293!2d17.845595979753472!3d49.918084725551466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713df4728419c79%3A0x9a86c21f4da6084c!2sZO%20TENNIS%20ACADEMY%20-%20Zuzana%20Ondr%C3%A1%C5%A1kov%C3%A1!5e0!3m2!1scs!2scz!4v1757861654340!5m2!1scs!2scz" width="100%" height="100%" style="border:0;" allowfullscreen title="ZO Tennis Academy - mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							</div>
 						</CardContent>
 					</Card>

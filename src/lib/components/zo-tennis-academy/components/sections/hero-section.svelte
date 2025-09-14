@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/button";
 	import { ArrowRightIcon } from "lucide-svelte";
+	import { base } from "$app/paths";
 
 	interface Props {
 		navigateTo: (page: string) => void;
@@ -12,7 +13,7 @@
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
 	<!-- Background Image with Overlay -->
 	<div class="absolute inset-0 z-0">
-		<img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1920&q=80" alt="Tennis action background" class="w-full h-full object-cover" />
+		<img src={`${base}/zo-tennis-academy.jpg`} alt="Tennis action background" class="w-full h-full object-cover" />
 		<div class="absolute inset-0 bg-gradient-to-t from-white/70 to-white/10 dark:from-black/70 dark:to-black/20"></div>
 	</div>
 

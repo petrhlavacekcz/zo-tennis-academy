@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
-	import { AwardIcon, StarIcon, PhoneIcon, MailIcon } from "lucide-svelte";
+	import { AwardIcon, PhoneIcon } from "lucide-svelte";
 	import { base } from "$app/paths";
+
 
 	let coaches = [
 		{

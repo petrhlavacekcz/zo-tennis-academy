@@ -1,11 +1,5 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
-	import { UsersIcon, MapPinIcon } from "lucide-svelte";
-
-	let stats = [
-		{ number: "500+", label: "Spokojených studentů", icon: UsersIcon },
-		{ number: "7", label: "Tenisových kurtů", icon: MapPinIcon },
-	];
 
 	let features = [
 		{ title: "Zkušení trenéři", description: "Profesionální koučování od bývalých hráčů WTA" },
@@ -24,19 +18,6 @@
 					Personalizovaný přístup k <span class="text-primary">tenisu</span>
 				</h2>
 				<p class="text-lg text-muted-foreground mb-8 leading-relaxed">V ZO Tennis Academy věříme, že každý hráč je jedinečný. Naše programy jsou navrženy tak, aby maximalizovaly váš potenciál prostřednictvím individuálního přístupu a profesionálního vedení.</p>
-
-				<!-- Statistics -->
-				<div class="grid grid-cols-2 gap-6 mb-8">
-					{#each stats as stat}
-						<div class="text-center">
-							<div class="flex justify-center mb-2">
-								<svelte:component this={stat.icon} size={24} class="text-primary" />
-							</div>
-							<div class="text-3xl font-bold text-primary mb-1">{stat.number}</div>
-							<div class="text-sm text-muted-foreground">{stat.label}</div>
-						</div>
-					{/each}
-				</div>
 
 				<!-- Features -->
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">

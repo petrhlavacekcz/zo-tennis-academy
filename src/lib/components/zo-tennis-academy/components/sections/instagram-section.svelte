@@ -24,7 +24,7 @@
 		</div>
 
 		<!-- Instagram Grid -->
-		<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+		<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
 			{#each instagramPosts as post}
 				<Card class="overflow-hidden group cursor-pointer shadow-none ring-1 ring-transparent hover:ring-border/30 bg-transparent transition">
 					<CardContent class="p-0 relative">
