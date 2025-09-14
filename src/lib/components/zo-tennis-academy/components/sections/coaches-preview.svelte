@@ -2,6 +2,7 @@
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
 	import { ArrowRightIcon } from "lucide-svelte";
+	import { base } from "$app/paths";
 
 	interface Props {
 		navigateTo: (page: string) => void;
@@ -44,7 +45,7 @@
 					<CardContent class="p-0">
 						<!-- Coach Image -->
 						<div class="relative overflow-hidden aspect-square">
-							<img src={coach.image} alt={coach.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+							<img src={`${base}${coach.image}`} alt={coach.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
 							<!-- Minimal gradient overlay with name/role -->
 							<div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/60 via-black/10 to-transparent">
 								<h3 class="text-sm md:text-base font-semibold text-white leading-tight">{coach.name}</h3>

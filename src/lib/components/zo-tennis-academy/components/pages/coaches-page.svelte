@@ -3,6 +3,7 @@
 	import { Button } from "$lib/components/ui/button";
 	import { Badge } from "$lib/components/ui/badge";
 	import { AwardIcon, StarIcon, PhoneIcon, MailIcon } from "lucide-svelte";
+	import { base } from "$app/paths";
 
 	let coaches = [
 		{
@@ -47,7 +48,7 @@
 							<div class="grid lg:grid-cols-5 gap-0">
 								<!-- Coach Image -->
 								<div class="lg:col-span-2 relative h-96 lg:h-auto">
-									<img src={coach.image} alt={coach.name} class="w-full h-full object-cover" />
+									<img src={`${base}${coach.image}`} alt={coach.name} class="w-full h-full object-cover" />
 									<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent lg:hidden"></div>
 								</div>
 
