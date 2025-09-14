@@ -64,6 +64,8 @@
 										{coach.bio}
 									</p>
 
+														<!--
+
 									<!-- Specializations -->
 									<div class="mb-8 hidden">
 										<h3 class="text-2xl md:text-3xl font-semibold mb-4 flex items-center gap-2">
@@ -78,6 +80,8 @@
 											{/each}
 										</div>
 									</div>
+														-->
+
 
 									<!-- Certifications -->
 									<div class="mb-8">
@@ -114,10 +118,14 @@
 											<PhoneIcon size={16} class="mr-2" />
 											Rezervovat lekci
 										</Button>
+														<!--
+
 										<Button variant="outline" class="tennis-hover hidden">
 											<MailIcon size={16} class="mr-2" />
 											Kontaktovat
 										</Button>
+														-->
+
 									</div>
 								</div>
 							</div>
