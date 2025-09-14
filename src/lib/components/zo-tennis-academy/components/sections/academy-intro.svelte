@@ -1,17 +1,15 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
-	import { UsersIcon, TrophyIcon, ClockIcon, MapPinIcon } from "lucide-svelte";
+	import { UsersIcon, MapPinIcon } from "lucide-svelte";
 
 	let stats = [
-		{ number: "15+", label: "Let zkušeností", icon: ClockIcon },
 		{ number: "500+", label: "Spokojených studentů", icon: UsersIcon },
-		{ number: "50+", label: "Turnajových vítězství", icon: TrophyIcon },
 		{ number: "7", label: "Tenisových kurtů", icon: MapPinIcon },
 	];
 
 	let features = [
 		{ title: "Zkušení trenéři", description: "Profesionální koučování od bývalých hráčů WTA" },
-		{ title: "Prémiové zázemí", description: "Moderní kurty a špičkové vybavení" },
+		{ title: "Příjemné zázemí", description: "Moderní kurty a špičkové vybavení" },
 		{ title: "Všechny úrovně", description: "Od začátečníků po pokročilé hráče" },
 		{ title: "Flexibilní rozvrh", description: "Přizpůsobíme se vašemu času" },
 	];

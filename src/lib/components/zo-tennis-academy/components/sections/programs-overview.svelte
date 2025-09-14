@@ -12,35 +12,43 @@
 	let programs = [
 		{
 			title: "Juniorský rozvoj",
-			subtitle: "6-18 let",
-			description: "Komplexní program pro mladé hráče zaměřený na technický rozvoj a sportovní růst.",
+			subtitle: "Pro děti a mládež 4–18 let",
+			description: "Komplexní program zaměřený na technický a taktický rozvoj mladých hráčů s důrazem na správné základy.",
 			icon: UsersIcon,
 			color: "text-blue-500",
 			features: ["Skupinové tréninky", "Individuální přístup", "Turnajová příprava"],
 		},
 		{
 			title: "Lekce pro dospělé",
-			subtitle: "Začátečníci až pokročilí",
-			description: "Flexibilní programy přizpůsobené vašemu tempu a cílům bez ohledu na věk.",
+			subtitle: "Pro začátečníky a pokročilé",
+			description: "Flexibilní program pro dospělé hráče všech úrovní s možností individuálního nebo skupinového tréninku.",
 			icon: TargetIcon,
 			color: "text-green-500",
 			features: ["Všechny úrovně", "Flexibilní časy", "Moderní metody"],
 		},
 		{
-			title: "Letní kempy",
-			subtitle: "Intenzivní týdenní programy",
-			description: "Intenzivní letní tréninky kombinující techniku, kondici a zábavu.",
-			icon: TrophyIcon,
-			color: "text-primary",
-			features: ["Celotýdenní program", "Všestranný rozvoj", "Zábavné aktivity"],
-		},
-		{
-			title: "Soukromé koučování",
+			title: "Soukromé lekce",
 			subtitle: "Individuální přístup",
-			description: "Personalizované tréninky zaměřené na vaše specifické potřeby a cíle.",
+			description: "Individuální lekce zaměřené na specifické potřeby každého hráče s maximální pozorností trenéra.",
 			icon: ClockIcon,
 			color: "text-purple-500",
 			features: ["1:1 trénink", "Rychlý pokrok", "Flexibilní rozvrh"],
+		},
+		{
+			title: "Profesionál",
+			subtitle: "Program šitý na míru",
+			description: "Program zaměřený na tenis na závodní úrovni, který je shodný s tréninkovým procesem špičkových hráčů.",
+			icon: TrophyIcon,
+			color: "text-primary",
+			features: ["Závodní úroveň", "Individuální plán", "Profesionální přístup"],
+		},
+		{
+			title: "Letní kempy",
+			subtitle: "Intenzivní týdenní programy",
+			description: "Týdenní kempy kombinující technický trénink, zápasy a zábavné aktivity pro děti všech věkových kategorií.",
+			icon: TrophyIcon,
+			color: "text-primary",
+			features: ["Celotýdenní program", "Všestranný rozvoj", "Zábavné aktivity"],
 		},
 	];
 </script>
@@ -86,11 +94,6 @@
 							{/each}
 						</div>
 
-						<!-- CTA -->
-						<div class="flex gap-3">
-							<Button variant="outline" size="sm" class="flex-1 group-hover:border-primary group-hover:text-primary transition-colors">Více informací</Button>
-							<Button onclick={() => navigateTo("contact")} size="sm" class="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground">Rezervovat</Button>
-						</div>
 					</CardContent>
 				</Card>
 			{/each}

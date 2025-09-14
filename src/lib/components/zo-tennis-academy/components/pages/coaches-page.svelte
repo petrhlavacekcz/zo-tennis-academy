@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
-	import { Badge } from "$lib/components/ui/badge";
 	import { AwardIcon, StarIcon, PhoneIcon, MailIcon } from "lucide-svelte";
 	import { base } from "$app/paths";
 
@@ -65,7 +64,7 @@
 									</p>
 
 									<!-- Specializations -->
-									<div class="mb-8">
+									<div class="mb-8 hidden">
 										<h3 class="text-2xl md:text-3xl font-semibold mb-4 flex items-center gap-2">
 											<StarIcon size={20} class="text-primary" />
 											Specializace
@@ -114,7 +113,7 @@
 											<PhoneIcon size={16} class="mr-2" />
 											Rezervovat lekci
 										</Button>
-										<Button variant="outline" class="tennis-hover">
+										<Button variant="outline" class="tennis-hover hidden">
 											<MailIcon size={16} class="mr-2" />
 											Kontaktovat
 										</Button>

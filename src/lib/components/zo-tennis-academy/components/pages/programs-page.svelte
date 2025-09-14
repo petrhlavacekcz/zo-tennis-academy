@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
-	import { Badge } from "$lib/components/ui/badge";
-
 
 	import { UsersIcon, TargetIcon, TrophyIcon, ClockIcon, ArrowRightIcon, CheckIcon } from "lucide-svelte";
 
@@ -16,50 +14,97 @@
 		{
 			id: "junior",
 			title: "Juniorský rozvoj",
-			subtitle: "6-18 let",
-			description: "Komplexní program zaměřený na technický a taktický rozvoj mladých hráčů s důrazem na správné základy a postupný růst.",
+			subtitle: "Pro děti a mládež 4–18 let",
+			description: "Komplexní program zaměřený na technický a taktický rozvoj mladých hráčů s důrazem na správné základy.",
 			icon: UsersIcon,
 			color: "text-blue-500",
-			duration: "60-90 minut",
-			groupSize: "4-6 hráčů",
-			price: "Od 800 Kč/lekce",
-			features: ["Individuální přístup k každému dítěti", "Progresivní výuka techniky", "Rozvoj koordinace a atletiky", "Turnajová příprava", "Mentální příprava", "Pravidelné hodnocení pokroku"],
+			duration: "60–90 minut",
+			groupSize: "3–5 hráčů",
+			price: "od 250 Kč / lekce",
+			features: [
+				"Skupinové tréninky podle věku a úrovně.",
+				"Rozvoj základních tenisových dovedností.",
+				"Budování správných pohybových návyků.",
+				"Zlepšování fyzické kondice a obratnosti.",
+				"Podpora týmové spolupráce a fair play."
+			],
 		},
 		{
 			id: "adult",
 			title: "Lekce pro dospělé",
-			subtitle: "Začátečníci až pokročilí",
-			description: "Flexibilní programy přizpůsobené vašemu tempu a cílům. Vhodné pro všechny úrovně bez ohledu na věk nebo zkušenosti.",
+			subtitle: "Pro začátečníky a pokročilé",
+			description: "Flexibilní program pro dospělé hráče všech úrovní s možností individuálního nebo skupinového tréninku.",
 			icon: TargetIcon,
 			color: "text-green-500",
-			duration: "60 minut",
-			groupSize: "2-4 hráči",
-			price: "Od 1000 Kč/lekce",
-			features: ["Všechny úrovně vítány", "Flexibilní časové rozvrhy", "Moderní výukové metody", "Technická analýza", "Taktické situace", "Kondičního příprava"],
+			duration: "60–90 minut",
+			groupSize: "1–4 hráči",
+			price: "od 300 Kč / lekce",
+			features: [
+				"Důraz na správnou techniku úderů.",
+				"Pravidelné lekce pro trvalý pokrok.",
+				"Osvojení základních technických prvků.",
+				"Rozvoj taktiky pro lepší hru.",
+				"Flexibilní tréninky podle možností hráčů.",
+				"Přátelské a motivující prostředí."
+			],
+		},
+		{
+			id: "private",
+			title: "Soukromé lekce",
+			subtitle: "Individuální přístup",
+			description: "Individuální lekce zaměřené na specifické potřeby každého hráče s maximální pozorností trenéra.",
+			icon: ClockIcon,
+			color: "text-purple-500",
+			duration: "60–90 minut",
+			groupSize: "1 hráč",
+			price: "600 Kč / lekce",
+			features: [
+				"100% pozornost trenéra.",
+				"Přizpůsobený tréninkový program.",
+				"Rychlý a efektivní pokrok.",
+				"Flexibilní termíny.",
+				"Video analýza techniky.",
+				"Nejlepší cesta k rychlému zlepšení."
+			],
+		},
+		{
+			id: "pro",
+			title: "Profesionál",
+			subtitle: "Program šitý na míru",
+			description: "Program zaměřený na tenis na závodní úrovni, který je shodný s tréninkovým procesem špičkových hráčů.",
+			icon: TrophyIcon,
+			color: "text-primary",
+			duration: "Denní / Týdenní / Měsíční – program šitý na míru",
+			groupSize: "Individuální",
+			price: "Cena na vyžádání",
+			features: [
+				"Na míru vytvořený každodenní tréninkový proces.",
+				"Program zaměřený na tenis na závodní úrovni.",
+				"Denní, týdenní i měsíční plán přizpůsobený hráči.",
+				"Tréninky, sparingy, kondiční příprava, fyzioterapie a masáže.",
+				"Program shodný s přípravou špičkových hráčů.",
+				"Možnost zajištění ubytování."
+			],
 		},
 		{
 			id: "camps",
 			title: "Letní kempy",
 			subtitle: "Intenzivní týdenní programy",
-			description: "Intenzivní letní tréninky kombinující techniku, kondici, taktiku a zábavu v přátelské atmosféře.",
+			description: "Týdenní kempy kombinující technický trénink, zápasy a zábavné aktivity pro děti všech věkových kategorií.",
 			icon: TrophyIcon,
 			color: "text-primary",
 			duration: "5 dní",
-			groupSize: "8-12 hráčů",
-			price: "Od 3500 Kč/týden",
-			features: ["Celotýdenní intenzivní program", "Kombinace tréninku a zábavy", "Všestranný rozvoj hráče", "Turnaje a soutěže", "Profesionální dozor", "Občerstvení zajištěno"],
-		},
-		{
-			id: "private",
-			title: "Soukromé koučování",
-			subtitle: "Individuální přístup",
-			description: "Personalizované tréninky zaměřené na vaše specifické potřeby, slabiny a cíle s maximální pozorností trenéra.",
-			icon: ClockIcon,
-			color: "text-purple-500",
-			duration: "60 minut",
-			groupSize: "1 hráč",
-			price: "Od 1500 Kč/lekce",
-			features: ["100% pozornost trenéra", "Rychlý pokrok", "Flexibilní rozvrh", "Individuální plán rozvoje", "Video analýza", "Osobní konzultace"],
+			groupSize: "12–16 dětí",
+			price: "Půldenní kemp / 2 800 Kč · Celodenní / 4 500 Kč",
+			features: [
+				"Bohatý program pro nezapomenutelné letní zážitky.",
+				"Celodenní tréninky pod vedením zkušených trenérů.",
+				"Různorodé hry a soutěže pro rozvoj dovedností.",
+				"Vyvážená kombinace obratnosti, vytrvalosti a koordinace.",
+				"Získání cenných zápasových zkušeností.",
+				"Obědy a svačiny zajištěny.",
+				"Každý účastník obdrží speciální tričko"
+			],
 		},
 	];
 </script>
@@ -126,66 +171,12 @@
 
 							<!-- CTAs -->
 							<div class="flex gap-3">
-								<Button variant="outline" class="flex-1 group-hover:border-primary group-hover:text-primary transition-colors">
-									Více informací
-									<ArrowRightIcon size={16} class="ml-2" />
-								</Button>
 								<Button onclick={() => navigateTo("contact")} class="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground">Rezervovat</Button>
 							</div>
 						</CardContent>
 					</Card>
 				{/each}
 
-				<!-- Pricing Section -->
-				<section class="mb-16">
-					<div class="text-center mb-8">
-						<h2 class="text-3xl md:text-4xl font-bold">Ceník</h2>
-						<p class="text-muted-foreground">Vyberte si balíček, který vám nejlépe sedí</p>
-					</div>
-					<div class="grid md:grid-cols-3 gap-6">
-						<!-- Junior -->
-						<Card class="rounded-2xl bg-white dark:bg-[#1E1E1E] shadow-sm p-6 transition hover:shadow-md hover-glow-orange hover-scale">
-							<h3 class="text-2xl font-bold">Junior</h3>
-							<p class="text-muted-foreground">6–18 let</p>
-							<div class="text-4xl font-extrabold text-primary mt-4">od 800 Kč</div>
-							<ul class="mt-4 space-y-2 text-sm text-muted-foreground">
-								<li>Skupinové lekce</li>
-								<li>Technika a základy</li>
-								<li>Progresivní plán</li>
-							</ul>
-							<Button class="mt-6 w-full bg-[#FF6B00] hover:bg-[#E55D00] rounded-full font-bold">Rezervovat</Button>
-						</Card>
-
-						<!-- Dospělí (Popular) -->
-						<Card class="relative rounded-2xl bg-white dark:bg-[#1E1E1E] shadow-sm p-6 transition hover:shadow-md hover-glow-orange hover-scale">
-							<div class="absolute -top-3 right-4">
-								<Badge>Nejpopulárnější</Badge>
-							</div>
-							<h3 class="text-2xl font-bold">Dospělí</h3>
-							<p class="text-muted-foreground">Začátečníci až pokročilí</p>
-							<div class="text-4xl font-extrabold text-primary mt-4">od 1000 Kč</div>
-							<ul class="mt-4 space-y-2 text-sm text-muted-foreground">
-								<li>Flexibilní rozvrh</li>
-								<li>Moderní metody výuky</li>
-								<li>Technická analýza</li>
-							</ul>
-							<Button class="mt-6 w-full bg-[#FF6B00] hover:bg-[#E55D00] rounded-full font-bold">Rezervovat</Button>
-						</Card>
-
-						<!-- Individuální -->
-						<Card class="rounded-2xl bg-white dark:bg-[#1E1E1E] shadow-sm p-6 transition hover:shadow-md hover-glow-orange hover-scale">
-							<h3 class="text-2xl font-bold">Individuální</h3>
-							<p class="text-muted-foreground">1 : 1 trénink</p>
-							<div class="text-4xl font-extrabold text-primary mt-4">od 1500 Kč</div>
-							<ul class="mt-4 space-y-2 text-sm text-muted-foreground">
-								<li>100% pozornost trenéra</li>
-								<li>Rychlý pokrok</li>
-								<li>Osobní plán</li>
-							</ul>
-							<Button class="mt-6 w-full bg-[#FF6B00] hover:bg-[#E55D00] rounded-full font-bold">Rezervovat</Button>
-						</Card>
-					</div>
-				</section>
 
 			</div>
 
