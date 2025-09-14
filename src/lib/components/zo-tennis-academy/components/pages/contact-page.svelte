@@ -47,8 +47,8 @@
 
 <div class="min-h-screen bg-background">
 	<!-- Page Header -->
-	<section class="py-16 bg-card border-b border-primary/20">
-		<div class="container mx-auto px-4 text-center">
+	<section class="py-24 bg-card border-b border-primary/20">
+		<div class="mx-auto max-w-[1320px] px-6 md:px-12 text-center">
 			<h1 class="text-4xl md:text-5xl font-bold mb-4">
 				<span class="text-primary">KONTAKT</span>
 			</h1>
@@ -57,8 +57,8 @@
 	</section>
 
 	<!-- Contact Content -->
-	<section class="py-20">
-		<div class="container mx-auto px-4">
+	<section class="py-24">
+		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<div class="grid lg:grid-cols-2 gap-12">
 				<!-- Contact Form -->
 				<Card class="shadow-none ring-1 ring-border/10 hover:ring-border/30 bg-transparent transition">

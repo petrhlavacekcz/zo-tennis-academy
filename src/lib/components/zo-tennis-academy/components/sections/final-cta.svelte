@@ -15,7 +15,7 @@
 		<div class="w-full h-full" style="background-image: radial-gradient(circle at 25% 25%, white 2px, transparent 2px), radial-gradient(circle at 75% 75%, white 2px, transparent 2px); background-size: 50px 50px;"></div>
 	</div>
 
-	<div class="container mx-auto px-4 text-center relative z-10">
+	<div class="mx-auto max-w-[1320px] px-6 md:px-12 text-center relative z-10">
 		<h2 class="text-4xl md:text-5xl font-bold mb-6">Připraveni zlepšit svou hru?</h2>
 
 		<p class="text-xl mb-8 max-w-2xl mx-auto opacity-90 leading-relaxed">Začněte svou tenisovou cestu s námi ještě dnes. Nabízíme bezplatnou zkušební lekci pro všechny nové studenty.</p>

@@ -10,7 +10,7 @@
 </script>
 
 <section class="py-24 bg-card">
-	<div class="container mx-auto px-4">
+	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<div class="grid lg:grid-cols-2 gap-12 items-center">
 			<!-- Left Column - Content -->
 			<div>

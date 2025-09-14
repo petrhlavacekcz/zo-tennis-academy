@@ -28,7 +28,7 @@
 </script>
 
 <header class="sticky top-0 z-50 glass">
-	<div class="container mx-auto px-4">
+	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<div class="flex items-center justify-between h-16">
 			<!-- Logo -->
 			<button onclick={() => handleNavigation("home")} class="flex items-center gap-2 text-2xl font-bold hover:text-primary transition-colors">
@@ -47,7 +47,7 @@
 
 			<!-- Right controls (Desktop) -->
 			<div class="hidden md:flex items-center gap-3">
-				<Button onclick={() => handleNavigation("contact")} class="bg-[#FF6B00] hover:bg-[#E55D00] text-white font-semibold rounded-full tennis-hover">REZERVOVAT</Button>
+				<Button onclick={() => handleNavigation("contact")} class="tennis-hover">REZERVOVAT</Button>
 				<ThemeSwitcher mode={themeMode} {setThemeMode} />
 			</div>
 

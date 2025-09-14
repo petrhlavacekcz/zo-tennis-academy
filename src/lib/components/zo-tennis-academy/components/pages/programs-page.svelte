@@ -111,8 +111,8 @@
 
 <div class="min-h-screen bg-background">
 	<!-- Page Header -->
-	<section class="py-16 bg-card border-b border-primary/20">
-		<div class="container mx-auto px-4 text-center">
+	<section class="py-24 bg-card border-b border-primary/20">
+		<div class="mx-auto max-w-[1320px] px-6 md:px-12 text-center">
 			<h1 class="text-5xl md:text-6xl font-bold mb-4">
 				NAŠE <span class="text-primary">PROGRAMY</span>
 			</h1>
@@ -121,8 +121,8 @@
 	</section>
 
 	<!-- Programs Grid -->
-	<section class="py-20">
-		<div class="container mx-auto px-4">
+	<section class="py-24">
+		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<div class="grid md:grid-cols-2 gap-8 mb-16">
 				{#each programs as program}
 					<Card class="group h-full overflow-hidden rounded-2xl bg-white dark:bg-[#1E1E1E] shadow-sm transition hover:shadow-md hover-glow-orange hover-scale">

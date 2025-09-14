@@ -11,7 +11,7 @@
 </script>
 
 <section class="py-24 bg-card">
-	<div class="container mx-auto px-4">
+	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
 			<div class="flex items-center justify-center gap-3 mb-4">

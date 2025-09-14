@@ -53,8 +53,8 @@
 	];
 </script>
 
-<section class="py-20 bg-background">
-	<div class="container mx-auto px-4">
+<section class="py-24 bg-background">
+	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
 			<h2 class="text-4xl font-bold mb-4">
@@ -101,7 +101,7 @@
 
 		<!-- Main CTA -->
 		<div class="text-center">
-			<Button onclick={() => navigateTo("programs")} size="lg" class="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold tennis-hover group">
+			<Button onclick={() => navigateTo("programs")} size="lg" class="tennis-hover group">
 				Zobrazit všechny programy
 				<ArrowRightIcon size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
 			</Button>

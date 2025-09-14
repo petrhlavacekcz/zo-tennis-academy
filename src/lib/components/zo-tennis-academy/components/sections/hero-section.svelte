@@ -34,12 +34,12 @@
 		<p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">Zlepšete svou hru s profesionálním koučováním pod vedením bývalé hráčky WTA Zuzany Ondraskové</p>
 
 		<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-			<Button onclick={() => navigateTo("contact")} size="lg" class="bg-[#FF6B00] hover:bg-[#E55D00] text-white font-semibold px-8 py-4 text-lg rounded-full tennis-hover group btn-press">
+			<Button onclick={() => navigateTo("contact")} size="lg" class="tennis-hover group btn-press">
 				Začněte dnes
 				<ArrowRightIcon size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
 			</Button>
 
-			<Button onclick={() => navigateTo("programs")} variant="outline" size="lg" class="border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg rounded-full tennis-hover btn-press">Naše programy</Button>
+			<Button onclick={() => navigateTo("programs")} variant="outline" size="lg" class="tennis-hover btn-press">Naše programy</Button>
 		</div>
 	</div>
 

@@ -26,7 +26,7 @@
 		<div class="w-full h-full" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(255,106,0,0.3) 10px, rgba(255,106,0,0.3) 11px); background-size: 100% 20px;"></div>
 	</div>
 
-	<div class="container mx-auto px-4 relative z-10">
+	<div class="mx-auto max-w-[1320px] px-6 md:px-12 relative z-10">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
 			<h2 class="text-4xl font-bold mb-4">
