@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
-	import { Badge } from "$lib/components/ui/badge";
-	import { Award, Phone, Star } from "@lucide/svelte";
-	import { base } from "$app/paths";
+	import { Award, Phone } from "@lucide/svelte";
+	import { assets } from "$app/paths";
 
 
 	let coaches = [
@@ -12,8 +11,6 @@
 			role: "Hlavní trenérka & Zakladatelka",
 			image: "/zuzka-dark.png",
 			bio: "Zuzana je bývalá profesionální tenistka, která dosáhla 74. místa na WTA žebříčku. Během své kariéry (1997-2013) získala 20 ITF titulů a účastnila se všech Grand Slam turnajů. Po ukončení aktivní kariéry se věnuje koučování a předávání svých zkušeností mladé generaci.",
-			specializations: ["Technická dokonalost", "Mentální příprava", "Turnajová strategie", "Profesionální koučování"],
-			certifications: ["ITF Level 3 Coach", "WTA Coaching Certification", "Sports Psychology Certificate", "First Aid Certified"],
 			achievements: ["74. místo WTA žebříčku (2005)", "20 ITF titulů", "Účast na všech Grand Slam turnajích", "Vítězství nad hráčkami TOP 50", "Reprezentace České republiky", "15+ let koučovacích zkušeností"],
 		},
 		{
@@ -21,8 +18,6 @@
 			role: "Technický specialista",
 			image: "/michal-dark.png",
 			bio: "Michał je technický specialista s bohatými zkušenostmi z mezinárodního tenisu. Pracoval jako sparingpartner pro hráčky TOP 100 WTA a má za sebou úspěšnou trenérskou kariéru. Jeho perfekcionistický přístup a důraz na detaily pomáhají hráčům dosáhnout jejich maximálního potenciálu.",
-			specializations: ["Taktická příprava", "Technická analýza", "Kondičního tréninku", "Juniorský rozvoj"],
-			certifications: ["ITF Level 2 Coach", "Tennis Europe Coach", "Strength & Conditioning Specialist", "Video Analysis Expert"],
 			achievements: ["Sparingpartner TOP 100 WTA hráčky", "Vítěz národních turnajů", "10+ let mezinárodních zkušeností", "Trenér juniorských reprezentantů", "Specialista na technickou analýzu", "Certifikovaný kondičního trenér"],
 		},
 	];
@@ -44,12 +39,12 @@
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<div class="space-y-16">
 				{#each coaches as coach}
-					<Card class="overflow-hidden shadow-sm transition hover:shadow-md hover-scale">
+					<Card class="glass overflow-hidden shadow-sm transition hover:shadow-md hover-scale p-0">
 						<CardContent class="p-0">
-							<div class="grid lg:grid-cols-5 gap-0">
+							<div class="grid lg:grid-cols-5 items-stretch gap-0">
 								<!-- Coach Image -->
-								<div class="lg:col-span-2 relative h-96 lg:h-auto">
-									<img src={`${base}${coach.image}`} alt={coach.name} class="w-full h-full object-cover" />
+								<div class="lg:col-span-2 relative aspect-[3/4] lg:aspect-auto lg:h-full">
+									<img src={assets + coach.image} alt={coach.name} class="absolute inset-0 w-full h-full object-cover object-center block" />
 									<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent lg:hidden"></div>
 								</div>
 
@@ -67,35 +62,11 @@
 
 														<!--
 
-									<!-- Specializations -->
-									<div class="mb-8 hidden">
-										<h3 class="text-2xl md:text-3xl font-semibold mb-4 flex items-center gap-2">
-											<Star size={20} class="text-primary" />
-											Specializace
-										</h3>
-										<div class="flex flex-wrap gap-2">
-											{#each coach.specializations as spec}
-												<Badge variant="secondary" class="bg-primary/10 text-primary border-primary/20">
-													{spec}
-												</Badge>
-											{/each}
-										</div>
-									</div>
+									<!-- Specializations removed -->
 														-->
 
 
-									<!-- Certifications -->
-									<div class="mb-8">
-										<h3 class="text-2xl md:text-3xl font-semibold mb-4">Certifikace</h3>
-										<ul class="space-y-2">
-											{#each coach.certifications as cert}
-												<li class="flex items-start gap-2">
-													<div class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-													<span class="text-muted-foreground">{cert}</span>
-												</li>
-											{/each}
-										</ul>
-									</div>
+
 
 									<!-- Achievements -->
 									<div class="mb-8">

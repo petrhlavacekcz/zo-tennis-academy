@@ -13,11 +13,11 @@
 	let { navItems, currentPage, handleNavigation, themeMode, setThemeMode }: Props = $props();
 </script>
 
-<div class="md:hidden bg-background border-t border-border">
+<div class="md:hidden glass border-t">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12 py-6">
 		<nav class="flex flex-col gap-4">
 			{#each navItems as item, index}
-				<button onclick={() => handleNavigation(item.id)} class={`text-left py-3 px-4 rounded-md font-medium transition-all duration-300 hover:bg-accent ${currentPage === item.id ? "text-primary bg-accent" : "text-muted-foreground"}`} style={`animation-delay: ${index * 100}ms`}>
+				<button onclick={() => handleNavigation(item.id)} class={`text-left py-3 px-4 rounded-md font-medium uppercase tracking-wide transition-all duration-300 hover:bg-accent ${currentPage === item.id ? "text-primary bg-accent" : "text-muted-foreground"}`} style={`animation-delay: ${index * 100}ms`}>
 					{item.label}
 				</button>
 			{/each}
@@ -30,7 +30,7 @@
 			</div>
 
 			<div class="pt-4 border-t border-border">
-				<Button onclick={() => handleNavigation("contact")} class="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">REZERVOVAT</Button>
+				<Button onclick={() => handleNavigation("contact")} class="w-full tennis-hover btn-press uppercase tracking-wide">REZERVOVAT</Button>
 			</div>
 		</nav>
 	</div>

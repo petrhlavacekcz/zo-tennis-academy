@@ -4,7 +4,7 @@
 	import { Input } from "$lib/components/ui/input";
 	import { Textarea } from "$lib/components/ui/textarea";
 	import { Label } from "$lib/components/ui/label";
-	import { Phone, Mail, MapPin, Clock, ChevronDown } from "@lucide/svelte";
+	import { Phone, Mail, MapPin, ChevronDown } from "@lucide/svelte";
 
 	let formData = $state({
 		name: "",
@@ -107,7 +107,7 @@
 								<div>
 									<h4 class="font-semibold mb-1">Telefon</h4>
 									<p class="text-muted-foreground">+420 603 441 399</p>
-									<p class="text-sm text-muted-foreground">Po-Pá: 8:00-20:00, So-Ne: 9:00-18:00</p>
+
 								</div>
 							</div>
 
@@ -116,7 +116,7 @@
 								<div>
 									<h4 class="font-semibold mb-1">Email</h4>
 									<p class="text-muted-foreground">tenis@zotennisacademy.cz</p>
-									<p class="text-sm text-muted-foreground">Odpovídáme do 24 hodin</p>
+
 								</div>
 							</div>
 
@@ -132,16 +132,6 @@
 								</div>
 							</div>
 
-							<div class="flex items-start gap-4">
-								<Clock size={24} class="text-primary mt-1" />
-								<div>
-									<h4 class="font-semibold mb-1">Otevírací doba</h4>
-									<div class="text-muted-foreground space-y-1">
-										<p>Pondělí - Pátek: 8:00 - 20:00</p>
-										<p>Sobota - Neděle: 9:00 - 18:00</p>
-									</div>
-								</div>
-							</div>
 						</CardContent>
 					</Card>
 

@@ -15,10 +15,10 @@
 	let isMobileMenuOpen = $state(false);
 
 	const navItems = [
-		{ id: "home", label: "DOMŮ", labelEn: "HOME" },
-		{ id: "coaches", label: "TRENÉŘI", labelEn: "COACHES" },
-		{ id: "programs", label: "PROGRAMY", labelEn: "PROGRAMS" },
-		{ id: "contact", label: "KONTAKT", labelEn: "CONTACT" },
+		{ id: "home", label: "Domů", labelEn: "HOME" },
+		{ id: "coaches", label: "Trenéři", labelEn: "COACHES" },
+		{ id: "programs", label: "Programy", labelEn: "PROGRAMS" },
+		{ id: "contact", label: "Kontakt", labelEn: "CONTACT" },
 	];
 
 	function handleNavigation(page: string) {
@@ -39,7 +39,7 @@
 			<!-- Desktop Navigation -->
 			<nav class="hidden md:flex items-center gap-8">
 				{#each navItems as item}
-					<button onclick={() => handleNavigation(item.id)} class={`font-medium transition-colors hover:underline hover:decoration-2 hover:decoration-primary ${currentPage === item.id ? "text-primary" : "text-muted-foreground"}`}>
+					<button onclick={() => handleNavigation(item.id)} class={`font-medium uppercase tracking-wide transition-colors hover:underline hover:decoration-2 hover:decoration-primary ${currentPage === item.id ? "text-primary" : "text-muted-foreground"}`}>
 						{item.label}
 					</button>
 				{/each}
@@ -47,7 +47,7 @@
 
 			<!-- Right controls (Desktop) -->
 			<div class="hidden md:flex items-center gap-3">
-				<Button onclick={() => handleNavigation("contact")} class="tennis-hover">REZERVOVAT</Button>
+				<Button onclick={() => handleNavigation("contact")} class="tennis-hover uppercase tracking-wide">REZERVOVAT</Button>
 				<ThemeSwitcher mode={themeMode} {setThemeMode} />
 			</div>
 

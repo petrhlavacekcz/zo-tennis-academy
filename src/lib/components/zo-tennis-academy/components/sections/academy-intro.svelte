@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
+	import { assets } from "$app/paths";
 
 	let features = [
 		{ title: "Zkušení trenéři", description: "Profesionální koučování od bývalých hráčů WTA" },
@@ -14,8 +15,8 @@
 		<div class="grid lg:grid-cols-2 gap-12 items-center">
 			<!-- Left Column - Content -->
 			<div>
-				<h2 class="text-4xl font-bold mb-6">
-					Personalizovaný přístup k <span class="text-primary">tenisu</span>
+				<h2 class="uppercase font-extrabold tracking-tight text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight mb-6">
+					PERSONALIZOVANÝ PŘÍSTUP K <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">TENISU</span>
 				</h2>
 				<p class="text-lg text-muted-foreground mb-8 leading-relaxed">V ZO Tennis Academy věříme, že každý hráč je jedinečný. Naše programy jsou navrženy tak, aby maximalizovaly váš potenciál prostřednictvím individuálního přístupu a profesionálního vedení.</p>
 
@@ -37,17 +38,11 @@
 			<div class="relative">
 				<Card class="overflow-hidden rounded-xl shadow-none ring-1 ring-transparent hover:ring-border/30 bg-transparent transition">
 					<CardContent class="p-0">
-						<img src="https://c.svelte0.com/placeholder.svg?size=square" alt="Tennis training session" class="w-full h-96 object-cover" />
+						<img src={assets + "/zo-tennis-academy.jpg"} alt="Tennis training session" class="w-full h-96 object-cover" />
 					</CardContent>
 				</Card>
 
-				<!-- Floating Stats Card -->
-				<Card class="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 tennis-hover">
-					<CardContent class="p-0 text-center">
-						<div class="text-2xl font-bold">74th</div>
-						<div class="text-sm opacity-90">WTA Ranking</div>
-					</CardContent>
-				</Card>
+
 			</div>
 		</div>
 	</div>

@@ -56,10 +56,7 @@ if (typeof window !== 'undefined') {
 
 
 
-	<!-- Tennis Ball Animation Background -->
-	<div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
-		<div class="tennis-ball-bg"></div>
-	</div>
+
 </div>
 
 <style>
@@ -73,24 +70,6 @@ if (typeof window !== 'undefined') {
 			sans-serif;
 		margin: 0;
 		padding: 0;
-	}
-
-	.tennis-ball-bg {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-image: radial-gradient(circle at 20% 80%, rgba(255, 106, 0, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 106, 0, 0.03) 0%, transparent 50%);
-		animation: float 20s ease-in-out infinite;
-	}
-
-	@keyframes float {
-		0%,
-		100% {
-			transform: translateY(0px) rotate(0deg);
-		}
-		50% {
-			transform: translateY(-20px) rotate(180deg);
-		}
 	}
 
 	:global(.tennis-hover) {

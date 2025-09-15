@@ -17,7 +17,7 @@
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: hsl(0 0% 94%);
-  --muted-foreground: oklch(0.554 0.046 257.417);
+  --muted-foreground: hsl(0 0% 32%);
   --accent: hsl(0 0% 96%);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
@@ -51,7 +51,7 @@
   --secondary: oklch(0.279 0.041 260.031);
   --secondary-foreground: oklch(0.984 0.003 247.858);
   --muted: hsl(0 0% 14%);
-  --muted-foreground: oklch(0.704 0.04 256.788);
+  --muted-foreground: hsl(0 0% 75%);
   --accent: hsl(0 0% 12%);
   --accent-foreground: oklch(0.984 0.003 247.858);
   --destructive: oklch(0.704 0.191 22.216);
@@ -115,16 +115,20 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
+  html, body {
     @apply bg-background text-foreground;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
   }
 }
+  img { display: block; }
+
 
 /* Glass utility for airy, translucent surfaces */
 .glass {
-  background-color: color-mix(in oklch, var(--card) 70%, transparent);
-  backdrop-filter: blur(12px);
-  border: 1px solid color-mix(in oklch, var(--border) 60%, transparent);
+  background-color: color-mix(in oklch, var(--card) 60%, transparent);
+  backdrop-filter: blur(14px) saturate(1.15);
+  border: 1px solid color-mix(in oklch, var(--border) 40%, transparent);
+  box-shadow: 0 8px 30px color-mix(in oklch, var(--foreground) 8%, transparent);
 }
 
 
@@ -144,3 +148,22 @@
 .hover-glow-orange:hover{box-shadow:0 10px 25px rgba(255,107,0,.25)}
 .hover-scale{transition:transform .2s ease}
 .hover-scale:hover{transform:scale(1.03)}
+
+
+/* Typography: headings + numeric features + label */
+@layer base {
+  /* Headings: Space Grotesk for premium, sporty feel */
+  h1 { font: 800 clamp(2.2rem, 3vw + 1rem, 3.5rem)/0.95 "Space Grotesk", Inter, system-ui, sans-serif; letter-spacing: -0.02em; }
+  h2 { font: 700 clamp(1.8rem, 2vw + 1rem, 2.5rem)/1.05 "Space Grotesk", Inter, system-ui, sans-serif; }
+  h3 { font: 700 clamp(1.4rem, 1.2vw + .9rem, 1.8rem)/1.15 Inter, system-ui, sans-serif; }
+  p  { font: 400 1rem/1.6 Inter, system-ui, sans-serif; }
+
+  /* Numeric polish and headline wrapping */
+  html { font-variant-numeric: lining-nums tabular-nums; }
+  h1, h2 { text-wrap: balance; }
+}
+
+@layer utilities {
+  .stat, .price, .ranking { font-variant-numeric: tabular-nums slashed-zero; }
+  .label { font: 500 0.875rem/1.2 Inter, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+}

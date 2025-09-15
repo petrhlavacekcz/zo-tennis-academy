@@ -57,23 +57,23 @@
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
-			<h2 class="text-4xl font-bold mb-4">
-				Naše <span class="text-primary">programy</span>
+			<h2 class="uppercase font-extrabold tracking-tight text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight mb-4">
+				NAŠE <span class="text-primary">PROGRAMY</span>
 			</h2>
 			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Vyberte si program, který nejlépe odpovídá vašim potřebám a tenisovým ambicím.</p>
 		</div>
 
-		<!-- Programs Grid -->
-		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 mb-12">
+		<!-- Programs Row (single row with horizontal scroll) -->
+		<div class="grid grid-flow-col auto-cols-[minmax(280px,1fr)] md:auto-cols-[minmax(320px,1fr)] gap-8 mb-12 overflow-x-auto snap-x snap-mandatory pb-2">
 			{#each programs as program}
-				<Card class="group h-full overflow-hidden shadow-sm transition hover:shadow-md hover-scale">
+				<Card class="group glass h-full overflow-hidden shadow-sm transition hover:shadow-md hover-scale snap-start min-w-[280px] md:min-w-[320px]">
 					<CardHeader class="pb-4">
 						<div class="flex items-center gap-4 mb-4">
 							<div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
 								<program.icon size={24} class={program.color} />
 							</div>
 							<div>
-								<CardTitle class="text-xl">{program.title}</CardTitle>
+								<CardTitle class="text-xl tracking-wide">{program.title}</CardTitle>
 								<p class="text-sm text-muted-foreground">{program.subtitle}</p>
 							</div>
 						</div>

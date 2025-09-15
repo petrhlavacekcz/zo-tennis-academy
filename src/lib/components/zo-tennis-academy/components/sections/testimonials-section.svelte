@@ -1,21 +1,19 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
-	import { Quote, Star } from "@lucide/svelte";
+	import { Quote } from "@lucide/svelte";
 
 	let testimonials = [
 		{
-			name: "Anna Svobodová",
-			role: "Rekreační hráčka",
-			image: "https://c.svelte0.com/placeholder.svg?size=square",
-			rating: 5,
-			text: "Díky ZO Tennis Academy jsem se zlepšila více, než jsem si kdy myslela, že je možné. Zuzanin přístup je nejen profesionální, ale také velmi motivující.",
+			name: "Lukáš Hahn",
+			role: "Rodič",
+			text:
+				"Naše tři děti trénují u Zuzky už více než tři roky a jsme naprosto spokojeni. Zuzka je skvělá trenérka, která k dětem přistupuje s trpělivostí, respektem a zároveň je dokáže motivovat k výkonu. Její tréninky jsou pestré, zábavné a přitom velmi kvalitní – vidíme u dětí obrovský pokrok jak v technice, tak v celkovém vztahu ke sportu. Díky Zuzce si tenis zamilovaly a na každou lekci se těší. Velké díky za profesionální a zároveň lidský přístup!",
 		},
 		{
-			name: "Tomáš Novák",
-			role: "Junior hráč",
-			image: "https://c.svelte0.com/placeholder.svg?size=square",
-			rating: 5,
-			text: "Trénink s Michałem mi pomohl vyhrát můj první turnaj. Jeho technické rady a taktické přípravy jsou neocenitelné.",
+			name: "Petr Hlaváček",
+			role: "Začátečník",
+			text:
+				"S tenisem jsem začal pozdě, ale díky Zuzce a Míšovi mě tenis strašně baví a užívám si, že si zahraju i s kamarády kteří hrají tenis celý život. Těším se na každý trénink. Moc děkuji za všechno.",
 		},
 	];
 </script>
@@ -29,10 +27,10 @@
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12 relative z-10">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
-			<h2 class="text-4xl font-bold mb-4">
-				Co říkají naši <span class="text-primary">studenti</span>
+			<h2 class="uppercase font-extrabold tracking-tight text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight mb-4">
+				REFERENCE
 			</h2>
-			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Přečtěte si zkušenosti našich studentů a zjistěte, jak jsme jim pomohli dosáhnout jejich tenisových cílů.</p>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Co o nás říkají naši hráči a rodiče.</p>
 		</div>
 
 		<!-- Testimonials Grid -->
@@ -47,25 +45,17 @@
 							</div>
 						</div>
 
-						<!-- Rating -->
-						<div class="flex justify-center gap-1 mb-6">
-							{#each Array(testimonial.rating) as _}
-								<Star size={20} class="text-primary fill-current" />
-							{/each}
-						</div>
+						<!-- Rating removed for text-only references -->
 
-						<!-- Testimonial Text -->
-						<blockquote class="text-center text-lg mb-8 leading-relaxed text-muted-foreground">
-							"{testimonial.text}"
+						<!-- Reference Text -->
+						<blockquote class="text-center text-lg mb-6 leading-relaxed text-foreground/80">
+							“{testimonial.text}”
 						</blockquote>
 
 						<!-- Author -->
-						<div class="flex items-center justify-center gap-4">
-							<img src={testimonial.image} alt={testimonial.name} class="w-12 h-12 rounded-full object-cover ring-2 ring-primary" />
-							<div class="text-center">
-								<div class="font-semibold">{testimonial.name}</div>
-								<div class="text-sm text-muted-foreground">{testimonial.role}</div>
-							</div>
+						<div class="text-center">
+							<div class="font-semibold">{testimonial.name}</div>
+							<div class="text-sm text-muted-foreground">{testimonial.role}</div>
 						</div>
 					</CardContent>
 				</Card>

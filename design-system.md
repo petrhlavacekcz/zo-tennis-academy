@@ -370,7 +370,7 @@ colors = {
 ### Photography Guidelines
 - **Lighting**: Natural light preferred, consistent exposure
 - **Composition**: Rule of thirds, dynamic angles for action shots
-- **Color Grading**: Warm tones that complement orange brand color
+- **Color Grading**: Warm tones that comlement orange brand color
 - **Consistency**: Maintain visual style across all imagery
 
 ---
