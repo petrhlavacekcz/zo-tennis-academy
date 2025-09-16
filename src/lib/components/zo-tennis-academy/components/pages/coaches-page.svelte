@@ -7,15 +7,15 @@
 
 	let coaches = [
 		{
-			name: "Zuzana Ondraskova",
-			role: "Hlavní trenérka & Zakladatelka",
+			name: "Zuzana Ondrášková",
+			role: "hlavní trenérka a zakladatelka",
 			image: "/zuzka-dark.png",
 			bio: "Zuzana je bývalá profesionální tenistka, která dosáhla 74. místa na WTA žebříčku. Během své kariéry (1997-2013) získala 20 ITF titulů a účastnila se všech Grand Slam turnajů. Po ukončení aktivní kariéry se věnuje koučování a předávání svých zkušeností mladé generaci.",
 			achievements: ["74. místo WTA žebříčku (2005)", "20 ITF titulů", "Účast na všech Grand Slam turnajích", "Vítězství nad hráčkami TOP 50", "Reprezentace České republiky", "15+ let koučovacích zkušeností"],
 		},
 		{
 			name: "Michał Kowalski",
-			role: "Technický specialista",
+			role: "trenér a technický specialista",
 			image: "/michal-dark.png",
 			bio: "Michał je technický specialista s bohatými zkušenostmi z mezinárodního tenisu. Pracoval jako sparingpartner pro hráčky TOP 100 WTA a má za sebou úspěšnou trenérskou kariéru. Jeho perfekcionistický přístup a důraz na detaily pomáhají hráčům dosáhnout jejich maximálního potenciálu.",
 			achievements: ["Sparingpartner TOP 100 WTA hráčky", "Vítěz národních turnajů", "10+ let mezinárodních zkušeností", "Trenér juniorských reprezentantů", "Specialista na technickou analýzu", "Certifikovaný kondičního trenér"],
@@ -27,10 +27,10 @@
 	<!-- Page Header -->
 	<section class="py-24 bg-card border-b border-primary/20">
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12 text-center">
-			<h1 class="text-5xl md:text-6xl font-bold mb-4">
+			<h1 class="text-page-heading mb-4">
 				NAŠI <span class="text-primary">TRENÉŘI</span>
 			</h1>
-			<p class="text-xl text-muted-foreground max-w-2xl mx-auto">Poznejte náš profesionální tým trenérů s bohatými zkušenostmi z mezinárodního tenisu</p>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Poznejte náš profesionální tým trenérů s bohatými zkušenostmi z mezinárodního tenisu</p>
 		</div>
 	</section>
 
@@ -51,12 +51,12 @@
 								<!-- Coach Information -->
 								<div class="lg:col-span-3 p-8 lg:p-12">
 									<div class="mb-6">
-										<h2 class="text-3xl md:text-4xl font-bold mb-2">{coach.name}</h2>
-										<p class="text-primary text-lg font-semibold">{coach.role}</p>
+										<h3 class="font-bold mb-2">{coach.name}</h3>
+										<p class="text-primary text-base font-semibold">{coach.role}</p>
 									</div>
 
 									<!-- Biography -->
-									<p class="text-muted-foreground mb-8 leading-relaxed text-lg">
+									<p class="text-muted-foreground mb-8 leading-relaxed text-base">
 										{coach.bio}
 									</p>
 
@@ -70,10 +70,10 @@
 
 									<!-- Achievements -->
 									<div class="mb-8">
-										<h3 class="text-2xl md:text-3xl font-semibold mb-4 flex items-center gap-2">
+										<h4 class="font-semibold mb-4 flex items-center gap-2">
 											<Award size={20} class="text-primary" />
 											Úspěchy a zkušenosti
-										</h3>
+										</h4>
 										<ul class="space-y-2">
 											{#each coach.achievements as achievement}
 												<li class="flex items-start gap-2">

@@ -149,21 +149,276 @@
 .hover-scale{transition:transform .2s ease}
 .hover-scale:hover{transform:scale(1.03)}
 
+/* Tennis-themed animation performance optimization */
+.tennis-animation-container {
+  will-change: transform, opacity;
+}
 
-/* Typography: headings + numeric features + label */
+.tennis-animation-container.animation-complete {
+  will-change: auto;
+}
+
+/* Modern Menu Hover Animations */
+@layer utilities {
+  /* Modern desktop menu item with multi-layer effects */
+  .menu-item {
+    position: relative;
+    overflow: hidden;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .menu-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+      hsla(var(--primary), 0.08), 
+      hsla(var(--primary), 0.15),
+      hsla(var(--primary), 0.08)
+    );
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 0.5rem;
+  }
+  
+  .menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+      transparent, 
+      hsl(var(--primary)), 
+      hsla(var(--primary), 0.8),
+      hsl(var(--primary)),
+      transparent
+    );
+    transform: translateX(-50%);
+    transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 0 8px hsla(var(--primary), 0.6);
+  }
+  
+  .menu-item:hover::before {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  
+  .menu-item:hover::after {
+    width: 90%;
+  }
+  
+  .menu-item:hover {
+    color: hsl(var(--primary));
+    text-shadow: 0 0 20px hsla(var(--primary), 0.7);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+      0 8px 25px hsla(var(--primary), 0.25),
+      0 3px 10px hsla(var(--primary), 0.15);
+  }
+  
+  /* Active menu item */
+  .menu-item.active {
+    color: hsl(var(--primary));
+  }
+  
+  .menu-item.active::before {
+    width: 100%;
+    background: hsl(var(--primary));
+  }
+  
+  /* Modern mobile menu item with layered effects */
+  .mobile-menu-item {
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0.25rem 0;
+  }
+  
+  .mobile-menu-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+      hsla(var(--primary), 0.05),
+      hsla(var(--primary), 0.15),
+      hsla(var(--primary), 0.08)
+    );
+    opacity: 0;
+    transform: scale(0.95) rotate(-1deg);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 16px;
+  }
+  
+  .mobile-menu-item::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+      transparent,
+      hsla(var(--primary), 0.3),
+      hsla(var(--primary), 0.5),
+      hsla(var(--primary), 0.3),
+      transparent
+    );
+    transition: left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    mix-blend-mode: overlay;
+  }
+  
+  .mobile-menu-item:hover::before {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  
+  .mobile-menu-item:hover::after {
+    left: 100%;
+  }
+  
+  .mobile-menu-item:hover {
+    color: hsl(var(--primary));
+    background: hsla(var(--primary), 0.12);
+    border-left: 4px solid hsl(var(--primary));
+    padding-left: calc(1rem - 4px);
+    transform: translateX(8px) translateY(-2px) scale(1.02);
+    box-shadow: 
+      0 8px 32px hsla(var(--primary), 0.3),
+      0 4px 16px hsla(var(--primary), 0.2),
+      inset 0 1px 0 hsla(var(--primary), 0.3);
+    text-shadow: 0 0 16px hsla(var(--primary), 0.6);
+  }
+  
+  .dark .mobile-menu-item:hover {
+    color: hsl(var(--primary));
+    background: hsla(var(--primary), 0.18);
+    box-shadow: 
+      0 8px 40px hsla(var(--primary), 0.4),
+      0 4px 20px hsla(var(--primary), 0.3),
+      inset 0 1px 0 hsla(var(--primary), 0.4);
+    text-shadow: 0 0 20px hsla(var(--primary), 0.8);
+  }
+  
+  /* Logo hover animation */
+  .logo-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .logo-hover:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px hsla(var(--primary), 0.3));
+  }
+  
+  .logo-hover:hover .logo-tennis {
+    color: hsl(var(--primary));
+    text-shadow: 0 0 12px hsla(var(--primary), 0.6);
+  }
+  
+  /* Modern mobile menu button with premium effects */
+  .mobile-menu-btn {
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .mobile-menu-btn::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg,
+      hsla(var(--primary), 0.1),
+      hsla(var(--primary), 0.2),
+      hsla(var(--primary), 0.1)
+    );
+    opacity: 0;
+    border-radius: 12px;
+    z-index: -1;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .mobile-menu-btn:hover::before {
+    opacity: 1;
+  }
+  
+  .mobile-menu-btn:hover {
+    background: hsla(var(--primary), 0.12);
+    color: hsl(var(--primary));
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 
+      0 8px 25px hsla(var(--primary), 0.25),
+      0 4px 12px hsla(var(--primary), 0.15);
+  }
+  
+  .dark .mobile-menu-btn:hover {
+    background: hsla(var(--primary), 0.18);
+    box-shadow: 
+      0 8px 30px hsla(var(--primary), 0.35),
+      0 4px 15px hsla(var(--primary), 0.2);
+  }
+}
+
+
+/* Typography: Clean semantic defaults */
 @layer base {
-  /* Headings: Space Grotesk for premium, sporty feel */
-  h1 { font: 800 clamp(2.2rem, 3vw + 1rem, 3.5rem)/0.95 "Space Grotesk", Inter, system-ui, sans-serif; letter-spacing: -0.02em; }
-  h2 { font: 700 clamp(1.8rem, 2vw + 1rem, 2.5rem)/1.05 "Space Grotesk", Inter, system-ui, sans-serif; }
-  h3 { font: 700 clamp(1.4rem, 1.2vw + .9rem, 1.8rem)/1.15 Inter, system-ui, sans-serif; }
-  p  { font: 400 1rem/1.6 Inter, system-ui, sans-serif; }
-
-  /* Numeric polish and headline wrapping */
   html { font-variant-numeric: lining-nums tabular-nums; }
-  h1, h2 { text-wrap: balance; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { font-size: 1rem; line-height: 1.5; } /* 16px minimum for accessibility */
 }
 
 @layer utilities {
+  /* Sport Typography - Space Grotesk for headings */
+  .text-hero { 
+    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem); 
+    font-weight: 800; 
+    line-height: 0.9; 
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  
+  .text-page-heading {
+    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  
+  .text-section-heading {
+    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  
+  .text-display { 
+    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem); 
+    font-weight: 700; 
+    line-height: 1.0; 
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  
+  .font-space { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
+  
   .stat, .price, .ranking { font-variant-numeric: tabular-nums slashed-zero; }
-  .label { font: 500 0.875rem/1.2 Inter, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+  .label { 
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
 }

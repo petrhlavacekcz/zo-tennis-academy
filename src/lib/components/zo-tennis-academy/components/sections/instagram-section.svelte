@@ -14,7 +14,7 @@
 		<div class="text-center mb-12">
 			<div class="flex items-center justify-center gap-3 mb-3">
 				<Instagram size={24} class="text-primary" />
-				<h2 class="uppercase font-extrabold tracking-tight text-[clamp(1.5rem,3vw,2rem)]">SLEDUJTE NÁS NA <span class="text-primary">INSTAGRAMU</span></h2>
+				<h2 class="text-section-heading">SLEDUJTE NÁS NA <span class="text-primary">INSTAGRAMU</span></h2>
 			</div>
 			<p class="text-white/70 max-w-2xl mx-auto">Zůstaňte v kontaktu s naší akademií a sledujte nejnovější fotky z tréninků a turnajů</p>
 		</div>

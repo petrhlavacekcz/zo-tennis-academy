@@ -100,41 +100,129 @@ colors = {
 
 ## Typography
 
-### Font Family
-- **Primary**: Inter (Google Fonts)
-- **Fallback**: system-ui, -apple-system, sans-serif
+### Current Issues Analysis
+**Problems Found:**
+- **Too many font sizes**: 10+ variants across the app (should be 4-6 max)
+- **Inconsistent weights**: Mixed font-medium, font-semibold, font-bold, font-extrabold
+- **Conflicting font families**: CSS defines Space Grotesk for headings but components use Inter
+- **Poor accessibility**: Some text below 16px minimum for body text
+- **No systematic approach**: Ad-hoc sizing without mathematical consistency
 
-### Type Scale
-\`\`\`css
-/* Display Headlines */
---text-9xl: 8rem      /* 128px - Hero headlines */
---text-8xl: 6rem      /* 96px - Section headlines */
---text-7xl: 4.5rem    /* 72px - Large headlines */
---text-6xl: 3.75rem   /* 60px - Medium headlines */
+### Recommended Typography System
 
-/* Body Text */
---text-xl: 1.25rem    /* 20px - Large body text */
---text-lg: 1.125rem   /* 18px - Medium body text */
---text-base: 1rem     /* 16px - Default body text */
---text-sm: 0.875rem   /* 14px - Small text */
---text-xs: 0.75rem    /* 12px - Labels, captions */
-\`\`\`
+#### Font Family Hierarchy
+```css
+/* Primary: Inter for all text */
+font-family: Inter, system-ui, -apple-system, sans-serif;
 
-### Typography Patterns
-- **Display Headlines**: Bold weight, tight line-height (0.9), tight letter-spacing (-0.02em)
-- **Section Headlines**: Bold weight, normal line-height (1.2)
-- **Body Text**: Normal weight, relaxed line-height (1.6)
-- **Labels**: Medium weight, uppercase, wide letter-spacing (0.1em)
+/* Optional: Space Grotesk for large headlines only */
+.hero-headline {
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+```
 
-### Responsive Typography
-\`\`\`css
-/* Responsive clamp for hero titles */
+#### Simplified Type Scale (Major Second - 1.125 ratio)
+**4 Primary Sizes + 2 Special Cases:**
+
+```css
+/* Core Typography Scale */
+--text-xs: 0.75rem     /* 12px - Captions, labels */
+--text-sm: 0.875rem    /* 14px - Secondary text */
+--text-base: 1rem      /* 16px - Body text (minimum) */
+--text-lg: 1.125rem    /* 18px - Large body, lead text */
+--text-xl: 1.5rem      /* 24px - Small headings */
+--text-2xl: 2rem       /* 32px - Section headings */
+
+/* Special Display Sizes */
+--text-4xl: 3rem       /* 48px - Page headings */
+--text-hero: clamp(2.5rem, 6vw, 4rem) /* 40-64px - Hero only */
+```
+
+#### Font Weight System (Only 3 weights)
+```css
+--font-normal: 400     /* Body text, secondary text */
+--font-semibold: 600   /* Headings, emphasis */
+--font-bold: 700       /* Primary headings, CTAs */
+```
+
+#### Line Height System
+```css
+--leading-tight: 1.2   /* Headings */
+--leading-normal: 1.5  /* Body text (accessibility minimum) */
+--leading-relaxed: 1.6 /* Large body text */
+```
+
+### Typography Usage Guidelines
+
+#### Semantic Hierarchy
+```html
+<!-- Hero Title (once per page) -->
+<h1 class="text-hero font-bold leading-tight">
+
+<!-- Page Headings -->
+<h1 class="text-4xl font-bold leading-tight">
+
+<!-- Section Headings -->
+<h2 class="text-2xl font-semibold leading-tight">
+
+<!-- Subsection Headings -->
+<h3 class="text-xl font-semibold leading-tight">
+
+<!-- Body Text -->
+<p class="text-base font-normal leading-normal">
+
+<!-- Large Body / Lead Text -->
+<p class="text-lg font-normal leading-relaxed">
+
+<!-- Secondary Text -->
+<p class="text-sm font-normal leading-normal">
+
+<!-- Labels / Captions -->
+<span class="text-xs font-normal leading-normal uppercase tracking-wide">
+```
+
+#### Responsive Typography
+```css
+/* Only use clamp for hero titles */
 .hero-title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  line-height: 0.9;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
   letter-spacing: -0.02em;
 }
-\`\`\`
+
+/* All other text should use fixed sizes with responsive design */
+```
+
+### Implementation Recommendations
+
+#### Phase 1: Audit and Replace
+1. **Replace oversized headings**: text-5xl, text-6xl → text-4xl or text-hero
+2. **Consolidate body text**: text-lg, text-xl → text-base or text-lg only
+3. **Unify weights**: Replace font-medium, font-extrabold → font-semibold, font-bold
+
+#### Phase 2: Accessibility Compliance
+1. **Minimum body text**: Ensure all body text is 16px (text-base) minimum
+2. **Contrast ratios**: Verify 4.5:1 minimum contrast
+3. **Line height**: Ensure 1.5 minimum for body text
+
+#### Phase 3: Systematic Application
+1. **Create typography utility classes**
+2. **Document component-specific usage**
+3. **Establish review process for new typography**
+
+### Migration Guide
+
+**Current → Recommended:**
+- `text-xs` → Keep (12px for labels only)
+- `text-sm` → Keep (14px for secondary text)
+- `text-base` → Keep (16px body text)
+- `text-lg` → Keep (18px large body)
+- `text-xl` → Keep (24px small headings)
+- `text-2xl` → Keep (32px section headings)
+- `text-3xl` → Replace with `text-2xl`
+- `text-4xl` → Keep (48px page headings)
+- `text-5xl, text-6xl` → Replace with `text-4xl` or `text-hero`
+- Custom clamps → Replace with `text-hero` for hero titles only
 
 ## Spacing System
 

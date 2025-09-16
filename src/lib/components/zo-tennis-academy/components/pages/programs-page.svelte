@@ -113,10 +113,10 @@
 	<!-- Page Header -->
 	<section class="py-24 bg-card border-b border-primary/20">
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12 text-center">
-			<h1 class="text-5xl md:text-6xl font-bold mb-4">
+			<h1 class="text-page-heading mb-4">
 				NAŠE <span class="text-primary">PROGRAMY</span>
 			</h1>
-			<p class="text-xl text-muted-foreground max-w-2xl mx-auto">Vyberte si program, který nejlépe odpovídá vašim potřebám a tenisovým ambicím</p>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Vyberte si program, který nejlépe odpovídá vašim potřebám a tenisovým ambicím</p>
 		</div>
 	</section>
 
@@ -183,8 +183,8 @@
 			<!-- Bottom CTA -->
 			<Card class="bg-primary text-primary-foreground tennis-hover">
 				<CardContent class="p-8 text-center">
-					<h3 class="text-2xl font-bold mb-4">Nevíte, který program je pro vás ten pravý?</h3>
-					<p class="text-lg mb-6 opacity-90">Kontaktujte nás a my vám pomůžeme vybrat ideální program podle vašich potřeb a cílů.</p>
+					<h3 class="font-bold mb-4">Nevíte, který program je pro vás ten pravý?</h3>
+					<p class="text-base mb-6 opacity-90">Kontaktujte nás a my vám pomůžeme vybrat ideální program podle vašich potřeb a cílů.</p>
 					<Button onclick={() => navigateTo("contact")} variant="secondary" size="lg" class="bg-white text-primary hover:bg-gray-100 font-semibold tennis-hover">
 						Kontaktovat nás
 						<ArrowRight size={20} class="ml-2" />

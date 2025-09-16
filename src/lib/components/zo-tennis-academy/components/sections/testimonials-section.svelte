@@ -27,7 +27,7 @@
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12 relative z-10">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
-			<h2 class="uppercase font-extrabold tracking-tight text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight mb-4">
+			<h2 class="text-section-heading mb-4">
 				REFERENCE
 			</h2>
 			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Co o nás říkají naši hráči a rodiče.</p>
@@ -55,7 +55,7 @@
 						<!-- Author -->
 						<div class="text-center">
 							<div class="font-semibold">{testimonial.name}</div>
-							<div class="text-sm text-muted-foreground">{testimonial.role}</div>
+							<div class="text-base text-muted-foreground">{testimonial.role}</div>
 						</div>
 					</CardContent>
 				</Card>

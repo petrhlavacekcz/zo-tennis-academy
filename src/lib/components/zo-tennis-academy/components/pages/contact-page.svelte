@@ -49,10 +49,10 @@
 	<!-- Page Header -->
 	<section class="py-24 bg-card border-b border-primary/20">
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12 text-center">
-			<h1 class="text-4xl md:text-5xl font-bold mb-4">
+			<h1 class="text-page-heading mb-4">
 				<span class="text-primary">KONTAKT</span>
 			</h1>
-			<p class="text-xl text-muted-foreground max-w-2xl mx-auto">Máte otázky nebo chcete rezervovat lekci? Jsme tu pro vás!</p>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Máte otázky nebo chcete rezervovat lekci? Jsme tu pro vás!</p>
 		</div>
 	</section>
 

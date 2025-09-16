@@ -31,15 +31,15 @@
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<div class="flex items-center justify-between h-16">
 			<!-- Logo -->
-			<button onclick={() => handleNavigation("home")} class="flex items-center gap-2 text-2xl font-bold hover:text-primary transition-colors">
+			<button onclick={() => handleNavigation("home")} class="flex items-center gap-2 text-2xl font-bold logo-hover">
 				<span class="text-primary">ZO</span>
-				<span>TENNIS</span>
+				<span class="logo-tennis">TENNIS</span>
 			</button>
 
 			<!-- Desktop Navigation -->
 			<nav class="hidden md:flex items-center gap-8">
 				{#each navItems as item}
-					<button onclick={() => handleNavigation(item.id)} class={`font-medium uppercase tracking-wide transition-colors hover:underline hover:decoration-2 hover:decoration-primary ${currentPage === item.id ? "text-primary" : "text-muted-foreground"}`}>
+					<button onclick={() => handleNavigation(item.id)} class={`font-medium uppercase tracking-wide menu-item ${currentPage === item.id ? "active" : "text-muted-foreground"}`}>
 						{item.label}
 					</button>
 				{/each}
@@ -52,7 +52,7 @@
 			</div>
 
 			<!-- Mobile Menu Button -->
-			<button onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)} class="md:hidden p-2 hover:bg-accent rounded-md transition-colors">
+			<button onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)} class="md:hidden mobile-menu-btn p-2">
 				{#if isMobileMenuOpen}
 					<X size={24} />
 				{:else}

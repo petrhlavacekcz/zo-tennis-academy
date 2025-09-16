@@ -57,7 +57,7 @@
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
-			<h2 class="uppercase font-extrabold tracking-tight text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight mb-4">
+			<h2 class="text-section-heading mb-4">
 				NAŠE <span class="text-primary">PROGRAMY</span>
 			</h2>
 			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Vyberte si program, který nejlépe odpovídá vašim potřebám a tenisovým ambicím.</p>
@@ -74,7 +74,7 @@
 							</div>
 							<div>
 								<CardTitle class="text-xl tracking-wide">{program.title}</CardTitle>
-								<p class="text-sm text-muted-foreground">{program.subtitle}</p>
+								<p class="text-base text-muted-foreground">{program.subtitle}</p>
 							</div>
 						</div>
 					</CardHeader>
@@ -89,7 +89,7 @@
 							{#each program.features as feature}
 								<div class="flex items-center gap-2">
 									<div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
-									<span class="text-sm">{feature}</span>
+									<span class="text-base">{feature}</span>
 								</div>
 							{/each}
 						</div>

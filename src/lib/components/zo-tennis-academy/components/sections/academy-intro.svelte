@@ -15,7 +15,7 @@
 		<div class="grid lg:grid-cols-2 gap-12 items-center">
 			<!-- Left Column - Content -->
 			<div>
-				<h2 class="uppercase font-extrabold tracking-tight text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight mb-6">
+				<h2 class="text-section-heading mb-6">
 					PERSONALIZOVANÝ PŘÍSTUP K <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">TENISU</span>
 				</h2>
 				<p class="text-lg text-muted-foreground mb-8 leading-relaxed">V ZO Tennis Academy věříme, že každý hráč je jedinečný. Naše programy jsou navrženy tak, aby maximalizovaly váš potenciál prostřednictvím individuálního přístupu a profesionálního vedení.</p>
@@ -27,7 +27,7 @@
 							<div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
 							<div>
 								<h4 class="font-semibold mb-1">{feature.title}</h4>
-								<p class="text-sm text-muted-foreground">{feature.description}</p>
+								<p class="text-base text-muted-foreground">{feature.description}</p>
 							</div>
 						</div>
 					{/each}

@@ -13,15 +13,15 @@
 
 	let coaches = [
 		{
-			name: "Zuzana Ondraskova",
-			role: "Hlavní trenérka & Zakladatelka",
+			name: "Zuzana Ondrášková",
+			role: "hlavní trenérka a zakladatelka",
 			image: "/zuzka-dark.png",
 			achievements: ["Bývalá hráčka WTA", "74. místo světového žebříčku", "Účast na Grand Slam turnajích"],
 			specialization: "Technická dokonalost, mentální příprava",
 		},
 		{
 			name: "Michał Kowalski",
-			role: "Technický specialista",
+			role: "trenér a technický specialista",
 			image: "/michal-dark.png",
 			achievements: ["Sparingpartner TOP 100 WTA", "Vítěz národních turnajů", "Mezinárodní zkušenosti"],
 			specialization: "Taktická příprava, perfekcionistický přístup",
@@ -33,7 +33,7 @@
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
 		<div class="text-center mb-16">
-			<h2 class="uppercase font-extrabold tracking-tight text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight mb-4">
+			<h2 class="text-section-heading mb-4">
 				NAŠI <span class="text-primary">TRENÉŘI</span>
 			</h2>
 			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Učte se od nejlepších. Naši trenéři kombinují profesionální zkušenosti s vášní pro tenis.</p>
@@ -47,10 +47,10 @@
 						<!-- Coach Image -->
 						<div class="relative overflow-hidden aspect-[3/4] -mx-6">
 							<img src={assets + coach.image} alt={coach.name} class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-500" />
-							<!-- Minimal gradient overlay with name/role -->
-							<div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/60 via-black/10 to-transparent">
-								<h3 class="text-sm md:text-base font-semibold text-white leading-tight break-words">{coach.name}</h3>
-								<p class="text-xs md:text-sm text-white/90 break-words">{coach.role}</p>
+							<!-- Enhanced gradient overlay with better positioned name/role -->
+							<div class="absolute inset-x-0 bottom-0 pl-12 pr-6 pb-6 pt-12 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+								<h3 class="text-xl md:text-2xl font-bold text-white leading-tight break-words mb-2">{coach.name}</h3>
+								<p class="text-base md:text-lg text-white/95 font-semibold break-words leading-snug">{coach.role}</p>
 							</div>
 						</div>
 
@@ -62,7 +62,7 @@
 
 							<ul class="space-y-2 mb-6 text-muted-foreground">
 								{#each coach.achievements as achievement}
-									<li class="flex items-start gap-2 text-sm leading-relaxed break-words">
+									<li class="flex items-start gap-2 text-base leading-relaxed break-words">
 										<div class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
 										<span>{achievement}</span>
 									</li>

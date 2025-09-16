@@ -17,7 +17,7 @@
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12 py-6">
 		<nav class="flex flex-col gap-4">
 			{#each navItems as item, index}
-				<button onclick={() => handleNavigation(item.id)} class={`text-left py-3 px-4 rounded-md font-medium uppercase tracking-wide transition-all duration-300 hover:bg-accent ${currentPage === item.id ? "text-primary bg-accent" : "text-muted-foreground"}`} style={`animation-delay: ${index * 100}ms`}>
+				<button onclick={() => handleNavigation(item.id)} class={`mobile-menu-item text-left py-3 px-4 font-medium uppercase tracking-wide ${currentPage === item.id ? "text-primary bg-accent" : "text-muted-foreground"}`} style={`animation-delay: ${index * 100}ms`}>
 					{item.label}
 				</button>
 			{/each}
