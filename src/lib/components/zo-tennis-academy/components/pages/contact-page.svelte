@@ -89,7 +89,7 @@
 								<Textarea id="message" bind:value={formData.message} placeholder="Napište nám vaši zprávu..." required class="mt-1 min-h-32" />
 							</div>
 
-							<Button type="submit" class="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold tennis-hover">Odeslat zprávu</Button>
+							<Button type="submit" class="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold tennis-hover">ODESLAT ZPRÁVU</Button>
 						</form>
 					</CardContent>
 				</Card>

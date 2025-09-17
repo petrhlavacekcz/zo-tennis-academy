@@ -23,11 +23,11 @@
 		<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
 			<Button onclick={() => navigateTo("contact")} size="lg" variant="secondary" class="bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 text-base tennis-hover group">
 				<Phone size={20} class="mr-2" />
-				Rezervovat zkušební lekci
+				REZERVOVAT ZKUŠEBNÍ LEKCI
 				<ArrowRight size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
 			</Button>
 
-			<Button onclick={() => navigateTo("programs")} size="lg" variant="outline" class="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-base tennis-hover">Prohlédnout programy</Button>
+			<Button onclick={() => navigateTo("programs")} size="lg" variant="outline" class="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-base tennis-hover">PROHLÉDNOUT PROGRAMY</Button>
 		</div>
 
 		<!-- Contact Info -->

@@ -13,11 +13,15 @@
 	let { navItems, currentPage, handleNavigation, themeMode, setThemeMode }: Props = $props();
 </script>
 
-<div class="md:hidden glass border-t">
+<div class="md:hidden glass-tennis border-t">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12 py-6">
 		<nav class="flex flex-col gap-4">
 			{#each navItems as item, index}
-				<button onclick={() => handleNavigation(item.id)} class={`mobile-menu-item text-left py-3 px-4 font-medium uppercase tracking-wide ${currentPage === item.id ? "text-primary bg-accent" : "text-muted-foreground"}`} style={`animation-delay: ${index * 100}ms`}>
+				<button
+					onclick={() => handleNavigation(item.id)}
+					class={`mobile-menu-item-tennis text-left py-3 px-4 font-medium uppercase tracking-wide ${currentPage === item.id ? "text-primary bg-accent" : "text-muted-foreground"}`}
+					style={`animation-delay: ${index * 100}ms`}
+				>
 					{item.label}
 				</button>
 			{/each}

@@ -186,7 +186,7 @@
 					<h3 class="font-bold mb-4">Nevíte, který program je pro vás ten pravý?</h3>
 					<p class="text-base mb-6 opacity-90">Kontaktujte nás a my vám pomůžeme vybrat ideální program podle vašich potřeb a cílů.</p>
 					<Button onclick={() => navigateTo("contact")} variant="secondary" size="lg" class="bg-white text-primary hover:bg-gray-100 font-semibold tennis-hover">
-						Kontaktovat nás
+						KONTAKTOVAT NÁS
 						<ArrowRight size={20} class="ml-2" />
 					</Button>
 				</CardContent>

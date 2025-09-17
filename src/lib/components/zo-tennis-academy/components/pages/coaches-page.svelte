@@ -88,7 +88,7 @@
 									<div class="flex flex-col sm:flex-row gap-4">
 										<Button class="bg-primary hover:bg-primary/90 text-primary-foreground tennis-hover">
 											<Phone size={16} class="mr-2" />
-											Rezervovat lekci
+											REZERVOVAT LEKCI
 										</Button>
 														<!--
 

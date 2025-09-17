@@ -73,12 +73,40 @@ if (typeof window !== 'undefined') {
 	}
 
 	:global(.tennis-hover) {
-		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	:global(.tennis-hover::before) {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 0;
+		height: 0;
+		background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+		transform: translate(-50%, -50%);
+		transition: all 0.4s ease;
+		border-radius: 50%;
+	}
+
+	:global(.tennis-hover:hover::before) {
+		width: 200px;
+		height: 200px;
 	}
 
 	:global(.tennis-hover:hover) {
-		transform: translateY(-2px);
-		box-shadow: 0 10px 25px rgba(255, 106, 0, 0.2);
+		transform: translateY(-2px) scale(1.02);
+		box-shadow: 0 8px 25px rgba(255, 106, 0, 0.25);
+	}
+
+	:global(.tennis-hover:active) {
+		transform: translateY(0) scale(0.98);
+		transition: all 0.1s ease;
 	}
 
 	:global(.tennis-ball-bounce) {

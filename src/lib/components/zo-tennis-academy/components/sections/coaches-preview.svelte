@@ -77,7 +77,7 @@
 		<!-- CTA -->
 		<div class="text-center">
 			<Button onclick={() => navigateTo("coaches")} size="lg" class="tennis-hover group">
-				Více o našich trenérech
+				VÍCE O NAŠICH TRENÉRECH
 				<ArrowRight size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
 			</Button>
 		</div>
