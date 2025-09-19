@@ -131,6 +131,94 @@
   box-shadow: 0 8px 30px color-mix(in oklch, var(--foreground) 8%, transparent);
 }
 
+/* Enhanced modern glassmorphic styling for program cards */
+.glass-modern {
+  background: color-mix(in oklch, var(--card) 70%, transparent);
+  backdrop-filter: blur(20px) saturate(1.2);
+  border: 1px solid color-mix(in oklch, var(--border) 50%, transparent);
+  box-shadow:
+    0 8px 32px color-mix(in oklch, var(--foreground) 6%, transparent),
+    inset 0 1px 0 color-mix(in oklch, var(--card) 30%, transparent);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-modern:hover {
+  background: color-mix(in oklch, var(--card) 75%, transparent);
+  backdrop-filter: blur(24px) saturate(1.3);
+  border-color: color-mix(in oklch, var(--primary) 25%, transparent);
+  box-shadow:
+    0 12px 40px color-mix(in oklch, var(--primary) 10%, transparent),
+    0 4px 16px color-mix(in oklch, var(--foreground) 8%, transparent),
+    inset 0 1px 0 color-mix(in oklch, var(--card) 40%, transparent);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Special styling for kempy (camps) card */
+.glass-kempy {
+  background: linear-gradient(135deg,
+    color-mix(in oklch, var(--primary) 15%, transparent) 0%,
+    color-mix(in oklch, var(--card) 70%, transparent) 100%);
+  backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid color-mix(in oklch, var(--primary) 30%, transparent);
+  box-shadow:
+    0 8px 32px color-mix(in oklch, var(--primary) 12%, transparent),
+    inset 0 1px 0 color-mix(in oklch, var(--card) 40%, transparent);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-kempy:hover {
+  background: linear-gradient(135deg,
+    color-mix(in oklch, var(--primary) 20%, transparent) 0%,
+    color-mix(in oklch, var(--card) 75%, transparent) 100%);
+  backdrop-filter: blur(24px) saturate(1.4);
+  border-color: color-mix(in oklch, var(--primary) 40%, transparent);
+  box-shadow:
+    0 16px 48px color-mix(in oklch, var(--primary) 15%, transparent),
+    0 4px 16px color-mix(in oklch, var(--foreground) 8%, transparent),
+    inset 0 1px 0 color-mix(in oklch, var(--card) 50%, transparent);
+  transform: translateY(-3px) scale(1.01);
+}
+
+/* Responsive adjustments for glassmorphic cards */
+@media (max-width: 768px) {
+  .glass-modern:hover,
+  .glass-kempy:hover {
+    /* Reduce transform effects on mobile for better performance */
+    transform: translateY(-1px) scale(1.01);
+  }
+
+  .glass-modern,
+  .glass-kempy {
+    /* Slightly reduce blur on mobile for better performance */
+    backdrop-filter: blur(16px) saturate(1.1);
+  }
+}
+
+/* Program card image optimizations */
+.program-image {
+  background-color: var(--accent);
+  background-image: linear-gradient(45deg, transparent 25%, var(--border) 25%, var(--border) 50%, transparent 50%, transparent 75%, var(--border) 75%);
+  background-size: 20px 20px;
+  animation: loading-shimmer 1.5s ease-in-out infinite;
+}
+
+.program-image img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.program-image img[loading] {
+  opacity: 0;
+}
+
+.program-image img:not([loading]) {
+  opacity: 1;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
 
 /* Orange underline hover for links/nav */
 .underline-orange{background-image:linear-gradient(currentColor,currentColor);background-position:0 100%;background-size:0% 2px;background-repeat:no-repeat;transition:background-size .2s ease,color .2s ease}
