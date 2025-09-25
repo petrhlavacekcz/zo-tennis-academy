@@ -38,15 +38,15 @@
 	<section class="py-24">
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<div class="space-y-16">
-				{#each coaches as coach}
-					<Card class="glass overflow-hidden shadow-sm transition hover:shadow-md hover-scale p-0">
-						<CardContent class="p-0">
-							<div class="grid lg:grid-cols-5 items-stretch gap-0">
-								<!-- Coach Image -->
-								<div class="lg:col-span-2 relative aspect-[3/4] lg:aspect-auto lg:h-full">
-									<img src={assets + coach.image} alt={coach.name} class="absolute inset-0 w-full h-full object-cover object-center block" />
-									<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent lg:hidden"></div>
-								</div>
+			{#each coaches as coach}
+				<Card class="glass overflow-hidden shadow-sm border-none">
+					<CardContent class="p-0">
+						<div class="grid lg:grid-cols-5 items-stretch gap-0">
+							<!-- Coach Image -->
+							<div class="card-media lg:col-span-2 aspect-[3/4] lg:aspect-auto lg:h-full">
+								<img src={assets + coach.image} alt={coach.name} loading="lazy" class="object-center" />
+								<div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent lg:hidden"></div>
+							</div>
 
 								<!-- Coach Information -->
 								<div class="lg:col-span-3 p-8 lg:p-12">

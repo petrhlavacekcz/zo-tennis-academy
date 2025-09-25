@@ -61,7 +61,7 @@
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<div class="grid lg:grid-cols-2 gap-12">
 				<!-- Contact Form -->
-				<Card class="shadow-none ring-1 ring-border/10 hover:ring-border/30 bg-transparent transition">
+				<Card class="shadow-sm bg-card/95">
 					<CardHeader>
 						<CardTitle class="text-2xl">Napište nám</CardTitle>
 						<p class="text-muted-foreground">Vyplňte formulář a my se vám ozveme do 24 hodin.</p>
@@ -97,7 +97,7 @@
 				<!-- Contact Information -->
 				<div class="space-y-8">
 					<!-- Contact Details -->
-					<Card class="shadow-none ring-1 ring-border/10 hover:ring-border/30 bg-transparent transition">
+					<Card class="shadow-sm bg-card/95">
 						<CardHeader>
 							<CardTitle class="text-2xl">Kontaktní údaje</CardTitle>
 						</CardHeader>
@@ -136,7 +136,7 @@
 					</Card>
 
 					<!-- Map -->
-					<Card class="shadow-none ring-1 ring-border/10 hover:ring-border/30 bg-transparent transition">
+					<Card class="shadow-sm bg-card/95">
 						<CardHeader>
 							<CardTitle class="text-2xl">Kde nás najdete</CardTitle>
 						</CardHeader>
@@ -148,7 +148,7 @@
 					</Card>
 
 					<!-- FAQ -->
-					<Card class="shadow-none ring-1 ring-border/10 hover:ring-border/30 bg-transparent transition">
+					<Card class="shadow-sm bg-card/95">
 						<CardHeader>
 							<CardTitle class="text-2xl">Často kladené otázky</CardTitle>
 						</CardHeader>

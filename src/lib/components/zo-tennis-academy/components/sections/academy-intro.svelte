@@ -42,13 +42,13 @@
 
 			<!-- Right Column - Image -->
 			<div class="relative">
-				<Card class="overflow-hidden rounded-xl shadow-none ring-1 ring-transparent hover:ring-border/30 bg-transparent transition">
+				<Card class="overflow-hidden border-none shadow-none bg-transparent">
 					<CardContent class="p-0">
-						<img src={assets + "/zo-tennis-academy.jpg"} alt="Tennis training session" class="w-full h-96 object-cover" />
+						<div class="card-media h-96">
+							<img src={assets + "/zo-tennis-academy.jpg"} alt="Tennis training session" loading="lazy" />
+						</div>
 					</CardContent>
 				</Card>
-
-
 			</div>
 		</div>
 	</div>

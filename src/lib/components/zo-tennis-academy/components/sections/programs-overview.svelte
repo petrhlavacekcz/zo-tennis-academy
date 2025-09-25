@@ -89,16 +89,12 @@
 		<!-- Regular Programs Grid (2x2) -->
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
 			{#each regularPrograms as program}
-				<Card class="group glass-modern h-full overflow-hidden shadow-none border-none transition hover:shadow-md p-0">
+				<Card class="glass-modern h-full border-none shadow-none">
 					<CardContent class="p-0">
 						<!-- Program Image -->
-						<div class="relative aspect-[4/3] overflow-hidden -mx-6">
-							<img
-								src={program.image}
-								alt={program.title}
-								class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-500"
-							/>
-							<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+						<div class="card-media aspect-[4/3]">
+							<img src={program.image} alt={program.title} loading="lazy" />
+							<div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent"></div>
 						</div>
 
 						<!-- Program Details -->
@@ -135,17 +131,13 @@
 
 		<!-- Kempy Card (Full Width) -->
 		<div class="mb-12">
-			<Card class="group glass-kempy h-full overflow-hidden shadow-none border-none transition hover:shadow-md p-0">
+			<Card class="glass-kempy h-full border-none shadow-none">
 				<CardContent class="p-0">
 					<div class="grid lg:grid-cols-2 gap-0 items-stretch">
 						<!-- Left side: Image -->
-						<div class="relative aspect-[4/3] lg:aspect-auto lg:h-full overflow-hidden">
-							<img
-								src={kempyProgram.image}
-								alt={kempyProgram.title}
-								class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-500"
-							/>
-							<div class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent lg:bg-gradient-to-r lg:from-black/60 lg:via-black/30 lg:to-transparent"></div>
+						<div class="card-media aspect-[4/3] lg:aspect-auto lg:h-full">
+							<img src={kempyProgram.image} alt={kempyProgram.title} loading="lazy" />
+							<div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/25 to-transparent lg:bg-gradient-to-r lg:from-black/60 lg:via-black/30 lg:to-transparent"></div>
 						</div>
 
 						<!-- Right side: Content -->

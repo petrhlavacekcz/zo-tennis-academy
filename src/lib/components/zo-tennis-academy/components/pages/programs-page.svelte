@@ -133,23 +133,19 @@
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<!-- Regular Programs Grid (2x2) -->
 			<div class="grid md:grid-cols-2 gap-8 mb-16">
-				{#each regularPrograms as program}
-					<Card class="group glass-modern h-full overflow-hidden shadow-sm transition hover:shadow-md p-0">
-						<CardContent class="p-0">
-							<!-- Program Image -->
-							<div class="relative aspect-[4/3] overflow-hidden">
-								<img
-									src={program.image}
-									alt={program.title}
-									class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-500"
-								/>
-								<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-								<div class="absolute top-4 left-4">
-									<div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
-										<program.icon size={24} class="text-white" />
-									</div>
+			{#each regularPrograms as program}
+				<Card class="glass-modern h-full border-none shadow-none">
+					<CardContent class="p-0">
+						<!-- Program Image -->
+						<div class="card-media aspect-[4/3]">
+							<img src={program.image} alt={program.title} loading="lazy" />
+							<div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-transparent"></div>
+							<div class="absolute top-4 left-4">
+								<div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+									<program.icon size={24} class="text-white" />
 								</div>
 							</div>
+						</div>
 
 							<!-- Program Details -->
 							<div class="p-6">
@@ -214,17 +210,13 @@
 
 			<!-- Kempy Card (Full Width) -->
 			<div class="mb-16">
-				<Card class="group glass-kempy h-full overflow-hidden shadow-sm transition hover:shadow-md p-0">
+				<Card class="glass-kempy h-full border-none shadow-none">
 					<CardContent class="p-0">
 						<div class="grid lg:grid-cols-2 gap-0 items-stretch">
 							<!-- Left side: Image -->
-							<div class="relative aspect-[4/3] lg:aspect-auto lg:h-full overflow-hidden">
-								<img
-									src={kempyProgram.image}
-									alt={kempyProgram.title}
-									class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-500"
-								/>
-								<div class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent lg:bg-gradient-to-r lg:from-black/60 lg:via-black/30 lg:to-transparent"></div>
+							<div class="card-media aspect-[4/3] lg:aspect-auto lg:h-full">
+								<img src={kempyProgram.image} alt={kempyProgram.title} loading="lazy" />
+								<div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/25 to-transparent lg:bg-gradient-to-r lg:from-black/60 lg:via-black/30 lg:to-transparent"></div>
 								<div class="absolute top-4 left-4">
 									<div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
 										<kempyProgram.icon size={24} class="text-white" />
@@ -297,7 +289,7 @@
 			</div>
 
 			<!-- Bottom CTA -->
-			<Card class="bg-primary text-primary-foreground tennis-hover">
+			<Card class="bg-primary text-primary-foreground">
 				<CardContent class="p-8 text-center">
 					<h3 class="font-bold mb-4">Nevíte, který program je pro vás ten pravý?</h3>
 					<p class="text-base mb-6 opacity-90">Kontaktujte nás a my vám pomůžeme vybrat ideální program podle vašich potřeb a cílů.</p>

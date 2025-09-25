@@ -42,13 +42,13 @@
 		<!-- Coaches Grid -->
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mb-12 max-w-4xl mx-auto">
 			{#each coaches as coach}
-				<Card class="group glass overflow-hidden shadow-sm transition hover:shadow-md hover-scale p-0">
+				<Card class="glass overflow-hidden shadow-sm border-none">
 					<CardContent class="p-0">
 						<!-- Coach Image -->
-						<div class="relative overflow-hidden aspect-[3/4] -mx-6">
-							<img src={assets + coach.image} alt={coach.name} class="w-full h-full object-cover block group-hover:scale-105 transition-transform duration-500" />
+						<div class="card-media aspect-[3/4]">
+							<img src={assets + coach.image} alt={coach.name} loading="lazy" />
 							<!-- Enhanced gradient overlay with better positioned name/role -->
-							<div class="absolute inset-x-0 bottom-0 pl-12 pr-6 pb-6 pt-12 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+							<div class="absolute inset-x-0 bottom-0 pl-10 pr-6 pb-6 pt-12 bg-gradient-to-t from-black/85 via-black/55 to-transparent">
 								<h3 class="text-xl md:text-2xl font-bold text-white leading-tight break-words mb-2">{coach.name}</h3>
 								<p class="text-base md:text-lg text-white/95 font-semibold break-words leading-snug">{coach.role}</p>
 							</div>
