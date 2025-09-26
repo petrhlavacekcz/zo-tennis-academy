@@ -587,10 +587,7 @@ img { display: block; }
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg,
-      hsla(var(--primary), 0.08),
-      hsla(var(--primary), 0.12)
-    );
+    background: rgba(255, 255, 255, 0.1);
     opacity: 0;
     transform: scale(0.95);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -611,7 +608,6 @@ img { display: block; }
   }
 
   .menu-item-tennis:hover {
-    color: hsl(var(--primary));
     transform: translateY(-2px);
   }
 
@@ -626,7 +622,7 @@ img { display: block; }
 
   /* Active menu item */
   .menu-item-tennis.active {
-    color: hsl(var(--primary));
+    /* Color is handled by component classes */
   }
 
   .menu-item-tennis.active::before {
@@ -673,47 +669,15 @@ img { display: block; }
     background: hsla(var(--primary), 0.12);
   }
   
-  /* Enhanced logo with tennis ball animation */
+  /* Enhanced logo without animation */
   .logo-tennis-enhanced {
     position: relative;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .logo-tennis-enhanced::after {
-    content: '🎾';
-    position: absolute;
-    top: -8px;
-    right: -24px;
-    font-size: 12px;
-    opacity: 0;
-    transform: scale(0) rotate(0deg);
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: none;
   }
 
   .logo-tennis-enhanced:hover {
-    transform: scale(1.08) translateY(-2px);
-    filter: drop-shadow(0 6px 16px hsla(var(--primary), 0.4));
-  }
-
-  .logo-tennis-enhanced:hover::after {
-    opacity: 1;
-    transform: scale(1) rotate(360deg);
-    animation: logo-ball-bounce 1.5s ease-in-out infinite;
-  }
-
-  .logo-tennis-enhanced:hover .logo-zo {
-    color: hsl(var(--primary));
-    text-shadow: 0 0 16px hsla(var(--primary), 0.8);
-  }
-
-  .logo-tennis-enhanced:hover .logo-tennis-text {
-    color: hsl(var(--primary));
-    text-shadow: 0 0 12px hsla(var(--primary), 0.6);
-  }
-
-  @keyframes logo-ball-bounce {
-    0%, 100% { transform: scale(1) rotate(360deg) translateY(0); }
-    50% { transform: scale(1.1) rotate(540deg) translateY(-3px); }
+    transform: none;
+    filter: none;
   }
   
   /* Enhanced mobile menu button with tennis theme */
@@ -749,24 +713,7 @@ img { display: block; }
     box-shadow: 0 4px 12px hsla(var(--primary), 0.3);
   }
 
-  /* Enhanced glass morphism for header */
-  .glass-tennis {
-    background: color-mix(in oklch, var(--card) 65%, transparent);
-    backdrop-filter: blur(16px) saturate(1.2);
-    border: 1px solid color-mix(in oklch, var(--border) 50%, transparent);
-    box-shadow:
-      0 8px 32px color-mix(in oklch, var(--foreground) 6%, transparent),
-      inset 0 1px 0 color-mix(in oklch, var(--card) 20%, transparent);
-    transition: all 0.3s ease;
-  }
 
-  .glass-tennis:hover {
-    backdrop-filter: blur(20px) saturate(1.3);
-    border-color: color-mix(in oklch, var(--primary) 20%, transparent);
-    box-shadow:
-      0 12px 40px color-mix(in oklch, var(--primary) 8%, transparent),
-      inset 0 1px 0 color-mix(in oklch, var(--card) 30%, transparent);
-  }
 
   /* Magnetic effect for desktop menu items */
   .magnetic-item {

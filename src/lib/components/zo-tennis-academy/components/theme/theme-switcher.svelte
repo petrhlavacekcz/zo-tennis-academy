@@ -1,37 +1,32 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
 	import { Sun, Moon, Monitor } from "@lucide/svelte";
 
 	interface Props {
 		mode: 'light' | 'dark' | 'system';
 		setThemeMode: (m: 'light' | 'dark' | 'system') => void;
+		textColor?: string;
+		iconFilter?: string;
 	}
 
-	let { mode, setThemeMode }: Props = $props();
+	let { mode, setThemeMode, textColor = "text-white", iconFilter = "" }: Props = $props();
 
-
-	let open = $state(false);
-	function pick(m: 'light' | 'dark' | 'system') {
-		setThemeMode(m);
-		open = false;
+	function cycleTheme() {
+		if (mode === 'light') {
+			setThemeMode('dark');
+		} else if (mode === 'dark') {
+			setThemeMode('system');
+		} else {
+			setThemeMode('light');
+		}
 	}
 </script>
 
-<div class="relative">
-	<Button onclick={() => (open = !open)} variant="outline" size="sm" class="bg-background/80 backdrop-blur-sm border-border hover:bg-accent rounded-full">
-		{#if mode === 'dark'}
-			<Moon size={16} />
-		{:else if mode === 'light'}
-			<Sun size={16} />
-		{:else}
-			<Monitor size={16} />
-		{/if}
-	</Button>
-	{#if open}
-		<div class="absolute right-0 mt-2 w-36 rounded-md border bg-card shadow-md p-1 z-50">
-			<button class="w-full flex items-center gap-2 px-3 py-2 rounded hover:bg-accent" onclick={() => pick('light')}><Sun size={14} /> Light</button>
-			<button class="w-full flex items-center gap-2 px-3 py-2 rounded hover:bg-accent" onclick={() => pick('dark')}><Moon size={14} /> Dark</button>
-			<button class="w-full flex items-center gap-2 px-3 py-2 rounded hover:bg-accent" onclick={() => pick('system')}><Monitor size={14} /> System</button>
-		</div>
+<button onclick={cycleTheme} class={`p-2 ${textColor} hover:text-primary transition-colors`} style={iconFilter}>
+	{#if mode === 'dark'}
+		<Moon size={20} />
+	{:else if mode === 'light'}
+		<Sun size={20} />
+	{:else}
+		<Monitor size={20} />
 	{/if}
-</div>
+</button>

@@ -5,6 +5,7 @@
 	import ThemeSwitcher from "../theme/theme-switcher.svelte";
 	import { onMount } from 'svelte';
 
+
 	interface Props {
 		currentPage: string;
 		navigateTo: (page: string) => void;
@@ -15,7 +16,12 @@
 	let { currentPage, navigateTo, themeMode, setThemeMode }: Props = $props();
 	let isMobileMenuOpen = $state(false);
 	let headerRef: HTMLElement;
-	let magneticItems: HTMLElement[] = [];
+
+	// Determine if current page has dark hero background
+	let isOnDarkBackground = $derived(currentPage === "home" || currentPage === "coaches" || currentPage === "programs" || currentPage === "contact");
+	let textColor = $derived(isOnDarkBackground ? "text-white" : "text-foreground");
+	let textShadow = $derived(isOnDarkBackground ? "text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);" : "");
+	let iconFilter = $derived(isOnDarkBackground ? "filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));" : "");
 
 	const navItems = [
 		{ id: "home", label: "Domů", labelEn: "HOME" },
@@ -77,13 +83,12 @@
 	});
 </script>
 
-<header bind:this={headerRef} class="sticky top-0 z-50 glass-tennis">
+<header bind:this={headerRef} class="absolute top-0 left-0 right-0 z-50 bg-transparent">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
-		<div class="flex items-center justify-between h-16">
+		<div class="flex items-center justify-between h-20 pt-4">
 			<!-- Enhanced Logo -->
-			<button onclick={() => handleNavigation("home")} class="logo-tennis-enhanced flex items-center gap-2 text-2xl font-bold">
-				<span class="logo-zo text-primary">ZO</span>
-				<span class="logo-tennis-text">TENNIS</span>
+			<button onclick={() => handleNavigation("home")} class="logo-tennis-enhanced flex items-center gap-2">
+				<img src="/zo-tennis-academy-logo.png" alt="ZO Tennis Academy" class="h-10 w-auto" />
 			</button>
 
 			<!-- Enhanced Desktop Navigation -->
@@ -91,7 +96,8 @@
 				{#each navItems as item}
 					<button
 						onclick={() => handleNavigation(item.id)}
-						class={`menu-item-tennis magnetic-item focus-tennis font-medium uppercase tracking-wide ${currentPage === item.id ? "active" : ""}`}
+						class={`menu-item-tennis magnetic-item focus-tennis font-medium uppercase tracking-wide transition-colors ${currentPage === item.id ? "text-primary" : `${textColor} hover:text-primary`}`}
+						style={textShadow}
 					>
 						{item.label}
 					</button>
@@ -101,11 +107,11 @@
 			<!-- Right controls (Desktop) -->
 			<div class="hidden md:flex items-center gap-3">
 				<Button onclick={() => handleNavigation("contact")} class="cta-tennis-enhanced focus-tennis uppercase tracking-wide">REZERVOVAT</Button>
-				<ThemeSwitcher mode={themeMode} {setThemeMode} />
+				<ThemeSwitcher mode={themeMode} {setThemeMode} {textColor} {iconFilter} />
 			</div>
 
 			<!-- Enhanced Mobile Menu Button -->
-			<button onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)} class="md:hidden mobile-menu-btn-tennis p-2">
+			<button onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)} class={`md:hidden mobile-menu-btn-tennis p-2 ${textColor} hover:text-primary transition-colors`} style={iconFilter}>
 				{#if isMobileMenuOpen}
 					<X size={24} />
 				{:else}
@@ -117,6 +123,6 @@
 
 	<!-- Mobile Menu -->
 	{#if isMobileMenuOpen}
-		<MobileMenu {navItems} {currentPage} {handleNavigation} themeMode={themeMode} {setThemeMode} />
+		<MobileMenu {navItems} {currentPage} {handleNavigation} themeMode={themeMode} {setThemeMode} {isOnDarkBackground} />
 	{/if}
 </header>

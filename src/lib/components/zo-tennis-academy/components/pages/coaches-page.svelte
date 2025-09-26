@@ -24,13 +24,25 @@
 </script>
 
 <div class="min-h-screen bg-background">
-	<!-- Page Header -->
-	<section class="py-24 bg-card border-b border-primary/20">
-		<div class="mx-auto max-w-[1320px] px-6 md:px-12 text-center">
-			<h1 class="text-page-heading mb-4">
+	<!-- Hero Section with Background -->
+	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+		<!-- Background Image with Overlay -->
+		<div class="absolute inset-0 z-0">
+			<img src="/zo-tennis-academy.jpg" alt="Tennis court background" class="w-full h-full object-cover block" />
+			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
+		</div>
+
+		<!-- Tennis Court Grid Pattern -->
+		<div class="absolute inset-0 z-10 opacity-10">
+			<div class="w-full h-full" style="background-image: linear-gradient(rgba(255,106,0,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,106,0,0.3) 1px, transparent 1px); background-size: 50px 50px;"></div>
+		</div>
+
+		<!-- Content -->
+		<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
+			<h1 class="text-page-heading mb-4 text-white">
 				NAŠI <span class="text-primary">TRENÉŘI</span>
 			</h1>
-			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Poznejte náš profesionální tým trenérů s bohatými zkušenostmi z mezinárodního tenisu</p>
+			<p class="text-lg text-white/90 max-w-2xl mx-auto">Poznejte náš profesionální tým trenérů s bohatými zkušenostmi z mezinárodního tenisu</p>
 		</div>
 	</section>
 
