@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
-	import { assets } from "$app/paths";
+	import { asset } from "$app/paths";
 
 	let features = [
 		{ title: "Zkušení trenéři", description: "Profesionální koučování od bývalých hráčů WTA" },
@@ -45,7 +45,7 @@
 				<Card class="overflow-hidden border-none shadow-none bg-transparent">
 					<CardContent class="p-0">
 						<div class="card-media h-96">
-							<img src={assets + "/zo-tennis-academy.jpg"} alt="Tennis training session" loading="lazy" />
+							<img src={asset("/zo-tennis-academy.jpg")} alt="Tennis training session" loading="lazy" />
 						</div>
 					</CardContent>
 				</Card>

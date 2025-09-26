@@ -2,7 +2,7 @@
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
 	import { Award, Phone } from "@lucide/svelte";
-	import { assets } from "$app/paths";
+	import { asset } from "$app/paths";
 
 
 	let coaches = [
@@ -28,7 +28,7 @@
 	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
 		<!-- Background Image with Overlay -->
 		<div class="absolute inset-0 z-0">
-			<img src="/zo-tennis-academy.jpg" alt="Tennis court background" class="w-full h-full object-cover block" />
+			<img src={asset("/zo-tennis-academy.jpg")} alt="Tennis court background" class="w-full h-full object-cover block" />
 			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
 		</div>
 
@@ -56,7 +56,7 @@
 						<div class="grid lg:grid-cols-5 items-stretch gap-0">
 							<!-- Coach Image -->
 							<div class="card-media lg:col-span-2 aspect-[3/4] lg:aspect-auto lg:h-full">
-								<img src={assets + coach.image} alt={coach.name} loading="lazy" class="object-center" />
+								<img src={asset(coach.image)} alt={coach.name} loading="lazy" class="object-center" />
 								<div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent lg:hidden"></div>
 							</div>
 

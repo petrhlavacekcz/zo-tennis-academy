@@ -3,7 +3,7 @@
 	import { Button } from "$lib/components/ui/button";
 
 	import { Users, Coins, Trophy, Clock, ArrowRight } from "@lucide/svelte";
-	import { assets } from "$app/paths";
+	import { asset } from "$app/paths";
 
 	interface Props {
 		navigateTo: (page: string) => void;
@@ -20,7 +20,7 @@
 			description: "Komplexní program zaměřený na technický a taktický rozvoj mladých hráčů s důrazem na správné základy.",
 			icon: Users,
 			color: "text-blue-500",
-			image: assets + "/junior.jpeg",
+			image: asset("/junior.jpeg"),
 			duration: "60–90 minut",
 			groupSize: "3–5 hráčů",
 			price: "od 250 Kč / lekce",
@@ -39,7 +39,7 @@
 			description: "Flexibilní program pro dospělé hráče všech úrovní s možností individuálního nebo skupinového tréninku.",
 			icon: Trophy,
 			color: "text-green-500",
-			image: assets + "/adult.jpeg",
+			image: asset("/adult.jpeg"),
 			duration: "60–90 minut",
 			groupSize: "1–4 hráči",
 			price: "od 300 Kč / lekce",
@@ -59,7 +59,7 @@
 			description: "Individuální lekce zaměřené na specifické potřeby každého hráče s maximální pozorností trenéra.",
 			icon: Clock,
 			color: "text-purple-500",
-			image: assets + "/private.jpeg",
+			image: asset("/private.jpeg"),
 			duration: "60–90 minut",
 			groupSize: "1 hráč",
 			price: "600 Kč / lekce",
@@ -83,7 +83,7 @@
 			description: "Program zaměřený na tenis na závodní úrovni, který je shodný s tréninkovým procesem špičkových hráčů.",
 			icon: Trophy,
 			color: "text-primary",
-			image: assets + "/professional.jpeg",
+			image: asset("/professional.jpeg"),
 			duration: "Denní / Týdenní / Měsíční – program šitý na míru",
 			groupSize: "Individuální",
 			price: "Cena na vyžádání",
@@ -103,7 +103,7 @@
 			description: "Týdenní kempy kombinující technický trénink, zápasy a zábavné aktivity pro děti všech věkových kategorií.",
 			icon: Trophy,
 			color: "text-primary",
-			image: assets + "/camps.jpeg",
+			image: asset("/camps.jpeg"),
 			duration: "5 dní",
 			groupSize: "12–16 dětí",
 			price: "Půldenní kemp / 2 800 Kč · Celodenní / 4 500 Kč",
@@ -125,7 +125,7 @@
 	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
 		<!-- Background Image with Overlay -->
 		<div class="absolute inset-0 z-0">
-			<img src="/zo-tennis-academy.jpg" alt="Tennis court background" class="w-full h-full object-cover block" />
+			<img src={asset("/zo-tennis-academy.jpg")} alt="Tennis court background" class="w-full h-full object-cover block" />
 			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
 		</div>
 

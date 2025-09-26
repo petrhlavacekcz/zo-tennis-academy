@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/button";
-
+	import { asset } from "$app/paths";
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 
@@ -52,7 +52,7 @@
 	<!-- Background Image with Overlay -->
 	<div class="absolute inset-0 z-0">
 		<!-- Use base-aware assets path to avoid 404 under subpath deployments -->
-		<img src="/zo-tennis-academy.jpg" alt="Tennis action background" class="w-full h-full object-cover block" />
+		<img src={asset("/zo-tennis-academy.jpg")} alt="Tennis action background" class="w-full h-full object-cover block" />
 		<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
 	</div>
 

@@ -4,6 +4,7 @@
 	import MobileMenu from "./mobile-menu.svelte";
 	import ThemeSwitcher from "../theme/theme-switcher.svelte";
 	import { onMount } from 'svelte';
+	import { asset } from "$app/paths";
 
 
 	interface Props {
@@ -88,7 +89,7 @@
 		<div class="flex items-center justify-between h-20 pt-4">
 			<!-- Enhanced Logo -->
 			<button onclick={() => handleNavigation("home")} class="logo-tennis-enhanced flex items-center gap-2">
-				<img src="/zo-tennis-academy-logo.png" alt="ZO Tennis Academy" class="h-10 w-auto" />
+				<img src={asset("/zo-tennis-academy-logo.png")} alt="ZO Tennis Academy" class="h-10 w-auto" />
 			</button>
 
 			<!-- Enhanced Desktop Navigation -->

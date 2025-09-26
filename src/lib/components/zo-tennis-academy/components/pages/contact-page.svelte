@@ -2,6 +2,7 @@
 	import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
 	import { Phone, Mail, MapPin, ChevronDown } from "@lucide/svelte";
+	import { asset } from "$app/paths";
 
 	let expandedFaq = $state<number | null>(null);
 
@@ -34,7 +35,7 @@
 	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
 		<!-- Background Image with Overlay -->
 		<div class="absolute inset-0 z-0">
-			<img src="/zo-tennis-academy.jpg" alt="Tennis court background" class="w-full h-full object-cover block" />
+			<img src={asset("/zo-tennis-academy.jpg")} alt="Tennis court background" class="w-full h-full object-cover block" />
 			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
 		</div>
 
@@ -100,7 +101,7 @@
 					</CardHeader>
 					<CardContent class="flex flex-1 flex-col p-0">
 						<div class="h-full min-h-[320px] w-full overflow-hidden">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164414.26148944293!2d17.845595979753472!3d49.918084725551466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713df4728419c79%3A0x9a86c21f4da6084c!2sZO%20TENNIS%20ACADEMY%20-%20Zuzana%20Ondr%C3%A1%C5%A1kov%C3%A1!5e0!3m2!1scs!2scz!4v1758808300951!5m2!1scs!2scz" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164414.26148944293!2d17.845595979753472!3d49.918084725551466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713df4728419c79%3A0x9a86c21f4da6084c!2sZO%20TENNIS%20ACADEMY%20-%20Zuzana%20Ondr%C3%A1%C5%A1kov%C3%A1!5e0!3m2!1scs!2scz!4v1758808300951!5m2!1scs!2scz" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ZO Tennis Academy location map"></iframe>
 						</div>
 					</CardContent>
 				</Card>
