@@ -1,6 +1,19 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/button";
 	import ThemeSwitcher from "../theme/theme-switcher.svelte";
+	import LangSwitcher from "./lang-switcher.svelte";
+	import { fly, fade } from "svelte/transition";
+	// @ts-ignore - lucide typed modules resolution
+	import Home from "@lucide/svelte/icons/home";
+	// @ts-ignore - lucide typed modules resolution
+	import Users from "@lucide/svelte/icons/users";
+	// @ts-ignore - lucide typed modules resolution
+	import Trophy from "@lucide/svelte/icons/trophy";
+	// @ts-ignore - lucide typed modules resolution
+	import Phone from "@lucide/svelte/icons/phone";
+	// @ts-ignore - lucide typed modules resolution
+	import ChevronLeft from "@lucide/svelte/icons/chevron-left";
+
 
 	interface Props {
 		navItems: Array<{ id: string; label: string; labelEn: string }>;
@@ -8,39 +21,107 @@
 		handleNavigation: (page: string) => void;
 		themeMode: 'light' | 'dark' | 'system';
 		setThemeMode: (m: 'light' | 'dark' | 'system') => void;
-		isOnDarkBackground: boolean;
+		locale: 'cs' | 'en';
+		onclose?: () => void;
+		onchangeLocale?: (locale: 'cs' | 'en') => void;
 	}
 
-	let { navItems, currentPage, handleNavigation, themeMode, setThemeMode, isOnDarkBackground }: Props = $props();
+	let { navItems, currentPage, handleNavigation, themeMode, setThemeMode, locale, onclose, onchangeLocale }: Props = $props();
 
-	let textColor = $derived(isOnDarkBackground ? "text-white" : "text-foreground");
-	let iconFilter = $derived(isOnDarkBackground ? "filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));" : "");
-	let menuBackground = $derived(isOnDarkBackground ? "bg-black/90 backdrop-blur-md" : "bg-white/95 backdrop-blur-md border-b border-border");
+	const iconFor = { home: Home, coaches: Users, programs: Trophy, contact: Phone } as const;
+
+
+	function navigateTo(id: string) {
+		handleNavigation(id);
+		onclose?.();
+	}
+
+	function onBackdropClick() {
+		onclose?.();
+	}
+
+	function onEscape(e: KeyboardEvent) {
+		if (e.key === 'Escape') {
+			e.stopPropagation();
+			onclose?.();
+		}
+	}
 </script>
 
-<div class={`md:hidden ${menuBackground}`}>
-	<div class="mx-auto max-w-[1320px] px-6 md:px-12 py-6">
-		<nav class="flex flex-col gap-4">
-			{#each navItems as item, index}
+<div class="fixed inset-0 z-[60]" onkeydown={onEscape} tabindex="0" aria-modal="true" role="dialog">
+	<!-- Backdrop with fade -->
+	<button
+		type="button"
+		class="absolute inset-0 bg-black/20 dark:bg-black/40"
+		aria-label="Close menu"
+		onclick={onBackdropClick}
+		transition:fade={{ duration: 200 }}
+	></button>
+
+	<!-- Panel -->
+	<aside
+		class="absolute inset-0 w-full h-full px-6 py-8 sm:px-8 bg-gradient-to-br from-gray-50/95 via-white/95 to-gray-100/95 dark:from-gray-950/95 dark:via-gray-900/95 dark:to-black/95 backdrop-blur-2xl supports-[backdrop-filter:none]:bg-white dark:supports-[backdrop-filter:none]:bg-gray-950 flex flex-col"
+		transition:fly={{ x: -100, duration: 300, opacity: 1 }}
+	>
+		<!-- Header with back button -->
+		<div class="flex items-center mb-12">
+			<button
+				class="p-2 -ml-2 rounded-full hover:bg-gray-200/60 dark:hover:bg-gray-800/60 transition-colors text-gray-900 dark:text-gray-100"
+				onclick={() => onclose?.()}
+				aria-label="Close menu"
+			>
+				<ChevronLeft size={28} strokeWidth={2.5} />
+			</button>
+		</div>
+
+		<!-- Menu Title -->
+		<h2 class="text-4xl font-bold mb-12 text-gray-900 dark:text-white">Menu</h2>
+
+		<!-- Nav -->
+		<nav class="flex-1 flex flex-col gap-3">
+			{#each navItems as item}
+				{@const Icon = iconFor[item.id as keyof typeof iconFor]}
 				<button
-					onclick={() => handleNavigation(item.id)}
-					class={`mobile-menu-item-tennis text-left py-3 px-4 font-medium uppercase tracking-wide transition-colors ${currentPage === item.id ? "text-primary bg-primary/10" : `${textColor} hover:text-primary ${isOnDarkBackground ? 'hover:bg-white/5' : 'hover:bg-black/5'}`}`}
-					style={`animation-delay: ${index * 100}ms`}
+					onclick={() => navigateTo(item.id)}
+					aria-current={currentPage === item.id ? 'page' : undefined}
+					class={`group w-full flex items-center gap-5 py-6 px-4 rounded-2xl text-left transition-all duration-200 ${
+						currentPage === item.id
+							? 'bg-primary/10 dark:bg-primary/20'
+							: 'hover:bg-gray-200/50 dark:hover:bg-gray-800/50'
+					}`}
 				>
-					{item.label}
+					<Icon
+						size={24}
+						strokeWidth={2}
+						class={`shrink-0 transition-colors ${
+							currentPage === item.id
+								? 'text-primary'
+								: 'text-gray-700 dark:text-gray-300 group-hover:text-primary'
+						}`}
+					/>
+					<span class={`text-2xl font-semibold uppercase tracking-wide transition-colors ${
+						currentPage === item.id
+							? 'text-primary'
+							: 'text-gray-900 dark:text-gray-100 group-hover:text-primary'
+					}`}>
+						{item.label}
+					</span>
 				</button>
 			{/each}
-
-			<!-- Theme Switcher (icon-only, accessible) -->
-			<div class="pt-2">
-				<div class="flex items-center justify-end px-4 py-3">
-					<ThemeSwitcher mode={themeMode} {setThemeMode} {textColor} {iconFilter} />
-				</div>
-			</div>
-
-			<div class="pt-4 border-t border-border">
-				<Button onclick={() => handleNavigation("contact")} class="w-full tennis-hover btn-press uppercase tracking-wide">REZERVOVAT</Button>
-			</div>
 		</nav>
-	</div>
+
+		<!-- Footer -->
+		<div class="mt-auto pt-8 space-y-4">
+			<!-- Settings row -->
+			<div class="flex items-center justify-between gap-3 px-2">
+				<LangSwitcher value={locale} languages={['cs','en']} onChange={(v) => onchangeLocale?.(v as 'cs' | 'en')} variant="mobile" />
+				<ThemeSwitcher mode={themeMode} {setThemeMode} variant="mobile" />
+			</div>
+
+			<!-- CTA Button -->
+			<Button onclick={() => navigateTo('contact')} variant="cta" size="xl" class="w-full tennis-hover">
+				Rezervovat
+			</Button>
+		</div>
+	</aside>
 </div>

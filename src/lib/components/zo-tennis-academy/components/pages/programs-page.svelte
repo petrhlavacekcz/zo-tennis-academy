@@ -2,7 +2,16 @@
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
 
-	import { Users, Coins, Trophy, Clock, ArrowRight } from "@lucide/svelte";
+	// @ts-ignore - lucide typed modules resolution
+	import Users from "@lucide/svelte/icons/users";
+	// @ts-ignore - lucide typed modules resolution
+	import Coins from "@lucide/svelte/icons/coins";
+	// @ts-ignore - lucide typed modules resolution
+	import Trophy from "@lucide/svelte/icons/trophy";
+	// @ts-ignore - lucide typed modules resolution
+	import Clock from "@lucide/svelte/icons/clock";
+	// @ts-ignore - lucide typed modules resolution
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 	import { asset } from "$app/paths";
 
 	interface Props {
@@ -210,7 +219,7 @@
 
 								<!-- CTAs -->
 								<div class="flex gap-3">
-									<Button onclick={() => navigateTo("contact")} class="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground">Rezervovat</Button>
+									<Button onclick={() => navigateTo("contact")} variant="cta" size="xl" class="flex-1 tennis-hover">Rezervovat</Button>
 								</div>
 							</div>
 						</CardContent>
@@ -284,7 +293,7 @@
 
 							<!-- CTA -->
 							<div class="mt-auto">
-								<Button onclick={() => navigateTo("contact")} class="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+								<Button onclick={() => navigateTo("contact")} variant="cta" size="xl" class="w-full tennis-hover">
 									{program.id === "camps" ? "Rezervovat kemp" : "Získat více informací"}
 								</Button>
 							</div>
@@ -299,9 +308,9 @@
 				<CardContent class="p-8 text-center">
 					<h3 class="font-bold mb-4">Nevíte, který program je pro vás ten pravý?</h3>
 					<p class="text-base mb-6 opacity-90">Kontaktujte nás a my vám pomůžeme vybrat ideální program podle vašich potřeb a cílů.</p>
-					<Button onclick={() => navigateTo("contact")} variant="secondary" size="lg" class="bg-white text-primary hover:bg-gray-100 font-semibold tennis-hover">
-						KONTAKTOVAT NÁS
-						<ArrowRight size={20} class="ml-2" />
+					<Button onclick={() => navigateTo("contact")} variant="cta-inverse" size="xl" class="tennis-hover">
+						Kontaktovat nás
+						<ArrowRight size={20} />
 					</Button>
 				</CardContent>
 			</Card>

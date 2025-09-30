@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/button";
-	import { Menu, X } from "@lucide/svelte";
+	import Menu from "@lucide/svelte/icons/menu";
+	import X from "@lucide/svelte/icons/x";
 	import MobileMenu from "./mobile-menu.svelte";
 	import ThemeSwitcher from "../theme/theme-switcher.svelte";
 	import { onMount } from 'svelte';
@@ -17,6 +18,20 @@
 	let { currentPage, navigateTo, themeMode, setThemeMode }: Props = $props();
 	let isMobileMenuOpen = $state(false);
 	let headerRef: HTMLElement;
+
+	// Locale state (temporary wiring)
+	let locale = $state<'cs' | 'en'>('cs');
+
+	// Lock body scroll when mobile menu is open
+	$effect(() => {
+		if (typeof document !== 'undefined') {
+			document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+			return () => {
+				document.body.style.overflow = '';
+			};
+		}
+	});
+
 
 	// Determine if current page has dark hero background
 	let isOnDarkBackground = $derived(currentPage === "home" || currentPage === "coaches" || currentPage === "programs" || currentPage === "contact");
@@ -107,7 +122,7 @@
 
 			<!-- Right controls (Desktop) -->
 			<div class="hidden md:flex items-center gap-3">
-				<Button onclick={() => handleNavigation("contact")} class="cta-tennis-enhanced focus-tennis uppercase tracking-wide">REZERVOVAT</Button>
+				<Button onclick={() => handleNavigation("contact")} variant="cta" size="lg" class="tennis-hover font-bold">Rezervovat</Button>
 				<ThemeSwitcher mode={themeMode} {setThemeMode} {textColor} {iconFilter} />
 			</div>
 
@@ -124,6 +139,15 @@
 
 	<!-- Mobile Menu -->
 	{#if isMobileMenuOpen}
-		<MobileMenu {navItems} {currentPage} {handleNavigation} themeMode={themeMode} {setThemeMode} {isOnDarkBackground} />
+		<MobileMenu
+			{navItems}
+			{currentPage}
+			{handleNavigation}
+			themeMode={themeMode}
+			{setThemeMode}
+			{locale}
+			onclose={() => (isMobileMenuOpen = false)}
+			onchangeLocale={(newLocale) => (locale = newLocale)}
+		/>
 	{/if}
 </header>

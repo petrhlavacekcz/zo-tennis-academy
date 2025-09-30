@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
-	import { Award, Phone } from "@lucide/svelte";
+	// @ts-ignore - lucide typed modules resolution
+	import Award from "@lucide/svelte/icons/award";
+	// @ts-ignore - lucide typed modules resolution
+	import Phone from "@lucide/svelte/icons/phone";
 	import { asset } from "$app/paths";
 
 
@@ -104,18 +107,10 @@
 
 									<!-- Contact CTA -->
 									<div class="flex flex-col sm:flex-row gap-4">
-										<Button class="bg-primary hover:bg-primary/90 text-primary-foreground tennis-hover">
-											<Phone size={16} class="mr-2" />
-											REZERVOVAT LEKCI
+										<Button variant="cta" size="xl" class="tennis-hover">
+											<Phone size={20} />
+											Rezervovat lekci
 										</Button>
-														<!--
-
-										<Button variant="outline" class="tennis-hover hidden">
-											<MailIcon size={16} class="mr-2" />
-											Kontaktovat
-										</Button>
-														-->
-
 									</div>
 								</div>
 							</div>

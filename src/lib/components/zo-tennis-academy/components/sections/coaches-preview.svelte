@@ -82,9 +82,9 @@
 
 		<!-- CTA -->
 		<div class="text-center">
-			<Button onclick={() => navigateTo("coaches")} size="lg" class="tennis-hover group">
-				VÍCE O NAŠICH TRENÉRECH
-				<ArrowRight size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
+			<Button onclick={() => navigateTo("coaches")} variant="default" size="xl" class="tennis-hover group">
+				Více o našich trenérech
+				<ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />
 			</Button>
 		</div>
 	</div>

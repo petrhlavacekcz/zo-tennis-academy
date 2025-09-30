@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button } from "$lib/components/ui/button";
-	import { ArrowRight, Phone } from "@lucide/svelte";
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
+	import Phone from "@lucide/svelte/icons/phone";
 
 	interface Props {
 		navigateTo: (page: string) => void;
@@ -21,13 +22,15 @@
 		<p class="text-lg mb-8 max-w-2xl mx-auto opacity-90 leading-relaxed">Začněte svou tenisovou cestu s námi ještě dnes. Nabízíme bezplatnou zkušební lekci pro všechny nové studenty.</p>
 
 		<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-			<Button onclick={() => navigateTo("contact")} size="lg" variant="secondary" class="bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 text-base tennis-hover group">
-				<Phone size={20} class="mr-2" />
-				REZERVOVAT ZKUŠEBNÍ LEKCI
-				<ArrowRight size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
+			<Button onclick={() => navigateTo("contact")} variant="cta-inverse" size="xl" class="tennis-hover group">
+				<Phone size={20} />
+				Rezervovat zkušební lekci
+				<ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />
 			</Button>
 
-			<Button onclick={() => navigateTo("programs")} size="lg" variant="outline" class="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-base tennis-hover">PROHLÉDNOUT PROGRAMY</Button>
+			<Button onclick={() => navigateTo("programs")} variant="outline-inverse" size="xl" class="tennis-hover">
+				Prohlédnout programy
+			</Button>
 		</div>
 
 		<!-- Contact Info -->

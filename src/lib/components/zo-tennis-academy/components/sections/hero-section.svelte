@@ -86,8 +86,8 @@
 					in:netCross={{ delay: 1000, duration: 800 }}
 					class="flex justify-center items-center"
 				>
-					<Button onclick={() => navigateTo("contact")} size="lg" class="tennis-hover">
-						REZERVOVAT LEKCI
+					<Button onclick={() => navigateTo("contact")} variant="cta" size="xl" class="tennis-hover">
+						Rezervovat lekci
 					</Button>
 				</div>
 			{:else}
@@ -97,8 +97,8 @@
 					Zlepšete svou hru s profesionálním koučováním pod vedením bývalé hráčky WTA Zuzany Ondraškové
 				</div>
 				<div class="flex justify-center items-center opacity-0">
-					<Button onclick={() => navigateTo("contact")} size="lg" class="tennis-hover">
-						REZERVOVAT LEKCI
+					<Button onclick={() => navigateTo("contact")} variant="cta" size="xl" class="tennis-hover">
+						Rezervovat lekci
 					</Button>
 				</div>
 			{/if}

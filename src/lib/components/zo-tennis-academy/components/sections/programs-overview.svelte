@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
-	import { Users, Trophy, Clock, ArrowRight } from "@lucide/svelte";
+	import Users from "@lucide/svelte/icons/users";
+	import Trophy from "@lucide/svelte/icons/trophy";
+	import Clock from "@lucide/svelte/icons/clock";
+	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 	import { assets } from "$app/paths";
 
 	interface Props {
@@ -177,9 +180,9 @@
 
 		<!-- Main CTA -->
 		<div class="text-center">
-			<Button onclick={() => navigateTo("programs")} size="lg" class="tennis-hover group">
-				ZOBRAZIT VŠECHNY PROGRAMY
-				<ArrowRight size={20} class="ml-2 group-hover:translate-x-1 transition-transform" />
+			<Button onclick={() => navigateTo("programs")} variant="cta" size="xl" class="tennis-hover group">
+				Zobrazit všechny programy
+				<ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />
 			</Button>
 		</div>
 	</div>
