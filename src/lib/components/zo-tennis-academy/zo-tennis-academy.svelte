@@ -12,6 +12,10 @@
 
 	function navigateTo(page: string) {
 		currentPage = page;
+		// Scroll to top smoothly when navigating to a new page
+		if (typeof window !== 'undefined') {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		}
 	}
 
 	function setThemeMode(mode: 'light' | 'dark' | 'system') {
