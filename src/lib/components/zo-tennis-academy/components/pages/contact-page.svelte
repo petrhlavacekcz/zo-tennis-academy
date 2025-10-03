@@ -9,15 +9,11 @@
 	let faqs = [
 		{
 			question: "Jak dlouho trvá jedna lekce?",
-			answer: "Standardní lekce trvá 60 minut. Pro juniory nabízíme také kratší 45minutové lekce a pro pokročilé hráče delší 90minutové tréninky.",
+			answer: "Standardní lekce trvá 60 minut, pro pokročilejší hráče nabízíme i delší lekce.",
 		},
 		{
 			question: "Potřebuji vlastní vybavení?",
 			answer: "Pro první lekce můžeme zapůjčit raketu. Doporučujeme však co nejdříve pořídit vlastní vybavení přizpůsobené vaší úrovni a stylu hry.",
-		},
-		{
-			question: "Můžu si vybrat trenéra?",
-			answer: "Ano, můžete si vybrat konkrétního trenéra podle vašich preferencí. Rádi vám také doporučíme trenéra na základě vašich cílů a úrovně.",
 		},
 		{
 			question: "Nabízíte zkušební lekci?",
@@ -67,7 +63,7 @@
 
 						<div class="space-y-6">
 							<Button asChild size="lg" class="w-full sm:w-auto px-8 bg-primary text-primary-foreground hover:bg-primary/90">
-								<a href="mailto:tenis@zotennisacademy.cz">tenis@zotennisacademy.cz</a>
+								<a href="mailto:info@zotennisacademy.cz">info@zotennisacademy.cz</a>
 							</Button>
 
 							<div class="grid gap-4">

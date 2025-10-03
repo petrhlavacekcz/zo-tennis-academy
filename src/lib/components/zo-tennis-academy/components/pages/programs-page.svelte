@@ -30,9 +30,9 @@
 			icon: Users,
 			color: "text-blue-500",
 			image: asset("/junior.jpeg"),
-			duration: "60–90 minut",
-			groupSize: "3–5 hráčů",
-			price: "od 250 Kč / lekce",
+			duration: "60 minut",
+			groupSize: "3-4 hráči",
+			price: "250 Kč / lekce",
 			features: [
 				"Skupinové tréninky podle věku a úrovně.",
 				"Rozvoj základních tenisových dovedností.",
@@ -49,7 +49,7 @@
 			icon: Trophy,
 			color: "text-green-500",
 			image: asset("/adult.jpeg"),
-			duration: "60–90 minut",
+			duration: "60 minut",
 			groupSize: "1–4 hráči",
 			price: "od 300 Kč / lekce",
 			features: [
@@ -69,7 +69,7 @@
 			icon: Clock,
 			color: "text-purple-500",
 			image: asset("/private.jpeg"),
-			duration: "60–90 minut",
+			duration: "60 minut",
 			groupSize: "1 hráč",
 			price: "600 Kč / lekce",
 			features: [
@@ -93,7 +93,7 @@
 			icon: Trophy,
 			color: "text-primary",
 			image: asset("/professional.jpeg"),
-			duration: "Denní / Týdenní / Měsíční – program šitý na míru",
+			duration: "Program šitý na míru",
 			groupSize: "Individuální",
 			price: "Cena na vyžádání",
 			features: [
@@ -115,7 +115,7 @@
 			image: asset("/camps.jpeg"),
 			duration: "5 dní",
 			groupSize: "12–16 dětí",
-			price: "Půldenní kemp / 2 800 Kč · Celodenní / 4 500 Kč",
+			price: "Více info Instagram",
 			features: [
 				"Bohatý program pro nezapomenutelné letní zážitky.",
 				"Celodenní tréninky pod vedením zkušených trenérů.",

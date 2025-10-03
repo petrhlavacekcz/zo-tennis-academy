@@ -2,8 +2,6 @@
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
 	// @ts-ignore - lucide typed modules resolution
-	import Award from "@lucide/svelte/icons/award";
-	// @ts-ignore - lucide typed modules resolution
 	import Phone from "@lucide/svelte/icons/phone";
 	import { asset } from "$app/paths";
 
@@ -14,14 +12,14 @@
 			role: "hlavní trenérka a zakladatelka",
 			image: "/zuzka-dark.png",
 			bio: "Zuzana je bývalá profesionální tenistka, která dosáhla 74. místa na WTA žebříčku. Během své kariéry (1997-2013) získala 20 ITF titulů a účastnila se všech Grand Slam turnajů. Po ukončení aktivní kariéry se věnuje koučování a předávání svých zkušeností mladé generaci.",
-			achievements: ["74. místo WTA žebříčku (2005)", "20 ITF titulů", "Účast na všech Grand Slam turnajích", "Vítězství nad hráčkami TOP 50", "Reprezentace České republiky", "15+ let koučovacích zkušeností"],
+			achievements: ["74. místo WTA žebříčku (2004, 2010)", "Vítězství nad hráčkami TOP 10", "20 ITF titulů", "Účast na všech Grand Slam turnajích", "Reprezentace České republiky", "15+ let koučovacích zkušeností"],
 		},
 		{
-			name: "Michał Kowalski",
+			name: "Michal Sapala",
 			role: "trenér a technický specialista",
 			image: "/michal-dark.png",
-			bio: "Michał je technický specialista s bohatými zkušenostmi z mezinárodního tenisu. Pracoval jako sparingpartner pro hráčky TOP 100 WTA a má za sebou úspěšnou trenérskou kariéru. Jeho perfekcionistický přístup a důraz na detaily pomáhají hráčům dosáhnout jejich maximálního potenciálu.",
-			achievements: ["Sparingpartner TOP 100 WTA hráčky", "Vítěz národních turnajů", "10+ let mezinárodních zkušeností", "Trenér juniorských reprezentantů", "Specialista na technickou analýzu", "Certifikovaný kondičního trenér"],
+			bio: "Michal je technický specialista s bohatými zkušenostmi z mezinárodního tenisu. Pracoval jako sparingpartner pro hráčky TOP 100 WTA a má za sebou úspěšnou trenérskou kariéru. Jeho perfekcionistický přístup a důraz na detaily pomáhají hráčům dosáhnout jejich maximálního potenciálu.",
+			achievements: ["Certifikovaný kondiční trenér", "Sparingpartner TOP 100 WTA hráčky", "Vítěz národních turnajů", "10+ let mezinárodních zkušeností", "Trenér juniorských reprezentantů", "Specialista na technickou analýzu"],
 		},
 	];
 </script>
@@ -66,43 +64,34 @@
 								<!-- Coach Information -->
 								<div class="lg:col-span-3 p-8 lg:p-12">
 									<div class="mb-6">
-										<h3 class="font-bold mb-2">{coach.name}</h3>
-										<p class="text-primary text-base font-semibold">{coach.role}</p>
+										<h3 class="text-3xl font-bold mb-2 text-foreground">{coach.name}</h3>
+										<p class="text-primary text-base font-semibold uppercase tracking-wide">{coach.role}</p>
 									</div>
 
 									<!-- Biography -->
-									<p class="text-muted-foreground mb-8 leading-relaxed text-base">
+									<p class="text-muted-foreground mb-10 leading-relaxed text-base">
 										{coach.bio}
 									</p>
 
-														<!--
-
-									<!-- Specializations removed -->
-														-->
-
-
-
-
 									<!-- Achievements -->
-									<div class="mb-8">
-										<h4 class="font-semibold mb-4 flex items-center gap-2">
-											<Award size={20} class="text-primary" />
+									<div class="mb-10">
+										<h4 class="text-xl font-bold mb-6 text-foreground">
 											Úspěchy a zkušenosti
 										</h4>
-										<ul class="space-y-2">
+										<div class="grid gap-3">
 											{#each coach.achievements as achievement}
-												<li class="flex items-start gap-2">
-													<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="text-primary flex-shrink-0 mt-1">
+												<div class="flex items-start gap-3">
+													<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 48 48" class="text-primary flex-shrink-0 mt-0.5">
 														<g fill="none" stroke="currentColor" stroke-width="4">
 															<path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
 															<path stroke-linecap="round" stroke-linejoin="round" d="M24 4q-.15 10.003-4.912 15.004Q14.328 24.007 4 24.008" />
 															<path stroke-linecap="round" d="M43.968 25.005q-9.768-.67-14.929 4.176Q23.88 34.026 24.004 44" />
 														</g>
 													</svg>
-													<span class="text-muted-foreground">{achievement}</span>
-												</li>
+													<span class="text-foreground text-base leading-relaxed">{achievement}</span>
+												</div>
 											{/each}
-										</ul>
+										</div>
 									</div>
 
 									<!-- Contact CTA -->

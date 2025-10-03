@@ -64,7 +64,7 @@
 		transition:fly={{ x: -100, duration: 300, opacity: 1 }}
 	>
 		<!-- Header with back button -->
-		<div class="flex items-center mb-12">
+		<div class="flex items-center mb-16">
 			<button
 				class="p-2 -ml-2 rounded-full hover:bg-gray-200/60 dark:hover:bg-gray-800/60 transition-colors text-gray-900 dark:text-gray-100"
 				onclick={() => onclose?.()}
@@ -73,9 +73,6 @@
 				<ChevronLeft size={28} strokeWidth={2.5} />
 			</button>
 		</div>
-
-		<!-- Menu Title -->
-		<h2 class="text-4xl font-bold mb-12 text-gray-900 dark:text-white">Menu</h2>
 
 		<!-- Nav -->
 		<nav class="flex-1 flex flex-col gap-3">

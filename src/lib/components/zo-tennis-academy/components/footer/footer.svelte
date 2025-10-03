@@ -37,11 +37,11 @@
 				<h3 class="font-semibold text-lg mb-6">Kontakt</h3>
 				<div class="space-y-3">
 					<a
-						href="mailto:tenis@zotennisacademy.cz"
+						href="mailto:info@zotennisacademy.cz"
 						class="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
 					>
 						<Mail size={18} class="shrink-0 group-hover:scale-110 transition-transform" />
-						<span>tenis@zotennisacademy.cz</span>
+						<span>info@zotennisacademy.cz</span>
 					</a>
 					<a
 						href="tel:+420603441399"

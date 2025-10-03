@@ -16,14 +16,14 @@
 			name: "Zuzana Ondrášková",
 			role: "hlavní trenérka a zakladatelka",
 			image: "/zuzka-dark.png",
-			achievements: ["Bývalá hráčka WTA", "74. místo světového žebříčku", "Účast na Grand Slam turnajích"],
+			achievements: ["74. místo WTA žebříčku (2004, 2010)", "Vítězství nad hráčkami TOP 10", "Účast na Grand Slam turnajích"],
 			specialization: "Technická dokonalost, mentální příprava",
 		},
 		{
-			name: "Michał Kowalski",
+			name: "Michal Sapala",
 			role: "trenér a technický specialista",
 			image: "/michal-dark.png",
-			achievements: ["Sparingpartner TOP 100 WTA", "Vítěz národních turnajů", "Mezinárodní zkušenosti"],
+			achievements: ["Certifikovaný kondiční trenér", "Sparingpartner TOP 100 WTA", "Mezinárodní zkušenosti"],
 			specialization: "Taktická příprava, perfekcionistický přístup",
 		},
 	];
