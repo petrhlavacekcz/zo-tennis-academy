@@ -9,6 +9,12 @@
 
 	const testimonials: Review[] = [
 		{
+			name: "Lukáš Kašparčík",
+			role: "Rodič",
+			text:
+				"Tenisová škola byla pro naše holky skvělou volbou – tenis si zamilovaly a na tréninky chodí s nadšením. Trenéři Zuzka a Míša mají velmi hezký a trpělivý přístup k dětem. Pokroky byly viditelné už po několika lekcích.",
+		},
+		{
 			name: "Kateřina Hečko",
 			role: "Rodič",
 			text:
@@ -89,25 +95,29 @@
 		</div>
 
 		<!-- Testimonials Grid -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 			{#each testimonials as testimonial}
-				<div class="bg-background/60 backdrop-blur-sm rounded-2xl p-6 transition-all duration-200 hover:bg-background/80 hover:shadow-lg">
-					<!-- Quote icon -->
-					<div class="mb-4">
-						<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-							<Quote size={16} class="text-primary" />
-						</div>
+				<div class="group relative">
+					<!-- Large decorative quote mark -->
+					<div class="absolute -top-2 -left-2 text-primary/10 transition-all duration-300 group-hover:text-primary/20 group-hover:scale-110">
+						<Quote size={64} strokeWidth={2.5} />
 					</div>
 
-					<!-- Testimonial text -->
-					<blockquote class="text-sm leading-relaxed text-muted-foreground mb-6">
-						"{testimonial.text}"
-					</blockquote>
+					<!-- Content -->
+					<div class="relative pt-8 px-2">
+						<!-- Testimonial text -->
+						<blockquote class="text-base leading-relaxed text-foreground mb-6 relative z-10">
+							{testimonial.text}
+						</blockquote>
 
-					<!-- Author -->
-					<div class="border-t border-border/20 pt-4">
-						<div class="font-medium text-foreground text-sm">{testimonial.name}</div>
-						<div class="text-xs text-muted-foreground/70 mt-1">{testimonial.role}</div>
+						<!-- Author with accent line -->
+						<div class="relative pl-4">
+							<!-- Orange accent line -->
+							<div class="absolute left-0 top-1 bottom-1 w-0.5 bg-gradient-to-b from-primary to-primary/40"></div>
+
+							<div class="font-semibold text-foreground text-base leading-tight">{testimonial.name}</div>
+							<div class="text-xs text-muted-foreground/60 mt-1">{testimonial.role}</div>
+						</div>
 					</div>
 				</div>
 			{/each}
