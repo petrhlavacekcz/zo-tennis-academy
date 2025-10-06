@@ -78,7 +78,7 @@
 					in:fade={{ delay: 600, duration: 800 }}
 					class="text-lg md:text-xl text-white/85 mb-8 max-w-3xl mx-auto leading-relaxed"
 				>
-					Zlepšete svou hru s profesionálním koučováním pod vedením bývalé hráčky WTA Zuzany Ondraškové
+					Zlepšete svou hru s profesionálním koučováním pod vedením bývalé hráčky WTA Zuzany Ondráškové
 				</div>
 
 				<!-- CTA button -->
@@ -94,7 +94,7 @@
 				<!-- Invisible placeholder to prevent layout shift -->
 				<div class="text-hero text-white mb-6 opacity-0">ZO TENNIS ACADEMY</div>
 				<div class="text-lg md:text-xl text-white/85 mb-8 max-w-3xl mx-auto leading-relaxed opacity-0">
-					Zlepšete svou hru s profesionálním koučováním pod vedením bývalé hráčky WTA Zuzany Ondraškové
+					Zlepšete svou hru s profesionálním koučováním pod vedením bývalé hráčky WTA Zuzany Ondráškové
 				</div>
 				<div class="flex justify-center items-center opacity-0">
 					<Button onclick={() => navigateTo("contact")} variant="cta" size="xl" class="tennis-hover">

@@ -19,7 +19,7 @@
 					<span class="text-primary">ZO</span>
 					<span>TENNIS ACADEMY</span>
 				</div>
-				<p class="text-muted-foreground mb-6 leading-relaxed">Profesionální tenisová akademie pod vedením bývalé hráčky WTA Zuzany Ondraskové. Pomáháme hráčům všech úrovní dosáhnout jejich tenisových cílů.</p>
+				<p class="text-muted-foreground mb-6 leading-relaxed">Profesionální tenisová akademie pod vedením bývalé hráčky WTA Zuzany Ondráškové. Pomáháme hráčům všech úrovní dosáhnout jejich tenisových cílů.</p>
 			</div>
 
 			<!-- Address -->

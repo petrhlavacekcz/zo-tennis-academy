@@ -68,7 +68,7 @@ Soubor: `sections/hero-section.svelte`
   - Dekor: jemná tenisová mřížka (CSS linear-gradient) s `opacity-10`.
 - Obsah:
   - Nadpis: „ZO TENNIS ACADEMY“ (řádkované), velikosti `text-5xl md:text-6xl`, podtitul `text-3xl md:text-5xl`.
-  - Tagline: „Zlepšete svou hru s profesionálním koučováním pod vedením bývalé hráčky WTA Zuzany Ondraskové“.
+  - Tagline: „Zlepšete svou hru s profesionálním koučováním pod vedením bývalé hráčky WTA Zuzany Ondráškové“.
   - CTA tlačítka:
     - Primární: „Začněte dnes“ → `navigateTo("contact")`, `size="lg"`, `px-8 py-4`, okrouhlé (`rounded-full`).
     - Sekundární: „Naše programy“ → `navigateTo("programs")`, variant `outline`.
@@ -243,7 +243,7 @@ Soubor: `components/footer/footer.svelte`
 - Sekční nadpis: "Naši trenéři"
 - Sekční popis: "Učte se od nejlepších. Naši trenéři kombinují profesionální zkušenosti s vášní pro tenis."
 - Trenéři:
-  - Zuzana Ondraskova — role: "Hlavní trenérka & Zakladatelka"
+  - Zuzana Ondrášková — role: "Hlavní trenérka & Zakladatelka"
     - Klíčové úspěchy:
       - "Bývalá hráčka WTA"
       - "74. místo světového žebříčku"
@@ -424,11 +424,11 @@ Koncový blok s identitou, adresou a kontakty.
 - Header popis: "Poznejte náš profesionální tým trenérů s bohatými zkušenostmi z mezinárodního tenisu"
 
 ### Trenéři
-- Zuzana Ondraskova — "Hlavní trenérka & Zakladatelka"
+- Zuzana Ondrášková — "Hlavní trenérka & Zakladatelka"
   - Bio: "Zuzana je bývalá profesionální tenistka, která dosáhla 74. místa na WTA žebříčku. Během své kariéry (1997-2013) získala 20 ITF titulů a účastnila se všech Grand Slam turnajů. Po ukončení aktivní kariéry se věnuje koučování a předávání svých zkušeností mladé generaci."
   - Specializace (nerenderováno): "Technická dokonalost", "Mentální příprava", "Turnajová strategie", "Profesionální koučování"
   - Certifikace: "ITF Level 3 Coach", "WTA Coaching Certification", "Sports Psychology Certificate", "First Aid Certified"
-  - Úspěchy: "74. místo WTA žebříčku (2005)", "20 ITF titulů", "Účast na všech Grand Slam turnajích", "Vítězství nad hráčkami TOP 50", "Reprezentace České republiky", "15+ let koučovacích zkušeností"
+  - Úspěchy: "74. místo WTA žebříčku (2005)", "20 ITF titulů", "Účast na všech Grand Slam turnajích", "Vítězství nad hráčkami TOP 50", "Reprezentace České republiky", "12+ let koučovacích zkušeností"
   - CTA: "Rezervovat lekci"
 - Michał Kowalski — "Technický specialista"
   - Bio: "Michał je technický specialista s bohatými zkušenostmi z mezinárodního tenisu. Pracoval jako sparingpartner pro hráčky TOP 100 WTA a má za sebou úspěšnou trenérskou kariéru. Jeho perfekcionistický přístup a důraz na detaily pomáhají hráčům dosáhnout jejich maximálního potenciálu."

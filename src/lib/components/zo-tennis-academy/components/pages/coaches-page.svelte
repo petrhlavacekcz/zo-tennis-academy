@@ -12,7 +12,7 @@
 			role: "hlavní trenérka a zakladatelka",
 			image: "/zuzka-dark.png",
 			bio: "Zuzana je bývalá profesionální tenistka, která dosáhla 74. místa na WTA žebříčku. Během své kariéry (1997-2013) získala 20 ITF titulů a účastnila se všech Grand Slam turnajů. Po ukončení aktivní kariéry se věnuje koučování a předávání svých zkušeností mladé generaci.",
-			achievements: ["74. místo WTA žebříčku (2004, 2010)", "Vítězství nad hráčkami TOP 10", "20 ITF titulů", "Účast na všech Grand Slam turnajích", "Reprezentace České republiky", "15+ let koučovacích zkušeností"],
+			achievements: ["74. místo WTA žebříčku (2004, 2010)", "Vítězství nad hráčkami TOP 10", "20 ITF titulů", "Účast na všech Grand Slam turnajích", "Reprezentace České republiky", "12+ let koučovacích zkušeností"],
 		},
 		{
 			name: "Michal Sapala",

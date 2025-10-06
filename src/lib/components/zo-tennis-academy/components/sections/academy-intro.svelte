@@ -45,7 +45,7 @@
 				<Card class="overflow-hidden border-none shadow-none bg-transparent">
 					<CardContent class="p-0">
 						<div class="card-media h-96">
-							<img src={asset("/zo-tennis-academy.jpg")} alt="Tennis training session" loading="lazy" />
+							<img src={asset("/zuzana-ondraskova-2.jpeg")} alt="Tennis training session" loading="lazy" />
 						</div>
 					</CardContent>
 				</Card>
