@@ -44,8 +44,13 @@
 			<div class="relative">
 				<Card class="overflow-hidden border-none shadow-none bg-transparent">
 					<CardContent class="p-0">
-						<div class="card-media h-96">
-							<img src={asset("/zuzana-ondraskova-2.jpeg")} alt="Tennis training session" loading="lazy" />
+						<div class="card-media aspect-[4/3] w-full">
+							<img 
+								src={asset("/zuzana-ondraskova-2.jpeg")} 
+								alt="Tennis training session" 
+								loading="lazy" 
+								class="object-cover w-full h-full"
+							/>
 						</div>
 					</CardContent>
 				</Card>
