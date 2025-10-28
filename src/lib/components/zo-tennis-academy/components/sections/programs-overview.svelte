@@ -5,79 +5,80 @@
 	import Trophy from "@lucide/svelte/icons/trophy";
 	import Clock from "@lucide/svelte/icons/clock";
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
-	import { assets } from "$app/paths";
-
-	interface Props {
-		navigateTo: (page: string) => void;
-	}
-
-	let { navigateTo }: Props = $props();
+	import { asset } from "$app/paths";
+	import { localizeHref } from "$lib/utils/localize";
+	import * as m from "$lib/paraglide/messages";
 
 	// First 3 programs (3 in row)
 	let mainPrograms = [
 		{
-			title: "Juniorský rozvoj",
-			subtitle: "Pro děti a mládež 4–18 let",
-			description: "Komplexní program zaměřený na technický a taktický rozvoj mladých hráčů s důrazem na správné základy.",
+			title: m["programs_page.junior.title"](),
+			subtitle: m["programs_page.junior.subtitle"](),
+			description: m["programs_page.junior.description"](),
 			icon: Users,
 			color: "text-blue-500",
-			image: assets + "/junior.jpeg",
-			features: ["Skupinové tréninky", "Individuální přístup", "Turnajová příprava"],
-			duration: "60 minut",
-			groupSize: "4–8 dětí",
-			price: "800 Kč",
+			image: asset("/junior.jpeg"),
+			features: [
+				m["programs_page.junior.features.group_training"](),
+				m["programs_page.junior.features.basic_skills"](),
+				m["programs_page.junior.features.teamwork"]()
+			],
 		},
 		{
-			title: "Lekce pro dospělé",
-			subtitle: "Pro začátečníky a pokročilé",
-			description: "Flexibilní program pro dospělé hráče všech úrovní s možností individuálního nebo skupinového tréninku.",
+			title: m["programs_page.adult.title"](),
+			subtitle: m["programs_page.adult.subtitle"](),
+			description: m["programs_page.adult.description"](),
 			icon: Trophy,
 			color: "text-green-500",
-			image: assets + "/adult.jpeg",
-			features: ["Všechny úrovně", "Flexibilní časy", "Moderní metody"],
-			duration: "60–90 minut",
-			groupSize: "2–6 osob",
-			price: "1 200 Kč",
+			image: asset("/adult.jpeg"),
+			features: [
+				m["programs_page.adult.features.technique"](),
+				m["programs_page.adult.features.flexible_training"](),
+				m["programs_page.adult.features.friendly_environment"]()
+			],
 		},
 		{
-			title: "Soukromé lekce",
-			subtitle: "Individuální přístup",
-			description: "Individuální lekce zaměřené na specifické potřeby každého hráče s maximální pozorností trenéra.",
+			title: m["programs_page.private.title"](),
+			subtitle: m["programs_page.private.subtitle"](),
+			description: m["programs_page.private.description"](),
 			icon: Clock,
 			color: "text-purple-500",
-			image: assets + "/private.jpeg",
-			features: ["1:1 trénink", "Rychlý pokrok", "Flexibilní rozvrh"],
-			duration: "60 minut",
-			groupSize: "1 osoba",
-			price: "1 800 Kč",
+			image: asset("/private.jpeg"),
+			features: [
+				m["programs_page.private.features.full_attention"](),
+				m["programs_page.private.features.fast_progress"](),
+				m["programs_page.private.features.flexible_schedule"]()
+			],
 		},
 	];
 
 	// Special programs (2 in row)
 	let specialPrograms = [
 		{
-			title: "Profesionál",
-			subtitle: "Program šitý na míru",
-			description: "Program zaměřený na tenis na závodní úrovni, který je shodný s tréninkovým procesem špičkových hráčů.",
+			title: m["programs_page.professional.title"](),
+			subtitle: m["programs_page.professional.subtitle"](),
+			description: m["programs_page.professional.description"](),
 			icon: Trophy,
 			color: "text-primary",
-			image: assets + "/professional.jpeg",
-			features: ["Závodní úroveň", "Individuální plán", "Profesionální přístup"],
-			duration: "90 minut",
-			groupSize: "1–2 osoby",
-			price: "2 500 Kč",
+			image: asset("/professional.jpeg"),
+			features: [
+				m["programs_page.professional.features.competitive_level"](),
+				m["programs_page.professional.features.custom_plan"](),
+				m["programs_page.professional.features.top_level"]()
+			],
 		},
 		{
-			title: "Letní kempy",
-			subtitle: "Intenzivní týdenní programy",
-			description: "Týdenní kempy kombinující technický trénink, zápasy a zábavné aktivity pro děti všech věkových kategorií.",
+			title: m["programs_page.camps.title"](),
+			subtitle: m["programs_page.camps.subtitle"](),
+			description: m["programs_page.camps.description"](),
 			icon: Trophy,
 			color: "text-primary",
-			image: assets + "/camps.jpeg",
-			features: ["Celotýdenní program", "Všestranný rozvoj", "Zábavné aktivity"],
-			duration: "5 dní",
-			groupSize: "12–16 dětí",
-			price: "2 800 Kč",
+			image: asset("/camps.jpeg"),
+			features: [
+				m["programs_page.camps.features.full_day"](),
+				m["programs_page.camps.features.various_games"](),
+				m["programs_page.camps.features.match_experience"]()
+			],
 		},
 	];
 </script>
@@ -87,9 +88,9 @@
 		<!-- Section Header -->
 		<div class="text-center mb-16">
 			<h2 class="text-section-heading mb-4">
-				NAŠE <span class="text-primary">PROGRAMY</span>
+				{m["programs_overview.heading"]()} <span class="text-primary">{m["programs_overview.heading_highlight"]()}</span>
 			</h2>
-			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Vyberte si program, který nejlépe odpovídá vašim potřebám a tenisovým ambicím.</p>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">{m["programs_overview.description"]()}</p>
 		</div>
 
 		<!-- Main Programs Grid (3 in row) -->
@@ -180,8 +181,8 @@
 
 		<!-- Main CTA -->
 		<div class="text-center">
-			<Button onclick={() => navigateTo("programs")} variant="cta" size="xl" class="tennis-hover group">
-				Zobrazit všechny programy
+			<Button href={localizeHref("/programs")} variant="cta" size="xl" class="tennis-hover group">
+				{m["programs_overview.cta"]()}
 				<ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />
 			</Button>
 		</div>

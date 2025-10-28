@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Quote } from "@lucide/svelte";
+	import * as m from "$lib/paraglide/messages";
 
 	interface Review {
 		name: string;
@@ -9,76 +10,64 @@
 
 	const testimonials: Review[] = [
 		{
-			name: "Lukáš Kašparčík",
-			role: "Rodič",
-			text:
-				"Tenisová škola byla pro naše holky skvělou volbou – tenis si zamilovaly a na tréninky chodí s nadšením. Trenéři Zuzka a Míša mají velmi hezký a trpělivý přístup k dětem. Pokroky byly viditelné už po několika lekcích.",
+			name: m["testimonials.reviews.lukas_kasparcik.name"](),
+			role: m["testimonials.reviews.lukas_kasparcik.role"](),
+			text: m["testimonials.reviews.lukas_kasparcik.text"](),
 		},
 		{
-			name: "Kateřina Hečko",
-			role: "Rodič",
-			text:
-				"Chtěla bych vyjádřit velkou pochvalu celému týmu tenisového klubu za jejich skvělou práci a profesionální přístup. Klub nabízí výborné zázemí, přátelskou atmosféru a kvalitní tréninky pro děti.",
+			name: m["testimonials.reviews.katerina_hecko.name"](),
+			role: m["testimonials.reviews.katerina_hecko.role"](),
+			text: m["testimonials.reviews.katerina_hecko.text"](),
 		},
 		{
-			name: "Petr Moravec",
-			role: "Rodič",
-			text:
-				"Dcera navštěvuje tenisové kurzy již dva roky a letos už podruhé absolvovala letní prázdninový kemp spolu s bráškou. Skvělý, laskavý a profesionální přístup celého týmu se promítl i do výsledků.",
+			name: m["testimonials.reviews.petr_moravec.name"](),
+			role: m["testimonials.reviews.petr_moravec.role"](),
+			text: m["testimonials.reviews.petr_moravec.text"](),
 		},
 		{
-			name: "Klára Kozačková",
-			role: "Rodič",
-			text:
-				"Doporučujeme tuto tenisovou školu! Syn ji navštěvuje něco přes rok a za tu dobu se neskutečně posunul. Trenérka i trenér jsou naprostí profesionálové.",
+			name: m["testimonials.reviews.klara_kozackova.name"](),
+			role: m["testimonials.reviews.klara_kozackova.role"](),
+			text: m["testimonials.reviews.klara_kozackova.text"](),
 		},
 		{
-			name: "Martin Peterek",
-			role: "Rodič",
-			text:
-				"Kristýnka si z kempu přivezla pohár za 1. místo a my jsme nadšení z progresu i práce trenérského týmu. Děkujeme a věříme v další posun!",
+			name: m["testimonials.reviews.martin_peterek.name"](),
+			role: m["testimonials.reviews.martin_peterek.role"](),
+			text: m["testimonials.reviews.martin_peterek.text"](),
 		},
 		{
-			name: "Silvie Onderková",
-			role: "Rodič",
-			text:
-				"Syn chodí do tenisové školy od úplného začátku a každa lekce ho baví víc a víc. Skvělý přístup trenérů, přátelská atmosféra a viditelný pokrok.",
+			name: m["testimonials.reviews.silvie_onderkova.name"](),
+			role: m["testimonials.reviews.silvie_onderkova.role"](),
+			text: m["testimonials.reviews.silvie_onderkova.text"](),
 		},
 		{
-			name: "Hana Salamon",
-			role: "Rodič",
-			text:
-				"Tábor hodnotím velmi kladně, Emmička byla každý den nadšená a je vidět velký pokrok. Jinak vše moc chválím a doporučuji.",
+			name: m["testimonials.reviews.hana_salamon.name"](),
+			role: m["testimonials.reviews.hana_salamon.role"](),
+			text: m["testimonials.reviews.hana_salamon.text"](),
 		},
 		{
-			name: "Monika Sawicka",
-			role: "Hráčka",
-			text:
-				"Zuzana má zkušenosti z čela žebříčku WTA, které se jinde hledají těžko. Množství péče, kterou věnuje rozvoji sportovců, je výjimečné.",
+			name: m["testimonials.reviews.monika_sawicka.name"](),
+			role: m["testimonials.reviews.monika_sawicka.role"](),
+			text: m["testimonials.reviews.monika_sawicka.text"](),
 		},
 		{
-			name: "Bartek Kozina",
-			role: "Rodič",
-			text:
-				"Velmi dobrá škola. Důsledná práce na technice a pěstování soutěžního ducha i v nejmladších skupinách. Vřele doporučuji.",
+			name: m["testimonials.reviews.bartek_kozina.name"](),
+			role: m["testimonials.reviews.bartek_kozina.role"](),
+			text: m["testimonials.reviews.bartek_kozina.text"](),
 		},
 		{
-			name: "Lukáš Hahn",
-			role: "Rodič",
-			text:
-				"Naše tři děti trénují u Zuzky už více než tři roky a jsme naprosto spokojeni. Zuzka je skvělá trenérka, která k dětem přistupuje s trpělivostí a respektem.",
+			name: m["testimonials.reviews.lukas_hahn.name"](),
+			role: m["testimonials.reviews.lukas_hahn.role"](),
+			text: m["testimonials.reviews.lukas_hahn.text"](),
 		},
 		{
-			name: "Petr Hlaváček",
-			role: "Hráč",
-			text:
-				"S tenisem jsem začal pozdě, ale díky Zuzce a Míšovi mě tenis strašně baví a užívám si, že si zahraju i s kamarády. Těším se na každý trénink.",
+			name: m["testimonials.reviews.petr_hlavacek.name"](),
+			role: m["testimonials.reviews.petr_hlavacek.role"](),
+			text: m["testimonials.reviews.petr_hlavacek.text"](),
 		},
 		{
-			name: "Veronika Hlaváčková",
-			role: "Pokročilá hráčka",
-			text:
-				"Tenisu se věnuji od svého mládí a Zuzka s Míšou mě u každého tréninku dokážou zase o něco posunout. Už jsem nevěřila, že si backhand můžu zlepšit, ale podařilo se.",
+			name: m["testimonials.reviews.veronika_hlavackova.name"](),
+			role: m["testimonials.reviews.veronika_hlavackova.role"](),
+			text: m["testimonials.reviews.veronika_hlavackova.text"](),
 		},
 	];
 </script>
@@ -87,10 +76,10 @@
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<div class="text-center mb-16">
 			<h2 class="text-section-heading mb-4">
-				NAŠE <span class="text-primary">REFERENCE</span>
+				{m["testimonials.heading"]()} <span class="text-primary">{m["testimonials.heading_highlight"]()}</span>
 			</h2>
 			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-				Výběr skutečných zkušeností hráčů, rodičů i trenérů, kteří s námi trénují dlouhodobě.
+				{m["testimonials.description"]()}
 			</p>
 		</div>
 

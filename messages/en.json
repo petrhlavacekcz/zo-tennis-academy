@@ -1,4 +1,309 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!"
+	"nav": {
+		"home": "Home",
+		"coaches": "Coaches",
+		"programs": "Programs",
+		"contact": "Contact",
+		"reserve": "Book Now"
+	},
+	"hero": {
+		"title": "ZO TENNIS ACADEMY",
+		"subtitle": "Improve your game with professional coaching led by former WTA player Zuzana Ondrášková",
+		"cta": "Book a Lesson"
+	},
+	"academy_intro": {
+		"heading": "PERSONALIZED APPROACH TO",
+		"heading_highlight": "TENNIS",
+		"description": "At ZO Tennis Academy, we believe that every player is unique. Our programs are designed to maximize your potential through individual approach and professional guidance.",
+		"features": {
+			"experienced_coaches": {
+				"title": "Experienced Coaches",
+				"description": "Professional coaching from former WTA players"
+			},
+			"pleasant_facilities": {
+				"title": "Pleasant Facilities",
+				"description": "Modern courts and top-notch equipment"
+			},
+			"all_levels": {
+				"title": "All Levels",
+				"description": "From beginners to advanced players"
+			},
+			"flexible_schedule": {
+				"title": "Flexible Schedule",
+				"description": "We adapt to your time"
+			}
+		}
+	},
+	"coaches_preview": {
+		"heading": "OUR",
+		"heading_highlight": "COACHES",
+		"description": "Learn from the best. Our coaches combine professional experience with passion for tennis.",
+		"label_achievements": "Key Achievements",
+		"cta": "More About Our Coaches",
+		"zuzana": {
+			"name": "Zuzana Ondrášková",
+			"role": "head coach and founder",
+			"achievements": {
+				"wta_ranking": "WTA ranking #74 (2004, 2010)",
+				"top10_wins": "Victories over TOP 10 players",
+				"grand_slam": "Participation in Grand Slam tournaments"
+			},
+			"specialization": "Technical excellence, mental preparation"
+		},
+		"michal": {
+			"name": "Michal Sapala",
+			"role": "coach and technical specialist",
+			"achievements": {
+				"certified_trainer": "Certified fitness trainer",
+				"sparring_partner": "Sparring partner for TOP 100 WTA",
+				"international": "International experience"
+			},
+			"specialization": "Tactical preparation, perfectionist approach"
+		}
+	},
+	"testimonials": {
+		"heading": "OUR",
+		"heading_highlight": "TESTIMONIALS",
+		"description": "A selection of real experiences from players, parents, and coaches who train with us long-term.",
+		"reviews": {
+			"lukas_kasparcik": {
+				"name": "Lukáš Kašparčík",
+				"role": "Parent",
+				"text": "The tennis school was a great choice for our girls – they fell in love with tennis and go to training with enthusiasm. Coaches Zuzka and Míša have a very nice and patient approach to children. Progress was visible after just a few lessons."
+			},
+			"katerina_hecko": {
+				"name": "Kateřina Hečko",
+				"role": "Parent",
+				"text": "I would like to express great praise to the entire tennis club team for their excellent work and professional approach. The club offers excellent facilities, a friendly atmosphere, and quality training for children."
+			},
+			"petr_moravec": {
+				"name": "Petr Moravec",
+				"role": "Parent",
+				"text": "My daughter has been attending tennis courses for two years and this year she completed the summer holiday camp for the second time along with her brother. The excellent, kind, and professional approach of the entire team was reflected in the results."
+			},
+			"klara_kozackova": {
+				"name": "Klára Kozačková",
+				"role": "Parent",
+				"text": "We recommend this tennis school! Our son has been attending for just over a year and has made incredible progress during that time. Both the coach and trainer are absolute professionals."
+			},
+			"martin_peterek": {
+				"name": "Martin Peterek",
+				"role": "Parent",
+				"text": "Kristýnka brought home a trophy for 1st place from the camp and we are thrilled with the progress and the work of the coaching team. Thank you and we believe in further improvement!"
+			},
+			"silvie_onderkova": {
+				"name": "Silvie Onderková",
+				"role": "Parent",
+				"text": "My son has been going to tennis school from the very beginning and each lesson is more and more enjoyable for him. Great approach from coaches, friendly atmosphere, and visible progress."
+			},
+			"hana_salamon": {
+				"name": "Hana Salamon",
+				"role": "Parent",
+				"text": "I rate the camp very positively, Emmička was excited every day and great progress is visible. Otherwise, I praise and recommend everything."
+			},
+			"monika_sawicka": {
+				"name": "Monika Sawicka",
+				"role": "Player",
+				"text": "Zuzana has experience from the top of the WTA rankings, which is hard to find elsewhere. The amount of care she devotes to athlete development is exceptional."
+			},
+			"bartek_kozina": {
+				"name": "Bartek Kozina",
+				"role": "Parent",
+				"text": "Very good school. Consistent work on technique and cultivation of competitive spirit even in the youngest groups. I highly recommend."
+			},
+			"lukas_hahn": {
+				"name": "Lukáš Hahn",
+				"role": "Parent",
+				"text": "Our three children have been training with Zuzka for more than three years and we are completely satisfied. Zuzka is a great coach who approaches children with patience and respect."
+			},
+			"petr_hlavacek": {
+				"name": "Petr Hlaváček",
+				"role": "Player",
+				"text": "I started tennis late, but thanks to Zuzka and Míša, I really enjoy tennis and love playing with friends. I look forward to every training session."
+			},
+			"veronika_hlavackova": {
+				"name": "Veronika Hlaváčková",
+				"role": "Advanced Player",
+				"text": "I've been playing tennis since my youth and Zuzka and Míša manage to improve me a bit more with each training session. I didn't believe I could improve my backhand anymore, but it happened."
+			}
+		}
+	},
+	"programs_overview": {
+		"heading": "OUR",
+		"heading_highlight": "PROGRAMS",
+		"description": "Choose the program that best suits your needs and tennis ambitions.",
+		"cta": "View All Programs"
+	},
+	"instagram": {
+		"heading": "FOLLOW US ON",
+		"heading_highlight": "INSTAGRAM",
+		"description": "Stay in touch with our academy and follow the latest photos from training and tournaments",
+		"handle": "@zo_tennis_academy"
+	},
+	"final_cta": {
+		"heading": "Ready to improve your game?",
+		"description": "Start your tennis journey with us today. We offer a free trial lesson for all new students.",
+		"cta_primary": "Book a Trial Lesson",
+		"cta_secondary": "View Programs",
+		"contact_text": "Have questions? Call us at",
+		"phone": "+420 603 441 399"
+	},
+	"coaches_page": {
+		"hero_title": "OUR",
+		"hero_title_highlight": "COACHES",
+		"hero_description": "Meet our professional team of coaches with extensive experience in international tennis",
+		"achievements_title": "Achievements and Experience",
+		"cta_reserve": "Book a Lesson",
+		"zuzana": {
+			"name": "Zuzana Ondrášková",
+			"role": "head coach and founder",
+			"bio": "Zuzana is a former professional tennis player who reached #74 in the WTA rankings. During her career (1997-2013), she won 20 ITF titles and participated in all Grand Slam tournaments. After ending her active career, she dedicates herself to coaching and passing on her experience to the younger generation.",
+			"achievements": {
+				"wta_ranking": "WTA ranking #74 (2004, 2010)",
+				"top10_wins": "Victories over TOP 10 players",
+				"itf_titles": "20 ITF titles",
+				"grand_slam": "Participation in all Grand Slam tournaments",
+				"czech_rep": "Czech Republic national team",
+				"coaching_exp": "12+ years of coaching experience"
+			}
+		},
+		"michal": {
+			"name": "Michal Sapala",
+			"role": "coach and technical specialist",
+			"bio": "Michal is a technical specialist with extensive experience in international tennis. He worked as a sparring partner for TOP 100 WTA players and has a successful coaching career. His perfectionist approach and attention to detail help players reach their maximum potential.",
+			"achievements": {
+				"certified_trainer": "Certified fitness trainer",
+				"sparring_partner": "Sparring partner for TOP 100 WTA players",
+				"national_wins": "National tournament winner",
+				"international_exp": "10+ years of international experience",
+				"junior_coach": "Junior national team coach",
+				"technical_specialist": "Technical analysis specialist"
+			}
+		}
+	},
+	"programs_page": {
+		"hero_title": "OUR",
+		"hero_title_highlight": "PROGRAMS",
+		"hero_description": "Choose the program that best suits your needs and tennis ambitions",
+		"cta_reserve": "Book Now",
+		"cta_reserve_camp": "Book Camp",
+		"cta_more_info": "Get More Info",
+		"bottom_cta_title": "Not sure which program is right for you?",
+		"bottom_cta_description": "Contact us and we'll help you choose the ideal program based on your needs and goals.",
+		"bottom_cta_button": "Contact Us",
+		"junior": {
+			"title": "Junior Development",
+			"subtitle": "For children and youth aged 4–18",
+			"description": "Comprehensive program focused on technical and tactical development of young players with emphasis on proper fundamentals.",
+			"duration": "60 minutes",
+			"group_size": "3-4 players",
+			"price": "250 CZK / lesson",
+			"features": {
+				"group_training": "Group training by age and level.",
+				"basic_skills": "Development of basic tennis skills.",
+				"movement_habits": "Building correct movement patterns.",
+				"physical_fitness": "Improving physical fitness and agility.",
+				"teamwork": "Promoting teamwork and fair play."
+			}
+		},
+		"adult": {
+			"title": "Adult Lessons",
+			"subtitle": "For beginners and advanced",
+			"description": "Flexible program for adult players of all levels with individual or group training options.",
+			"duration": "60 minutes",
+			"group_size": "1–4 players",
+			"price": "from 300 CZK / lesson",
+			"features": {
+				"technique": "Emphasis on proper stroke technique.",
+				"regular_lessons": "Regular lessons for continuous progress.",
+				"basic_elements": "Mastering basic technical elements.",
+				"tactics": "Tactical development for better play.",
+				"flexible_training": "Flexible training according to players' availability.",
+				"friendly_environment": "Friendly and motivating environment."
+			}
+		},
+		"private": {
+			"title": "Private Lessons",
+			"subtitle": "Individual approach",
+			"description": "Individual lessons focused on specific needs of each player with maximum coach attention.",
+			"duration": "60 minutes",
+			"group_size": "1 player",
+			"price": "600 CZK / lesson",
+			"features": {
+				"full_attention": "100% coach attention.",
+				"customized_program": "Customized training program.",
+				"fast_progress": "Fast and efficient progress.",
+				"flexible_schedule": "Flexible scheduling.",
+				"video_analysis": "Video technique analysis.",
+				"best_path": "Best path to rapid improvement."
+			}
+		},
+		"professional": {
+			"title": "Professional",
+			"subtitle": "Customized program",
+			"description": "Program focused on competitive level tennis, identical to the training process of top players.",
+			"duration": "Customized program",
+			"group_size": "Individual",
+			"price": "Price on request",
+			"features": {
+				"custom_process": "Customized daily training process.",
+				"competitive_level": "Program focused on competitive level tennis.",
+				"custom_plan": "Daily, weekly, and monthly plan tailored to the player.",
+				"full_package": "Training, sparring, fitness preparation, physiotherapy, and massage.",
+				"top_level": "Program identical to top player preparation.",
+				"accommodation": "Accommodation can be arranged."
+			}
+		},
+		"camps": {
+			"title": "Summer Camps",
+			"subtitle": "Intensive weekly programs",
+			"description": "Weekly camps combining technical training, matches, and fun activities for children of all age categories.",
+			"duration": "5 days",
+			"group_size": "12–16 children",
+			"price": "More info on Instagram",
+			"features": {
+				"rich_program": "Rich program for unforgettable summer experiences.",
+				"full_day": "Full-day training led by experienced coaches.",
+				"various_games": "Various games and competitions for skill development.",
+				"balanced_combo": "Balanced combination of agility, endurance, and coordination.",
+				"match_experience": "Gaining valuable match experience.",
+				"meals": "Lunches and snacks provided.",
+				"tshirt": "Each participant receives a special t-shirt"
+			}
+		}
+	},
+	"contact_page": {
+		"hero_title": "CONTACT",
+		"hero_description": "Have questions or want to book a lesson? We're here for you!",
+		"contact_card_title": "We're here for you",
+		"contact_card_description": "Get in touch and we'll set up training exactly according to your needs and goals.",
+		"phone_label": "Phone",
+		"email_label": "Email",
+		"address_label": "Address",
+		"address_value": "Ivana Kubince, 747 91 Štítina, Czech Republic",
+		"map_title": "Where to find us",
+		"faq_title": "Frequently Asked Questions",
+		"faq": {
+			"lesson_duration": {
+				"question": "How long does one lesson last?",
+				"answer": "A standard lesson lasts 60 minutes, for more advanced players we also offer longer lessons."
+			},
+			"equipment": {
+				"question": "Do I need my own equipment?",
+				"answer": "For the first lessons we can lend you a racket. However, we recommend getting your own equipment suited to your level and playing style as soon as possible."
+			},
+			"trial_lesson": {
+				"question": "Do you offer a trial lesson?",
+				"answer": "Yes, for all new students we offer a free trial lesson where you can try our approach and meet the coach."
+			}
+		}
+	},
+	"footer": {
+		"company_description": "Professional tennis academy led by former WTA player Zuzana Ondrášková. We help players of all levels achieve their tennis goals.",
+		"address_title": "Address",
+		"address_value": "Ivana Kubince, 747 91 Štítina, Czech Republic",
+		"contact_title": "Contact",
+		"copyright": "© 2025 ZO Tennis Academy. All rights reserved."
+	}
 }

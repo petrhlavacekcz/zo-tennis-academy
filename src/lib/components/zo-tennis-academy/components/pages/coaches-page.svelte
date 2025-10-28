@@ -4,22 +4,37 @@
 	// @ts-ignore - lucide typed modules resolution
 	import Phone from "@lucide/svelte/icons/phone";
 	import { asset } from "$app/paths";
-
+	import { localizeHref } from "$lib/utils/localize";
+	import * as m from "$lib/paraglide/messages";
 
 	let coaches = [
 		{
-			name: "Zuzana Ondrášková",
-			role: "hlavní trenérka a zakladatelka",
+			name: m["coaches_page.zuzana.name"](),
+			role: m["coaches_page.zuzana.role"](),
 			image: "/zuzka-dark.png",
-			bio: "Zuzana je bývalá profesionální tenistka, která dosáhla 74. místa na WTA žebříčku. Během své kariéry (1997-2013) získala 20 ITF titulů a účastnila se všech Grand Slam turnajů. Po ukončení aktivní kariéry se věnuje koučování a předávání svých zkušeností mladé generaci.",
-			achievements: ["74. místo WTA žebříčku (2004, 2010)", "Vítězství nad hráčkami TOP 10", "20 ITF titulů", "Účast na všech Grand Slam turnajích", "Reprezentace České republiky", "12+ let koučovacích zkušeností"],
+			bio: m["coaches_page.zuzana.bio"](),
+			achievements: [
+				m["coaches_page.zuzana.achievements.wta_ranking"](),
+				m["coaches_page.zuzana.achievements.top10_wins"](),
+				m["coaches_page.zuzana.achievements.itf_titles"](),
+				m["coaches_page.zuzana.achievements.grand_slam"](),
+				m["coaches_page.zuzana.achievements.czech_rep"](),
+				m["coaches_page.zuzana.achievements.coaching_exp"]()
+			],
 		},
 		{
-			name: "Michal Sapala",
-			role: "trenér a technický specialista",
+			name: m["coaches_page.michal.name"](),
+			role: m["coaches_page.michal.role"](),
 			image: "/michal-dark.png",
-			bio: "Michal je technický specialista s bohatými zkušenostmi z mezinárodního tenisu. Pracoval jako sparingpartner pro hráčky TOP 100 WTA a má za sebou úspěšnou trenérskou kariéru. Jeho perfekcionistický přístup a důraz na detaily pomáhají hráčům dosáhnout jejich maximálního potenciálu.",
-			achievements: ["Certifikovaný kondiční trenér", "Sparingpartner TOP 100 WTA hráčky", "Vítěz národních turnajů", "10+ let mezinárodních zkušeností", "Trenér juniorských reprezentantů", "Specialista na technickou analýzu"],
+			bio: m["coaches_page.michal.bio"](),
+			achievements: [
+				m["coaches_page.michal.achievements.certified_trainer"](),
+				m["coaches_page.michal.achievements.sparring_partner"](),
+				m["coaches_page.michal.achievements.national_wins"](),
+				m["coaches_page.michal.achievements.international_exp"](),
+				m["coaches_page.michal.achievements.junior_coach"](),
+				m["coaches_page.michal.achievements.technical_specialist"]()
+			],
 		},
 	];
 </script>
@@ -41,9 +56,9 @@
 		<!-- Content -->
 		<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
 			<h1 class="text-page-heading mb-4 text-white">
-				NAŠI <span class="text-primary">TRENÉŘI</span>
+				{m["coaches_page.hero_title"]()} <span class="text-primary">{m["coaches_page.hero_title_highlight"]()}</span>
 			</h1>
-			<p class="text-lg text-white/90 max-w-2xl mx-auto">Poznejte náš profesionální tým trenérů s bohatými zkušenostmi z mezinárodního tenisu</p>
+			<p class="text-lg text-white/90 max-w-2xl mx-auto">{m["coaches_page.hero_description"]()}</p>
 		</div>
 	</section>
 
@@ -76,7 +91,7 @@
 									<!-- Achievements -->
 									<div class="mb-10">
 										<h4 class="text-xl font-bold mb-6 text-foreground">
-											Úspěchy a zkušenosti
+											{m["coaches_page.achievements_title"]()}
 										</h4>
 										<div class="grid gap-3">
 											{#each coach.achievements as achievement}
@@ -96,9 +111,9 @@
 
 									<!-- Contact CTA -->
 									<div class="flex flex-col sm:flex-row gap-4">
-										<Button variant="cta" size="xl" class="tennis-hover">
+										<Button href={localizeHref("/contact")} variant="cta" size="xl" class="tennis-hover">
 											<Phone size={20} />
-											Rezervovat lekci
+											{m["coaches_page.cta_reserve"]()}
 										</Button>
 									</div>
 								</div>

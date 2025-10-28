@@ -1,0 +1,310 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"nav": {
+		"home": "Startseite",
+		"coaches": "Trainer",
+		"programs": "Programme",
+		"contact": "Kontakt",
+		"reserve": "Jetzt buchen"
+	},
+	"hero": {
+		"title": "ZO TENNIS ACADEMY",
+		"subtitle": "Verbessern Sie Ihr Spiel mit professionellem Coaching unter der Leitung der ehemaligen WTA-Spielerin Zuzana Ondrášková",
+		"cta": "Unterricht buchen"
+	},
+	"academy_intro": {
+		"heading": "PERSONALISIERTER ANSATZ FÜR",
+		"heading_highlight": "TENNIS",
+		"description": "In der ZO Tennis Academy glauben wir, dass jeder Spieler einzigartig ist. Unsere Programme sind darauf ausgelegt, Ihr Potenzial durch individuellen Ansatz und professionelle Anleitung zu maximieren.",
+		"features": {
+			"experienced_coaches": {
+				"title": "Erfahrene Trainer",
+				"description": "Professionelles Coaching von ehemaligen WTA-Spielerinnen"
+			},
+			"pleasant_facilities": {
+				"title": "Angenehme Einrichtungen",
+				"description": "Moderne Plätze und erstklassige Ausrüstung"
+			},
+			"all_levels": {
+				"title": "Alle Niveaus",
+				"description": "Von Anfängern bis zu fortgeschrittenen Spielern"
+			},
+			"flexible_schedule": {
+				"title": "Flexibler Zeitplan",
+				"description": "Wir passen uns Ihrer Zeit an"
+			}
+		}
+	},
+	"coaches_preview": {
+		"heading": "UNSERE",
+		"heading_highlight": "TRAINER",
+		"description": "Lernen Sie von den Besten. Unsere Trainer kombinieren professionelle Erfahrung mit Leidenschaft für Tennis.",
+		"label_achievements": "Wichtigste Erfolge",
+		"cta": "Mehr über unsere Trainer",
+		"zuzana": {
+			"name": "Zuzana Ondrášková",
+			"role": "Cheftrainerin und Gründerin",
+			"achievements": {
+				"wta_ranking": "WTA-Ranking #74 (2004, 2010)",
+				"top10_wins": "Siege über TOP-10-Spielerinnen",
+				"grand_slam": "Teilnahme an Grand-Slam-Turnieren"
+			},
+			"specialization": "Technische Perfektion, mentale Vorbereitung"
+		},
+		"michal": {
+			"name": "Michal Sapala",
+			"role": "Trainer und technischer Spezialist",
+			"achievements": {
+				"certified_trainer": "Zertifizierter Fitnesstrainer",
+				"sparring_partner": "Sparringpartner für TOP 100 WTA",
+				"international": "Internationale Erfahrung"
+			},
+			"specialization": "Taktische Vorbereitung, perfektionistischer Ansatz"
+		}
+	},
+	"testimonials": {
+		"heading": "UNSERE",
+		"heading_highlight": "REFERENZEN",
+		"description": "Eine Auswahl echter Erfahrungen von Spielern, Eltern und Trainern, die langfristig mit uns trainieren.",
+		"reviews": {
+			"lukas_kasparcik": {
+				"name": "Lukáš Kašparčík",
+				"role": "Elternteil",
+				"text": "Die Tennisschule war eine großartige Wahl für unsere Mädchen – sie haben sich in Tennis verliebt und gehen mit Begeisterung zum Training. Die Trainer Zuzka und Míša haben einen sehr netten und geduldigen Umgang mit Kindern. Fortschritte waren schon nach wenigen Stunden sichtbar."
+			},
+			"katerina_hecko": {
+				"name": "Kateřina Hečko",
+				"role": "Elternteil",
+				"text": "Ich möchte dem gesamten Tennisclub-Team großes Lob für ihre hervorragende Arbeit und professionelle Herangehensweise aussprechen. Der Club bietet ausgezeichnete Einrichtungen, eine freundliche Atmosphäre und qualitativ hochwertiges Training für Kinder."
+			},
+			"petr_moravec": {
+				"name": "Petr Moravec",
+				"role": "Elternteil",
+				"text": "Meine Tochter besucht seit zwei Jahren Tenniskurse und hat dieses Jahr zum zweiten Mal das Sommerferiencamp zusammen mit ihrem Bruder absolviert. Die ausgezeichnete, freundliche und professionelle Herangehensweise des gesamten Teams spiegelte sich in den Ergebnissen wider."
+			},
+			"klara_kozackova": {
+				"name": "Klára Kozačková",
+				"role": "Elternteil",
+				"text": "Wir empfehlen diese Tennisschule! Unser Sohn besucht sie seit etwas über einem Jahr und hat in dieser Zeit unglaubliche Fortschritte gemacht. Sowohl die Trainerin als auch der Trainer sind absolute Profis."
+			},
+			"martin_peterek": {
+				"name": "Martin Peterek",
+				"role": "Elternteil",
+				"text": "Kristýnka brachte einen Pokal für den 1. Platz vom Camp mit nach Hause und wir sind begeistert vom Fortschritt und der Arbeit des Trainerteams. Vielen Dank und wir glauben an weitere Verbesserungen!"
+			},
+			"silvie_onderkova": {
+				"name": "Silvie Onderková",
+				"role": "Elternteil",
+				"text": "Mein Sohn geht von Anfang an zur Tennisschule und jede Stunde macht ihm mehr und mehr Spaß. Toller Ansatz der Trainer, freundliche Atmosphäre und sichtbarer Fortschritt."
+			},
+			"hana_salamon": {
+				"name": "Hana Salamon",
+				"role": "Elternteil",
+				"text": "Ich bewerte das Camp sehr positiv, Emmička war jeden Tag begeistert und großer Fortschritt ist sichtbar. Ansonsten lobe und empfehle ich alles sehr."
+			},
+			"monika_sawicka": {
+				"name": "Monika Sawicka",
+				"role": "Spielerin",
+				"text": "Zuzana hat Erfahrung von der Spitze der WTA-Rangliste, die anderswo schwer zu finden ist. Die Menge an Aufmerksamkeit, die sie der Entwicklung von Sportlern widmet, ist außergewöhnlich."
+			},
+			"bartek_kozina": {
+				"name": "Bartek Kozina",
+				"role": "Elternteil",
+				"text": "Sehr gute Schule. Konsequente Arbeit an der Technik und Förderung des Wettbewerbsgeistes auch in den jüngsten Gruppen. Ich empfehle wärmstens."
+			},
+			"lukas_hahn": {
+				"name": "Lukáš Hahn",
+				"role": "Elternteil",
+				"text": "Unsere drei Kinder trainieren seit mehr als drei Jahren bei Zuzka und wir sind vollkommen zufrieden. Zuzka ist eine großartige Trainerin, die Kinder mit Geduld und Respekt behandelt."
+			},
+			"petr_hlavacek": {
+				"name": "Petr Hlaváček",
+				"role": "Spieler",
+				"text": "Ich habe spät mit Tennis angefangen, aber dank Zuzka und Míša macht mir Tennis wirklich Spaß und ich genieße es, mit Freunden zu spielen. Ich freue mich auf jedes Training."
+			},
+			"veronika_hlavackova": {
+				"name": "Veronika Hlaváčková",
+				"role": "Fortgeschrittene Spielerin",
+				"text": "Ich spiele seit meiner Jugend Tennis und Zuzka und Míša schaffen es, mich bei jedem Training ein bisschen mehr zu verbessern. Ich glaubte nicht mehr, dass ich meine Rückhand verbessern könnte, aber es ist gelungen."
+			}
+		}
+	},
+	"programs_overview": {
+		"heading": "UNSERE",
+		"heading_highlight": "PROGRAMME",
+		"description": "Wählen Sie das Programm, das Ihren Bedürfnissen und Tennisambitionen am besten entspricht.",
+		"cta": "Alle Programme anzeigen"
+	},
+	"instagram": {
+		"heading": "FOLGEN SIE UNS AUF",
+		"heading_highlight": "INSTAGRAM",
+		"description": "Bleiben Sie mit unserer Akademie in Kontakt und verfolgen Sie die neuesten Fotos von Training und Turnieren",
+		"handle": "@zo_tennis_academy"
+	},
+	"final_cta": {
+		"heading": "Bereit, Ihr Spiel zu verbessern?",
+		"description": "Beginnen Sie noch heute Ihre Tennisreise mit uns. Wir bieten eine kostenlose Probestunde für alle neuen Schüler.",
+		"cta_primary": "Probestunde buchen",
+		"cta_secondary": "Programme ansehen",
+		"contact_text": "Haben Sie Fragen? Rufen Sie uns an unter",
+		"phone": "+420 603 441 399"
+	},
+	"coaches_page": {
+		"hero_title": "UNSERE",
+		"hero_title_highlight": "TRAINER",
+		"hero_description": "Lernen Sie unser professionelles Trainerteam mit umfangreicher Erfahrung im internationalen Tennis kennen",
+		"achievements_title": "Erfolge und Erfahrung",
+		"cta_reserve": "Unterricht buchen",
+		"zuzana": {
+			"name": "Zuzana Ondrášková",
+			"role": "Cheftrainerin und Gründerin",
+			"bio": "Zuzana ist eine ehemalige professionelle Tennisspielerin, die Platz 74 der WTA-Rangliste erreichte. Während ihrer Karriere (1997-2013) gewann sie 20 ITF-Titel und nahm an allen Grand-Slam-Turnieren teil. Nach Beendigung ihrer aktiven Karriere widmet sie sich dem Coaching und der Weitergabe ihrer Erfahrungen an die jüngere Generation.",
+			"achievements": {
+				"wta_ranking": "WTA-Ranking #74 (2004, 2010)",
+				"top10_wins": "Siege über TOP-10-Spielerinnen",
+				"itf_titles": "20 ITF-Titel",
+				"grand_slam": "Teilnahme an allen Grand-Slam-Turnieren",
+				"czech_rep": "Tschechische Nationalmannschaft",
+				"coaching_exp": "12+ Jahre Coaching-Erfahrung"
+			}
+		},
+		"michal": {
+			"name": "Michal Sapala",
+			"role": "Trainer und technischer Spezialist",
+			"bio": "Michal ist ein technischer Spezialist mit umfangreicher Erfahrung im internationalen Tennis. Er arbeitete als Sparringpartner für TOP-100-WTA-Spielerinnen und hat eine erfolgreiche Trainerkarriere. Sein perfektionistischer Ansatz und die Aufmerksamkeit für Details helfen Spielern, ihr maximales Potenzial zu erreichen.",
+			"achievements": {
+				"certified_trainer": "Zertifizierter Fitnesstrainer",
+				"sparring_partner": "Sparringpartner für TOP-100-WTA-Spielerinnen",
+				"national_wins": "Gewinner nationaler Turniere",
+				"international_exp": "10+ Jahre internationale Erfahrung",
+				"junior_coach": "Trainer der Junioren-Nationalmannschaft",
+				"technical_specialist": "Spezialist für technische Analyse"
+			}
+		}
+	},
+	"programs_page": {
+		"hero_title": "UNSERE",
+		"hero_title_highlight": "PROGRAMME",
+		"hero_description": "Wählen Sie das Programm, das Ihren Bedürfnissen und Tennisambitionen am besten entspricht",
+		"cta_reserve": "Jetzt buchen",
+		"cta_reserve_camp": "Camp buchen",
+		"cta_more_info": "Mehr Informationen",
+		"bottom_cta_title": "Nicht sicher, welches Programm das Richtige für Sie ist?",
+		"bottom_cta_description": "Kontaktieren Sie uns und wir helfen Ihnen, das ideale Programm basierend auf Ihren Bedürfnissen und Zielen auszuwählen.",
+		"bottom_cta_button": "Kontaktieren Sie uns",
+		"junior": {
+			"title": "Juniorenentwicklung",
+			"subtitle": "Für Kinder und Jugendliche von 4–18 Jahren",
+			"description": "Umfassendes Programm mit Fokus auf technische und taktische Entwicklung junger Spieler mit Schwerpunkt auf richtigen Grundlagen.",
+			"duration": "60 Minuten",
+			"group_size": "3-4 Spieler",
+			"price": "250 CZK / Unterricht",
+			"features": {
+				"group_training": "Gruppentraining nach Alter und Niveau.",
+				"basic_skills": "Entwicklung grundlegender Tennisfähigkeiten.",
+				"movement_habits": "Aufbau korrekter Bewegungsmuster.",
+				"physical_fitness": "Verbesserung der körperlichen Fitness und Beweglichkeit.",
+				"teamwork": "Förderung von Teamarbeit und Fair Play."
+			}
+		},
+		"adult": {
+			"title": "Erwachsenenunterricht",
+			"subtitle": "Für Anfänger und Fortgeschrittene",
+			"description": "Flexibles Programm für erwachsene Spieler aller Niveaus mit Individual- oder Gruppentrainingsoptionen.",
+			"duration": "60 Minuten",
+			"group_size": "1–4 Spieler",
+			"price": "ab 300 CZK / Unterricht",
+			"features": {
+				"technique": "Schwerpunkt auf richtiger Schlagtechnik.",
+				"regular_lessons": "Regelmäßiger Unterricht für kontinuierlichen Fortschritt.",
+				"basic_elements": "Beherrschung grundlegender technischer Elemente.",
+				"tactics": "Taktische Entwicklung für besseres Spiel.",
+				"flexible_training": "Flexibles Training nach Verfügbarkeit der Spieler.",
+				"friendly_environment": "Freundliche und motivierende Umgebung."
+			}
+		},
+		"private": {
+			"title": "Privatunterricht",
+			"subtitle": "Individueller Ansatz",
+			"description": "Individueller Unterricht mit Fokus auf spezifische Bedürfnisse jedes Spielers mit maximaler Traineraufmerksamkeit.",
+			"duration": "60 Minuten",
+			"group_size": "1 Spieler",
+			"price": "600 CZK / Unterricht",
+			"features": {
+				"full_attention": "100% Traineraufmerksamkeit.",
+				"customized_program": "Maßgeschneidertes Trainingsprogramm.",
+				"fast_progress": "Schneller und effizienter Fortschritt.",
+				"flexible_schedule": "Flexible Terminplanung.",
+				"video_analysis": "Video-Technikanalyse.",
+				"best_path": "Bester Weg zur schnellen Verbesserung."
+			}
+		},
+		"professional": {
+			"title": "Professionell",
+			"subtitle": "Maßgeschneidertes Programm",
+			"description": "Programm mit Fokus auf Wettkampftennis, identisch mit dem Trainingsprozess von Spitzenspielern.",
+			"duration": "Maßgeschneidertes Programm",
+			"group_size": "Individuell",
+			"price": "Preis auf Anfrage",
+			"features": {
+				"custom_process": "Maßgeschneiderter täglicher Trainingsprozess.",
+				"competitive_level": "Programm mit Fokus auf Wettkampftennis.",
+				"custom_plan": "Täglicher, wöchentlicher und monatlicher Plan, angepasst an den Spieler.",
+				"full_package": "Training, Sparring, Fitnessvorbereitung, Physiotherapie und Massage.",
+				"top_level": "Programm identisch mit der Vorbereitung von Spitzenspielern.",
+				"accommodation": "Unterkunft kann arrangiert werden."
+			}
+		},
+		"camps": {
+			"title": "Sommercamps",
+			"subtitle": "Intensive Wochenprogramme",
+			"description": "Wöchentliche Camps, die technisches Training, Matches und unterhaltsame Aktivitäten für Kinder aller Altersgruppen kombinieren.",
+			"duration": "5 Tage",
+			"group_size": "12–16 Kinder",
+			"price": "Mehr Infos auf Instagram",
+			"features": {
+				"rich_program": "Reichhaltiges Programm für unvergessliche Sommererlebnisse.",
+				"full_day": "Ganztägiges Training unter Leitung erfahrener Trainer.",
+				"various_games": "Verschiedene Spiele und Wettbewerbe zur Fähigkeitsentwicklung.",
+				"balanced_combo": "Ausgewogene Kombination aus Beweglichkeit, Ausdauer und Koordination.",
+				"match_experience": "Sammeln wertvoller Matcherfahrung.",
+				"meals": "Mittagessen und Snacks inklusive.",
+				"tshirt": "Jeder Teilnehmer erhält ein spezielles T-Shirt"
+			}
+		}
+	},
+	"contact_page": {
+		"hero_title": "KONTAKT",
+		"hero_description": "Haben Sie Fragen oder möchten Sie eine Unterrichtsstunde buchen? Wir sind für Sie da!",
+		"contact_card_title": "Wir sind für Sie da",
+		"contact_card_description": "Nehmen Sie Kontakt auf und wir richten das Training genau nach Ihren Bedürfnissen und Zielen ein.",
+		"phone_label": "Telefon",
+		"email_label": "E-Mail",
+		"address_label": "Adresse",
+		"address_value": "Ivana Kubince, 747 91 Štítina, Tschechische Republik",
+		"map_title": "Wo Sie uns finden",
+		"faq_title": "Häufig gestellte Fragen",
+		"faq": {
+			"lesson_duration": {
+				"question": "Wie lange dauert eine Unterrichtsstunde?",
+				"answer": "Eine Standardstunde dauert 60 Minuten, für fortgeschrittene Spieler bieten wir auch längere Stunden an."
+			},
+			"equipment": {
+				"question": "Brauche ich meine eigene Ausrüstung?",
+				"answer": "Für die ersten Stunden können wir Ihnen einen Schläger leihen. Wir empfehlen jedoch, so bald wie möglich eigene Ausrüstung zu besorgen, die Ihrem Niveau und Spielstil entspricht."
+			},
+			"trial_lesson": {
+				"question": "Bieten Sie eine Probestunde an?",
+				"answer": "Ja, für alle neuen Schüler bieten wir eine kostenlose Probestunde an, bei der Sie unseren Ansatz ausprobieren und den Trainer kennenlernen können."
+			}
+		}
+	},
+	"footer": {
+		"company_description": "Professionelle Tennisakademie unter der Leitung der ehemaligen WTA-Spielerin Zuzana Ondrášková. Wir helfen Spielern aller Niveaus, ihre Tennisziele zu erreichen.",
+		"address_title": "Adresse",
+		"address_value": "Ivana Kubince, 747 91 Štítina, Tschechische Republik",
+		"contact_title": "Kontakt",
+		"copyright": "© 2025 ZO Tennis Academy. Alle Rechte vorbehalten."
+	}
+}
+

@@ -4,23 +4,21 @@
 	import X from "@lucide/svelte/icons/x";
 	import MobileMenu from "./mobile-menu.svelte";
 	import ThemeSwitcher from "../theme/theme-switcher.svelte";
+	import LangSwitcher from "./lang-switcher.svelte";
 	import { onMount } from 'svelte';
 	import { asset } from "$app/paths";
-
+	import { localizeHref } from "$lib/utils/localize";
+	import * as m from "$lib/paraglide/messages";
 
 	interface Props {
 		currentPage: string;
-		navigateTo: (page: string) => void;
 		themeMode: 'light' | 'dark' | 'system';
 		setThemeMode: (m: 'light' | 'dark' | 'system') => void;
 	}
 
-	let { currentPage, navigateTo, themeMode, setThemeMode }: Props = $props();
+	let { currentPage, themeMode, setThemeMode }: Props = $props();
 	let isMobileMenuOpen = $state(false);
 	let headerRef: HTMLElement;
-
-	// Locale state (temporary wiring)
-	let locale = $state<'cs' | 'en'>('cs');
 
 	// Lock body scroll when mobile menu is open
 	$effect(() => {
@@ -40,16 +38,11 @@
 	let iconFilter = $derived(isOnDarkBackground ? "filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));" : "");
 
 	const navItems = [
-		{ id: "home", label: "Domů", labelEn: "HOME" },
-		{ id: "coaches", label: "Trenéři", labelEn: "COACHES" },
-		{ id: "programs", label: "Programy", labelEn: "PROGRAMS" },
-		{ id: "contact", label: "Kontakt", labelEn: "CONTACT" },
+		{ id: "home", href: "/", label: () => m["nav.home"]() },
+		{ id: "coaches", href: "/coaches", label: () => m["nav.coaches"]() },
+		{ id: "programs", href: "/programs", label: () => m["nav.programs"]() },
+		{ id: "contact", href: "/contact", label: () => m["nav.contact"]() },
 	];
-
-	function handleNavigation(page: string) {
-		navigateTo(page);
-		isMobileMenuOpen = false;
-	}
 
 	// Magnetic effect for desktop menu items
 	function addMagneticEffect(element: HTMLElement) {
@@ -103,26 +96,27 @@
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<div class="flex items-center justify-between h-20 pt-4">
 			<!-- Enhanced Logo -->
-			<button onclick={() => handleNavigation("home")} class="logo-tennis-enhanced flex items-center gap-2">
+			<a href={localizeHref("/")} class="logo-tennis-enhanced flex items-center gap-2">
 				<img src={asset("/zo-tennis-academy-logo.png")} alt="ZO Tennis Academy" class="h-10 w-auto" />
-			</button>
+			</a>
 
 			<!-- Enhanced Desktop Navigation -->
 			<nav class="hidden md:flex items-center gap-8">
 				{#each navItems as item}
-					<button
-						onclick={() => handleNavigation(item.id)}
+					<a
+						href={localizeHref(item.href)}
 						class={`menu-item-tennis magnetic-item focus-tennis font-medium uppercase tracking-wide transition-colors ${currentPage === item.id ? "text-primary" : `${textColor} hover:text-primary`}`}
 						style={textShadow}
 					>
-						{item.label}
-					</button>
+						{item.label()}
+					</a>
 				{/each}
 			</nav>
 
 			<!-- Right controls (Desktop) -->
 			<div class="hidden md:flex items-center gap-3">
-				<Button onclick={() => handleNavigation("contact")} variant="cta" size="lg" class="tennis-hover font-bold">Rezervovat</Button>
+				<Button href={localizeHref("/contact")} variant="cta" size="lg" class="tennis-hover font-bold">{m["nav.reserve"]()}</Button>
+				<LangSwitcher {textColor} {iconFilter} />
 				<ThemeSwitcher mode={themeMode} {setThemeMode} {textColor} {iconFilter} />
 			</div>
 
@@ -142,12 +136,9 @@
 		<MobileMenu
 			{navItems}
 			{currentPage}
-			{handleNavigation}
 			themeMode={themeMode}
 			{setThemeMode}
-			{locale}
 			onclose={() => (isMobileMenuOpen = false)}
-			onchangeLocale={(newLocale) => (locale = newLocale)}
 		/>
 	{/if}
 </header>

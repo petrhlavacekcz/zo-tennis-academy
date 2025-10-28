@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { asset } from "$app/paths";
+	import * as m from "$lib/paraglide/messages";
 
 	let features = [
-		{ title: "Zkušení trenéři", description: "Profesionální koučování od bývalých hráčů WTA" },
-		{ title: "Příjemné zázemí", description: "Moderní kurty a špičkové vybavení" },
-		{ title: "Všechny úrovně", description: "Od začátečníků po pokročilé hráče" },
-		{ title: "Flexibilní rozvrh", description: "Přizpůsobíme se vašemu času" },
+		{ title: () => m["academy_intro.features.experienced_coaches.title"](), description: () => m["academy_intro.features.experienced_coaches.description"]() },
+		{ title: () => m["academy_intro.features.pleasant_facilities.title"](), description: () => m["academy_intro.features.pleasant_facilities.description"]() },
+		{ title: () => m["academy_intro.features.all_levels.title"](), description: () => m["academy_intro.features.all_levels.description"]() },
+		{ title: () => m["academy_intro.features.flexible_schedule.title"](), description: () => m["academy_intro.features.flexible_schedule.description"]() },
 	];
 </script>
 
@@ -16,9 +17,9 @@
 			<!-- Left Column - Content -->
 			<div>
 				<h2 class="text-section-heading mb-6">
-					PERSONALIZOVANÝ PŘÍSTUP K <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">TENISU</span>
+					{m["academy_intro.heading"]()} <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">{m["academy_intro.heading_highlight"]()}</span>
 				</h2>
-				<p class="text-lg text-muted-foreground mb-8 leading-relaxed">V ZO Tennis Academy věříme, že každý hráč je jedinečný. Naše programy jsou navrženy tak, aby maximalizovaly váš potenciál prostřednictvím individuálního přístupu a profesionálního vedení.</p>
+				<p class="text-lg text-muted-foreground mb-8 leading-relaxed">{m["academy_intro.description"]()}</p>
 
 				<!-- Features -->
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -32,8 +33,8 @@
 								</g>
 							</svg>
 							<div>
-								<h4 class="font-semibold mb-1">{feature.title}</h4>
-								<p class="text-base text-muted-foreground">{feature.description}</p>
+								<h4 class="font-semibold mb-1">{feature.title()}</h4>
+								<p class="text-base text-muted-foreground">{feature.description()}</p>
 							</div>
 						</div>
 					{/each}

@@ -6,20 +6,14 @@
 	import ProgramsOverview from "../sections/programs-overview.svelte";
 	import InstagramSection from "../sections/instagram-section.svelte";
 	import FinalCTA from "../sections/final-cta.svelte";
-
-	interface Props {
-		navigateTo: (page: string) => void;
-	}
-
-	let { navigateTo }: Props = $props();
 </script>
 
 <div class="relative">
-	<HeroSection {navigateTo} />
+	<HeroSection />
 	<AcademyIntro />
-	<CoachesPreview {navigateTo} />
+	<CoachesPreview />
 	<TestimonialsSection />
-	<ProgramsOverview {navigateTo} />
+	<ProgramsOverview />
 	<InstagramSection />
-	<FinalCTA {navigateTo} />
+	<FinalCTA />
 </div>

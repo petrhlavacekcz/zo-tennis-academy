@@ -1,12 +1,7 @@
 <script lang="ts">
 	import Phone from "@lucide/svelte/icons/phone";
 	import Mail from "@lucide/svelte/icons/mail";
-
-	interface Props {
-		navigateTo: (page: string) => void;
-	}
-
-	let { navigateTo }: Props = $props();
+	import * as m from "$lib/paraglide/messages";
 </script>
 
 <footer class="bg-[#F5F5F5] dark:bg-[#111] border-t border-border">
@@ -19,12 +14,12 @@
 					<span class="text-primary">ZO</span>
 					<span>TENNIS ACADEMY</span>
 				</div>
-				<p class="text-muted-foreground mb-6 leading-relaxed">Profesionální tenisová akademie pod vedením bývalé hráčky WTA Zuzany Ondráškové. Pomáháme hráčům všech úrovní dosáhnout jejich tenisových cílů.</p>
+				<p class="text-muted-foreground mb-6 leading-relaxed">{m["footer.company_description"]()}</p>
 			</div>
 
 			<!-- Address -->
 			<div>
-				<h3 class="font-semibold text-lg mb-6">Adresa</h3>
+				<h3 class="font-semibold text-lg mb-6">{m["footer.address_title"]()}</h3>
 				<p class="text-muted-foreground leading-relaxed">
 					Ivana Kubince<br />
 					747 91 Štítina<br />
@@ -34,7 +29,7 @@
 
 			<!-- Contact Info -->
 			<div>
-				<h3 class="font-semibold text-lg mb-6">Kontakt</h3>
+				<h3 class="font-semibold text-lg mb-6">{m["footer.contact_title"]()}</h3>
 				<div class="space-y-3">
 					<a
 						href="mailto:info@zotennisacademy.cz"
@@ -59,7 +54,7 @@
 	<div class="border-t border-border">
 		<div class="container mx-auto px-4 py-6">
 			<div class="flex flex-col md:flex-row justify-between items-center gap-4">
-				<p class="text-muted-foreground text-sm">© 2025 ZO Tennis Academy. Všechna práva vyhrazena.</p>
+				<p class="text-muted-foreground text-sm">{m["footer.copyright"]()}</p>
 			</div>
 		</div>
 	</div>

@@ -1,4 +1,309 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from cs!"
+	"nav": {
+		"home": "Domů",
+		"coaches": "Trenéři",
+		"programs": "Programy",
+		"contact": "Kontakt",
+		"reserve": "Rezervovat"
+	},
+	"hero": {
+		"title": "ZO TENNIS ACADEMY",
+		"subtitle": "Zlepšete svou hru s profesionálním koučováním pod vedením bývalé hráčky WTA Zuzany Ondráškové",
+		"cta": "Rezervovat lekci"
+	},
+	"academy_intro": {
+		"heading": "PERSONALIZOVANÝ PŘÍSTUP K",
+		"heading_highlight": "TENISU",
+		"description": "V ZO Tennis Academy věříme, že každý hráč je jedinečný. Naše programy jsou navrženy tak, aby maximalizovaly váš potenciál prostřednictvím individuálního přístupu a profesionálního vedení.",
+		"features": {
+			"experienced_coaches": {
+				"title": "Zkušení trenéři",
+				"description": "Profesionální koučování od bývalých hráčů WTA"
+			},
+			"pleasant_facilities": {
+				"title": "Příjemné zázemí",
+				"description": "Moderní kurty a špičkové vybavení"
+			},
+			"all_levels": {
+				"title": "Všechny úrovně",
+				"description": "Od začátečníků po pokročilé hráče"
+			},
+			"flexible_schedule": {
+				"title": "Flexibilní rozvrh",
+				"description": "Přizpůsobíme se vašemu času"
+			}
+		}
+	},
+	"coaches_preview": {
+		"heading": "NAŠI",
+		"heading_highlight": "TRENÉŘI",
+		"description": "Učte se od nejlepších. Naši trenéři kombinují profesionální zkušenosti s vášní pro tenis.",
+		"label_achievements": "Klíčové úspěchy",
+		"cta": "Více o našich trenérech",
+		"zuzana": {
+			"name": "Zuzana Ondrášková",
+			"role": "hlavní trenérka a zakladatelka",
+			"achievements": {
+				"wta_ranking": "74. místo WTA žebříčku (2004, 2010)",
+				"top10_wins": "Vítězství nad hráčkami TOP 10",
+				"grand_slam": "Účast na Grand Slam turnajích"
+			},
+			"specialization": "Technická dokonalost, mentální příprava"
+		},
+		"michal": {
+			"name": "Michal Sapala",
+			"role": "trenér a technický specialista",
+			"achievements": {
+				"certified_trainer": "Certifikovaný kondiční trenér",
+				"sparring_partner": "Sparingpartner TOP 100 WTA",
+				"international": "Mezinárodní zkušenosti"
+			},
+			"specialization": "Taktická příprava, perfekcionistický přístup"
+		}
+	},
+	"testimonials": {
+		"heading": "NAŠE",
+		"heading_highlight": "REFERENCE",
+		"description": "Výběr skutečných zkušeností hráčů, rodičů i trenérů, kteří s námi trénují dlouhodobě.",
+		"reviews": {
+			"lukas_kasparcik": {
+				"name": "Lukáš Kašparčík",
+				"role": "Rodič",
+				"text": "Tenisová škola byla pro naše holky skvělou volbou – tenis si zamilovaly a na tréninky chodí s nadšením. Trenéři Zuzka a Míša mají velmi hezký a trpělivý přístup k dětem. Pokroky byly viditelné už po několika lekcích."
+			},
+			"katerina_hecko": {
+				"name": "Kateřina Hečko",
+				"role": "Rodič",
+				"text": "Chtěla bych vyjádřit velkou pochvalu celému týmu tenisového klubu za jejich skvělou práci a profesionální přístup. Klub nabízí výborné zázemí, přátelskou atmosféru a kvalitní tréninky pro děti."
+			},
+			"petr_moravec": {
+				"name": "Petr Moravec",
+				"role": "Rodič",
+				"text": "Dcera navštěvuje tenisové kurzy již dva roky a letos už podruhé absolvovala letní prázdninový kemp spolu s bráškou. Skvělý, laskavý a profesionální přístup celého týmu se promítl i do výsledků."
+			},
+			"klara_kozackova": {
+				"name": "Klára Kozačková",
+				"role": "Rodič",
+				"text": "Doporučujeme tuto tenisovou školu! Syn ji navštěvuje něco přes rok a za tu dobu se neskutečně posunul. Trenérka i trenér jsou naprostí profesionálové."
+			},
+			"martin_peterek": {
+				"name": "Martin Peterek",
+				"role": "Rodič",
+				"text": "Kristýnka si z kempu přivezla pohár za 1. místo a my jsme nadšení z progresu i práce trenérského týmu. Děkujeme a věříme v další posun!"
+			},
+			"silvie_onderkova": {
+				"name": "Silvie Onderková",
+				"role": "Rodič",
+				"text": "Syn chodí do tenisové školy od úplného začátku a každa lekce ho baví víc a víc. Skvělý přístup trenérů, přátelská atmosféra a viditelný pokrok."
+			},
+			"hana_salamon": {
+				"name": "Hana Salamon",
+				"role": "Rodič",
+				"text": "Tábor hodnotím velmi kladně, Emmička byla každý den nadšená a je vidět velký pokrok. Jinak vše moc chválím a doporučuji."
+			},
+			"monika_sawicka": {
+				"name": "Monika Sawicka",
+				"role": "Hráčka",
+				"text": "Zuzana má zkušenosti z čela žebříčku WTA, které se jinde hledají těžko. Množství péče, kterou věnuje rozvoji sportovců, je výjimečné."
+			},
+			"bartek_kozina": {
+				"name": "Bartek Kozina",
+				"role": "Rodič",
+				"text": "Velmi dobrá škola. Důsledná práce na technice a pěstování soutěžního ducha i v nejmladších skupinách. Vřele doporučuji."
+			},
+			"lukas_hahn": {
+				"name": "Lukáš Hahn",
+				"role": "Rodič",
+				"text": "Naše tři děti trénují u Zuzky už více než tři roky a jsme naprosto spokojeni. Zuzka je skvělá trenérka, která k dětem přistupuje s trpělivostí a respektem."
+			},
+			"petr_hlavacek": {
+				"name": "Petr Hlaváček",
+				"role": "Hráč",
+				"text": "S tenisem jsem začal pozdě, ale díky Zuzce a Míšovi mě tenis strašně baví a užívám si, že si zahraju i s kamarády. Těším se na každý trénink."
+			},
+			"veronika_hlavackova": {
+				"name": "Veronika Hlaváčková",
+				"role": "Pokročilá hráčka",
+				"text": "Tenisu se věnuji od svého mládí a Zuzka s Míšou mě u každého tréninku dokážou zase o něco posunout. Už jsem nevěřila, že si backhand můžu zlepšit, ale podařilo se."
+			}
+		}
+	},
+	"programs_overview": {
+		"heading": "NAŠE",
+		"heading_highlight": "PROGRAMY",
+		"description": "Vyberte si program, který nejlépe odpovídá vašim potřebám a tenisovým ambicím.",
+		"cta": "Zobrazit všechny programy"
+	},
+	"instagram": {
+		"heading": "SLEDUJTE NÁS NA",
+		"heading_highlight": "INSTAGRAMU",
+		"description": "Zůstaňte v kontaktu s naší akademií a sledujte nejnovější fotky z tréninků a turnajů",
+		"handle": "@zo_tennis_academy"
+	},
+	"final_cta": {
+		"heading": "Připraveni zlepšit svou hru?",
+		"description": "Začněte svou tenisovou cestu s námi ještě dnes. Nabízíme bezplatnou zkušební lekci pro všechny nové studenty.",
+		"cta_primary": "Rezervovat zkušební lekci",
+		"cta_secondary": "Prohlédnout programy",
+		"contact_text": "Máte otázky? Zavolejte nám na",
+		"phone": "+420 603 441 399"
+	},
+	"coaches_page": {
+		"hero_title": "NAŠI",
+		"hero_title_highlight": "TRENÉŘI",
+		"hero_description": "Poznejte náš profesionální tým trenérů s bohatými zkušenostmi z mezinárodního tenisu",
+		"achievements_title": "Úspěchy a zkušenosti",
+		"cta_reserve": "Rezervovat lekci",
+		"zuzana": {
+			"name": "Zuzana Ondrášková",
+			"role": "hlavní trenérka a zakladatelka",
+			"bio": "Zuzana je bývalá profesionální tenistka, která dosáhla 74. místa na WTA žebříčku. Během své kariéry (1997-2013) získala 20 ITF titulů a účastnila se všech Grand Slam turnajů. Po ukončení aktivní kariéry se věnuje koučování a předávání svých zkušeností mladé generaci.",
+			"achievements": {
+				"wta_ranking": "74. místo WTA žebříčku (2004, 2010)",
+				"top10_wins": "Vítězství nad hráčkami TOP 10",
+				"itf_titles": "20 ITF titulů",
+				"grand_slam": "Účast na všech Grand Slam turnajích",
+				"czech_rep": "Reprezentace České republiky",
+				"coaching_exp": "12+ let koučovacích zkušeností"
+			}
+		},
+		"michal": {
+			"name": "Michal Sapala",
+			"role": "trenér a technický specialista",
+			"bio": "Michal je technický specialista s bohatými zkušenostmi z mezinárodního tenisu. Pracoval jako sparingpartner pro hráčky TOP 100 WTA a má za sebou úspěšnou trenérskou kariéru. Jeho perfekcionistický přístup a důraz na detaily pomáhají hráčům dosáhnout jejich maximálního potenciálu.",
+			"achievements": {
+				"certified_trainer": "Certifikovaný kondiční trenér",
+				"sparring_partner": "Sparingpartner TOP 100 WTA hráčky",
+				"national_wins": "Vítěz národních turnajů",
+				"international_exp": "10+ let mezinárodních zkušeností",
+				"junior_coach": "Trenér juniorských reprezentantů",
+				"technical_specialist": "Specialista na technickou analýzu"
+			}
+		}
+	},
+	"programs_page": {
+		"hero_title": "NAŠE",
+		"hero_title_highlight": "PROGRAMY",
+		"hero_description": "Vyberte si program, který nejlépe odpovídá vašim potřebám a tenisovým ambicím",
+		"cta_reserve": "Rezervovat",
+		"cta_reserve_camp": "Rezervovat kemp",
+		"cta_more_info": "Získat více informací",
+		"bottom_cta_title": "Nevíte, který program je pro vás ten pravý?",
+		"bottom_cta_description": "Kontaktujte nás a my vám pomůžeme vybrat ideální program podle vašich potřeb a cílů.",
+		"bottom_cta_button": "Kontaktovat nás",
+		"junior": {
+			"title": "Juniorský rozvoj",
+			"subtitle": "Pro děti a mládež 4–18 let",
+			"description": "Komplexní program zaměřený na technický a taktický rozvoj mladých hráčů s důrazem na správné základy.",
+			"duration": "60 minut",
+			"group_size": "3-4 hráči",
+			"price": "250 Kč / lekce",
+			"features": {
+				"group_training": "Skupinové tréninky podle věku a úrovně.",
+				"basic_skills": "Rozvoj základních tenisových dovedností.",
+				"movement_habits": "Budování správných pohybových návyků.",
+				"physical_fitness": "Zlepšování fyzické kondice a obratnosti.",
+				"teamwork": "Podpora týmové spolupráce a fair play."
+			}
+		},
+		"adult": {
+			"title": "Lekce pro dospělé",
+			"subtitle": "Pro začátečníky a pokročilé",
+			"description": "Flexibilní program pro dospělé hráče všech úrovní s možností individuálního nebo skupinového tréninku.",
+			"duration": "60 minut",
+			"group_size": "1–4 hráči",
+			"price": "od 300 Kč / lekce",
+			"features": {
+				"technique": "Důraz na správnou techniku úderů.",
+				"regular_lessons": "Pravidelné lekce pro trvalý pokrok.",
+				"basic_elements": "Osvojení základních technických prvků.",
+				"tactics": "Rozvoj taktiky pro lepší hru.",
+				"flexible_training": "Flexibilní tréninky podle možností hráčů.",
+				"friendly_environment": "Přátelské a motivující prostředí."
+			}
+		},
+		"private": {
+			"title": "Soukromé lekce",
+			"subtitle": "Individuální přístup",
+			"description": "Individuální lekce zaměřené na specifické potřeby každého hráče s maximální pozorností trenéra.",
+			"duration": "60 minut",
+			"group_size": "1 hráč",
+			"price": "600 Kč / lekce",
+			"features": {
+				"full_attention": "100% pozornost trenéra.",
+				"customized_program": "Přizpůsobený tréninkový program.",
+				"fast_progress": "Rychlý a efektivní pokrok.",
+				"flexible_schedule": "Flexibilní termíny.",
+				"video_analysis": "Video analýza techniky.",
+				"best_path": "Nejlepší cesta k rychlému zlepšení."
+			}
+		},
+		"professional": {
+			"title": "Profesionál",
+			"subtitle": "Program šitý na míru",
+			"description": "Program zaměřený na tenis na závodní úrovni, který je shodný s tréninkovým procesem špičkových hráčů.",
+			"duration": "Program šitý na míru",
+			"group_size": "Individuální",
+			"price": "Cena na vyžádání",
+			"features": {
+				"custom_process": "Na míru vytvořený každodenní tréninkový proces.",
+				"competitive_level": "Program zaměřený na tenis na závodní úrovni.",
+				"custom_plan": "Denní, týdenní i měsíční plán přizpůsobený hráči.",
+				"full_package": "Tréninky, sparingy, kondiční příprava, fyzioterapie a masáže.",
+				"top_level": "Program shodný s přípravou špičkových hráčů.",
+				"accommodation": "Možnost zajištění ubytování."
+			}
+		},
+		"camps": {
+			"title": "Letní kempy",
+			"subtitle": "Intenzivní týdenní programy",
+			"description": "Týdenní kempy kombinující technický trénink, zápasy a zábavné aktivity pro děti všech věkových kategorií.",
+			"duration": "5 dní",
+			"group_size": "12–16 dětí",
+			"price": "Více info Instagram",
+			"features": {
+				"rich_program": "Bohatý program pro nezapomenutelné letní zážitky.",
+				"full_day": "Celodenní tréninky pod vedením zkušených trenérů.",
+				"various_games": "Různorodé hry a soutěže pro rozvoj dovedností.",
+				"balanced_combo": "Vyvážená kombinace obratnosti, vytrvalosti a koordinace.",
+				"match_experience": "Získání cenných zápasových zkušeností.",
+				"meals": "Obědy a svačiny zajištěny.",
+				"tshirt": "Každý účastník obdrží speciální tričko"
+			}
+		}
+	},
+	"contact_page": {
+		"hero_title": "KONTAKT",
+		"hero_description": "Máte otázky nebo chcete rezervovat lekci? Jsme tu pro vás!",
+		"contact_card_title": "Jsme tu pro vás",
+		"contact_card_description": "Ozvěte se a společně nastavíme trénink přesně podle vašich potřeb a cílů.",
+		"phone_label": "Telefon",
+		"email_label": "Email",
+		"address_label": "Adresa",
+		"address_value": "Ivana Kubince, 747 91 Štítina, Česká republika",
+		"map_title": "Kde nás najdete",
+		"faq_title": "Často kladené otázky",
+		"faq": {
+			"lesson_duration": {
+				"question": "Jak dlouho trvá jedna lekce?",
+				"answer": "Standardní lekce trvá 60 minut, pro pokročilejší hráče nabízíme i delší lekce."
+			},
+			"equipment": {
+				"question": "Potřebuji vlastní vybavení?",
+				"answer": "Pro první lekce můžeme zapůjčit raketu. Doporučujeme však co nejdříve pořídit vlastní vybavení přizpůsobené vaší úrovni a stylu hry."
+			},
+			"trial_lesson": {
+				"question": "Nabízíte zkušební lekci?",
+				"answer": "Ano, pro všechny nové studenty nabízíme bezplatnou zkušební lekci, kde si můžete vyzkoušet náš přístup a poznat trenéra."
+			}
+		}
+	},
+	"footer": {
+		"company_description": "Profesionální tenisová akademie pod vedením bývalé hráčky WTA Zuzany Ondráškové. Pomáháme hráčům všech úrovní dosáhnout jejich tenisových cílů.",
+		"address_title": "Adresa",
+		"address_value": "Ivana Kubince, 747 91 Štítina, Česká republika",
+		"contact_title": "Kontakt",
+		"copyright": "© 2025 ZO Tennis Academy. Všechna práva vyhrazena."
+	}
 }

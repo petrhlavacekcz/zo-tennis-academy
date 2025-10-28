@@ -3,6 +3,8 @@
 	import ThemeSwitcher from "../theme/theme-switcher.svelte";
 	import LangSwitcher from "./lang-switcher.svelte";
 	import { fly, fade } from "svelte/transition";
+	import { localizeHref } from "$lib/utils/localize";
+	import * as m from "$lib/paraglide/messages";
 	// @ts-ignore - lucide typed modules resolution
 	import Home from "@lucide/svelte/icons/home";
 	// @ts-ignore - lucide typed modules resolution
@@ -16,25 +18,16 @@
 
 
 	interface Props {
-		navItems: Array<{ id: string; label: string; labelEn: string }>;
+		navItems: Array<{ id: string; href: string; label: () => string }>;
 		currentPage: string;
-		handleNavigation: (page: string) => void;
 		themeMode: 'light' | 'dark' | 'system';
 		setThemeMode: (m: 'light' | 'dark' | 'system') => void;
-		locale: 'cs' | 'en';
 		onclose?: () => void;
-		onchangeLocale?: (locale: 'cs' | 'en') => void;
 	}
 
-	let { navItems, currentPage, handleNavigation, themeMode, setThemeMode, locale, onclose, onchangeLocale }: Props = $props();
+	let { navItems, currentPage, themeMode, setThemeMode, onclose }: Props = $props();
 
 	const iconFor = { home: Home, coaches: Users, programs: Trophy, contact: Phone } as const;
-
-
-	function navigateTo(id: string) {
-		handleNavigation(id);
-		onclose?.();
-	}
 
 	function onBackdropClick() {
 		onclose?.();
@@ -78,8 +71,9 @@
 		<nav class="flex-1 flex flex-col gap-3">
 			{#each navItems as item}
 				{@const Icon = iconFor[item.id as keyof typeof iconFor]}
-				<button
-					onclick={() => navigateTo(item.id)}
+				<a
+					href={localizeHref(item.href)}
+					onclick={() => onclose?.()}
 					aria-current={currentPage === item.id ? 'page' : undefined}
 					class={`group w-full flex items-center gap-5 py-6 px-4 rounded-2xl text-left transition-all duration-200 ${
 						currentPage === item.id
@@ -101,23 +95,29 @@
 							? 'text-primary'
 							: 'text-gray-900 dark:text-gray-100 group-hover:text-primary'
 					}`}>
-						{item.label}
+						{item.label()}
 					</span>
-				</button>
+				</a>
 			{/each}
 		</nav>
 
 		<!-- Footer -->
 		<div class="mt-auto pt-8 space-y-4">
 			<!-- Settings row -->
-			<div class="flex items-center justify-between gap-3 px-2">
-				<LangSwitcher value={locale} languages={['cs','en']} onChange={(v) => onchangeLocale?.(v as 'cs' | 'en')} variant="mobile" />
-				<ThemeSwitcher mode={themeMode} {setThemeMode} variant="mobile" />
+			<div class="flex flex-col gap-3 px-2">
+				<div class="flex items-center justify-between gap-3">
+					<span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language</span>
+					<LangSwitcher variant="mobile" />
+				</div>
+				<div class="flex items-center justify-between gap-3">
+					<span class="text-sm font-medium text-gray-700 dark:text-gray-300">Theme</span>
+					<ThemeSwitcher mode={themeMode} {setThemeMode} variant="mobile" />
+				</div>
 			</div>
 
 			<!-- CTA Button -->
-			<Button onclick={() => navigateTo('contact')} variant="cta" size="xl" class="w-full tennis-hover">
-				Rezervovat
+			<Button href={localizeHref("/contact")} variant="cta" size="xl" class="w-full tennis-hover">
+				{m["nav.reserve"]()}
 			</Button>
 		</div>
 	</aside>

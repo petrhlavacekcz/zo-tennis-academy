@@ -2,12 +2,8 @@
 	import { Button } from "$lib/components/ui/button";
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 	import Phone from "@lucide/svelte/icons/phone";
-
-	interface Props {
-		navigateTo: (page: string) => void;
-	}
-
-	let { navigateTo }: Props = $props();
+	import { localizeHref } from "$lib/utils/localize";
+	import * as m from "$lib/paraglide/messages";
 </script>
 
 <section class="py-24 bg-primary text-primary-foreground relative overflow-hidden">
@@ -17,27 +13,27 @@
 	</div>
 
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12 text-center relative z-10">
-		<h2 class="text-section-heading mb-6">Připraveni zlepšit svou hru?</h2>
+		<h2 class="text-section-heading mb-6">{m["final_cta.heading"]()}</h2>
 
-		<p class="text-lg mb-8 max-w-2xl mx-auto opacity-90 leading-relaxed">Začněte svou tenisovou cestu s námi ještě dnes. Nabízíme bezplatnou zkušební lekci pro všechny nové studenty.</p>
+		<p class="text-lg mb-8 max-w-2xl mx-auto opacity-90 leading-relaxed">{m["final_cta.description"]()}</p>
 
 		<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-			<Button onclick={() => navigateTo("contact")} variant="cta-inverse" size="xl" class="tennis-hover group">
+			<Button href={localizeHref("/contact")} variant="cta-inverse" size="xl" class="group">
 				<Phone size={20} />
-				Rezervovat zkušební lekci
+				{m["final_cta.cta_primary"]()}
 				<ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />
 			</Button>
 
-			<Button onclick={() => navigateTo("programs")} variant="outline-inverse" size="xl" class="tennis-hover">
-				Prohlédnout programy
+			<Button href={localizeHref("/programs")} variant="outline-inverse" size="xl">
+				{m["final_cta.cta_secondary"]()}
 			</Button>
 		</div>
 
 		<!-- Contact Info -->
 		<div class="mt-12 pt-8 border-t border-white/20">
 			<p class="text-base opacity-90">
-				Máte otázky? Zavolejte nám na
-				<a href="tel:+420603441399" class="font-semibold hover:underline">+420 603 441 399</a>
+				{m["final_cta.contact_text"]()}
+				<a href="tel:+420603441399" class="font-semibold hover:underline">{m["final_cta.phone"]()}</a>
 			</p>
 		</div>
 	</div>

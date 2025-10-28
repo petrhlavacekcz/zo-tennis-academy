@@ -3,21 +3,22 @@
 	import { Button } from "$lib/components/ui/button";
 	import { Phone, Mail, MapPin, ChevronDown } from "@lucide/svelte";
 	import { asset } from "$app/paths";
+	import * as m from "$lib/paraglide/messages";
 
 	let expandedFaq = $state<number | null>(null);
 
 	let faqs = [
 		{
-			question: "Jak dlouho trvá jedna lekce?",
-			answer: "Standardní lekce trvá 60 minut, pro pokročilejší hráče nabízíme i delší lekce.",
+			question: m["contact_page.faq.lesson_duration.question"](),
+			answer: m["contact_page.faq.lesson_duration.answer"](),
 		},
 		{
-			question: "Potřebuji vlastní vybavení?",
-			answer: "Pro první lekce můžeme zapůjčit raketu. Doporučujeme však co nejdříve pořídit vlastní vybavení přizpůsobené vaší úrovni a stylu hry.",
+			question: m["contact_page.faq.equipment.question"](),
+			answer: m["contact_page.faq.equipment.answer"](),
 		},
 		{
-			question: "Nabízíte zkušební lekci?",
-			answer: "Ano, pro všechny nové studenty nabízíme bezplatnou zkušební lekci, kde si můžete vyzkoušet náš přístup a poznat trenéra.",
+			question: m["contact_page.faq.trial_lesson.question"](),
+			answer: m["contact_page.faq.trial_lesson.answer"](),
 		},
 	];
 
@@ -43,9 +44,9 @@
 		<!-- Content -->
 		<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
 			<h1 class="text-page-heading mb-4 text-white">
-				<span class="text-primary">KONTAKT</span>
+				<span class="text-primary">{m["contact_page.hero_title"]()}</span>
 			</h1>
-			<p class="text-lg text-white/90 max-w-2xl mx-auto">Máte otázky nebo chcete rezervovat lekci? Jsme tu pro vás!</p>
+			<p class="text-lg text-white/90 max-w-2xl mx-auto">{m["contact_page.hero_description"]()}</p>
 		</div>
 	</section>
 
@@ -56,14 +57,13 @@
 				<Card class="h-full rounded-3xl border border-border/50 bg-card/95 shadow-[0_24px_50px_rgba(15,15,15,0.12)]">
 					<CardContent class="flex h-full flex-col gap-10 p-10 lg:p-12">
 						<div class="space-y-4">
-							<span class="text-xs font-semibold uppercase tracking-[0.35em] text-primary/70">Jsme tu pro vás</span>
-							<h2 class="text-3xl lg:text-4xl font-semibold leading-tight">Ozvěte se a společně nastavíme trénink</h2>
-							<p class="text-base text-muted-foreground">Preferujeme osobní komunikaci – napište nám a domluvíme ideální formu spolupráce, termíny i první zkušební lekci.</p>
+							<span class="text-xs font-semibold uppercase tracking-[0.35em] text-primary/70">{m["contact_page.contact_card_title"]()}</span>
+							<h2 class="text-3xl lg:text-4xl font-semibold leading-tight">{m["contact_page.contact_card_description"]()}</h2>
 						</div>
 
 						<div class="space-y-6">
-							<Button asChild size="lg" class="w-full sm:w-auto px-8 bg-primary text-primary-foreground hover:bg-primary/90">
-								<a href="mailto:info@zotennisacademy.cz">info@zotennisacademy.cz</a>
+							<Button href="mailto:info@zotennisacademy.cz" size="lg" class="w-full sm:w-auto px-8 bg-primary text-primary-foreground hover:bg-primary/90">
+								info@zotennisacademy.cz
 							</Button>
 
 							<div class="grid gap-4">
@@ -72,7 +72,7 @@
 										<Phone size={20} class="text-primary" />
 									</div>
 									<div class="flex flex-col">
-										<p class="text-xs uppercase tracking-wide text-muted-foreground">Telefon</p>
+										<p class="text-xs uppercase tracking-wide text-muted-foreground">{m["contact_page.phone_label"]()}</p>
 										<a href="tel:+420603441399" class="text-base font-semibold text-foreground hover:text-primary transition-colors whitespace-nowrap">+420 603 441 399</a>
 									</div>
 								</div>
@@ -81,8 +81,8 @@
 										<MapPin size={20} class="text-primary" />
 									</div>
 									<div class="flex flex-col">
-										<p class="text-xs uppercase tracking-wide text-muted-foreground">Adresa</p>
-										<p class="text-base font-semibold text-foreground">Ivana Kubince&nbsp;•&nbsp;747 91 Štítina</p>
+										<p class="text-xs uppercase tracking-wide text-muted-foreground">{m["contact_page.address_label"]()}</p>
+										<p class="text-base font-semibold text-foreground">{m["contact_page.address_value"]()}</p>
 									</div>
 								</div>
 							</div>
@@ -92,8 +92,7 @@
 
 				<Card class="h-full rounded-3xl border border-border/50 bg-card/95 shadow-[0_24px_50px_rgba(15,15,15,0.12)] overflow-hidden">
 					<CardHeader class="p-8 pb-4">
-						<CardTitle class="text-2xl">Kde nás najdete</CardTitle>
-						<p class="text-muted-foreground">Naše kurty najdete v klidném prostředí s pohodlným parkováním.</p>
+						<CardTitle class="text-2xl">{m["contact_page.map_title"]()}</CardTitle>
 					</CardHeader>
 					<CardContent class="flex flex-1 flex-col p-0">
 						<div class="h-full min-h-[320px] w-full overflow-hidden">
@@ -105,8 +104,7 @@
 
 			<Card class="mt-12 rounded-3xl border border-border/50 bg-card/95 shadow-[0_18px_40px_rgba(15,15,15,0.08)]">
 				<CardHeader class="px-8 pt-8 pb-4">
-					<CardTitle class="text-2xl">Často kladené otázky</CardTitle>
-					<p class="text-muted-foreground">Shrnuli jsme odpovědi na nejčastější dotazy, abyste měli vše potřebné hned po ruce.</p>
+					<CardTitle class="text-2xl">{m["contact_page.faq_title"]()}</CardTitle>
 				</CardHeader>
 				<CardContent class="px-2 pb-8">
 					<div class="space-y-3">

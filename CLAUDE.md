@@ -21,12 +21,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Architecture
 
 ### Framework & Technology Stack
-- **SvelteKit 2.x** with **Svelte 5** (using new runes syntax: `$state`, `$props`, `$effect`)
+- **SvelteKit 2.x** with **Svelte 5** (using new runes syntax: `$state`, `$props`, `$effect`, `$derived`)
 - **TypeScript** for type safety
 - **Tailwind CSS v4** with `@tailwindcss/vite` plugin
 - **shadcn-svelte** component library (bits-ui based)
-- **Paraglide.js** for internationalization (Czech/English)
-- **Vite** as build tool with static adapter for GitHub Pages
+- **Paraglide.js 2.0** for internationalization (Czech/English/German/Polish)
+- **Vite** as build tool with static adapter for static site generation
 
 ### Project Structure
 - `src/lib/components/ui/` - shadcn-svelte UI components (Button, Card, Input, etc.)
@@ -36,30 +36,38 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   - `components/header/` - Header and navigation components
   - `components/footer/` - Footer component
   - `components/theme/` - Theme switching functionality
-- `src/lib/paraglide/` - Auto-generated i18n files
-- `messages/` - Translation files (cs.json, en.json)
+- `src/lib/paraglide/` - Auto-generated i18n files (do not edit manually)
+- `src/lib/utils/` - Utility functions (localize.ts for i18n routing)
+- `messages/` - Translation files (cs.json, en.json, de.json, pl.json)
+- `src/routes/[[lang]]/` - File-based routing with optional language parameter
 
 ### Navigation & State Management
-- Client-side routing implemented with state management in `zo-tennis-academy.svelte`
+- **SvelteKit file-based routing** with `[[lang]]` parameter for multilingual support
+- **Svelte 5 runes** for reactive state management (`$state`, `$derived`, `$effect`)
+- **Svelte 5 `$app/state`** for accessing page state (replaces deprecated `$app/stores`)
 - Theme switching (light/dark/system) with localStorage persistence
-- No external state management library - uses Svelte 5 runes
+- No external state management library needed
 
 ### Styling & Design System
-- Tailwind CSS with custom design tokens
+- Tailwind CSS v4 with custom design tokens
 - Component aliases configured in `components.json`:
   - `$lib/components` for components
   - `$lib/components/ui` for UI components
   - `$lib/utils` for utilities
-- Tennis-themed animations and hover effects defined globally
+- Tennis-themed animations and hover effects defined globally in layout
 
-### Internationalization
-- Base locale: Czech (`cs`)
-- Supported locales: Czech (`cs`), English (`en`)
-- Messages stored in `/messages/{locale}.json`
-- Paraglide generates runtime files in `src/lib/paraglide/`
+### Internationalization (Paraglide.js 2.0)
+- **Base locale**: Czech (`cs`) at `/`
+- **Supported locales**: Czech (`cs`), English (`en`), German (`de`), Polish (`pl`)
+- **URL structure**: `/{locale}/{page}` (e.g., `/en/coaches`, `/de/programs`)
+- **Messages**: Stored in `/messages/{locale}.json` (309+ keys per language)
+- **Runtime**: Paraglide generates tree-shakable message functions in `src/lib/paraglide/`
+- **Strategy**: `['url', 'cookie', 'baseLocale']` for locale detection
+- **SSG Support**: Invisible anchor tags in layout for crawling all language versions
 
 ### Build Configuration
-- **Static adapter** for GitHub Pages deployment
-- Base path: `/zo-tennis-academy/` in production
-- Prerendering enabled for all routes
-- Tailwind CSS v4 integrated via Vite plugin
+- **Static adapter** (`@sveltejs/adapter-static`) for SSG
+- **No base path** - deploys to root domain
+- **Prerendering**: Enabled for all routes (`prerender: true`)
+- **Tailwind CSS v4**: Integrated via Vite plugin
+- **Paraglide Vite Plugin**: Compiles messages at build time

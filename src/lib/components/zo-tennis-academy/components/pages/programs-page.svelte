@@ -13,72 +13,68 @@
 	// @ts-ignore - lucide typed modules resolution
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
 	import { asset } from "$app/paths";
-
-	interface Props {
-		navigateTo: (page: string) => void;
-	}
-
-	let { navigateTo }: Props = $props();
+	import { localizeHref } from "$lib/utils/localize";
+	import * as m from "$lib/paraglide/messages";
 
 	// First 3 programs (3 in row)
 	let mainPrograms = [
 		{
 			id: "junior",
-			title: "Juniorský rozvoj",
-			subtitle: "Pro děti a mládež 4–18 let",
-			description: "Komplexní program zaměřený na technický a taktický rozvoj mladých hráčů s důrazem na správné základy.",
+			title: m["programs_page.junior.title"](),
+			subtitle: m["programs_page.junior.subtitle"](),
+			description: m["programs_page.junior.description"](),
 			icon: Users,
 			color: "text-blue-500",
 			image: asset("/junior.jpeg"),
-			duration: "60 minut",
-			groupSize: "3-4 hráči",
-			price: "250 Kč / lekce",
+			duration: m["programs_page.junior.duration"](),
+			groupSize: m["programs_page.junior.group_size"](),
+			price: m["programs_page.junior.price"](),
 			features: [
-				"Skupinové tréninky podle věku a úrovně.",
-				"Rozvoj základních tenisových dovedností.",
-				"Budování správných pohybových návyků.",
-				"Zlepšování fyzické kondice a obratnosti.",
-				"Podpora týmové spolupráce a fair play."
+				m["programs_page.junior.features.group_training"](),
+				m["programs_page.junior.features.basic_skills"](),
+				m["programs_page.junior.features.movement_habits"](),
+				m["programs_page.junior.features.physical_fitness"](),
+				m["programs_page.junior.features.teamwork"]()
 			],
 		},
 		{
 			id: "adult",
-			title: "Lekce pro dospělé",
-			subtitle: "Pro začátečníky a pokročilé",
-			description: "Flexibilní program pro dospělé hráče všech úrovní s možností individuálního nebo skupinového tréninku.",
+			title: m["programs_page.adult.title"](),
+			subtitle: m["programs_page.adult.subtitle"](),
+			description: m["programs_page.adult.description"](),
 			icon: Trophy,
 			color: "text-green-500",
 			image: asset("/adult.jpeg"),
-			duration: "60 minut",
-			groupSize: "1–4 hráči",
-			price: "od 300 Kč / lekce",
+			duration: m["programs_page.adult.duration"](),
+			groupSize: m["programs_page.adult.group_size"](),
+			price: m["programs_page.adult.price"](),
 			features: [
-				"Důraz na správnou techniku úderů.",
-				"Pravidelné lekce pro trvalý pokrok.",
-				"Osvojení základních technických prvků.",
-				"Rozvoj taktiky pro lepší hru.",
-				"Flexibilní tréninky podle možností hráčů.",
-				"Přátelské a motivující prostředí."
+				m["programs_page.adult.features.technique"](),
+				m["programs_page.adult.features.regular_lessons"](),
+				m["programs_page.adult.features.basic_elements"](),
+				m["programs_page.adult.features.tactics"](),
+				m["programs_page.adult.features.flexible_training"](),
+				m["programs_page.adult.features.friendly_environment"]()
 			],
 		},
 		{
 			id: "private",
-			title: "Soukromé lekce",
-			subtitle: "Individuální přístup",
-			description: "Individuální lekce zaměřené na specifické potřeby každého hráče s maximální pozorností trenéra.",
+			title: m["programs_page.private.title"](),
+			subtitle: m["programs_page.private.subtitle"](),
+			description: m["programs_page.private.description"](),
 			icon: Clock,
 			color: "text-purple-500",
 			image: asset("/private.jpeg"),
-			duration: "60 minut",
-			groupSize: "1 hráč",
-			price: "600 Kč / lekce",
+			duration: m["programs_page.private.duration"](),
+			groupSize: m["programs_page.private.group_size"](),
+			price: m["programs_page.private.price"](),
 			features: [
-				"100% pozornost trenéra.",
-				"Přizpůsobený tréninkový program.",
-				"Rychlý a efektivní pokrok.",
-				"Flexibilní termíny.",
-				"Video analýza techniky.",
-				"Nejlepší cesta k rychlému zlepšení."
+				m["programs_page.private.features.full_attention"](),
+				m["programs_page.private.features.customized_program"](),
+				m["programs_page.private.features.fast_progress"](),
+				m["programs_page.private.features.flexible_schedule"](),
+				m["programs_page.private.features.video_analysis"](),
+				m["programs_page.private.features.best_path"]()
 			],
 		},
 	];
@@ -87,43 +83,43 @@
 	let specialPrograms = [
 		{
 			id: "pro",
-			title: "Profesionál",
-			subtitle: "Program šitý na míru",
-			description: "Program zaměřený na tenis na závodní úrovni, který je shodný s tréninkovým procesem špičkových hráčů.",
+			title: m["programs_page.professional.title"](),
+			subtitle: m["programs_page.professional.subtitle"](),
+			description: m["programs_page.professional.description"](),
 			icon: Trophy,
 			color: "text-primary",
 			image: asset("/professional.jpeg"),
-			duration: "Program šitý na míru",
-			groupSize: "Individuální",
-			price: "Cena na vyžádání",
+			duration: m["programs_page.professional.duration"](),
+			groupSize: m["programs_page.professional.group_size"](),
+			price: m["programs_page.professional.price"](),
 			features: [
-				"Na míru vytvořený každodenní tréninkový proces.",
-				"Program zaměřený na tenis na závodní úrovni.",
-				"Denní, týdenní i měsíční plán přizpůsobený hráči.",
-				"Tréninky, sparingy, kondiční příprava, fyzioterapie a masáže.",
-				"Program shodný s přípravou špičkových hráčů.",
-				"Možnost zajištění ubytování."
+				m["programs_page.professional.features.custom_process"](),
+				m["programs_page.professional.features.competitive_level"](),
+				m["programs_page.professional.features.custom_plan"](),
+				m["programs_page.professional.features.full_package"](),
+				m["programs_page.professional.features.top_level"](),
+				m["programs_page.professional.features.accommodation"]()
 			],
 		},
 		{
 			id: "camps",
-			title: "Letní kempy",
-			subtitle: "Intenzivní týdenní programy",
-			description: "Týdenní kempy kombinující technický trénink, zápasy a zábavné aktivity pro děti všech věkových kategorií.",
+			title: m["programs_page.camps.title"](),
+			subtitle: m["programs_page.camps.subtitle"](),
+			description: m["programs_page.camps.description"](),
 			icon: Trophy,
 			color: "text-primary",
 			image: asset("/camps.jpeg"),
-			duration: "5 dní",
-			groupSize: "12–16 dětí",
-			price: "Více info Instagram",
+			duration: m["programs_page.camps.duration"](),
+			groupSize: m["programs_page.camps.group_size"](),
+			price: m["programs_page.camps.price"](),
 			features: [
-				"Bohatý program pro nezapomenutelné letní zážitky.",
-				"Celodenní tréninky pod vedením zkušených trenérů.",
-				"Různorodé hry a soutěže pro rozvoj dovedností.",
-				"Vyvážená kombinace obratnosti, vytrvalosti a koordinace.",
-				"Získání cenných zápasových zkušeností.",
-				"Obědy a svačiny zajištěny.",
-				"Každý účastník obdrží speciální tričko"
+				m["programs_page.camps.features.rich_program"](),
+				m["programs_page.camps.features.full_day"](),
+				m["programs_page.camps.features.various_games"](),
+				m["programs_page.camps.features.balanced_combo"](),
+				m["programs_page.camps.features.match_experience"](),
+				m["programs_page.camps.features.meals"](),
+				m["programs_page.camps.features.tshirt"]()
 			],
 		},
 	];
@@ -146,9 +142,9 @@
 		<!-- Content -->
 		<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
 			<h1 class="text-page-heading mb-4 text-white">
-				NAŠE <span class="text-primary">PROGRAMY</span>
+				{m["programs_page.hero_title"]()} <span class="text-primary">{m["programs_page.hero_title_highlight"]()}</span>
 			</h1>
-			<p class="text-lg text-white/90 max-w-2xl mx-auto">Vyberte si program, který nejlépe odpovídá vašim potřebám a tenisovým ambicím</p>
+			<p class="text-lg text-white/90 max-w-2xl mx-auto">{m["programs_page.hero_description"]()}</p>
 		</div>
 	</section>
 
@@ -219,7 +215,7 @@
 
 								<!-- CTAs -->
 								<div class="flex gap-3">
-									<Button onclick={() => navigateTo("contact")} variant="cta" size="xl" class="flex-1 tennis-hover">Rezervovat</Button>
+									<Button href={localizeHref("/contact")} variant="cta" size="xl" class="flex-1 tennis-hover">{m["programs_page.cta_reserve"]()}</Button>
 								</div>
 							</div>
 						</CardContent>
@@ -293,8 +289,8 @@
 
 							<!-- CTA -->
 							<div class="mt-auto">
-								<Button onclick={() => navigateTo("contact")} variant="cta" size="xl" class="w-full tennis-hover">
-									{program.id === "camps" ? "Rezervovat kemp" : "Získat více informací"}
+								<Button href={localizeHref("/contact")} variant="cta" size="xl" class="w-full tennis-hover">
+									{program.id === "camps" ? m["programs_page.cta_reserve_camp"]() : m["programs_page.cta_more_info"]()}
 								</Button>
 							</div>
 						</div>
@@ -306,10 +302,10 @@
 			<!-- Bottom CTA -->
 			<Card class="bg-primary text-primary-foreground">
 				<CardContent class="p-8 text-center">
-					<h3 class="font-bold mb-4">Nevíte, který program je pro vás ten pravý?</h3>
-					<p class="text-base mb-6 opacity-90">Kontaktujte nás a my vám pomůžeme vybrat ideální program podle vašich potřeb a cílů.</p>
-					<Button onclick={() => navigateTo("contact")} variant="cta-inverse" size="xl" class="tennis-hover">
-						Kontaktovat nás
+					<h3 class="font-bold mb-4">{m["programs_page.bottom_cta_title"]()}</h3>
+					<p class="text-base mb-6 opacity-90">{m["programs_page.bottom_cta_description"]()}</p>
+					<Button href={localizeHref("/contact")} variant="cta-inverse" size="xl" class="tennis-hover">
+						{m["programs_page.bottom_cta_button"]()}
 						<ArrowRight size={20} />
 					</Button>
 				</CardContent>

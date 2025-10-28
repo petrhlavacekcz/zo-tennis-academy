@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Instagram } from "@lucide/svelte";
+	import * as m from "$lib/paraglide/messages";
 
 	let instagramPosts = Array.from({ length: 6 }, (_, i) => ({
 		id: i + 1,
@@ -14,9 +15,9 @@
 		<div class="text-center mb-12">
 			<div class="flex items-center justify-center gap-3 mb-3">
 				<Instagram size={24} class="text-primary" />
-				<h2 class="text-section-heading">SLEDUJTE NÁS NA <span class="text-primary">INSTAGRAMU</span></h2>
+				<h2 class="text-section-heading">{m["instagram.heading"]()} <span class="text-primary">{m["instagram.heading_highlight"]()}</span></h2>
 			</div>
-			<p class="text-white/70 max-w-2xl mx-auto">Zůstaňte v kontaktu s naší akademií a sledujte nejnovější fotky z tréninků a turnajů</p>
+			<p class="text-white/70 max-w-2xl mx-auto">{m["instagram.description"]()}</p>
 		</div>
 
 		<!-- Instagram Grid (wireframe) -->
@@ -34,7 +35,7 @@
 		<div class="text-center">
 			<a href="https://www.instagram.com/zo_tennis_academy/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-medium">
 				<Instagram size={18} />
-				@zo_tennis_academy
+				{m["instagram.handle"]()}
 			</a>
 		</div>
 	</div>

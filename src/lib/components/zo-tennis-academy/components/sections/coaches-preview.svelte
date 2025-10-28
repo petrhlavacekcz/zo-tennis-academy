@@ -2,29 +2,30 @@
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
 	import { ArrowRight } from "@lucide/svelte";
-	import { assets } from "$app/paths";
-
-
-	interface Props {
-		navigateTo: (page: string) => void;
-	}
-
-	let { navigateTo }: Props = $props();
+	import { asset } from "$app/paths";
+	import { localizeHref } from "$lib/utils/localize";
+	import * as m from "$lib/paraglide/messages";
 
 	let coaches = [
 		{
-			name: "Zuzana Ondrášková",
-			role: "hlavní trenérka a zakladatelka",
+			name: m["coaches_preview.zuzana.name"](),
+			role: m["coaches_preview.zuzana.role"](),
 			image: "/zuzka-dark.png",
-			achievements: ["74. místo WTA žebříčku (2004, 2010)", "Vítězství nad hráčkami TOP 10", "Účast na Grand Slam turnajích"],
-			specialization: "Technická dokonalost, mentální příprava",
+			achievements: [
+				m["coaches_preview.zuzana.achievements.wta_ranking"](),
+				m["coaches_preview.zuzana.achievements.top10_wins"](),
+				m["coaches_preview.zuzana.achievements.grand_slam"]()
+			],
 		},
 		{
-			name: "Michal Sapala",
-			role: "trenér a technický specialista",
+			name: m["coaches_preview.michal.name"](),
+			role: m["coaches_preview.michal.role"](),
 			image: "/michal-dark.png",
-			achievements: ["Certifikovaný kondiční trenér", "Sparingpartner TOP 100 WTA", "Mezinárodní zkušenosti"],
-			specialization: "Taktická příprava, perfekcionistický přístup",
+			achievements: [
+				m["coaches_preview.michal.achievements.certified_trainer"](),
+				m["coaches_preview.michal.achievements.sparring_partner"](),
+				m["coaches_preview.michal.achievements.international"]()
+			],
 		},
 	];
 </script>
@@ -34,9 +35,9 @@
 		<!-- Section Header -->
 		<div class="text-center mb-16">
 			<h2 class="text-section-heading mb-4">
-				NAŠI <span class="text-primary">TRENÉŘI</span>
+				{m["coaches_preview.heading"]()} <span class="text-primary">{m["coaches_preview.heading_highlight"]()}</span>
 			</h2>
-			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">Učte se od nejlepších. Naši trenéři kombinují profesionální zkušenosti s vášní pro tenis.</p>
+			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">{m["coaches_preview.description"]()}</p>
 		</div>
 
 		<!-- Coaches Grid -->
@@ -46,7 +47,7 @@
 					<CardContent class="p-0">
 						<!-- Coach Image -->
 						<div class="card-media aspect-[3/4]">
-							<img src={assets + coach.image} alt={coach.name} loading="lazy" />
+							<img src={asset(coach.image)} alt={coach.name} loading="lazy" />
 							<!-- Enhanced gradient overlay with better positioned name/role -->
 							<div class="absolute inset-x-0 bottom-0 pl-10 pr-6 pb-6 pt-12 bg-gradient-to-t from-black/85 via-black/55 to-transparent">
 								<h3 class="text-xl md:text-2xl font-bold text-white leading-tight break-words mb-2">{coach.name}</h3>
@@ -57,7 +58,7 @@
 						<!-- Coach Details -->
 						<div class="p-6">
 							<div class="mb-3">
-								<span class="label">Klíčové úspěchy</span>
+								<span class="label">{m["coaches_preview.label_achievements"]()}</span>
 							</div>
 
 							<ul class="space-y-2 mb-6 text-muted-foreground">
@@ -82,8 +83,8 @@
 
 		<!-- CTA -->
 		<div class="text-center">
-			<Button onclick={() => navigateTo("coaches")} variant="default" size="xl" class="tennis-hover group">
-				Více o našich trenérech
+			<Button href={localizeHref("/coaches")} variant="cta" size="xl" class="group">
+				{m["coaches_preview.cta"]()}
 				<ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />
 			</Button>
 		</div>
