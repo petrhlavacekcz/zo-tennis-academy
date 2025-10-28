@@ -67,7 +67,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Build Configuration
 - **Static adapter** (`@sveltejs/adapter-static`) for SSG
-- **No base path** - deploys to root domain
+- **Base path**: `/zo-tennis-academy` for GitHub Pages deployment (production only)
 - **Prerendering**: Enabled for all routes (`prerender: true`)
 - **Tailwind CSS v4**: Integrated via Vite plugin
 - **Paraglide Vite Plugin**: Compiles messages at build time

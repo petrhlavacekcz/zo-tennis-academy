@@ -1,12 +1,40 @@
 <script lang="ts">
 	import { Instagram } from "@lucide/svelte";
 	import * as m from "$lib/paraglide/messages";
+	import { onMount } from "svelte";
 
-	let instagramPosts = Array.from({ length: 6 }, (_, i) => ({
-		id: i + 1,
-		image: "https://c.svelte0.com/placeholder.svg?size=square",
-		alt: `Instagram post ${i + 1}`,
-	}));
+	let instagramContainer: HTMLElement;
+
+	onMount(() => {
+		// Dynamically load and initialize the Instagram feed widget
+		if (instagramContainer) {
+			// @ts-ignore - External CDN module
+			import("https://cdn.fouita.com/public/instagram-feed.js?11").then((module: any) => {
+				const App = module.default;
+				new App({
+					target: instagramContainer,
+					props: {
+						settings: {
+							layout: "masonry",
+							source: "insta",
+							selected: "uname",
+							header: false,
+							autoplay: true,
+							zigzag: true,
+							cols: 3,
+							cardHeight: 300,
+							gap: 0,
+							direction: "down",
+							height: 600,
+							bgColor: "transparent",
+							txtColor: "rgba(255, 255, 255, 0.9)",
+							ukey: "93d287a6-4e72-4207-b9b2-ac4f5a8f7348"
+						}
+					}
+				});
+			});
+		}
+	});
 </script>
 
 <section class="py-24 bg-neutral-950 text-white">
@@ -20,23 +48,44 @@
 			<p class="text-white/70 max-w-2xl mx-auto">{m["instagram.description"]()}</p>
 		</div>
 
-		<!-- Instagram Grid (wireframe) -->
-		<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
-			{#each instagramPosts as _}
-				<div class="rounded-xl border border-white/10 bg-white/[0.06] aspect-square flex items-center justify-center">
-					<div class="w-10 h-10 rounded-full border-2 border-white/30 flex items-center justify-center">
-						<Instagram size={20} class="text-white/40" />
-					</div>
-				</div>
-			{/each}
+		<!-- Instagram Feed Widget -->
+		<div class="mb-8">
+			<div bind:this={instagramContainer} id="ft-insta-app" class="instagram-feed-container"></div>
 		</div>
 
 		<!-- Instagram Handle -->
 		<div class="text-center">
-			<a href="https://www.instagram.com/zo_tennis_academy/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-medium">
+			<a href="https://www.instagram.com/zo_tennis_academy/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors">
 				<Instagram size={18} />
 				{m["instagram.handle"]()}
 			</a>
 		</div>
 	</div>
 </section>
+
+<style>
+	/* Custom styling for Instagram feed widget */
+	:global(.instagram-feed-container) {
+		background: transparent !important;
+	}
+
+	/* Hide or style the Fouita branding footer */
+	:global(#ft-insta-brd) {
+		display: none !important;
+	}
+
+	/* Ensure cards have proper styling within our dark theme */
+	:global(.instagram-feed-container *) {
+		color: rgba(255, 255, 255, 0.9) !important;
+	}
+
+	/* Add subtle hover effects to Instagram cards */
+	:global(.instagram-feed-container img) {
+		transition: transform 0.3s ease, opacity 0.3s ease;
+	}
+
+	:global(.instagram-feed-container img:hover) {
+		transform: scale(1.05);
+		opacity: 0.9;
+	}
+</style>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
-	import { Phone, Mail, MapPin, ChevronDown } from "@lucide/svelte";
+	import { Phone, MapPin, ChevronDown } from "@lucide/svelte";
 	import { asset } from "$app/paths";
 	import * as m from "$lib/paraglide/messages";
 
