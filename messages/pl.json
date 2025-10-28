@@ -305,6 +305,28 @@
 		"address_value": "Ivana Kubince, 747 91 Štítina, Republika Czeska",
 		"contact_title": "Kontakt",
 		"copyright": "© 2025 ZO Tennis Academy. Wszelkie prawa zastrzeżone."
+	},
+	"seo": {
+		"home": {
+			"title": "ZO Tennis Academy | Profesjonalna Akademia Tenisa Štítina",
+			"description": "Profesjonalna akademia tenisa prowadzona przez byłą zawodniczkę WTA Zuzanę Ondráškową. Programy dla dzieci, dorosłych i profesjonalistów. Štítina, Czechy.",
+			"keywords": "akademia tenisa, tenis Štítina, lekcje tenisa, Zuzana Ondrášková, WTA, trening tenisowy, tenis juniorski, profesjonalny tenis"
+		},
+		"coaches": {
+			"title": "Nasi Trenerzy | ZO Tennis Academy",
+			"description": "Poznaj naszych doświadczonych trenerów. Zuzana Ondrášková - była zawodniczka WTA (74. miejsce), Michal Ondrášek - trener ITF. Profesjonalny coaching w Štítinie.",
+			"keywords": "trenerzy tenisa, Zuzana Ondrášková, Michal Ondrášek, trener WTA, trener ITF, profesjonalny coaching"
+		},
+		"programs": {
+			"title": "Programy Tenisowe | ZO Tennis Academy",
+			"description": "Lekcje indywidualne, treningi grupowe, programy juniorskie i przygotowanie profesjonalne. Programy dla wszystkich poziomów od początkujących do zaawansowanych.",
+			"keywords": "lekcje tenisa, trening indywidualny, trening grupowy, tenis juniorski, obozy tenisowe, przygotowanie profesjonalne"
+		},
+		"contact": {
+			"title": "Kontakt | ZO Tennis Academy",
+			"description": "Skontaktuj się z ZO Tennis Academy. Zarezerwuj lekcję lub zapytaj o nasze programy. Ivana Kubince, Štítina. Tel: +420 603 441 399",
+			"keywords": "kontakt akademia tenisa, rezerwacja lekcji tenisa, tenis Štítina, korty tenisowe Štítina"
+		}
 	}
 }
 

@@ -16,29 +16,32 @@
 
 	function setThemeMode(mode: 'light' | 'dark' | 'system') {
 		themeMode = mode;
-		if (typeof localStorage !== 'undefined') localStorage.setItem('theme', mode);
-		if (typeof document !== 'undefined') {
-			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-			const isDark = mode === 'dark' || (mode === 'system' && prefersDark);
-			document.documentElement.classList.toggle('dark', isDark);
-		}
+		localStorage.setItem('theme', mode);
+		applyTheme();
+	}
+
+	function applyTheme() {
+		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		const isDark = themeMode === 'dark' || (themeMode === 'system' && prefersDark);
+		document.documentElement.classList.toggle('dark', isDark);
 	}
 
 	// Initialize theme from localStorage and listen to system preference changes
-	if (typeof window !== 'undefined') {
+	$effect(() => {
 		const stored = localStorage.getItem('theme');
-		if (stored === 'light' || stored === 'dark' || stored === 'system') themeMode = stored as any;
-		const media = window.matchMedia('(prefers-color-scheme: dark)');
-		function apply() {
-			const isDark = themeMode === 'dark' || (themeMode === 'system' && media.matches);
-			document.documentElement.classList.toggle('dark', isDark);
+		if (stored === 'light' || stored === 'dark' || stored === 'system') {
+			themeMode = stored as 'light' | 'dark' | 'system';
 		}
-		media.addEventListener('change', apply);
-		$effect(apply);
-	}
+
+		const media = window.matchMedia('(prefers-color-scheme: dark)');
+		applyTheme();
+
+		media.addEventListener('change', applyTheme);
+		return () => media.removeEventListener('change', applyTheme);
+	});
 
 	// Derive current page from URL pathname
-	let currentPage = $derived(() => {
+	let currentPage = $derived.by(() => {
 		const pathname = page.url.pathname;
 		// Remove language prefix
 		const cleanPath = pathname.replace(/^\/(cs|en|de|pl)?/, '').replace(/^\//, '') || 'home';
@@ -49,7 +52,7 @@
 </script>
 
 <div class="min-h-screen bg-background text-foreground transition-colors duration-300">
-	<Header currentPage={currentPage()} themeMode={themeMode} {setThemeMode} />
+	<Header {currentPage} themeMode={themeMode} {setThemeMode} />
 
 	<main class="relative">
 		{@render children()}
