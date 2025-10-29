@@ -2,7 +2,6 @@
 	import Header from "$lib/components/zo-tennis-academy/components/header/header.svelte";
 	import Footer from "$lib/components/zo-tennis-academy/components/footer/footer.svelte";
 	import { page } from "$app/state";
-	import { locales, localizeHref } from "$lib/paraglide/runtime";
 	import type { Snippet } from "svelte";
 
 	interface Props {
@@ -59,13 +58,6 @@
 	</main>
 
 	<Footer />
-</div>
-
-<!-- Invisible anchor tags for SSG crawling of all language versions -->
-<div style="display:none" aria-hidden="true">
-	{#each locales as locale}
-		<a href={localizeHref(page.url.pathname, { locale })}>{locale}</a>
-	{/each}
 </div>
 
 <style>

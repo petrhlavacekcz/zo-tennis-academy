@@ -7,10 +7,34 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/zo-tennis-academy' : ''
+			base: process.env.NODE_ENV === 'production' ? '/zo-tennis-academy' : '',
+			relative: false
 		},
 		prerender: {
-			entries: ['*', '/sitemap.xml']
+			entries: [
+				// Czech (base locale at root)
+				'/',
+				'/coaches',
+				'/programs',
+				'/contact',
+				// English
+				'/en',
+				'/en/coaches',
+				'/en/programs',
+				'/en/contact',
+				// German
+				'/de',
+				'/de/coaches',
+				'/de/programs',
+				'/de/contact',
+				// Polish
+				'/pl',
+				'/pl/coaches',
+				'/pl/programs',
+				'/pl/contact',
+				// Sitemap
+				'/sitemap.xml'
+			]
 		}
 	}
 };
