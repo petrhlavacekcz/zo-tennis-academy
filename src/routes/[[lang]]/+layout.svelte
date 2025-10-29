@@ -2,6 +2,7 @@
 	import Header from "$lib/components/zo-tennis-academy/components/header/header.svelte";
 	import Footer from "$lib/components/zo-tennis-academy/components/footer/footer.svelte";
 	import { page } from "$app/state";
+	import { base } from "$app/paths";
 	import type { Snippet } from "svelte";
 
 	interface Props {
@@ -41,7 +42,19 @@
 
 	// Derive current page from URL pathname
 	let currentPage = $derived.by(() => {
-		const pathname = page.url.pathname;
+		const originalPath = page.url.pathname;
+
+		// Remove base path if present (for GitHub Pages deployment)
+		let pathname: string = originalPath;
+		if (base && pathname.startsWith(base)) {
+			pathname = pathname.slice(base.length);
+		}
+
+		// Ensure pathname starts with /
+		if (!pathname.startsWith('/')) {
+			pathname = '/' + pathname;
+		}
+
 		// Remove language prefix
 		const cleanPath = pathname.replace(/^\/(cs|en|de|pl)?/, '').replace(/^\//, '') || 'home';
 		// Extract the first segment
