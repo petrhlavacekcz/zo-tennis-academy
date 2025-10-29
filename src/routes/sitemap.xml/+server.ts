@@ -1,6 +1,6 @@
 import type { RequestHandler } from './$types';
 
-const baseUrl = 'https://petrhlavacekcz.github.io/zo-tennis-academy';
+const baseUrl = 'https://www.zotennisacademy.cz';
 const locales = ['cs', 'en', 'de', 'pl'];
 const pages = ['', 'coaches', 'programs', 'contact'];
 
