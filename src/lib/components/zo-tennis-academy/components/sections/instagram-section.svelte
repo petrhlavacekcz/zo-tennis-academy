@@ -49,6 +49,13 @@
 			<div id="ft-insta-app"></div>
 		</div>
 
+		<!-- Fouita branding (hidden by CSS) -->
+		<div id="ft-insta-brd" class="text-center text-xs text-white/40 mt-4">
+			<a href="https://fouita.com/website-widgets/instagram-feed" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Embed Instagram Feed</a>
+			<span class="mx-2">with</span>
+			<a href="https://fouita.com" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Fouita</a>
+		</div>
+
 		<!-- Instagram Handle -->
 		<div class="text-center mt-8">
 			<a href="https://www.instagram.com/zo_tennis_academy/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors">
