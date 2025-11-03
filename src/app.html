@@ -4,9 +4,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.fouita.com https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.googleapis.com; img-src 'self' data: https:; media-src 'self' data: https://cdn.fouita.com https://*.fbcdn.net https://*.cdninstagram.com https://scontent.cdninstagram.com https://www.instagram.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://cdn.fouita.com https://api.fouita.com https://social-feed.fouita.com https://social-feed.fouita.net https://*.cdninstagram.com https://scontent.cdninstagram.com https://www.instagram.com https://maps.googleapis.com; frame-src 'self' https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self';">
+			<!-- Preconnect for faster font loading -->
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+			<!-- Preload hero image for faster LCP -->
+			<link rel="preload" href="/zo-tennis-academy.webp" as="image" type="image/webp">
+
+			<!-- Async font loading to prevent render blocking -->
+			<link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+			<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
 		%sveltekit.head%
 	</head>
