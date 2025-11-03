@@ -15,7 +15,7 @@
 		title,
 		description,
 		keywords = '',
-		image = '/zo-tennis-academy.jpg',
+		image = '/zo-tennis-academy.webp',
 		type = 'website',
 		structuredData
 	}: Props = $props();

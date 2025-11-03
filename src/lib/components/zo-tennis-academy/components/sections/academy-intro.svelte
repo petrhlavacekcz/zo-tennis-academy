@@ -46,10 +46,10 @@
 				<Card class="overflow-hidden border-none shadow-none bg-transparent">
 					<CardContent class="p-0">
 						<div class="card-media aspect-[4/3] w-full">
-							<img 
-								src={asset("/zuzana-ondraskova-2.jpeg")} 
-								alt="Tennis training session" 
-								loading="lazy" 
+							<img
+								src={asset("/zuzana-ondraskova-2.webp")}
+								alt="Tennis training session"
+								loading="lazy"
 								class="object-cover w-full h-full"
 							/>
 						</div>

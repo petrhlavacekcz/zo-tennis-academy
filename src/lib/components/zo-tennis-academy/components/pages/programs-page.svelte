@@ -25,7 +25,7 @@
 			description: m["programs_page.junior.description"](),
 			icon: Users,
 			color: "text-blue-500",
-			image: asset("/junior.jpeg"),
+			image: asset("/junior.webp"),
 			duration: m["programs_page.junior.duration"](),
 			groupSize: m["programs_page.junior.group_size"](),
 			price: m["programs_page.junior.price"](),
@@ -44,7 +44,7 @@
 			description: m["programs_page.adult.description"](),
 			icon: Trophy,
 			color: "text-green-500",
-			image: asset("/adult.jpeg"),
+			image: asset("/adult.webp"),
 			duration: m["programs_page.adult.duration"](),
 			groupSize: m["programs_page.adult.group_size"](),
 			price: m["programs_page.adult.price"](),
@@ -64,7 +64,7 @@
 			description: m["programs_page.private.description"](),
 			icon: Clock,
 			color: "text-purple-500",
-			image: asset("/private.jpeg"),
+			image: asset("/private.webp"),
 			duration: m["programs_page.private.duration"](),
 			groupSize: m["programs_page.private.group_size"](),
 			price: m["programs_page.private.price"](),
@@ -88,7 +88,7 @@
 			description: m["programs_page.professional.description"](),
 			icon: Trophy,
 			color: "text-primary",
-			image: asset("/professional.jpeg"),
+			image: asset("/professional.webp"),
 			duration: m["programs_page.professional.duration"](),
 			groupSize: m["programs_page.professional.group_size"](),
 			price: m["programs_page.professional.price"](),
@@ -108,7 +108,7 @@
 			description: m["programs_page.camps.description"](),
 			icon: Trophy,
 			color: "text-primary",
-			image: asset("/camps.jpeg"),
+			image: asset("/camps.webp"),
 			duration: m["programs_page.camps.duration"](),
 			groupSize: m["programs_page.camps.group_size"](),
 			price: m["programs_page.camps.price"](),
@@ -130,7 +130,7 @@
 	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
 		<!-- Background Image with Overlay -->
 		<div class="absolute inset-0 z-0">
-			<img src={asset("/zo-tennis-academy.jpg")} alt="Tennis court background" class="w-full h-full object-cover block" />
+			<img src={asset("/zo-tennis-academy.webp")} alt="Tennis court background" class="w-full h-full object-cover block" />
 			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
 		</div>
 

@@ -97,7 +97,7 @@
 		<div class="flex items-center justify-between h-20 pt-4">
 			<!-- Enhanced Logo -->
 			<a href={localizeHref("/")} class="logo-tennis-enhanced flex items-center gap-2">
-				<img src={asset("/zo-tennis-academy-logo.png")} alt="ZO Tennis Academy" class="h-10 w-auto" />
+				<img src={asset("/zo-tennis-academy-logo.webp")} alt="ZO Tennis Academy" class="h-10 w-auto" />
 			</a>
 
 			<!-- Enhanced Desktop Navigation -->

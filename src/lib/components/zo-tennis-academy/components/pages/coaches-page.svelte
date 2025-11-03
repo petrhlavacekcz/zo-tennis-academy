@@ -11,7 +11,7 @@
 		{
 			name: m["coaches_page.zuzana.name"](),
 			role: m["coaches_page.zuzana.role"](),
-			image: "/zuzka-dark.png",
+			image: "/zuzka-dark.webp",
 			bio: m["coaches_page.zuzana.bio"](),
 			achievements: [
 				m["coaches_page.zuzana.achievements.wta_ranking"](),
@@ -25,7 +25,7 @@
 		{
 			name: m["coaches_page.michal.name"](),
 			role: m["coaches_page.michal.role"](),
-			image: "/michal-dark.png",
+			image: "/michal-dark.webp",
 			bio: m["coaches_page.michal.bio"](),
 			achievements: [
 				m["coaches_page.michal.achievements.certified_trainer"](),
@@ -44,7 +44,7 @@
 	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
 		<!-- Background Image with Overlay -->
 		<div class="absolute inset-0 z-0">
-			<img src={asset("/zo-tennis-academy.jpg")} alt="Tennis court background" class="w-full h-full object-cover block" />
+			<img src={asset("/zo-tennis-academy.webp")} alt="Tennis court background" class="w-full h-full object-cover block" />
 			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
 		</div>
 

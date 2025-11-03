@@ -9,8 +9,8 @@
 		"name": "ZO Tennis Academy",
 		"description": m["footer.company_description"](),
 		"url": "https://www.zotennisacademy.cz",
-		"logo": "https://www.zotennisacademy.cz/zo-tennis-academy.jpg",
-		"image": "https://www.zotennisacademy.cz/zo-tennis-academy.jpg",
+		"logo": "https://www.zotennisacademy.cz/zo-tennis-academy.webp",
+		"image": "https://www.zotennisacademy.cz/zo-tennis-academy.webp",
 		"address": {
 			"@type": "PostalAddress",
 			"streetAddress": "Ivana Kubince",

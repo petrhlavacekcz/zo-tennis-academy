@@ -12,7 +12,7 @@
 				"name": "Zuzana Ondrášková",
 				"jobTitle": "Head Coach & Founder",
 				"description": "Former WTA player, career-high ranking 74 (2004, 2010). Victories over TOP 10 players. Grand Slam participant.",
-				"image": "https://petrhlavacekcz.github.io/zo-tennis-academy/zuzana-ondraskova.jpg",
+				"image": "https://www.zotennisacademy.cz/zuzana-ondraskova-2.webp",
 				"worksFor": {
 					"@type": "SportsActivityLocation",
 					"name": "ZO Tennis Academy"
@@ -23,7 +23,7 @@
 				"name": "Michal Ondrášek",
 				"jobTitle": "ITF Coach",
 				"description": "ITF certified coach with extensive experience in player development.",
-				"image": "https://petrhlavacekcz.github.io/zo-tennis-academy/michal-ondrasek.jpg",
+				"image": "https://www.zotennisacademy.cz/michal-dark.webp",
 				"worksFor": {
 					"@type": "SportsActivityLocation",
 					"name": "ZO Tennis Academy"

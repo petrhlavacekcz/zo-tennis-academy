@@ -17,7 +17,7 @@
 			description: m["programs_page.junior.description"](),
 			icon: Users,
 			color: "text-blue-500",
-			image: asset("/junior.jpeg"),
+			image: asset("/junior.webp"),
 			features: [
 				m["programs_page.junior.features.group_training"](),
 				m["programs_page.junior.features.basic_skills"](),
@@ -30,7 +30,7 @@
 			description: m["programs_page.adult.description"](),
 			icon: Trophy,
 			color: "text-green-500",
-			image: asset("/adult.jpeg"),
+			image: asset("/adult.webp"),
 			features: [
 				m["programs_page.adult.features.technique"](),
 				m["programs_page.adult.features.flexible_training"](),
@@ -43,7 +43,7 @@
 			description: m["programs_page.private.description"](),
 			icon: Clock,
 			color: "text-purple-500",
-			image: asset("/private.jpeg"),
+			image: asset("/private.webp"),
 			features: [
 				m["programs_page.private.features.full_attention"](),
 				m["programs_page.private.features.fast_progress"](),
@@ -60,7 +60,7 @@
 			description: m["programs_page.professional.description"](),
 			icon: Trophy,
 			color: "text-primary",
-			image: asset("/professional.jpeg"),
+			image: asset("/professional.webp"),
 			features: [
 				m["programs_page.professional.features.competitive_level"](),
 				m["programs_page.professional.features.custom_plan"](),
@@ -73,7 +73,7 @@
 			description: m["programs_page.camps.description"](),
 			icon: Trophy,
 			color: "text-primary",
-			image: asset("/camps.jpeg"),
+			image: asset("/camps.webp"),
 			features: [
 				m["programs_page.camps.features.full_day"](),
 				m["programs_page.camps.features.various_games"](),

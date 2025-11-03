@@ -10,7 +10,7 @@
 		{
 			name: m["coaches_preview.zuzana.name"](),
 			role: m["coaches_preview.zuzana.role"](),
-			image: "/zuzka-dark.png",
+			image: "/zuzka-dark.webp",
 			achievements: [
 				m["coaches_preview.zuzana.achievements.wta_ranking"](),
 				m["coaches_preview.zuzana.achievements.top10_wins"](),
@@ -20,7 +20,7 @@
 		{
 			name: m["coaches_preview.michal.name"](),
 			role: m["coaches_preview.michal.role"](),
-			image: "/michal-dark.png",
+			image: "/michal-dark.webp",
 			achievements: [
 				m["coaches_preview.michal.achievements.certified_trainer"](),
 				m["coaches_preview.michal.achievements.sparring_partner"](),
