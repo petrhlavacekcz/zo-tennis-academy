@@ -100,6 +100,7 @@
 								? 'bg-primary/10 text-primary font-semibold'
 								: 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
 						}`}
+						aria-label={`Switch to ${getLanguageLabel(locale)}`}
 					>
 						<span class="font-semibold uppercase">{locale}</span>
 						<span class="ml-2 text-xs opacity-70">{getLanguageLabel(locale)}</span>

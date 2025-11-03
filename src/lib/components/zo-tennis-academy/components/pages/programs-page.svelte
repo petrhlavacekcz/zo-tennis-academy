@@ -130,7 +130,16 @@
 	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
 		<!-- Background Image with Overlay -->
 		<div class="absolute inset-0 z-0">
-			<img src={asset("/zo-tennis-academy.webp")} alt="Tennis court background" class="w-full h-full object-cover block" loading="lazy" width="1920" height="1080" />
+			<img
+				src={asset("/zo-tennis-academy.webp")}
+				alt="Tennis court background"
+				class="w-full h-full object-cover block"
+				loading="lazy"
+				width="1920"
+				height="1080"
+				decoding="async"
+				style="aspect-ratio: 16/9;"
+			/>
 			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
 		</div>
 

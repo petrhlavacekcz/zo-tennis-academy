@@ -49,7 +49,12 @@
 	</div>
 {:else}
 	<!-- Default variant: single button cycle -->
-	<button onclick={cycleTheme} class={`p-2 ${textColor} hover:text-primary transition-colors`} style={iconFilter}>
+	<button
+		onclick={cycleTheme}
+		class={`p-2 ${textColor} hover:text-primary transition-colors`}
+		style={iconFilter}
+		aria-label={mode === 'dark' ? 'Switch to light mode' : mode === 'light' ? 'Switch to system mode' : 'Switch to dark mode'}
+	>
 		{#if mode === 'dark'}
 			<Moon size={20} />
 		{:else if mode === 'light'}

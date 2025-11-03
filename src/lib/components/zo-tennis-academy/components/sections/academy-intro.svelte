@@ -33,7 +33,7 @@
 								</g>
 							</svg>
 							<div>
-								<h4 class="font-semibold mb-1">{feature.title()}</h4>
+								<h3 class="font-semibold mb-1">{feature.title()}</h3>
 								<p class="text-base text-muted-foreground">{feature.description()}</p>
 							</div>
 						</div>

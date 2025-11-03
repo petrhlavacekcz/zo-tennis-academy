@@ -9,7 +9,17 @@
 	<!-- Background Image with Overlay -->
 	<div class="absolute inset-0 z-0">
 		<!-- Use base-aware assets path to avoid 404 under subpath deployments -->
-		<img src={asset("/zo-tennis-academy.webp")} alt="Tennis action background" class="w-full h-full object-cover block" width="1920" height="1080" />
+		<!-- Hero image with fetchpriority for LCP optimization -->
+		<img
+			src={asset("/zo-tennis-academy.webp")}
+			alt="Tennis action background"
+			class="w-full h-full object-cover block"
+			width="1920"
+			height="1080"
+			fetchpriority="high"
+			decoding="async"
+			style="aspect-ratio: 16/9;"
+		/>
 		<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
 	</div>
 

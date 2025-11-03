@@ -22,10 +22,19 @@ const handleSecurityHeaders: Handle = async ({ event, resolve }) => {
 
 	response.headers.set('Content-Security-Policy', cspDirectives);
 
-	// Additional security headers
+	// Additional security headers (2025 best practices)
 	response.headers.set('X-Frame-Options', 'SAMEORIGIN');
 	response.headers.set('X-Content-Type-Options', 'nosniff');
 	response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+	response.headers.set('X-XSS-Protection', '1; mode=block');
+
+	// HSTS - Force HTTPS (only in production)
+	if (event.url.hostname !== 'localhost') {
+		response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+	}
+
+	// Permissions Policy - Restrict browser features
+	response.headers.set('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
 
 	return response;
 };

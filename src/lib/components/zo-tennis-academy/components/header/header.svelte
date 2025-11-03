@@ -121,7 +121,13 @@
 			</div>
 
 			<!-- Enhanced Mobile Menu Button -->
-			<button onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)} class={`md:hidden mobile-menu-btn-tennis p-2 ${textColor} hover:text-primary transition-colors`} style={iconFilter}>
+			<button
+				onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)}
+				class={`md:hidden mobile-menu-btn-tennis p-2 ${textColor} hover:text-primary transition-colors`}
+				style={iconFilter}
+				aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+				aria-expanded={isMobileMenuOpen}
+			>
 				{#if isMobileMenuOpen}
 					<X size={24} />
 				{:else}

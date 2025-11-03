@@ -44,7 +44,16 @@
 	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
 		<!-- Background Image with Overlay -->
 		<div class="absolute inset-0 z-0">
-			<img src={asset("/zo-tennis-academy.webp")} alt="Tennis court background" class="w-full h-full object-cover block" loading="lazy" width="1920" height="1080" />
+			<img
+				src={asset("/zo-tennis-academy.webp")}
+				alt="Tennis court background"
+				class="w-full h-full object-cover block"
+				loading="lazy"
+				width="1920"
+				height="1080"
+				decoding="async"
+				style="aspect-ratio: 16/9;"
+			/>
 			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
 		</div>
 
@@ -79,7 +88,7 @@
 								<!-- Coach Information -->
 								<div class="lg:col-span-3 p-8 lg:p-12">
 									<div class="mb-6">
-										<h3 class="text-3xl font-bold mb-2 text-foreground">{coach.name}</h3>
+										<h2 class="text-3xl font-bold mb-2 text-foreground">{coach.name}</h2>
 										<p class="text-primary text-base font-semibold uppercase tracking-wide">{coach.role}</p>
 									</div>
 
@@ -90,9 +99,9 @@
 
 									<!-- Achievements -->
 									<div class="mb-10">
-										<h4 class="text-xl font-bold mb-6 text-foreground">
+										<h3 class="text-xl font-bold mb-6 text-foreground">
 											{m["coaches_page.achievements_title"]()}
-										</h4>
+										</h3>
 										<div class="grid gap-3">
 											{#each coach.achievements as achievement}
 												<div class="flex items-start gap-3">

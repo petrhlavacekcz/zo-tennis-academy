@@ -9,6 +9,7 @@
 		image?: string;
 		type?: 'website' | 'article';
 		structuredData?: object;
+		breadcrumbs?: Array<{ name: string; url: string }>;
 	}
 
 	let {
@@ -17,7 +18,8 @@
 		keywords = '',
 		image = '/zo-tennis-academy.webp',
 		type = 'website',
-		structuredData
+		structuredData,
+		breadcrumbs
 	}: Props = $props();
 
 	const locale = $derived(getLocale());
@@ -102,6 +104,20 @@
 	<!-- Structured Data (JSON-LD) -->
 	{#if structuredData}
 		{@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}
+	{/if}
+
+	<!-- BreadcrumbList Schema -->
+	{#if breadcrumbs && breadcrumbs.length > 0}
+		{@html `<script type="application/ld+json">${JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": breadcrumbs.map((crumb, index) => ({
+				"@type": "ListItem",
+				"position": index + 1,
+				"name": crumb.name,
+				"item": crumb.url
+			}))
+		})}</script>`}
 	{/if}
 </svelte:head>
 
