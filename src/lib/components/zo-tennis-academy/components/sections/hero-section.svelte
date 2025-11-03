@@ -9,7 +9,7 @@
 	<!-- Background Image with Overlay -->
 	<div class="absolute inset-0 z-0">
 		<!-- Use base-aware assets path to avoid 404 under subpath deployments -->
-		<img src={asset("/zo-tennis-academy.jpg")} alt="Tennis action background" class="w-full h-full object-cover block" width="1920" height="1080" />
+		<img src={asset("/zo-tennis-academy.webp")} alt="Tennis action background" class="w-full h-full object-cover block" width="1920" height="1080" />
 		<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
 	</div>
 
