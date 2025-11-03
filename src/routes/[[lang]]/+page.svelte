@@ -8,9 +8,9 @@
 		"@type": "SportsActivityLocation",
 		"name": "ZO Tennis Academy",
 		"description": m["footer.company_description"](),
-		"url": "https://petrhlavacekcz.github.io/zo-tennis-academy",
-		"logo": "https://petrhlavacekcz.github.io/zo-tennis-academy/zo-tennis-academy.jpg",
-		"image": "https://petrhlavacekcz.github.io/zo-tennis-academy/zo-tennis-academy.jpg",
+		"url": "https://www.zotennisacademy.cz",
+		"logo": "https://www.zotennisacademy.cz/zo-tennis-academy.jpg",
+		"image": "https://www.zotennisacademy.cz/zo-tennis-academy.jpg",
 		"address": {
 			"@type": "PostalAddress",
 			"streetAddress": "Ivana Kubince",

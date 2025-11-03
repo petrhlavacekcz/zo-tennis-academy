@@ -18,7 +18,7 @@
 			},
 			"telephone": "+420603441399",
 			"email": "info@zotennisacademy.cz",
-			"url": "https://petrhlavacekcz.github.io/zo-tennis-academy"
+			"url": "https://www.zotennisacademy.cz"
 		}
 	};
 </script>

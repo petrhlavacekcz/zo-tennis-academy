@@ -22,10 +22,11 @@
 	<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
 		<!-- Main title with enhanced visibility -->
 		<h1
-			class="text-hero text-white mb-6 font-black"
+			class="text-white mb-6 font-black"
 			style="text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 4px 16px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 106, 0, 0.4);"
 		>
-			{m["hero.title"]()}
+			<div class="text-hero" style="font-size: clamp(4rem, 10vw, 8rem); line-height: 0.85;">ZO</div>
+			<div class="text-hero" style="font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-top: 0.5rem;">TENNIS ACADEMY . CZ</div>
 		</h1>
 
 		<!-- Subtitle with maximum visibility -->

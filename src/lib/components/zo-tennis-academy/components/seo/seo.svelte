@@ -21,7 +21,7 @@
 	}: Props = $props();
 
 	const locale = $derived(getLocale());
-	const baseUrl = 'https://petrhlavacekcz.github.io/zo-tennis-academy';
+	const baseUrl = 'https://www.zotennisacademy.cz';
 	
 	// Get current URL with base path
 	const currentUrl = $derived(() => {

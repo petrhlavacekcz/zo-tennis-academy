@@ -3,4 +3,4 @@ User-agent: *
 Disallow:
 
 # Sitemap
-Sitemap: https://petrhlavacekcz.github.io/zo-tennis-academy/sitemap.xml
+Sitemap: https://www.zotennisacademy.cz/sitemap.xml
