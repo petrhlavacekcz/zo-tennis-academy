@@ -7,6 +7,9 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
+# Pin npm to the same version used for lockfile generation
+RUN corepack enable && corepack prepare npm@10.9.4 --activate
+
 # Install dependencies
 RUN npm ci
 
@@ -30,4 +33,3 @@ EXPOSE 80
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
-

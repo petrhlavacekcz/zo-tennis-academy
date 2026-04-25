@@ -25,6 +25,10 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+      - name: Use npm 10.9.4
+        run: |
+          corepack enable
+          corepack prepare npm@10.9.4 --activate
       - name: Install dependencies
         run: npm ci
       - name: Build
@@ -43,4 +47,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
