@@ -23,6 +23,8 @@
 		"@eslint/compat": "^1.4.1",
 		"@eslint/js": "^9.39.4",
 		"@inlang/paraglide-js": "^2.16.1",
+		"@inlang/plugin-m-function-matcher": "^2.2.9",
+		"@inlang/plugin-message-format": "^4.4.0",
 		"@internationalized/date": "^3.12.1",
 		"@lucide/svelte": "^0.548.0",
 		"@sveltejs/adapter-auto": "^7.0.1",
