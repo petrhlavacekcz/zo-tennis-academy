@@ -64,7 +64,7 @@
 <section class="py-24 bg-neutral-950 text-white">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
-		<div class="text-center mb-12">
+		<div class="text-center mb-12 reveal">
 			<div class="flex items-center justify-center gap-3 mb-3">
 				<Instagram size={24} class="text-primary" />
 				<h2 class="text-section-heading">{m["instagram.heading"]()} <span class="text-primary">{m["instagram.heading_highlight"]()}</span></h2>

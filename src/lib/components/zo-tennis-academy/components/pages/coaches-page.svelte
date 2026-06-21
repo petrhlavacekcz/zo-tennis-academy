@@ -75,8 +75,8 @@
 	<section class="py-24">
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<div class="space-y-16">
-			{#each coaches as coach}
-				<Card class="glass overflow-hidden shadow-sm border-none">
+			{#each coaches as coach, i}
+				<Card class="glass overflow-hidden shadow-sm border-none reveal reveal-delay-{i + 1}">
 					<CardContent class="p-0">
 						<div class="grid lg:grid-cols-5 items-stretch gap-0">
 							<!-- Coach Image -->

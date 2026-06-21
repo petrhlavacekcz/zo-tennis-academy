@@ -162,8 +162,8 @@
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<!-- Main Programs Grid (3 in row) -->
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-			{#each mainPrograms as program}
-				<Card class="glass-modern h-full border-none shadow-none">
+			{#each mainPrograms as program, i}
+				<Card class="glass-modern h-full border-none shadow-none reveal reveal-delay-{i + 1}">
 					<CardContent class="p-0">
 						<!-- Program Image -->
 						<div class="card-media aspect-[4/3]">
@@ -234,8 +234,8 @@
 
 			<!-- Special Programs Grid (2 in row) -->
 			<div class="grid md:grid-cols-2 gap-8 mb-16">
-			{#each specialPrograms as program}
-				<Card class="glass-modern h-full border-none shadow-none">
+			{#each specialPrograms as program, i}
+				<Card class="glass-modern h-full border-none shadow-none reveal reveal-delay-{i + 1}">
 					<CardContent class="p-0">
 						<!-- Program Image -->
 						<div class="card-media aspect-[4/3]">
@@ -309,7 +309,7 @@
 			</div>
 
 			<!-- Bottom CTA -->
-			<Card class="bg-primary text-primary-foreground">
+			<Card class="bg-primary text-primary-foreground reveal">
 				<CardContent class="p-8 text-center">
 					<h3 class="font-bold mb-4">{m["programs_page.bottom_cta_title"]()}</h3>
 					<p class="text-base mb-6 opacity-90">{m["programs_page.bottom_cta_description"]()}</p>

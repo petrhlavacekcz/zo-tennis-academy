@@ -51,7 +51,7 @@
 		</div>
 
 		<!-- Content -->
-		<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
+		<div class="relative z-20 text-center px-4 max-w-4xl mx-auto pt-20 reveal">
 			<h1 class="text-page-heading mb-4 text-white">
 				<span class="text-primary">{m["contact_page.hero_title"]()}</span>
 			</h1>
@@ -62,7 +62,7 @@
 	<!-- Contact Content -->
 	<section class="py-24">
 		<div class="mx-auto max-w-[1180px] px-6 md:px-12">
-			<div class="grid gap-10 lg:grid-cols-[1.1fr_1fr] items-stretch">
+			<div class="grid gap-10 lg:grid-cols-[1.1fr_1fr] items-stretch reveal">
 				<Card class="h-full rounded-3xl border border-border/50 bg-card/95 shadow-[0_24px_50px_rgba(15,15,15,0.12)]">
 					<CardContent class="flex h-full flex-col gap-10 p-10 lg:p-12">
 						<div class="space-y-4">
@@ -111,7 +111,7 @@
 				</Card>
 			</div>
 
-			<Card class="mt-12 rounded-3xl border border-border/50 bg-card/95 shadow-[0_18px_40px_rgba(15,15,15,0.08)]">
+			<Card class="mt-12 rounded-3xl border border-border/50 bg-card/95 shadow-[0_18px_40px_rgba(15,15,15,0.08)] reveal reveal-delay-2">
 				<CardHeader class="px-8 pt-8 pb-4">
 					<CardTitle class="text-2xl">{m["contact_page.faq_title"]()}</CardTitle>
 				</CardHeader>

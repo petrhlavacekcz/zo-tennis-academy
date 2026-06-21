@@ -94,9 +94,9 @@
 		</div>
 
 		<!-- Main Programs Grid (3 in row) -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 reveal">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
 			{#each mainPrograms as program, i}
-				<Card class="glass-modern h-full border-none shadow-none relative">
+				<Card class="glass-modern h-full border-none shadow-none relative reveal reveal-delay-{i + 1}">
 					<CardContent class="p-0">
 						<!-- "Most Popular" badge on Private Lessons (index 2) -->
 						{#if i === 2}
@@ -143,9 +143,9 @@
 		</div>
 
 		<!-- Special Programs Grid (2 in row) -->
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 reveal reveal-delay-2">
-			{#each specialPrograms as program}
-				<Card class="glass-modern h-full border-none shadow-none">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+			{#each specialPrograms as program, i}
+				<Card class="glass-modern h-full border-none shadow-none reveal reveal-delay-{i + 1}">
 					<CardContent class="p-0">
 						<!-- Program Image -->
 						<div class="card-media aspect-[4/3]">

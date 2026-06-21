@@ -169,6 +169,11 @@ img { display: block; }
   backdrop-filter: blur(14px) saturate(1.15);
   border: 1px solid color-mix(in oklch, var(--border) 40%, transparent);
   box-shadow: 0 8px 30px color-mix(in oklch, var(--foreground) 8%, transparent);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.glass:hover {
+  border-color: color-mix(in oklch, var(--primary) 20%, transparent);
+  box-shadow: 0 12px 36px color-mix(in oklch, var(--primary) 10%, transparent);
 }
 
 /* Enhanced modern glassmorphic styling for program cards */
@@ -840,19 +845,19 @@ img { display: block; }
   }
   
   .text-page-heading {
-    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
-    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
-    font-weight: 800;
-    line-height: 0.95;
-    letter-spacing: -0.02em;
+    font-family: "Barlow Condensed", "Space Grotesk", Inter, system-ui, sans-serif;
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.01em;
     text-transform: uppercase;
   }
-  
+
   .text-section-heading {
-    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
-    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
-    font-weight: 700;
-    line-height: 1.1;
+    font-family: "Barlow Condensed", "Space Grotesk", Inter, system-ui, sans-serif;
+    font-size: clamp(1.85rem, 4vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.0;
     letter-spacing: -0.01em;
     text-transform: uppercase;
   }
