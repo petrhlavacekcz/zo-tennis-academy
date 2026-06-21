@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { Quote } from "@lucide/svelte";
 	import * as m from "$lib/paraglide/messages";
 
 	interface Review {
@@ -70,11 +69,14 @@
 			text: m["testimonials.reviews.veronika_hlavackova.text"](),
 		},
 	];
+
+	const row1 = testimonials.slice(0, 6);
+	const row2 = testimonials.slice(6, 12);
 </script>
 
-<section class="py-24 bg-card">
-	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
-		<div class="text-center mb-16">
+<section class="py-24 bg-card overflow-hidden">
+	<div class="mx-auto max-w-[1320px] px-6 md:px-12 mb-16">
+		<div class="text-center">
 			<h2 class="text-section-heading mb-4">
 				{m["testimonials.heading"]()} <span class="text-primary">{m["testimonials.heading_highlight"]()}</span>
 			</h2>
@@ -82,34 +84,52 @@
 				{m["testimonials.description"]()}
 			</p>
 		</div>
+	</div>
 
-		<!-- Testimonials Grid -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-			{#each testimonials as testimonial}
-				<div class="group relative">
-					<!-- Large decorative quote mark -->
-					<div class="absolute -top-2 -left-2 text-primary/10 transition-all duration-300 group-hover:text-primary/20 group-hover:scale-110">
-						<Quote size={64} strokeWidth={2.5} />
-					</div>
-
-					<!-- Content -->
-					<div class="relative pt-8 px-2">
-						<!-- Testimonial text -->
-						<blockquote class="text-base leading-relaxed text-foreground mb-6 relative z-10">
+	<!-- Marquee Rows -->
+	<div class="space-y-5">
+		<!-- Row 1: scrolls left -->
+		<div class="overflow-hidden">
+			<div class="marquee-track gap-5 px-5">
+				{#each [...row1, ...row1] as testimonial}
+					<div class="glass flex-none w-72 lg:w-80 rounded-2xl p-5">
+						<!-- Stars -->
+						<div class="text-primary text-sm mb-3 tracking-wide">★★★★★</div>
+						<!-- Quote text -->
+						<blockquote class="text-sm leading-relaxed text-foreground mb-4 line-clamp-4">
 							{testimonial.text}
 						</blockquote>
-
-						<!-- Author with accent line -->
+						<!-- Author -->
 						<div class="relative pl-4">
-							<!-- Orange accent line -->
-							<div class="absolute left-0 top-1 bottom-1 w-0.5 bg-gradient-to-b from-primary to-primary/40"></div>
-
-							<div class="font-semibold text-foreground text-base leading-tight">{testimonial.name}</div>
-							<div class="text-xs text-muted-foreground/60 mt-1">{testimonial.role}</div>
+							<div class="absolute left-0 top-0.5 bottom-0.5 w-0.5 bg-gradient-to-b from-primary to-primary/30 rounded-full"></div>
+							<div class="font-semibold text-foreground text-sm leading-tight">{testimonial.name}</div>
+							<div class="text-xs text-muted-foreground/60 mt-0.5">{testimonial.role}</div>
 						</div>
 					</div>
-				</div>
-			{/each}
+				{/each}
+			</div>
+		</div>
+
+		<!-- Row 2: scrolls right -->
+		<div class="overflow-hidden">
+			<div class="marquee-track-reverse gap-5 px-5">
+				{#each [...row2, ...row2] as testimonial}
+					<div class="glass flex-none w-72 lg:w-80 rounded-2xl p-5">
+						<!-- Stars -->
+						<div class="text-primary text-sm mb-3 tracking-wide">★★★★★</div>
+						<!-- Quote text -->
+						<blockquote class="text-sm leading-relaxed text-foreground mb-4 line-clamp-4">
+							{testimonial.text}
+						</blockquote>
+						<!-- Author -->
+						<div class="relative pl-4">
+							<div class="absolute left-0 top-0.5 bottom-0.5 w-0.5 bg-gradient-to-b from-primary to-primary/30 rounded-full"></div>
+							<div class="font-semibold text-foreground text-sm leading-tight">{testimonial.name}</div>
+							<div class="text-xs text-muted-foreground/60 mt-0.5">{testimonial.role}</div>
+						</div>
+					</div>
+				{/each}
+			</div>
 		</div>
 	</div>
 </section>

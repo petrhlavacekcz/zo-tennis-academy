@@ -1,19 +1,17 @@
 <script lang="ts">
 	import Phone from "@lucide/svelte/icons/phone";
 	import Mail from "@lucide/svelte/icons/mail";
+	import { asset } from "$app/paths";
 	import * as m from "$lib/paraglide/messages";
 </script>
 
-<footer class="bg-[#F5F5F5] dark:bg-[#111] border-t border-border">
+<footer class="bg-[#F5F5F5] dark:bg-[#111] border-t-4 border-primary">
 	<!-- Main Footer Content -->
 	<div class="container mx-auto px-4 py-16">
 		<div class="grid md:grid-cols-3 gap-12">
 			<!-- Company Info -->
 			<div>
-				<div class="flex items-center gap-2 text-2xl font-bold mb-4">
-					<span class="text-primary">ZO</span>
-					<span>TENNIS ACADEMY</span>
-				</div>
+				<img src={asset("/zo-tennis-academy-logo.webp")} alt="ZO Tennis Academy" class="h-10 w-auto mb-4" />
 				<p class="text-muted-foreground mb-6 leading-relaxed">{m["footer.company_description"]()}</p>
 			</div>
 

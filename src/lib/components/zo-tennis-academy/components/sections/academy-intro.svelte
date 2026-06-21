@@ -24,8 +24,8 @@
 				<!-- Features -->
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 					{#each features as feature}
-						<div class="flex items-start gap-3">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48" class="text-primary flex-shrink-0 mt-1">
+						<div class="flex items-start gap-4 p-4 rounded-xl border-l-4 border-primary bg-primary/5 dark:bg-primary/10 transition-colors hover:bg-primary/8 dark:hover:bg-primary/15">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48" class="text-primary flex-shrink-0 mt-0.5">
 								<g fill="none" stroke="currentColor" stroke-width="4">
 									<path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
 									<path stroke-linecap="round" stroke-linejoin="round" d="M24 4q-.15 10.003-4.912 15.004Q14.328 24.007 4 24.008" />
@@ -33,8 +33,8 @@
 								</g>
 							</svg>
 							<div>
-								<h3 class="font-semibold mb-1">{feature.title()}</h3>
-								<p class="text-base text-muted-foreground">{feature.description()}</p>
+								<h3 class="font-bold mb-1">{feature.title()}</h3>
+								<p class="text-sm text-muted-foreground leading-relaxed">{feature.description()}</p>
 							</div>
 						</div>
 					{/each}

@@ -7,9 +7,23 @@
 </script>
 
 <section class="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-	<!-- Background Pattern -->
-	<div class="absolute inset-0 opacity-10">
-		<div class="w-full h-full" style="background-image: radial-gradient(circle at 25% 25%, white 2px, transparent 2px), radial-gradient(circle at 75% 75%, white 2px, transparent 2px); background-size: 50px 50px;"></div>
+	<!-- Tennis Court SVG Pattern -->
+	<div class="absolute inset-0 opacity-10" aria-hidden="true">
+		<svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice" class="w-full h-full">
+			<!-- Court outer boundary -->
+			<rect x="50" y="30" width="700" height="240" fill="none" stroke="white" stroke-width="3"/>
+			<!-- Net (center vertical line) -->
+			<line x1="400" y1="30" x2="400" y2="270" stroke="white" stroke-width="2"/>
+			<!-- Service line (horizontal) -->
+			<line x1="50" y1="150" x2="750" y2="150" stroke="white" stroke-width="1.5"/>
+			<!-- Left center service line -->
+			<line x1="225" y1="150" x2="225" y2="270" stroke="white" stroke-width="1.5"/>
+			<!-- Right center service line -->
+			<line x1="575" y1="150" x2="575" y2="270" stroke="white" stroke-width="1.5"/>
+			<!-- Center marks -->
+			<line x1="400" y1="264" x2="400" y2="270" stroke="white" stroke-width="2.5"/>
+			<line x1="400" y1="30" x2="400" y2="36" stroke="white" stroke-width="2.5"/>
+		</svg>
 	</div>
 
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12 text-center relative z-10">

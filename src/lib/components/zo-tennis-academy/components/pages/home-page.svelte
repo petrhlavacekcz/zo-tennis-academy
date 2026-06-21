@@ -1,5 +1,6 @@
 <script lang="ts">
 	import HeroSection from "../sections/hero-section.svelte";
+	import StatsSection from "../sections/stats-section.svelte";
 	import AcademyIntro from "../sections/academy-intro.svelte";
 	import CoachesPreview from "../sections/coaches-preview.svelte";
 	import TestimonialsSection from "../sections/testimonials-section.svelte";
@@ -10,6 +11,7 @@
 
 <div class="relative">
 	<HeroSection />
+	<StatsSection />
 	<AcademyIntro />
 	<CoachesPreview />
 	<TestimonialsSection />
