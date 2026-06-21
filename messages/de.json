@@ -143,7 +143,7 @@
 	},
 	"final_cta": {
 		"heading": "Bereit, Ihr Spiel zu verbessern?",
-		"description": "Beginnen Sie noch heute Ihre Tennisreise mit uns. Wir bieten eine kostenlose Probestunde für alle neuen Schüler.",
+		"description": "Beginnen Sie noch heute Ihre Tennisreise mit uns. Neuen Spielern bieten wir die erste Gruppenstunde kostenlos oder einen Rabatt von 250 CZK auf das erste Einzeltraining.",
 		"cta_primary": "Probestunde buchen",
 		"cta_secondary": "Programme ansehen",
 		"contact_text": "Haben Sie Fragen? Rufen Sie uns an unter",
@@ -295,7 +295,7 @@
 			},
 			"trial_lesson": {
 				"question": "Bieten Sie eine Probestunde an?",
-				"answer": "Ja, für alle neuen Schüler bieten wir eine kostenlose Probestunde an, bei der Sie unseren Ansatz ausprobieren und den Trainer kennenlernen können."
+				"answer": "Ja. Neuen Spielern bieten wir die erste Gruppenstunde kostenlos oder einen Rabatt von 250 CZK auf das erste Einzeltraining. Kontaktieren Sie uns einfach und wir finden gemeinsam die passende Trainingsform für Sie."
 			}
 		}
 	},

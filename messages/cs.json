@@ -143,7 +143,7 @@
 	},
 	"final_cta": {
 		"heading": "Připraveni zlepšit svou hru?",
-		"description": "Začněte svou tenisovou cestu s námi ještě dnes. Nabízíme bezplatnou zkušební lekci pro všechny nové studenty.",
+		"description": "Začněte svou tenisovou cestu s námi ještě dnes. Novým hráčům nabízíme první skupinovou lekci zdarma nebo slevu 250 Kč na první individuální trénink.",
 		"cta_primary": "Rezervovat zkušební lekci",
 		"cta_secondary": "Prohlédnout programy",
 		"contact_text": "Máte otázky? Zavolejte nám na",
@@ -295,7 +295,7 @@
 			},
 			"trial_lesson": {
 				"question": "Nabízíte zkušební lekci?",
-				"answer": "Ano, pro všechny nové studenty nabízíme bezplatnou zkušební lekci, kde si můžete vyzkoušet náš přístup a poznat trenéra."
+				"answer": "Ano. Novým hráčům nabízíme první skupinovou lekci zdarma nebo slevu 250 Kč na první individuální trénink. Stačí nás kontaktovat a společně vybereme nejvhodnější variantu tréninku."
 			}
 		}
 	},
