@@ -149,7 +149,7 @@
 		</div>
 
 		<!-- Content -->
-		<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
+		<div class="relative z-20 text-center px-4 max-w-4xl mx-auto pt-20 reveal">
 			<h1 class="text-page-heading mb-4 text-white">
 				{m["programs_page.hero_title"]()} <span class="text-primary">{m["programs_page.hero_title_highlight"]()}</span>
 			</h1>

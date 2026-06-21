@@ -33,7 +33,7 @@
 <section class="py-24 bg-background">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
-		<div class="text-center mb-16">
+		<div class="text-center mb-16 reveal">
 			<h2 class="text-section-heading mb-4">
 				{m["coaches_preview.heading"]()} <span class="text-primary">{m["coaches_preview.heading_highlight"]()}</span>
 			</h2>
@@ -43,7 +43,7 @@
 		<!-- Coaches Grid -->
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mb-12 max-w-4xl mx-auto">
 			{#each coaches as coach, i}
-				<Card class="glass overflow-hidden shadow-sm border-none">
+				<Card class="glass overflow-hidden shadow-sm border-none reveal reveal-delay-{i + 1}">
 					<CardContent class="p-0">
 						<!-- Coach Image -->
 						<div class="card-media aspect-[3/4]">

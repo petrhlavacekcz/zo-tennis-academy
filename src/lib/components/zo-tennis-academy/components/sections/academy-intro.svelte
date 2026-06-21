@@ -15,7 +15,7 @@
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<div class="grid lg:grid-cols-2 gap-12 items-center">
 			<!-- Left Column - Content -->
-			<div>
+			<div class="reveal-left">
 				<h2 class="text-section-heading mb-6">
 					{m["academy_intro.heading"]()} <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">{m["academy_intro.heading_highlight"]()}</span>
 				</h2>
@@ -42,7 +42,7 @@
 			</div>
 
 			<!-- Right Column - Image -->
-			<div class="relative">
+			<div class="relative reveal-right">
 				<Card class="overflow-hidden border-none shadow-none bg-transparent">
 					<CardContent class="p-0">
 						<div class="card-media aspect-[4/3] w-full">

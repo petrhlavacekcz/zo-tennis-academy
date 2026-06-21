@@ -31,11 +31,20 @@
 	});
 
 
-	// Determine if current page has dark hero background
-	let isOnDarkBackground = $derived(currentPage === "home" || currentPage === "coaches" || currentPage === "programs" || currentPage === "contact");
-	let textColor = $derived(isOnDarkBackground ? "text-white" : "text-foreground");
-	let textShadow = $derived(isOnDarkBackground ? "text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);" : "");
-	let iconFilter = $derived(isOnDarkBackground ? "filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));" : "");
+	// Track scroll position to apply glass background
+	let isScrolled = $state(false);
+	$effect(() => {
+		if (typeof window === 'undefined') return;
+		const onScroll = () => { isScrolled = window.scrollY > 72; };
+		window.addEventListener('scroll', onScroll, { passive: true });
+		onScroll();
+		return () => window.removeEventListener('scroll', onScroll);
+	});
+
+	// All pages start with dark hero background; text is always white until scrolled
+	let textColor = $derived(isScrolled ? "text-foreground" : "text-white");
+	let textShadow = $derived(isScrolled ? "" : "text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);");
+	let iconFilter = $derived(isScrolled ? "" : "filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));");
 
 	const navItems = [
 		{ id: "home", href: "/", label: () => m["nav.home"]() },
@@ -92,7 +101,10 @@
 	});
 </script>
 
-<header bind:this={headerRef} class="absolute top-0 left-0 right-0 z-50 bg-transparent">
+<header
+	bind:this={headerRef}
+	class={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md border-b border-border/40 shadow-sm' : 'bg-transparent'}`}
+>
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<div class="flex items-center justify-between h-20 pt-4">
 			<!-- Enhanced Logo -->

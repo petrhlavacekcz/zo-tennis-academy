@@ -76,7 +76,7 @@
 
 <section class="py-24 bg-card overflow-hidden">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12 mb-16">
-		<div class="text-center">
+		<div class="text-center reveal">
 			<h2 class="text-section-heading mb-4">
 				{m["testimonials.heading"]()} <span class="text-primary">{m["testimonials.heading_highlight"]()}</span>
 			</h2>

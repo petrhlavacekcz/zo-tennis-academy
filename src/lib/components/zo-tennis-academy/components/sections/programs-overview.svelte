@@ -86,7 +86,7 @@
 <section class="py-24 bg-background">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
-		<div class="text-center mb-16">
+		<div class="text-center mb-16 reveal">
 			<h2 class="text-section-heading mb-4">
 				{m["programs_overview.heading"]()} <span class="text-primary">{m["programs_overview.heading_highlight"]()}</span>
 			</h2>
@@ -94,10 +94,16 @@
 		</div>
 
 		<!-- Main Programs Grid (3 in row) -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-			{#each mainPrograms as program}
-				<Card class="glass-modern h-full border-none shadow-none">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 reveal">
+			{#each mainPrograms as program, i}
+				<Card class="glass-modern h-full border-none shadow-none relative">
 					<CardContent class="p-0">
+						<!-- "Most Popular" badge on Private Lessons (index 2) -->
+						{#if i === 2}
+							<div class="absolute top-4 left-4 z-10 bg-primary text-white text-xs font-black uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg">
+								★ Nejoblíbenější
+							</div>
+						{/if}
 						<!-- Program Image -->
 						<div class="card-media aspect-[4/3]">
 							<img src={program.image} alt={program.title} loading="lazy" />
@@ -137,7 +143,7 @@
 		</div>
 
 		<!-- Special Programs Grid (2 in row) -->
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 reveal reveal-delay-2">
 			{#each specialPrograms as program}
 				<Card class="glass-modern h-full border-none shadow-none">
 					<CardContent class="p-0">

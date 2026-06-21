@@ -31,11 +31,11 @@
 		<div class="text-center max-w-4xl mx-auto">
 			<!-- Main title -->
 			<h1
-				class="text-white mb-6 font-black"
+				class="text-white mb-6"
 				style="text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.6), 0 0 40px rgba(255,106,0,0.4);"
 			>
-				<div class="text-hero" style="font-size: clamp(4rem, 10vw, 8rem); line-height: 0.85;">ZO</div>
-				<div class="text-hero" style="font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-top: 0.5rem;">TENNIS ACADEMY . CZ</div>
+				<div style="font-family: 'Barlow Condensed', 'Space Grotesk', Inter, system-ui, sans-serif; font-size: clamp(6rem, 18vw, 14rem); font-weight: 900; line-height: 0.82; letter-spacing: -0.02em; text-transform: uppercase;">ZO</div>
+				<div style="font-family: 'Barlow Condensed', 'Space Grotesk', Inter, system-ui, sans-serif; font-size: clamp(1.6rem, 4.5vw, 3.2rem); font-weight: 800; line-height: 1.1; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.25rem;">TENNIS ACADEMY . CZ</div>
 			</h1>
 
 			<!-- Subtitle — clean text, no glass box -->

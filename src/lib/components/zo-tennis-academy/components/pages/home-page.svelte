@@ -7,12 +7,14 @@
 	import ProgramsOverview from "../sections/programs-overview.svelte";
 	import InstagramSection from "../sections/instagram-section.svelte";
 	import FinalCTA from "../sections/final-cta.svelte";
+	import PhilosophySection from "../sections/philosophy-section.svelte";
 </script>
 
 <div class="relative">
 	<HeroSection />
 	<StatsSection />
 	<AcademyIntro />
+	<PhilosophySection />
 	<CoachesPreview />
 	<TestimonialsSection />
 	<ProgramsOverview />

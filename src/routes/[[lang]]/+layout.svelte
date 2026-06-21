@@ -3,6 +3,7 @@
 	import Footer from "$lib/components/zo-tennis-academy/components/footer/footer.svelte";
 	import { page } from "$app/state";
 	import { base } from "$app/paths";
+	import { onMount } from "svelte";
 	import type { Snippet } from "svelte";
 
 	interface Props {
@@ -10,6 +11,29 @@
 	}
 
 	let { children }: Props = $props();
+
+	// Scroll-reveal observer — wires up all .reveal/.reveal-left/.reveal-right elements
+	onMount(() => {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('revealed');
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{ threshold: 0.08, rootMargin: '0px 0px -48px 0px' }
+		);
+
+		const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+		revealEls.forEach((el) => observer.observe(el));
+
+		// Re-run when SvelteKit navigates (new page content)
+		return () => observer.disconnect();
+	});
 
 	// Theme management
 	let themeMode = $state<'light' | 'dark' | 'system'>('light');
