@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
+	import IconTennisBall from "$lib/components/zo-tennis-academy/components/ui/icon-tennis-ball.svelte";
 	import { asset } from "$app/paths";
 	import * as m from "$lib/paraglide/messages";
 
@@ -12,7 +13,7 @@
 </script>
 
 <section class="py-24 bg-card">
-	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
+	<div class="container-section">
 		<div class="grid lg:grid-cols-2 gap-12 items-center">
 			<!-- Left Column - Content -->
 			<div>
@@ -25,13 +26,7 @@
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 					{#each features as feature}
 						<div class="flex items-start gap-3">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48" class="text-primary flex-shrink-0 mt-1">
-								<g fill="none" stroke="currentColor" stroke-width="4">
-									<path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
-									<path stroke-linecap="round" stroke-linejoin="round" d="M24 4q-.15 10.003-4.912 15.004Q14.328 24.007 4 24.008" />
-									<path stroke-linecap="round" d="M43.968 25.005q-9.768-.67-14.929 4.176Q23.88 34.026 24.004 44" />
-								</g>
-							</svg>
+							<IconTennisBall size={16} class="text-primary flex-shrink-0 mt-1" />
 							<div>
 								<h3 class="font-semibold mb-1">{feature.title()}</h3>
 								<p class="text-base text-muted-foreground">{feature.description()}</p>

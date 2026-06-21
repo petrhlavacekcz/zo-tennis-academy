@@ -115,7 +115,7 @@
 
 			<!-- Right controls (Desktop) -->
 			<div class="hidden md:flex items-center gap-3">
-				<Button href={localizeHref("/contact")} variant="cta" size="lg" class="tennis-hover font-bold">{m["nav.reserve"]()}</Button>
+				<Button href={localizeHref("/contact")} variant="cta" size="lg" class="font-bold">{m["nav.reserve"]()}</Button>
 				<LangSwitcher {textColor} {iconFilter} />
 				<ThemeSwitcher mode={themeMode} {setThemeMode} {textColor} {iconFilter} />
 			</div>

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
+	import PageHero from "$lib/components/zo-tennis-academy/components/ui/page-hero.svelte";
 	import { Phone, MapPin, ChevronDown } from "@lucide/svelte";
-	import { asset } from "$app/paths";
 	import * as m from "$lib/paraglide/messages";
 
 	let expandedFaq = $state<number | null>(null);
@@ -28,41 +28,16 @@
 </script>
 
 <div class="min-h-screen bg-background">
-	<!-- Hero Section with Background -->
-	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-		<!-- Background Image with Overlay -->
-		<div class="absolute inset-0 z-0">
-			<img
-				src={asset("/zo-tennis-academy.webp")}
-				alt="Tennis court background"
-				class="w-full h-full object-cover block"
-				loading="lazy"
-				width="1920"
-				height="1080"
-				decoding="async"
-				style="aspect-ratio: 16/9;"
-			/>
-			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
-		</div>
-
-		<!-- Tennis Court Grid Pattern -->
-		<div class="absolute inset-0 z-10 opacity-10">
-			<div class="w-full h-full" style="background-image: linear-gradient(rgba(255,106,0,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,106,0,0.3) 1px, transparent 1px); background-size: 50px 50px;"></div>
-		</div>
-
-		<!-- Content -->
-		<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
-			<h1 class="text-page-heading mb-4 text-white">
-				<span class="text-primary">{m["contact_page.hero_title"]()}</span>
-			</h1>
-			<p class="text-lg text-white/90 max-w-2xl mx-auto">{m["contact_page.hero_description"]()}</p>
-		</div>
-	</section>
+	<PageHero
+		title={m["contact_page.hero_title"]()}
+		highlightFirst={true}
+		description={m["contact_page.hero_description"]()}
+	/>
 
 	<!-- Contact Content -->
 	<section class="py-24">
-		<div class="mx-auto max-w-[1180px] px-6 md:px-12">
-			<div class="grid gap-10 lg:grid-cols-[1.1fr_1fr] items-stretch">
+		<div class="container-section">
+			<div class="grid gap-10 lg:grid-cols-2 items-stretch">
 				<Card class="h-full rounded-3xl border border-border/50 bg-card/95 shadow-[0_24px_50px_rgba(15,15,15,0.12)]">
 					<CardContent class="flex h-full flex-col gap-10 p-10 lg:p-12">
 						<div class="space-y-4">

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
+	import PageHero from "$lib/components/zo-tennis-academy/components/ui/page-hero.svelte";
+	import IconTennisBall from "$lib/components/zo-tennis-academy/components/ui/icon-tennis-ball.svelte";
 
 	// @ts-ignore - lucide typed modules resolution
 	import Users from "@lucide/svelte/icons/users";
@@ -12,9 +14,9 @@
 	import Clock from "@lucide/svelte/icons/clock";
 	// @ts-ignore - lucide typed modules resolution
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
-	import { asset } from "$app/paths";
 	import { localizeHref } from "$lib/utils/localize";
 	import * as m from "$lib/paraglide/messages";
+	import { asset } from "$app/paths";
 
 	// First 3 programs (3 in row)
 	let mainPrograms = [
@@ -126,40 +128,15 @@
 </script>
 
 <div class="min-h-screen bg-background">
-	<!-- Hero Section with Background -->
-	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-		<!-- Background Image with Overlay -->
-		<div class="absolute inset-0 z-0">
-			<img
-				src={asset("/zo-tennis-academy.webp")}
-				alt="Tennis court background"
-				class="w-full h-full object-cover block"
-				loading="lazy"
-				width="1920"
-				height="1080"
-				decoding="async"
-				style="aspect-ratio: 16/9;"
-			/>
-			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
-		</div>
-
-		<!-- Tennis Court Grid Pattern -->
-		<div class="absolute inset-0 z-10 opacity-10">
-			<div class="w-full h-full" style="background-image: linear-gradient(rgba(255,106,0,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,106,0,0.3) 1px, transparent 1px); background-size: 50px 50px;"></div>
-		</div>
-
-		<!-- Content -->
-		<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
-			<h1 class="text-page-heading mb-4 text-white">
-				{m["programs_page.hero_title"]()} <span class="text-primary">{m["programs_page.hero_title_highlight"]()}</span>
-			</h1>
-			<p class="text-lg text-white/90 max-w-2xl mx-auto">{m["programs_page.hero_description"]()}</p>
-		</div>
-	</section>
+	<PageHero
+		title={m["programs_page.hero_title"]()}
+		titleHighlight={m["programs_page.hero_title_highlight"]()}
+		description={m["programs_page.hero_description"]()}
+	/>
 
 	<!-- Programs Grid -->
 	<section class="py-24">
-		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
+		<div class="container-section">
 			<!-- Main Programs Grid (3 in row) -->
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 			{#each mainPrograms as program}
@@ -210,13 +187,7 @@
 								<div class="space-y-3 mb-8">
 									{#each program.features as feature}
 										<div class="flex items-start gap-3">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48" class="text-primary flex-shrink-0 mt-1">
-												<g fill="none" stroke="currentColor" stroke-width="4">
-													<path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
-													<path stroke-linecap="round" stroke-linejoin="round" d="M24 4q-.15 10.003-4.912 15.004Q14.328 24.007 4 24.008" />
-													<path stroke-linecap="round" d="M43.968 25.005q-9.768-.67-14.929 4.176Q23.88 34.026 24.004 44" />
-												</g>
-											</svg>
+											<IconTennisBall size={16} class="text-primary flex-shrink-0 mt-1" />
 											<span class="text-sm leading-relaxed">{feature}</span>
 										</div>
 									{/each}
@@ -224,7 +195,7 @@
 
 								<!-- CTAs -->
 								<div class="flex gap-3">
-									<Button href={localizeHref("/contact")} variant="cta" size="xl" class="flex-1 tennis-hover">{m["programs_page.cta_reserve"]()}</Button>
+									<Button href={localizeHref("/contact")} variant="cta" size="xl" class="flex-1">{m["programs_page.cta_reserve"]()}</Button>
 								</div>
 							</div>
 						</CardContent>
@@ -283,13 +254,7 @@
 								<div class="space-y-2">
 									{#each program.features as feature}
 										<div class="flex items-start gap-3">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48" class="text-primary flex-shrink-0 mt-1">
-												<g fill="none" stroke="currentColor" stroke-width="4">
-													<path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
-													<path stroke-linecap="round" stroke-linejoin="round" d="M24 4q-.15 10.003-4.912 15.004Q14.328 24.007 4 24.008" />
-													<path stroke-linecap="round" d="M43.968 25.005q-9.768-.67-14.929 4.176Q23.88 34.026 24.004 44" />
-												</g>
-											</svg>
+											<IconTennisBall size={16} class="text-primary flex-shrink-0 mt-1" />
 											<span class="text-sm leading-relaxed">{feature}</span>
 										</div>
 									{/each}
@@ -298,7 +263,7 @@
 
 							<!-- CTA -->
 							<div class="mt-auto">
-								<Button href={localizeHref("/contact")} variant="cta" size="xl" class="w-full tennis-hover">
+								<Button href={localizeHref("/contact")} variant="cta" size="xl" class="w-full">
 									{program.id === "camps" ? m["programs_page.cta_reserve_camp"]() : m["programs_page.cta_more_info"]()}
 								</Button>
 							</div>
@@ -313,7 +278,7 @@
 				<CardContent class="p-8 text-center">
 					<h3 class="font-bold mb-4">{m["programs_page.bottom_cta_title"]()}</h3>
 					<p class="text-base mb-6 opacity-90">{m["programs_page.bottom_cta_description"]()}</p>
-					<Button href={localizeHref("/contact")} variant="cta-inverse" size="xl" class="tennis-hover">
+					<Button href={localizeHref("/contact")} variant="cta-inverse" size="xl">
 						{m["programs_page.bottom_cta_button"]()}
 						<ArrowRight size={20} />
 					</Button>

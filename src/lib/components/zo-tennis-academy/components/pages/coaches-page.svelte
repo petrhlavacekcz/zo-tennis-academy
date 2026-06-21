@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
+	import PageHero from "$lib/components/zo-tennis-academy/components/ui/page-hero.svelte";
+	import IconTennisBall from "$lib/components/zo-tennis-academy/components/ui/icon-tennis-ball.svelte";
 	// @ts-ignore - lucide typed modules resolution
 	import Phone from "@lucide/svelte/icons/phone";
 	import { asset } from "$app/paths";
@@ -40,40 +42,15 @@
 </script>
 
 <div class="min-h-screen bg-background">
-	<!-- Hero Section with Background -->
-	<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-		<!-- Background Image with Overlay -->
-		<div class="absolute inset-0 z-0">
-			<img
-				src={asset("/zo-tennis-academy.webp")}
-				alt="Tennis court background"
-				class="w-full h-full object-cover block"
-				loading="lazy"
-				width="1920"
-				height="1080"
-				decoding="async"
-				style="aspect-ratio: 16/9;"
-			/>
-			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/20"></div>
-		</div>
-
-		<!-- Tennis Court Grid Pattern -->
-		<div class="absolute inset-0 z-10 opacity-10">
-			<div class="w-full h-full" style="background-image: linear-gradient(rgba(255,106,0,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,106,0,0.3) 1px, transparent 1px); background-size: 50px 50px;"></div>
-		</div>
-
-		<!-- Content -->
-		<div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
-			<h1 class="text-page-heading mb-4 text-white">
-				{m["coaches_page.hero_title"]()} <span class="text-primary">{m["coaches_page.hero_title_highlight"]()}</span>
-			</h1>
-			<p class="text-lg text-white/90 max-w-2xl mx-auto">{m["coaches_page.hero_description"]()}</p>
-		</div>
-	</section>
+	<PageHero
+		title={m["coaches_page.hero_title"]()}
+		titleHighlight={m["coaches_page.hero_title_highlight"]()}
+		description={m["coaches_page.hero_description"]()}
+	/>
 
 	<!-- Coaches Profiles -->
 	<section class="py-24">
-		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
+		<div class="container-section">
 			<div class="space-y-16">
 			{#each coaches as coach}
 				<Card class="glass overflow-hidden shadow-sm border-none">
@@ -105,13 +82,7 @@
 										<div class="grid gap-3">
 											{#each coach.achievements as achievement}
 												<div class="flex items-start gap-3">
-													<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 48 48" class="text-primary flex-shrink-0 mt-0.5">
-														<g fill="none" stroke="currentColor" stroke-width="4">
-															<path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
-															<path stroke-linecap="round" stroke-linejoin="round" d="M24 4q-.15 10.003-4.912 15.004Q14.328 24.007 4 24.008" />
-															<path stroke-linecap="round" d="M43.968 25.005q-9.768-.67-14.929 4.176Q23.88 34.026 24.004 44" />
-														</g>
-													</svg>
+													<IconTennisBall size={18} class="text-primary flex-shrink-0 mt-0.5" />
 													<span class="text-foreground text-base leading-relaxed">{achievement}</span>
 												</div>
 											{/each}
@@ -120,7 +91,7 @@
 
 									<!-- Contact CTA -->
 									<div class="flex flex-col sm:flex-row gap-4">
-										<Button href={localizeHref("/contact")} variant="cta" size="xl" class="tennis-hover">
+										<Button href={localizeHref("/contact")} variant="cta" size="xl">
 											<Phone size={20} />
 											{m["coaches_page.cta_reserve"]()}
 										</Button>

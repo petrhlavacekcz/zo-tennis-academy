@@ -4,7 +4,7 @@
 	import * as m from "$lib/paraglide/messages";
 </script>
 
-<footer class="bg-[#F5F5F5] dark:bg-[#111] border-t border-border">
+<footer class="bg-muted dark:bg-card border-t border-border">
 	<!-- Main Footer Content -->
 	<div class="container mx-auto px-4 py-16">
 		<div class="grid md:grid-cols-3 gap-12">

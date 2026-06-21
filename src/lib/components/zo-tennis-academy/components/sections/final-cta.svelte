@@ -12,7 +12,7 @@
 		<div class="w-full h-full" style="background-image: radial-gradient(circle at 25% 25%, white 2px, transparent 2px), radial-gradient(circle at 75% 75%, white 2px, transparent 2px); background-size: 50px 50px;"></div>
 	</div>
 
-	<div class="mx-auto max-w-[1320px] px-6 md:px-12 text-center relative z-10">
+	<div class="container-section text-center relative z-10">
 		<h2 class="text-section-heading mb-6">{m["final_cta.heading"]()}</h2>
 
 		<p class="text-lg mb-8 max-w-2xl mx-auto opacity-90 leading-relaxed">{m["final_cta.description"]()}</p>

@@ -108,16 +108,5 @@
 	:global(.card-media:hover img) {
 		transform: scale(1.05);
 	}
-
-	:global(.glass) {
-		background: rgba(255, 255, 255, 0.05);
-		backdrop-filter: blur(10px);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-	}
-
-	:global(.dark .glass) {
-		background: rgba(0, 0, 0, 0.2);
-		border: 1px solid rgba(255, 255, 255, 0.05);
-	}
 </style>
 

@@ -116,7 +116,7 @@
 			</div>
 
 			<!-- CTA Button -->
-			<Button href={localizeHref("/contact")} variant="cta" size="xl" class="w-full tennis-hover">
+			<Button href={localizeHref("/contact")} variant="cta" size="xl" class="w-full">
 				{m["nav.reserve"]()}
 			</Button>
 		</div>
