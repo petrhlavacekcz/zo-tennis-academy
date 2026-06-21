@@ -1,117 +1,71 @@
 <script lang="ts">
+	import { onMount } from "svelte";
 	import { Instagram } from "@lucide/svelte";
 	import * as m from "$lib/paraglide/messages";
-	import { onMount } from "svelte";
 
-	let widgetContainer: HTMLElement;
-	let widgetLoaded = $state(false);
+	// Setup: create a free account at https://behold.so → connect @zo_tennis_academy
+	// → copy your Feed ID from the dashboard and paste it here.
+	const FEED_ID = "YOUR_BEHOLD_FEED_ID";
+
+	let section: HTMLElement;
+	let feedContainer: HTMLElement;
+	let loaded = $state(false);
 
 	onMount(() => {
-		// Lazy load Fouita widget using Intersection Observer
 		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting && !widgetLoaded) {
-						widgetLoaded = true;
-						loadFouitaWidget();
-						observer.disconnect();
-					}
-				});
+			([entry]) => {
+				if (entry.isIntersecting) {
+					observer.disconnect();
+					loaded = true;
+					const widget = document.createElement("behold-widget");
+					widget.setAttribute("feed-id", FEED_ID);
+					feedContainer.appendChild(widget);
+					const script = document.createElement("script");
+					script.src = "https://w.behold.so/widget.js";
+					script.type = "module";
+					document.head.appendChild(script);
+				}
 			},
-			{
-				rootMargin: "200px", // Load 200px before section is visible
-			}
+			{ rootMargin: "200px" }
 		);
-
-		if (widgetContainer) {
-			observer.observe(widgetContainer);
-		}
-
-		return () => {
-			observer.disconnect();
-		};
+		observer.observe(section);
+		return () => observer.disconnect();
 	});
-
-	async function loadFouitaWidget() {
-		// Dynamically load Fouita widget script
-		// @ts-ignore - Dynamic import of external module
-		const module = await import("https://cdn.fouita.com/public/instagram-feed.js?11");
-		const App = module.default;
-		new App({
-			target: document.getElementById("ft-insta-app"),
-			props: {
-				settings: {
-					layout: "masonry",
-					source: "insta",
-					selected: "uname",
-					header: false,
-					autoplay: true,
-					zigzag: false,
-					cols: 3,
-					cardHeight: 300,
-					gap: 1,
-					direction: "down",
-					height: 800,
-					bgColor: "",
-					txtColor: "",
-					ukey: "93d287a6-4e72-4207-b9b2-ac4f5a8f7348",
-				},
-			},
-		});
-	}
 </script>
 
-<section class="py-24 bg-neutral-950 text-white">
-	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
+<section class="py-24 bg-neutral-950 text-white" bind:this={section}>
+	<div class="container-section">
 		<!-- Section Header -->
 		<div class="text-center mb-12">
 			<div class="flex items-center justify-center gap-3 mb-3">
 				<Instagram size={24} class="text-primary" />
-				<h2 class="text-section-heading">{m["instagram.heading"]()} <span class="text-primary">{m["instagram.heading_highlight"]()}</span></h2>
+				<h2 class="text-section-heading">
+					{m["instagram.heading"]()} <span class="text-primary">{m["instagram.heading_highlight"]()}</span>
+				</h2>
 			</div>
 			<p class="text-white/70 max-w-2xl mx-auto">{m["instagram.description"]()}</p>
 		</div>
 
-		<!-- Instagram Feed Widget -->
-		<div class="mb-8" bind:this={widgetContainer}>
-			<div id="ft-insta-app">
-				{#if !widgetLoaded}
-					<!-- Loading placeholder -->
-					<div class="flex items-center justify-center min-h-[400px]">
-						<div class="text-white/50 text-center">
-							<Instagram size={48} class="mx-auto mb-4 animate-pulse" />
-							<p>Loading Instagram feed...</p>
-						</div>
-					</div>
-				{/if}
-			</div>
-		</div>
-
-		<!-- Fouita branding (hidden by CSS) -->
-		<div id="ft-insta-brd" class="text-center text-xs text-white/40 mt-4">
-			<a href="https://fouita.com/website-widgets/instagram-feed" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Embed Instagram Feed</a>
-			<span class="mx-2">with</span>
-			<a href="https://fouita.com" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Fouita</a>
+		<!-- Instagram Feed (Behold widget, loaded lazily) -->
+		<div class="mb-10 min-h-[400px]" bind:this={feedContainer} style="--behold-height: 800px">
+			{#if !loaded}
+				<div class="flex items-center justify-center h-[400px]">
+					<Instagram size={48} class="text-white/20 animate-pulse" />
+				</div>
+			{/if}
 		</div>
 
 		<!-- Instagram Handle -->
-		<div class="text-center mt-8">
-			<a href="https://www.instagram.com/zo_tennis_academy/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors">
-				<Instagram size={18} />
+		<div class="text-center">
+			<a
+				href="https://www.instagram.com/zo_tennis_academy/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-flex items-center gap-2 text-primary font-semibold text-lg hover:text-primary/80 transition-colors"
+			>
+				<Instagram size={20} />
 				{m["instagram.handle"]()}
 			</a>
 		</div>
 	</div>
 </section>
-
-<style>
-	/* Minimal styling - let Fouita handle most of it */
-	:global(#ft-insta-app) {
-		min-height: 400px;
-	}
-
-	/* Hide Fouita branding */
-	:global(#ft-insta-brd) {
-		display: none !important;
-	}
-</style>

@@ -6,15 +6,15 @@ import { paraglideMiddleware } from '$lib/paraglide/server';
 const handleSecurityHeaders: Handle = async ({ event, resolve }) => {
 	const response = await resolve(event);
 
-	// Content Security Policy for Instagram widget (Fouita CDN) and Google Maps
+	// Content Security Policy for Instagram widget (Behold CDN) and Google Maps
 	const cspDirectives = [
 		"default-src 'self'",
-		"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.fouita.com https://maps.googleapis.com https://maps.gstatic.com",
+		"script-src 'self' 'unsafe-inline' 'unsafe-eval' https://w.behold.so https://maps.googleapis.com https://maps.gstatic.com",
 		"style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://maps.googleapis.com",
 		"img-src 'self' data: https:",
-		"media-src 'self' data: https://cdn.fouita.com https://*.fbcdn.net https://*.cdninstagram.com https://scontent.cdninstagram.com https://www.instagram.com",
+		"media-src 'self' data: https://*.fbcdn.net https://*.cdninstagram.com https://scontent.cdninstagram.com https://www.instagram.com",
 		"font-src 'self' https://fonts.gstatic.com",
-		"connect-src 'self' https://cdn.fouita.com https://api.fouita.com https://social-feed.fouita.com https://social-feed.fouita.net https://*.cdninstagram.com https://scontent.cdninstagram.com https://www.instagram.com https://maps.googleapis.com",
+		"connect-src 'self' https://behold.so https://w.behold.so https://*.cdninstagram.com https://scontent.cdninstagram.com https://www.instagram.com https://maps.googleapis.com",
 		"frame-src 'self' https://maps.google.com https://www.google.com",
 		"object-src 'none'",
 		"base-uri 'self'"
