@@ -143,7 +143,7 @@
 	},
 	"final_cta": {
 		"heading": "Gotowy, aby poprawić swoją grę?",
-		"description": "Rozpocznij swoją tenisową podróż z nami już dziś. Oferujemy bezpłatną lekcję próbną dla wszystkich nowych uczniów.",
+		"description": "Rozpocznij swoją tenisową podróż z nami już dziś. Nowym graczom oferujemy pierwszą lekcję grupową za darmo lub zniżkę 250 CZK na pierwszy indywidualny trening.",
 		"cta_primary": "Zarezerwuj lekcję próbną",
 		"cta_secondary": "Zobacz programy",
 		"contact_text": "Masz pytania? Zadzwoń do nas pod numer",
@@ -295,7 +295,7 @@
 			},
 			"trial_lesson": {
 				"question": "Czy oferujecie lekcję próbną?",
-				"answer": "Tak, dla wszystkich nowych uczniów oferujemy bezpłatną lekcję próbną, podczas której możesz wypróbować nasze podejście i poznać trenera."
+				"answer": "Tak. Nowym graczom oferujemy pierwszą lekcję grupową za darmo lub zniżkę 250 CZK na pierwszy indywidualny trening. Wystarczy się z nami skontaktować, a wspólnie wybierzemy najlepszą opcję treningową."
 			}
 		}
 	},

@@ -143,7 +143,7 @@
 	},
 	"final_cta": {
 		"heading": "Ready to improve your game?",
-		"description": "Start your tennis journey with us today. We offer a free trial lesson for all new students.",
+		"description": "Start your tennis journey with us today. New players get their first group lesson free or a 250 CZK discount on their first individual training.",
 		"cta_primary": "Book a Trial Lesson",
 		"cta_secondary": "View Programs",
 		"contact_text": "Have questions? Call us at",
@@ -295,7 +295,7 @@
 			},
 			"trial_lesson": {
 				"question": "Do you offer a trial lesson?",
-				"answer": "Yes, for all new students we offer a free trial lesson where you can try our approach and meet the coach."
+				"answer": "Yes. New players get their first group lesson free or a 250 CZK discount on their first individual training. Just contact us and we'll find the best training option for you together."
 			}
 		}
 	},
