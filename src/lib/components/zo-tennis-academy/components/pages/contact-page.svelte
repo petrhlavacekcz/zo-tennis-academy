@@ -67,7 +67,7 @@
 					<CardContent class="flex h-full flex-col gap-10 p-10 lg:p-12">
 						<div class="space-y-4">
 							<span class="text-xs font-semibold uppercase tracking-[0.35em] text-primary/70">{m["contact_page.contact_card_title"]()}</span>
-							<h2 class="text-3xl lg:text-4xl font-semibold leading-tight">{m["contact_page.contact_card_description"]()}</h2>
+							<h2 class="text-2xl lg:text-3xl font-semibold leading-snug text-balance">{m["contact_page.contact_card_description"]()}</h2>
 						</div>
 
 						<div class="space-y-6">

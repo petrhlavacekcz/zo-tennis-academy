@@ -53,7 +53,7 @@
 
 	<!-- Panel -->
 	<aside
-		class="absolute inset-0 w-full h-full px-6 py-8 sm:px-8 bg-gradient-to-br from-gray-50/95 via-white/95 to-gray-100/95 dark:from-gray-950/95 dark:via-gray-900/95 dark:to-black/95 backdrop-blur-2xl supports-[backdrop-filter:none]:bg-white dark:supports-[backdrop-filter:none]:bg-gray-950 flex flex-col"
+		class="absolute inset-0 w-full h-full px-6 py-8 sm:px-8 bg-background flex flex-col"
 		transition:fly={{ x: -100, duration: 300, opacity: 1 }}
 	>
 		<!-- Header with back button -->

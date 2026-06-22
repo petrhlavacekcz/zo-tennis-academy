@@ -32,11 +32,11 @@
 	<div class="hero-enter relative z-20 text-center px-4 max-w-4xl mx-auto">
 		<!-- Brand wordmark: ZO TENNIS ACADEMY -->
 		<h1
-			class="text-white mb-6"
+			class="text-white mb-5"
 			style="text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55), 0 6px 28px rgba(0, 0, 0, 0.4);"
 		>
-			<div class="text-hero" style="font-size: clamp(4rem, 11vw, 8.5rem); line-height: 0.82;">ZO</div>
-			<div class="text-hero" style="font-size: clamp(1.6rem, 4.6vw, 3.25rem); line-height: 1.05; margin-top: 0.4rem; letter-spacing: 0.04em;">TENNIS ACADEMY</div>
+			<span class="text-hero block text-primary" style="font-size: clamp(3.75rem, 11vw, 7rem); line-height: 0.85;">ZO</span>
+			<span class="text-hero block" style="font-size: clamp(1.85rem, 5.6vw, 3rem); line-height: 1; letter-spacing: 0.12em; margin-top: 0.15rem;">TENNIS ACADEMY</span>
 		</h1>
 
 		<!-- Subtitle -->
