@@ -2,6 +2,8 @@
 	import Phone from "@lucide/svelte/icons/phone";
 	import Mail from "@lucide/svelte/icons/mail";
 	import * as m from "$lib/paraglide/messages";
+
+	const currentYear = new Date().getFullYear();
 </script>
 
 <footer class="bg-muted border-t border-border">
@@ -53,8 +55,19 @@
 	<!-- Bottom Footer -->
 	<div class="border-t border-border">
 		<div class="container mx-auto px-4 py-6">
-			<div class="flex flex-col md:flex-row justify-between items-center gap-4">
-				<p class="text-muted-foreground text-sm">{m["footer.copyright"]()}</p>
+			<div class="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4">
+				<p class="text-muted-foreground text-sm">© {currentYear} {m["footer.copyright"]()}</p>
+				<p class="text-muted-foreground text-sm">
+					{m["footer.credit"]()}
+					<a
+						href="https://www.petrhlavacek.cz"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="font-medium text-foreground hover:text-primary transition-colors"
+					>
+						Petr Hlaváček
+					</a>
+				</p>
 			</div>
 		</div>
 	</div>
