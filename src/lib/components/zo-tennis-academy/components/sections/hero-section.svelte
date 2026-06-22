@@ -30,13 +30,12 @@
 
 	<!-- Content -->
 	<div class="hero-enter relative z-20 text-center px-4 max-w-4xl mx-auto">
-		<!-- Brand wordmark: ZO TENNIS ACADEMY -->
+		<!-- Brand wordmark: ZO TENNIS ACADEMY (single line, uniform light color) -->
 		<h1
-			class="text-white mb-5"
-			style="text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55), 0 6px 28px rgba(0, 0, 0, 0.4);"
+			class="text-hero text-white mb-5 whitespace-nowrap"
+			style="font-size: clamp(1.6rem, 6.6vw, 4.5rem); letter-spacing: 0.03em; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55), 0 6px 28px rgba(0, 0, 0, 0.4);"
 		>
-			<span class="text-hero block text-primary" style="font-size: clamp(3.75rem, 11vw, 7rem); line-height: 0.85;">ZO</span>
-			<span class="text-hero block" style="font-size: clamp(1.85rem, 5.6vw, 3rem); line-height: 1; letter-spacing: 0.12em; margin-top: 0.15rem;">TENNIS ACADEMY</span>
+			ZO TENNIS ACADEMY
 		</h1>
 
 		<!-- Subtitle -->

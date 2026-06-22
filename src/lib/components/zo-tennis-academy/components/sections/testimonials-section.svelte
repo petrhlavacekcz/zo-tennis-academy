@@ -74,7 +74,7 @@
 
 <section class="py-16 md:py-24 bg-card">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
-		<div class="text-center mb-16">
+		<div class="text-center mb-12 md:mb-16">
 			<h2 class="text-section-heading mb-4">
 				{m["testimonials.heading"]()} <span class="text-primary">{m["testimonials.heading_highlight"]()}</span>
 			</h2>
@@ -105,7 +105,7 @@
 							<div class="absolute left-0 top-1 bottom-1 w-0.5 bg-gradient-to-b from-primary to-primary/40"></div>
 
 							<div class="font-semibold text-foreground text-base leading-tight">{testimonial.name}</div>
-							<div class="text-xs text-muted-foreground/60 mt-1">{testimonial.role}</div>
+							<div class="text-xs text-muted-foreground mt-1">{testimonial.role}</div>
 						</div>
 					</div>
 				</div>

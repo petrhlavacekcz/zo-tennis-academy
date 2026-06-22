@@ -86,7 +86,7 @@
 <section class="py-16 md:py-24 bg-background">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
-		<div class="text-center mb-16">
+		<div class="text-center mb-12 md:mb-16">
 			<h2 class="text-section-heading mb-4">
 				{m["programs_overview.heading"]()} <span class="text-primary">{m["programs_overview.heading_highlight"]()}</span>
 			</h2>

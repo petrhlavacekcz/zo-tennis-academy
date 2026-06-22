@@ -16,7 +16,7 @@
 			<!-- Left Column - Content -->
 			<div>
 				<h2 class="text-section-heading mb-6">
-					{m["academy_intro.heading"]()} <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">{m["academy_intro.heading_highlight"]()}</span>
+					{m["academy_intro.heading"]()} <span class="text-primary">{m["academy_intro.heading_highlight"]()}</span>
 				</h2>
 				<p class="text-lg text-muted-foreground mb-8 leading-relaxed">{m["academy_intro.description"]()}</p>
 

@@ -16,8 +16,8 @@
 				link: "text-primary underline-offset-4 hover:underline text-sm font-medium",
 
 				// PRIMARY BUTTONS - Consistent styling with minimal animation
-				// Orange gradient for light/dark backgrounds
-				cta: "rounded-lg bg-gradient-to-b from-orange-500 to-orange-600 text-white font-bold text-base uppercase tracking-wide shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]",
+				// Brand-primary (token-driven, theme-aware) for light/dark backgrounds
+				cta: "rounded-lg bg-primary text-primary-foreground font-bold text-base uppercase tracking-wide shadow-lg hover:bg-primary/90 hover:shadow-xl active:scale-[0.98]",
 				// White button for orange/colored backgrounds
 				"cta-inverse": "rounded-lg bg-white text-primary font-bold text-base uppercase tracking-wide shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]",
 
