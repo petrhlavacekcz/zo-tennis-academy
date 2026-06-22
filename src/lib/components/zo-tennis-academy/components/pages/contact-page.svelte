@@ -101,7 +101,7 @@
 
 				<Card class="h-full rounded-2xl border border-border/50 bg-card/95 shadow-soft overflow-hidden">
 					<CardHeader class="p-8 pb-4">
-						<CardTitle class="text-2xl">{m["contact_page.map_title"]()}</CardTitle>
+						<CardTitle class="font-space text-2xl font-semibold uppercase tracking-wide">{m["contact_page.map_title"]()}</CardTitle>
 					</CardHeader>
 					<CardContent class="flex flex-1 flex-col p-0">
 						<div class="h-full min-h-[320px] w-full overflow-hidden">
@@ -113,7 +113,7 @@
 
 			<Card class="mt-12 rounded-2xl border border-border/50 bg-card/95 shadow-soft">
 				<CardHeader class="px-8 pt-8 pb-4">
-					<CardTitle class="text-2xl">{m["contact_page.faq_title"]()}</CardTitle>
+					<CardTitle class="font-space text-2xl font-semibold uppercase tracking-wide">{m["contact_page.faq_title"]()}</CardTitle>
 				</CardHeader>
 				<CardContent class="px-2 pb-8">
 					<div class="space-y-3">

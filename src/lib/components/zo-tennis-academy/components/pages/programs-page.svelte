@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
+	import CheckIcon from "../sections/check-icon.svelte";
 
 	// @ts-ignore - lucide typed modules resolution
 	import Users from "@lucide/svelte/icons/users";
 	// @ts-ignore - lucide typed modules resolution
 	import Coins from "@lucide/svelte/icons/coins";
-	// @ts-ignore - lucide typed modules resolution
-	import Trophy from "@lucide/svelte/icons/trophy";
 	// @ts-ignore - lucide typed modules resolution
 	import Clock from "@lucide/svelte/icons/clock";
 	// @ts-ignore - lucide typed modules resolution
@@ -23,8 +22,6 @@
 			title: m["programs_page.junior.title"](),
 			subtitle: m["programs_page.junior.subtitle"](),
 			description: m["programs_page.junior.description"](),
-			icon: Users,
-			color: "text-blue-500",
 			image: asset("/junior.webp"),
 			duration: m["programs_page.junior.duration"](),
 			groupSize: m["programs_page.junior.group_size"](),
@@ -42,8 +39,6 @@
 			title: m["programs_page.adult.title"](),
 			subtitle: m["programs_page.adult.subtitle"](),
 			description: m["programs_page.adult.description"](),
-			icon: Trophy,
-			color: "text-green-500",
 			image: asset("/adult.webp"),
 			duration: m["programs_page.adult.duration"](),
 			groupSize: m["programs_page.adult.group_size"](),
@@ -62,8 +57,6 @@
 			title: m["programs_page.private.title"](),
 			subtitle: m["programs_page.private.subtitle"](),
 			description: m["programs_page.private.description"](),
-			icon: Clock,
-			color: "text-purple-500",
 			image: asset("/private.webp"),
 			duration: m["programs_page.private.duration"](),
 			groupSize: m["programs_page.private.group_size"](),
@@ -86,8 +79,6 @@
 			title: m["programs_page.professional.title"](),
 			subtitle: m["programs_page.professional.subtitle"](),
 			description: m["programs_page.professional.description"](),
-			icon: Trophy,
-			color: "text-primary",
 			image: asset("/professional.webp"),
 			duration: m["programs_page.professional.duration"](),
 			groupSize: m["programs_page.professional.group_size"](),
@@ -106,8 +97,6 @@
 			title: m["programs_page.camps.title"](),
 			subtitle: m["programs_page.camps.subtitle"](),
 			description: m["programs_page.camps.description"](),
-			icon: Trophy,
-			color: "text-primary",
 			image: asset("/camps.webp"),
 			duration: m["programs_page.camps.duration"](),
 			groupSize: m["programs_page.camps.group_size"](),
@@ -210,13 +199,7 @@
 								<div class="space-y-3 mb-8">
 									{#each program.features as feature}
 										<div class="flex items-start gap-3">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48" class="text-primary flex-shrink-0 mt-1">
-												<g fill="none" stroke="currentColor" stroke-width="4">
-													<path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
-													<path stroke-linecap="round" stroke-linejoin="round" d="M24 4q-.15 10.003-4.912 15.004Q14.328 24.007 4 24.008" />
-													<path stroke-linecap="round" d="M43.968 25.005q-9.768-.67-14.929 4.176Q23.88 34.026 24.004 44" />
-												</g>
-											</svg>
+											<CheckIcon size={16} class="text-primary flex-shrink-0 mt-1" />
 											<span class="text-sm leading-relaxed">{feature}</span>
 										</div>
 									{/each}
@@ -283,13 +266,7 @@
 								<div class="space-y-2">
 									{#each program.features as feature}
 										<div class="flex items-start gap-3">
-											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48" class="text-primary flex-shrink-0 mt-1">
-												<g fill="none" stroke="currentColor" stroke-width="4">
-													<path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
-													<path stroke-linecap="round" stroke-linejoin="round" d="M24 4q-.15 10.003-4.912 15.004Q14.328 24.007 4 24.008" />
-													<path stroke-linecap="round" d="M43.968 25.005q-9.768-.67-14.929 4.176Q23.88 34.026 24.004 44" />
-												</g>
-											</svg>
+											<CheckIcon size={16} class="text-primary flex-shrink-0 mt-1" />
 											<span class="text-sm leading-relaxed">{feature}</span>
 										</div>
 									{/each}
@@ -309,11 +286,11 @@
 			</div>
 
 			<!-- Bottom CTA -->
-			<Card class="bg-primary text-primary-foreground">
-				<CardContent class="p-8 text-center">
-					<h3 class="font-bold mb-4">{m["programs_page.bottom_cta_title"]()}</h3>
-					<p class="text-base mb-6 opacity-90">{m["programs_page.bottom_cta_description"]()}</p>
-					<Button href={localizeHref("/contact")} variant="cta-inverse" size="xl" class="tennis-hover">
+			<Card class="bg-primary text-primary-foreground border-none">
+				<CardContent class="p-8 md:p-12">
+					<h3 class="text-section-heading mb-4">{m["programs_page.bottom_cta_title"]()}</h3>
+					<p class="text-base mb-8 max-w-2xl opacity-90 leading-relaxed">{m["programs_page.bottom_cta_description"]()}</p>
+					<Button href={localizeHref("/contact")} variant="cta-inverse" size="xl">
 						{m["programs_page.bottom_cta_button"]()}
 						<ArrowRight size={20} />
 					</Button>
