@@ -123,7 +123,7 @@
 				src={asset("/zo-tennis-academy.webp")}
 				alt="Tennis court background"
 				class="w-full h-full object-cover block"
-				loading="lazy"
+				fetchpriority="high"
 				width="1920"
 				height="1080"
 				decoding="async"
@@ -152,7 +152,7 @@
 			<!-- Main Programs Grid (3 in row) -->
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 			{#each mainPrograms as program}
-				<Card class="glass-modern h-full border-none shadow-none">
+				<Card class="h-full shadow-soft">
 					<CardContent class="p-0">
 						<!-- Program Image -->
 						<div class="card-media aspect-[4/3]">
@@ -207,7 +207,7 @@
 
 								<!-- CTAs -->
 								<div class="flex gap-3">
-									<Button href={localizeHref("/contact")} variant="cta" size="xl" class="flex-1 tennis-hover">{m["programs_page.cta_reserve"]()}</Button>
+									<Button href={localizeHref("/contact")} variant="cta" size="xl" class="flex-1">{m["programs_page.cta_reserve"]()}</Button>
 								</div>
 							</div>
 						</CardContent>
@@ -218,7 +218,7 @@
 			<!-- Special Programs Grid (2 in row) -->
 			<div class="grid md:grid-cols-2 gap-8 mb-16">
 			{#each specialPrograms as program}
-				<Card class="glass-modern h-full border-none shadow-none">
+				<Card class="h-full shadow-soft">
 					<CardContent class="p-0">
 						<!-- Program Image -->
 						<div class="card-media aspect-[4/3]">
@@ -275,7 +275,7 @@
 
 							<!-- CTA -->
 							<div class="mt-auto">
-								<Button href={localizeHref("/contact")} variant="cta" size="xl" class="w-full tennis-hover">
+								<Button href={localizeHref("/contact")} variant="cta" size="xl" class="w-full">
 									{program.id === "camps" ? m["programs_page.cta_reserve_camp"]() : m["programs_page.cta_more_info"]()}
 								</Button>
 							</div>

@@ -17,9 +17,9 @@
 
 				// PRIMARY BUTTONS - Consistent styling with minimal animation
 				// Brand-primary (token-driven, theme-aware) for light/dark backgrounds
-				cta: "rounded-lg bg-primary text-primary-foreground font-bold text-base uppercase tracking-wide shadow-lg hover:bg-primary/90 hover:shadow-xl active:scale-[0.98]",
+				cta: "rounded-lg bg-primary text-primary-foreground font-bold text-base uppercase tracking-wide shadow-lg hover:bg-primary/90 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
 				// White button for orange/colored backgrounds
-				"cta-inverse": "rounded-lg bg-white text-primary font-bold text-base uppercase tracking-wide shadow-lg hover:shadow-xl active:scale-[0.98]",
+				"cta-inverse": "rounded-lg bg-white text-primary font-bold text-base uppercase tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
 
 				// SECONDARY BUTTONS - Consistent styling with minimal animation
 				// Outline for light backgrounds

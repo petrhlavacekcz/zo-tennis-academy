@@ -49,7 +49,7 @@
 				src={asset("/zo-tennis-academy.webp")}
 				alt="Tennis court background"
 				class="w-full h-full object-cover block"
-				loading="lazy"
+				fetchpriority="high"
 				width="1920"
 				height="1080"
 				decoding="async"
@@ -77,7 +77,7 @@
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<div class="space-y-16">
 			{#each coaches as coach}
-				<Card class="glass overflow-hidden shadow-sm border-none">
+				<Card class="overflow-hidden shadow-soft">
 					<CardContent class="p-0">
 						<div class="grid lg:grid-cols-5 items-stretch gap-0">
 							<!-- Coach Image -->
@@ -115,7 +115,7 @@
 
 									<!-- Contact CTA -->
 									<div class="flex flex-col sm:flex-row gap-4">
-										<Button href={localizeHref("/contact")} variant="cta" size="xl" class="tennis-hover">
+										<Button href={localizeHref("/contact")} variant="cta" size="xl">
 											<Phone size={20} />
 											{m["coaches_page.cta_reserve"]()}
 										</Button>

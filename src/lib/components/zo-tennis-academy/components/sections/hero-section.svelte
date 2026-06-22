@@ -48,7 +48,7 @@
 
 		<!-- CTA button -->
 		<div class="flex justify-center items-center">
-			<Button href={localizeHref("/contact")} variant="cta" size="xl" class="tennis-hover">
+			<Button href={localizeHref("/contact")} variant="cta" size="xl">
 				{m["hero.cta"]()}
 			</Button>
 		</div>

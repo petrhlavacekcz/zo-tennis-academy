@@ -30,15 +30,15 @@
 
 {#if variant === 'mobile'}
 	<!-- Mobile variant: segmented control style -->
-	<div class="inline-flex items-center gap-1 p-1 rounded-xl bg-gray-200/80 dark:bg-gray-800/80">
+	<div class="inline-flex items-center gap-1 p-1 rounded-xl bg-muted">
 		{#each themeOptions as option}
 			{@const Icon = option.icon}
 			<button
 				onclick={() => setThemeMode(option.value)}
 				class={`p-2 rounded-lg transition-all ${
 					mode === option.value
-						? 'bg-white dark:bg-gray-700 text-primary shadow-sm'
-						: 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+						? 'bg-card text-primary shadow-sm'
+						: 'text-muted-foreground hover:text-foreground'
 				}`}
 				aria-label={option.label}
 				aria-pressed={mode === option.value}

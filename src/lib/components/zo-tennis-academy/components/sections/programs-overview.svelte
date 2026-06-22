@@ -84,7 +84,7 @@
 		<!-- Main Programs Grid (3 in row) -->
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
 			{#each mainPrograms as program}
-				<Card class="glass-modern h-full border-none shadow-none">
+				<Card class="h-full shadow-soft">
 					<CardContent class="p-0">
 						<!-- Program Image -->
 						<div class="card-media aspect-[4/3]">
@@ -121,7 +121,7 @@
 		<!-- Special Programs Grid (2 in row) -->
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
 			{#each specialPrograms as program}
-				<Card class="glass-modern h-full border-none shadow-none">
+				<Card class="h-full shadow-soft">
 					<CardContent class="p-0">
 						<!-- Program Image -->
 						<div class="card-media aspect-[4/3]">
@@ -157,7 +157,7 @@
 
 		<!-- Main CTA -->
 		<div>
-			<Button href={localizeHref("/programs")} variant="cta" size="xl" class="tennis-hover group">
+			<Button href={localizeHref("/programs")} variant="cta" size="xl" class="group">
 				{m["programs_overview.cta"]()}
 				<ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />
 			</Button>

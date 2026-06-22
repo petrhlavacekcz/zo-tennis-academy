@@ -44,7 +44,7 @@
 		<!-- Coaches Grid -->
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mb-12 max-w-4xl mx-auto">
 			{#each coaches as coach}
-				<Card class="glass overflow-hidden shadow-sm border-none">
+				<Card class="overflow-hidden shadow-soft">
 					<CardContent class="p-0">
 						<!-- Coach Image -->
 						<div class="card-media aspect-[3/4]">

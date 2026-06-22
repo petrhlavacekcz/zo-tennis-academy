@@ -36,7 +36,7 @@
 				src={asset("/zo-tennis-academy.webp")}
 				alt="Tennis court background"
 				class="w-full h-full object-cover block"
-				loading="lazy"
+				fetchpriority="high"
 				width="1920"
 				height="1080"
 				decoding="async"
@@ -71,7 +71,7 @@
 						</div>
 
 						<div class="space-y-6">
-							<Button href="mailto:info@zotennisacademy.cz" size="lg" class="w-full sm:w-auto px-8 bg-primary text-primary-foreground hover:bg-primary/90">
+							<Button href="mailto:info@zotennisacademy.cz" variant="default" size="lg" class="w-full sm:w-auto px-8">
 								info@zotennisacademy.cz
 							</Button>
 

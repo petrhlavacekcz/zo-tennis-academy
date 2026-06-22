@@ -164,65 +164,6 @@ img { display: block; }
 }
 
 
-/* Glass utility for airy, translucent surfaces */
-.glass {
-  background-color: color-mix(in oklch, var(--card) 60%, transparent);
-  backdrop-filter: blur(14px) saturate(1.15);
-  border: 1px solid color-mix(in oklch, var(--border) 40%, transparent);
-  box-shadow: 0 8px 30px color-mix(in oklch, var(--foreground) 8%, transparent);
-}
-
-/* Enhanced modern glassmorphic styling for program cards */
-.glass-modern {
-  background: color-mix(in oklch, var(--card) 75%, transparent);
-  backdrop-filter: blur(18px) saturate(1.15);
-  border: 1px solid color-mix(in oklch, var(--border) 55%, transparent);
-  box-shadow:
-    0 12px 32px color-mix(in oklch, var(--foreground) 4%, transparent),
-    inset 0 1px 0 color-mix(in oklch, var(--card) 36%, transparent);
-  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.glass-modern:hover {
-  background: color-mix(in oklch, var(--card) 82%, transparent);
-  border-color: color-mix(in oklch, var(--primary) 22%, transparent);
-  box-shadow:
-    0 16px 40px color-mix(in oklch, var(--primary) 8%, transparent),
-    inset 0 1px 0 color-mix(in oklch, var(--card) 46%, transparent);
-}
-
-/* Special styling for kempy (camps) card */
-.glass-kempy {
-  background: linear-gradient(135deg,
-    color-mix(in oklch, var(--primary) 12%, transparent) 0%,
-    color-mix(in oklch, var(--card) 78%, transparent) 100%);
-  backdrop-filter: blur(18px) saturate(1.2);
-  border: 1px solid color-mix(in oklch, var(--primary) 28%, transparent);
-  box-shadow:
-    0 14px 36px color-mix(in oklch, var(--primary) 10%, transparent),
-    inset 0 1px 0 color-mix(in oklch, var(--card) 40%, transparent);
-  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.glass-kempy:hover {
-  background: linear-gradient(135deg,
-    color-mix(in oklch, var(--primary) 18%, transparent) 0%,
-    color-mix(in oklch, var(--card) 84%, transparent) 100%);
-  border-color: color-mix(in oklch, var(--primary) 36%, transparent);
-  box-shadow:
-    0 18px 44px color-mix(in oklch, var(--primary) 13%, transparent),
-    inset 0 1px 0 color-mix(in oklch, var(--card) 52%, transparent);
-}
-
-/* Responsive adjustments for glassmorphic cards */
-@media (max-width: 768px) {
-  .glass-modern,
-  .glass-kempy {
-    /* Slightly reduce blur on mobile for better performance */
-    backdrop-filter: blur(16px) saturate(1.1);
-  }
-}
-
 /* Program card image optimizations */
 .program-image {
   background-color: var(--accent);
@@ -264,16 +205,22 @@ img { display: block; }
 /* Soft, warm-tinted elevation (replaces heavy dark drop shadows) */
 .shadow-soft{box-shadow:0 14px 36px color-mix(in oklch,var(--foreground) 8%,transparent)}
 
-/* Subtle, tasteful hover lift for CTAs/cards (calm easing, no glow) */
-.tennis-hover{transition:transform .2s cubic-bezier(0.4,0,0.2,1),box-shadow .2s cubic-bezier(0.4,0,0.2,1)}
-.tennis-hover:hover{transform:translateY(-2px);box-shadow:0 10px 24px color-mix(in oklch,var(--primary) 18%,transparent)}
-
-/* Accessible focus ring (no glow/scale) */
+/* Accessible focus ring for nav (no glow/scale) */
 .focus-tennis:focus-visible {
   outline: none;
   box-shadow:
     0 0 0 2px var(--background),
     0 0 0 4px var(--primary);
+}
+
+/* Consistent keyboard focus ring for every other interactive element */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 3px;
 }
 
 /* High contrast mode support */
@@ -283,11 +230,13 @@ img { display: block; }
   }
 }
 
+/* Respect reduced-motion: disable hover lifts, the card image zoom, and smooth scroll */
 @media (prefers-reduced-motion: reduce) {
-  .tennis-hover,
   .hover-lift { transition: none; }
-  .tennis-hover:hover,
   .hover-lift:hover { transform: none; }
+  .card-media img { transition: none !important; }
+  .card-media:hover img { transform: none !important; }
+  html { scroll-behavior: auto; }
 }
 
 /* Modern Tennis-Themed Menu Animations */

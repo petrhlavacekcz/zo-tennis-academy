@@ -60,14 +60,14 @@
 
 {#if variant === 'mobile'}
 	<!-- Mobile variant: segmented control style -->
-	<div class="inline-flex items-center gap-1 p-1 rounded-xl bg-gray-200/80 dark:bg-gray-800/80">
+	<div class="inline-flex items-center gap-1 p-1 rounded-xl bg-muted">
 		{#each locales as locale}
 			<button
 				onclick={() => switchLanguage(locale)}
 				class={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${
 					currentLocale === locale
-						? 'bg-white dark:bg-gray-700 text-primary shadow-sm'
-						: 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+						? 'bg-card text-primary shadow-sm'
+						: 'text-muted-foreground hover:text-foreground'
 				}`}
 				aria-label={getLanguageLabel(locale)}
 				aria-pressed={currentLocale === locale}
@@ -91,14 +91,14 @@
 		</button>
 
 		{#if isOpen}
-			<div class="absolute right-0 top-full mt-2 py-1 min-w-[140px] rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg z-50">
+			<div class="absolute right-0 top-full mt-2 py-1 min-w-[140px] rounded-lg border border-border bg-popover shadow-lg z-50">
 				{#each locales as locale}
 					<button
 						onclick={() => switchLanguage(locale)}
 						class={`w-full px-4 py-2 text-left text-sm transition-colors ${
 							currentLocale === locale
 								? 'bg-primary/10 text-primary font-semibold'
-								: 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+								: 'text-foreground hover:bg-accent'
 						}`}
 						aria-label={`Switch to ${getLanguageLabel(locale)}`}
 					>

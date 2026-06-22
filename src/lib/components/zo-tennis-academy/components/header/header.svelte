@@ -64,6 +64,7 @@
 				{#each navItems as item}
 					<a
 						href={localizeHref(item.href)}
+						aria-current={currentPage === item.id ? 'page' : undefined}
 						class={`menu-item-tennis focus-tennis font-medium uppercase tracking-wide transition-colors ${currentPage === item.id ? "text-primary" : `${textColor} hover:text-primary`}`}
 						style={textShadow}
 					>
@@ -74,7 +75,7 @@
 
 			<!-- Right controls (Desktop) -->
 			<div class="hidden md:flex items-center gap-3">
-				<Button href={localizeHref("/contact")} variant="cta" size="lg" class="tennis-hover font-bold">{m["nav.reserve"]()}</Button>
+				<Button href={localizeHref("/contact")} variant="cta" size="lg" class="font-bold">{m["nav.reserve"]()}</Button>
 				<LangSwitcher {textColor} {iconFilter} />
 				<ThemeSwitcher mode={themeMode} {setThemeMode} {textColor} {iconFilter} />
 			</div>

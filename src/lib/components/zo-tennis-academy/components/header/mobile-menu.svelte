@@ -59,7 +59,7 @@
 		<!-- Header with back button -->
 		<div class="flex items-center mb-16">
 			<button
-				class="p-2 -ml-2 rounded-full hover:bg-gray-200/60 dark:hover:bg-gray-800/60 transition-colors text-gray-900 dark:text-gray-100"
+				class="p-2 -ml-2 rounded-full hover:bg-muted transition-colors text-foreground"
 				onclick={() => onclose?.()}
 				aria-label="Close menu"
 			>
@@ -78,7 +78,7 @@
 					class={`group w-full flex items-center gap-5 py-6 px-4 rounded-2xl text-left transition-all duration-200 ${
 						currentPage === item.id
 							? 'bg-primary/10 dark:bg-primary/20'
-							: 'hover:bg-gray-200/50 dark:hover:bg-gray-800/50'
+							: 'hover:bg-muted'
 					}`}
 				>
 					<Icon
@@ -87,13 +87,13 @@
 						class={`shrink-0 transition-colors ${
 							currentPage === item.id
 								? 'text-primary'
-								: 'text-gray-700 dark:text-gray-300 group-hover:text-primary'
+								: 'text-muted-foreground group-hover:text-primary'
 						}`}
 					/>
 					<span class={`text-2xl font-semibold uppercase tracking-wide transition-colors ${
 						currentPage === item.id
 							? 'text-primary'
-							: 'text-gray-900 dark:text-gray-100 group-hover:text-primary'
+							: 'text-foreground group-hover:text-primary'
 					}`}>
 						{item.label()}
 					</span>
@@ -106,17 +106,17 @@
 			<!-- Settings row -->
 			<div class="flex flex-col gap-3 px-2">
 				<div class="flex items-center justify-between gap-3">
-					<span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language</span>
+					<span class="text-sm font-medium text-muted-foreground">Language</span>
 					<LangSwitcher variant="mobile" />
 				</div>
 				<div class="flex items-center justify-between gap-3">
-					<span class="text-sm font-medium text-gray-700 dark:text-gray-300">Theme</span>
+					<span class="text-sm font-medium text-muted-foreground">Theme</span>
 					<ThemeSwitcher mode={themeMode} {setThemeMode} variant="mobile" />
 				</div>
 			</div>
 
 			<!-- CTA Button -->
-			<Button href={localizeHref("/contact")} variant="cta" size="xl" class="w-full tennis-hover">
+			<Button href={localizeHref("/contact")} variant="cta" size="xl" class="w-full">
 				{m["nav.reserve"]()}
 			</Button>
 		</div>
