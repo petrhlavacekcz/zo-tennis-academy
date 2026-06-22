@@ -74,11 +74,11 @@
 <section class="py-16 md:py-24 bg-background">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
-		<div class="text-center mb-12 md:mb-16">
+		<div class="mb-12 md:mb-16">
 			<h2 class="text-section-heading mb-4">
 				{m["programs_overview.heading"]()} <span class="text-primary">{m["programs_overview.heading_highlight"]()}</span>
 			</h2>
-			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">{m["programs_overview.description"]()}</p>
+			<p class="text-lg text-muted-foreground max-w-2xl">{m["programs_overview.description"]()}</p>
 		</div>
 
 		<!-- Main Programs Grid (3 in row) -->
@@ -156,7 +156,7 @@
 		</div>
 
 		<!-- Main CTA -->
-		<div class="text-center">
+		<div>
 			<Button href={localizeHref("/programs")} variant="cta" size="xl" class="tennis-hover group">
 				{m["programs_overview.cta"]()}
 				<ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />

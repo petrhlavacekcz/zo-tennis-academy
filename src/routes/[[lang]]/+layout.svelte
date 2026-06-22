@@ -84,7 +84,7 @@
 <style>
 	:global(body) {
 		font-family:
-			"Inter",
+			"Hanken Grotesk",
 			system-ui,
 			-apple-system,
 			"Segoe UI",

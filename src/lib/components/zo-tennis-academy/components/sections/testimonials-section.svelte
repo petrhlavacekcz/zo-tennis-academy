@@ -83,11 +83,11 @@
 
 <section class="py-16 md:py-24 bg-card">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
-		<div class="text-center mb-12 md:mb-16">
+		<div class="mb-12 md:mb-16">
 			<h2 class="text-section-heading mb-4">
 				{m["testimonials.heading"]()} <span class="text-primary">{m["testimonials.heading_highlight"]()}</span>
 			</h2>
-			<p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+			<p class="text-lg text-muted-foreground max-w-2xl">
 				{m["testimonials.description"]()}
 			</p>
 		</div>

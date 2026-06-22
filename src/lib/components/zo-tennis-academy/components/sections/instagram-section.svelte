@@ -64,12 +64,12 @@
 <section class="py-16 md:py-24 bg-[hsl(30_9%_6%)] text-white">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
-		<div class="text-center mb-12">
-			<div class="flex items-center justify-center gap-3 mb-3">
+		<div class="mb-12">
+			<div class="flex items-center justify-start gap-3 mb-3">
 				<Instagram size={24} class="text-primary" />
 				<h2 class="text-section-heading">{m["instagram.heading"]()} <span class="text-primary">{m["instagram.heading_highlight"]()}</span></h2>
 			</div>
-			<p class="text-white/70 max-w-2xl mx-auto">{m["instagram.description"]()}</p>
+			<p class="text-white/70 max-w-2xl">{m["instagram.description"]()}</p>
 		</div>
 
 		<!-- Instagram Feed Widget -->
