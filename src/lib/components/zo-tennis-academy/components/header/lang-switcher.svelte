@@ -81,7 +81,7 @@
 	<div class="relative" bind:this={dropdownRef}>
 		<button
 			onclick={toggleDropdown}
-			class={`p-2 ${textColor} hover:text-primary transition-colors flex items-center gap-1`}
+			class={`min-h-11 px-2 ${textColor} hover:text-primary transition-colors flex items-center gap-1`}
 			style={iconFilter}
 			aria-label="Switch language"
 			aria-expanded={isOpen}

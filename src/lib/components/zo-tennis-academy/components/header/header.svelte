@@ -5,7 +5,6 @@
 	import MobileMenu from "./mobile-menu.svelte";
 	import ThemeSwitcher from "../theme/theme-switcher.svelte";
 	import LangSwitcher from "./lang-switcher.svelte";
-	import { onMount } from 'svelte';
 	import { asset } from "$app/paths";
 	import { localizeHref } from "$lib/utils/localize";
 	import * as m from "$lib/paraglide/messages";
@@ -18,7 +17,7 @@
 
 	let { currentPage, themeMode, setThemeMode }: Props = $props();
 	let isMobileMenuOpen = $state(false);
-	let headerRef: HTMLElement;
+	let scrolled = $state(false);
 
 	// Lock body scroll when mobile menu is open
 	$effect(() => {
@@ -30,12 +29,19 @@
 		}
 	});
 
+	// Track scroll to toggle the frosted-glass bar
+	$effect(() => {
+		const onScroll = () => { scrolled = window.scrollY > 24; };
+		onScroll();
+		window.addEventListener('scroll', onScroll, { passive: true });
+		return () => window.removeEventListener('scroll', onScroll);
+	});
 
-	// Determine if current page has dark hero background
-	let isOnDarkBackground = $derived(currentPage === "home" || currentPage === "coaches" || currentPage === "programs" || currentPage === "contact");
-	let textColor = $derived(isOnDarkBackground ? "text-white" : "text-foreground");
-	let textShadow = $derived(isOnDarkBackground ? "text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);" : "");
-	let iconFilter = $derived(isOnDarkBackground ? "filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));" : "");
+	// The header sits over dark heroes at the top, and over a dark frosted bar once
+	// scrolled — so nav/logo/icons stay white in both light and dark themes throughout.
+	const textColor = "text-white";
+	const textShadow = "text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);";
+	const iconFilter = "filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));";
 
 	const navItems = [
 		{ id: "home", href: "/", label: () => m["nav.home"]() },
@@ -43,69 +49,22 @@
 		{ id: "programs", href: "/programs", label: () => m["nav.programs"]() },
 		{ id: "contact", href: "/contact", label: () => m["nav.contact"]() },
 	];
-
-	// Magnetic effect for desktop menu items
-	function addMagneticEffect(element: HTMLElement) {
-		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-		const handleMouseMove = (e: MouseEvent) => {
-			const rect = element.getBoundingClientRect();
-			const x = e.clientX - rect.left - rect.width / 2;
-			const y = e.clientY - rect.top - rect.height / 2;
-
-			// Limit the magnetic effect strength
-			const strength = 0.15;
-			const maxDistance = 50;
-			const distance = Math.sqrt(x * x + y * y);
-
-			if (distance < maxDistance) {
-				element.style.transform = `translate(${x * strength}px, ${y * strength}px) scale(1.02)`;
-			}
-		};
-
-		const handleMouseLeave = () => {
-			element.style.transform = 'translate(0, 0) scale(1)';
-		};
-
-		element.addEventListener('mousemove', handleMouseMove);
-		element.addEventListener('mouseleave', handleMouseLeave);
-
-		return () => {
-			element.removeEventListener('mousemove', handleMouseMove);
-			element.removeEventListener('mouseleave', handleMouseLeave);
-		};
-	}
-
-	onMount(() => {
-		// Add magnetic effect to desktop menu items
-		const menuItems = headerRef?.querySelectorAll('.magnetic-item');
-		const cleanupFunctions: (() => void)[] = [];
-
-		menuItems?.forEach((item) => {
-			const cleanup = addMagneticEffect(item as HTMLElement);
-			if (cleanup) cleanupFunctions.push(cleanup);
-		});
-
-		return () => {
-			cleanupFunctions.forEach(cleanup => cleanup());
-		};
-	});
 </script>
 
-<header bind:this={headerRef} class="absolute top-0 left-0 right-0 z-50 bg-transparent">
+<header class={`header-bar fixed top-0 left-0 right-0 z-50 ${scrolled ? 'scrolled' : ''}`}>
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<div class="flex items-center justify-between h-20 pt-4">
-			<!-- Enhanced Logo -->
-			<a href={localizeHref("/")} class="logo-tennis-enhanced flex items-center gap-2">
+			<!-- Logo (white wordmark + orange ZO — kept on dark surfaces in both themes) -->
+			<a href={localizeHref("/")} class="flex items-center gap-2">
 				<img src={asset("/zo-tennis-academy-logo.webp")} alt="ZO Tennis Academy" class="h-10 w-auto" />
 			</a>
 
-			<!-- Enhanced Desktop Navigation -->
+			<!-- Desktop Navigation -->
 			<nav class="hidden md:flex items-center gap-8">
 				{#each navItems as item}
 					<a
 						href={localizeHref(item.href)}
-						class={`menu-item-tennis magnetic-item focus-tennis font-medium uppercase tracking-wide transition-colors ${currentPage === item.id ? "text-primary" : `${textColor} hover:text-primary`}`}
+						class={`menu-item-tennis focus-tennis font-medium uppercase tracking-wide transition-colors ${currentPage === item.id ? "text-primary" : `${textColor} hover:text-primary`}`}
 						style={textShadow}
 					>
 						{item.label()}
@@ -148,3 +107,30 @@
 		/>
 	{/if}
 </header>
+
+<style>
+	/* Transparent over the hero; fades into a dark frosted-glass bar once scrolled.
+	   Same dark glass in both light and dark themes so the white logo/nav stay legible. */
+	.header-bar {
+		background-color: transparent;
+		transition:
+			background-color 0.3s ease,
+			backdrop-filter 0.3s ease,
+			box-shadow 0.3s ease;
+	}
+
+	.header-bar.scrolled {
+		background-color: color-mix(in oklch, black 72%, transparent);
+		backdrop-filter: blur(14px) saturate(1.1);
+		-webkit-backdrop-filter: blur(14px) saturate(1.1);
+		box-shadow:
+			inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+			0 8px 30px rgba(0, 0, 0, 0.28);
+	}
+
+	@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+		.header-bar.scrolled {
+			background-color: rgba(10, 9, 8, 0.94);
+		}
+	}
+</style>

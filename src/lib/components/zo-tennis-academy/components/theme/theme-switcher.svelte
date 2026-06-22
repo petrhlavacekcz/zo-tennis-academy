@@ -51,7 +51,7 @@
 	<!-- Default variant: single button cycle -->
 	<button
 		onclick={cycleTheme}
-		class={`p-2 ${textColor} hover:text-primary transition-colors`}
+		class={`inline-flex h-11 w-11 items-center justify-center rounded-lg ${textColor} hover:text-primary transition-colors`}
 		style={iconFilter}
 		aria-label={mode === 'dark' ? 'Switch to light mode' : mode === 'light' ? 'Switch to system mode' : 'Switch to dark mode'}
 	>

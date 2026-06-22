@@ -72,7 +72,7 @@
 	</section>
 
 	<!-- Coaches Profiles -->
-	<section class="py-24">
+	<section class="py-16 md:py-24">
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<div class="space-y-16">
 			{#each coaches as coach}

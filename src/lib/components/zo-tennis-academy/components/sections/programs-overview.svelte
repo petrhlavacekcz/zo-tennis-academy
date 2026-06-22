@@ -83,7 +83,7 @@
 	];
 </script>
 
-<section class="py-24 bg-background">
+<section class="py-16 md:py-24 bg-background">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
 		<div class="text-center mb-16">

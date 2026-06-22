@@ -72,7 +72,7 @@
 	];
 </script>
 
-<section class="py-24 bg-card">
+<section class="py-16 md:py-24 bg-card">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<div class="text-center mb-16">
 			<h2 class="text-section-heading mb-4">

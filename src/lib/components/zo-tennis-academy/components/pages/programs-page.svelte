@@ -158,7 +158,7 @@
 	</section>
 
 	<!-- Programs Grid -->
-	<section class="py-24">
+	<section class="py-16 md:py-24">
 		<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 			<!-- Main Programs Grid (3 in row) -->
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

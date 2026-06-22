@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { Card, CardContent } from "$lib/components/ui/card";
 	import { asset } from "$app/paths";
 	import * as m from "$lib/paraglide/messages";
 
@@ -11,7 +10,7 @@
 	];
 </script>
 
-<section class="py-24 bg-card">
+<section class="py-16 md:py-24 bg-card">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<div class="grid lg:grid-cols-2 gap-12 items-center">
 			<!-- Left Column - Content -->
@@ -43,18 +42,14 @@
 
 			<!-- Right Column - Image -->
 			<div class="relative">
-				<Card class="overflow-hidden border-none shadow-none bg-transparent">
-					<CardContent class="p-0">
-						<div class="card-media aspect-[4/3] w-full">
-							<img
-								src={asset("/zuzana-ondraskova-2.webp")}
-								alt="Tennis training session"
-								loading="lazy"
-								class="object-cover w-full h-full"
-							/>
-						</div>
-					</CardContent>
-				</Card>
+				<div class="card-media aspect-[4/3] w-full overflow-hidden rounded-xl">
+					<img
+						src={asset("/zuzana-ondraskova-2.webp")}
+						alt="Tennis training session"
+						loading="lazy"
+						class="object-cover w-full h-full"
+					/>
+				</div>
 			</div>
 		</div>
 	</div>

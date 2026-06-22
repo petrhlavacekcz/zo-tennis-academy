@@ -30,23 +30,24 @@
 
 :root {
   --radius: 0.625rem;
-  --background: hsl(0 0% 98%);
-  --foreground: hsl(0 0% 4%);
-  --card: hsl(0 0% 100%);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
+  /* Warm-tinted neutrals (hue ~36) to harmonize with the orange brand — never pure gray */
+  --background: hsl(36 33% 98%);
+  --foreground: hsl(28 12% 7%);
+  --card: hsl(40 40% 99.5%);
+  --card-foreground: hsl(28 12% 9%);
+  --popover: hsl(40 40% 99.5%);
+  --popover-foreground: hsl(28 12% 9%);
   --primary: hsl(24 95% 53%);
   --primary-foreground: #ffffff;
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: hsl(0 0% 94%);
-  --muted-foreground: hsl(0 0% 32%);
-  --accent: hsl(0 0% 96%);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --secondary: hsl(36 24% 95%);
+  --secondary-foreground: hsl(28 12% 12%);
+  --muted: hsl(36 22% 94%);
+  --muted-foreground: hsl(30 8% 32%);
+  --accent: hsl(36 26% 96%);
+  --accent-foreground: hsl(28 12% 12%);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: hsl(0 0% 86%);
-  --input: hsl(0 0% 90%);
+  --border: hsl(36 16% 87%);
+  --input: hsl(36 18% 90%);
   --ring: hsl(24 95% 53%);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -64,23 +65,24 @@
 }
 
 .dark {
-  --background: hsl(0 0% 4%);
-  --foreground: hsl(0 0% 98%);
-  --card: hsl(0 0% 10%);
-  --card-foreground: #EEE;
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
+  /* Warm-tinted near-blacks (hue ~30) — never pure gray */
+  --background: hsl(30 9% 5%);
+  --foreground: hsl(40 18% 97%);
+  --card: hsl(30 7% 11%);
+  --card-foreground: hsl(40 14% 93%);
+  --popover: hsl(30 7% 11%);
+  --popover-foreground: hsl(40 18% 97%);
   --primary: hsl(20 91% 48%);
   --primary-foreground: #ffffff;
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: hsl(0 0% 14%);
-  --muted-foreground: hsl(0 0% 75%);
-  --accent: hsl(0 0% 12%);
-  --accent-foreground: oklch(0.984 0.003 247.858);
+  --secondary: hsl(30 6% 16%);
+  --secondary-foreground: hsl(40 18% 97%);
+  --muted: hsl(30 6% 15%);
+  --muted-foreground: hsl(35 8% 76%);
+  --accent: hsl(30 6% 13%);
+  --accent-foreground: hsl(40 18% 97%);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: hsl(0 0% 20%);
-  --input: hsl(0 0% 18%);
+  --border: hsl(30 6% 22%);
+  --input: hsl(30 6% 19%);
   --ring: hsl(20 91% 48%);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
@@ -259,341 +261,33 @@ img { display: block; }
 /* Button press micro-interaction */
 .btn-press:active{transform:translateY(1px) scale(.99)}
 
-/* Orange glow + scale utilities */
-.hover-glow-orange:hover{box-shadow:0 10px 25px rgba(255,107,0,.25)}
-.hover-scale{transition:none}
-.hover-scale:hover{transform:none}
+/* Soft, warm-tinted elevation (replaces heavy dark drop shadows) */
+.shadow-soft{box-shadow:0 14px 36px color-mix(in oklch,var(--foreground) 8%,transparent)}
 
-/* Tennis-themed animation performance optimization */
-.tennis-animation-container {
-  will-change: transform, opacity;
-}
+/* Subtle, tasteful hover lift for CTAs/cards (calm easing, no glow) */
+.tennis-hover{transition:transform .2s cubic-bezier(0.4,0,0.2,1),box-shadow .2s cubic-bezier(0.4,0,0.2,1)}
+.tennis-hover:hover{transform:translateY(-2px);box-shadow:0 10px 24px color-mix(in oklch,var(--primary) 18%,transparent)}
 
-.tennis-animation-container.animation-complete {
-  will-change: auto;
-}
-
-/* Enhanced Hero Text Animations */
-@property --gradient-position {
-  syntax: '<percentage>';
-  initial-value: 0%;
-  inherits: false;
-}
-
-@property --glow-intensity {
-  syntax: '<number>';
-  initial-value: 0;
-  inherits: false;
-}
-
-/* Hero Title Animation */
-.hero-title-animated {
-  animation: hero-title-entrance 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  transform: translateY(20px);
-  opacity: 0;
-}
-
-@keyframes hero-title-entrance {
-  0% {
-    transform: translateY(20px) scale(0.95);
-    opacity: 0;
-    filter: blur(4px);
-  }
-  60% {
-    transform: translateY(-5px) scale(1.02);
-    opacity: 0.8;
-    filter: blur(1px);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-
-/* Character-level tennis ball physics animation */
-.hero-char {
-  display: inline-block;
-  position: relative;
-  transform-origin: center bottom;
-}
-
-.hero-char-tennis-serve {
-  animation: tennis-char-serve 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-}
-
-@keyframes tennis-char-serve {
-  0% {
-    transform: translateX(-60px) translateY(-20px) rotate(-15deg) scale(0.3);
-    opacity: 0;
-    filter: blur(4px) drop-shadow(0 0 20px rgba(255, 106, 0, 0.8));
-  }
-  30% {
-    transform: translateX(-20px) translateY(-30px) rotate(-5deg) scale(0.7);
-    opacity: 0.7;
-    filter: blur(2px) drop-shadow(0 0 15px rgba(255, 106, 0, 0.6));
-  }
-  70% {
-    transform: translateX(5px) translateY(-10px) rotate(2deg) scale(1.1);
-    opacity: 0.9;
-    filter: blur(1px) drop-shadow(0 0 10px rgba(255, 106, 0, 0.4));
-  }
-  100% {
-    transform: translateX(0) translateY(0) rotate(0deg) scale(1);
-    opacity: 1;
-    filter: blur(0) drop-shadow(0 0 0 transparent);
-  }
-}
-
-/* Dynamic gradient wave effect */
-.hero-gradient-text {
-  color: white; /* Fallback color */
-  background: linear-gradient(
-    90deg,
-    white 0%,
-    white calc(var(--gradient-position) - 20%),
-    hsl(var(--primary)) var(--gradient-position),
-    white calc(var(--gradient-position) + 20%),
-    white 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 calc(var(--glow-intensity) * 20px) hsl(var(--primary) / 0.6);
-}
-
-/* Fallback for browsers that don't support background-clip: text */
-@supports not (-webkit-background-clip: text) {
-  .hero-gradient-text {
-    color: white;
-    -webkit-text-fill-color: white;
-  }
-}
-
-.hero-gradient-wave {
-  animation: gradient-wave 2.5s ease-in-out forwards;
-}
-
-@keyframes gradient-wave {
-  0% {
-    --gradient-position: 0%;
-    --glow-intensity: 0;
-  }
-  50% {
-    --gradient-position: 50%;
-    --glow-intensity: 1;
-  }
-  100% {
-    --gradient-position: 100%;
-    --glow-intensity: 0.3;
-  }
-}
-
-/* Tennis ball morphing effect */
-.hero-char-morph {
-  position: relative;
-}
-
-.hero-char-morph::before {
-  content: '🎾';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  font-size: 0.8em;
-  z-index: 1;
-  animation: ball-morph 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-}
-
-@keyframes ball-morph {
-  0% {
-    transform: translate(-50%, -50%) scale(1) rotate(0deg);
-    opacity: 1;
-  }
-  30% {
-    transform: translate(-50%, -50%) scale(1.3) rotate(180deg);
-    opacity: 0.8;
-  }
-  60% {
-    transform: translate(-50%, -50%) scale(0.8) rotate(360deg);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0) rotate(540deg);
-    opacity: 0;
-  }
-}
-
-/* Subtitle court baseline animation */
-.hero-subtitle-char {
-  display: inline-block;
-  animation: court-baseline 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes court-baseline {
-  0% {
-    transform: translateY(40px);
-    opacity: 0;
-    filter: blur(3px);
-    letter-spacing: 4px;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-    filter: blur(0);
-    letter-spacing: normal;
-  }
-}
-
-/* Consistent Primary Button System */
-.tennis-primary-btn {
-  position: relative;
-  overflow: hidden;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.tennis-primary-btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
-  transform: translate(-50%, -50%);
-  transition: all 0.4s ease;
-  border-radius: 50%;
-}
-
-.tennis-primary-btn:hover::before {
-  width: 200px;
-  height: 200px;
-}
-
-.tennis-primary-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.25);
-}
-
-.tennis-primary-btn:active {
-  transform: translateY(0) scale(0.98);
-  transition: all 0.1s ease;
-}
-
-/* Legacy CTA button enhanced tennis hover - keeping for compatibility */
-.cta-tennis-enhanced {
-  position: relative;
-  overflow: hidden;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cta-tennis-enhanced::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-  transform: translate(-50%, -50%);
-  transition: all 0.6s ease;
-  border-radius: 50%;
-}
-
-.cta-tennis-enhanced:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-.cta-tennis-enhanced:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(255, 106, 0, 0.3);
-}
-
-/* Advanced Tennis Court Animation Effects */
-.tennis-court-lines {
-  position: relative;
-  overflow: hidden;
-}
-
-.tennis-court-lines::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
-  animation: court-line-draw 2s ease-in-out infinite;
-}
-
-@keyframes court-line-draw {
-  0% { left: -100%; opacity: 0; }
-  50% { left: 0%; opacity: 1; }
-  100% { left: 100%; opacity: 0; }
-}
-
-/* Tennis Ball Loading Animation */
-.tennis-ball-loader {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 30% 30%, #fff 2px, transparent 2px),
-    radial-gradient(circle at 70% 70%, #fff 2px, transparent 2px),
-    linear-gradient(45deg, #90EE90 0%, #228B22 50%, #90EE90 100%);
-  animation: tennis-ball-spin 1s linear infinite;
-}
-
-@keyframes tennis-ball-spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Enhanced Focus States for Accessibility */
+/* Accessible focus ring (no glow/scale) */
 .focus-tennis:focus-visible {
   outline: none;
   box-shadow:
-    0 0 0 2px hsl(var(--background)),
-    0 0 0 4px hsl(var(--primary)),
-    0 0 20px hsl(var(--primary) / 0.3);
-  transform: scale(1.02);
-}
-
-/* Responsive Animation Adjustments */
-@media (max-width: 768px) {
-  .hero-char-tennis-serve {
-    animation-duration: 0.6s;
-  }
-
-  .hero-gradient-wave {
-    animation-duration: 2s;
-  }
-
-  .magnetic-item {
-    /* Disable magnetic effects on mobile */
-    pointer-events: auto;
-  }
+    0 0 0 2px var(--background),
+    0 0 0 4px var(--primary);
 }
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
-  .menu-item-tennis::after,
-  .mobile-menu-item-tennis::before {
+  .menu-item-tennis::after {
     background: currentColor;
   }
+}
 
-  .hero-gradient-text {
-    background: none;
-    color: white;
-  }
+@media (prefers-reduced-motion: reduce) {
+  .tennis-hover,
+  .hover-lift { transition: none; }
+  .tennis-hover:hover,
+  .hover-lift:hover { transform: none; }
 }
 
 /* Modern Tennis-Themed Menu Animations */
@@ -657,53 +351,7 @@ img { display: block; }
   .menu-item-tennis.active::after {
     width: 70%;
   }
-  
-  /* Sleek Mobile Menu with Orange Accent */
-  .mobile-menu-item-tennis {
-    position: relative;
-    border-radius: 0.75rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
-  }
 
-  .mobile-menu-item-tennis::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background: hsl(var(--primary));
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 0 0.75rem 0.75rem 0;
-  }
-
-  .mobile-menu-item-tennis:hover {
-    color: hsl(var(--primary));
-    background: hsla(var(--primary), 0.08);
-    padding-left: calc(1rem + 8px);
-    transform: translateX(4px);
-  }
-
-  .mobile-menu-item-tennis:hover::before {
-    width: 4px;
-  }
-
-  .dark .mobile-menu-item-tennis:hover {
-    background: hsla(var(--primary), 0.12);
-  }
-  
-  /* Enhanced logo without animation */
-  .logo-tennis-enhanced {
-    position: relative;
-    transition: none;
-  }
-
-  .logo-tennis-enhanced:hover {
-    transform: none;
-    filter: none;
-  }
-  
   /* Enhanced mobile menu button with tennis theme */
   .mobile-menu-btn-tennis {
     border-radius: 12px;
@@ -736,18 +384,6 @@ img { display: block; }
     background: hsla(var(--primary), 0.18);
     box-shadow: 0 4px 12px hsla(var(--primary), 0.3);
   }
-
-
-
-  /* Magnetic effect for desktop menu items */
-  .magnetic-item {
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-  }
-
-  .magnetic-item:hover {
-    will-change: transform;
-  }
 }
 
 
@@ -759,45 +395,49 @@ img { display: block; }
 }
 
 @layer utilities {
-  /* Sport Typography - Space Grotesk for headings */
-  .text-hero { 
-    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
-    font-size: clamp(2.5rem, 6vw, 4rem); 
-    font-weight: 800; 
-    line-height: 0.9; 
-    letter-spacing: -0.02em;
+  /* Athletic-premium typography — Archivo (wide "expanded" width on the largest tiers) */
+  .text-hero {
+    font-family: Archivo, Inter, system-ui, sans-serif;
+    font-stretch: 125%;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: 0.01em;
     text-transform: uppercase;
   }
-  
+
   .text-page-heading {
-    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+    font-family: Archivo, Inter, system-ui, sans-serif;
+    font-stretch: 125%;
     font-size: clamp(2.25rem, 4.5vw, 3.5rem);
     font-weight: 800;
     line-height: 0.95;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.005em;
     text-transform: uppercase;
   }
-  
+
   .text-section-heading {
-    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+    font-family: Archivo, Inter, system-ui, sans-serif;
+    font-stretch: 112%;
     font-size: clamp(1.75rem, 3.5vw, 2.75rem);
     font-weight: 700;
     line-height: 1.1;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
     text-transform: uppercase;
   }
-  
-  .text-display { 
-    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem); 
-    font-weight: 700; 
-    line-height: 1.0; 
-    letter-spacing: -0.01em;
+
+  .text-display {
+    font-family: Archivo, Inter, system-ui, sans-serif;
+    font-stretch: 112%;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
     text-transform: uppercase;
   }
-  
-  .font-space { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
-  
+
+  .font-space { font-family: Archivo, Inter, system-ui, sans-serif; }
+
   .stat, .price, .ranking { font-variant-numeric: tabular-nums slashed-zero; }
   .label { 
     font-family: Inter, system-ui, sans-serif;
