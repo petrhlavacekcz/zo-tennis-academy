@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { asset } from "$app/paths";
+	import CheckIcon from "./check-icon.svelte";
 	import * as m from "$lib/paraglide/messages";
 
 	let features = [
@@ -24,13 +25,7 @@
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 					{#each features as feature}
 						<div class="flex items-start gap-3">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48" class="text-primary flex-shrink-0 mt-1">
-								<g fill="none" stroke="currentColor" stroke-width="4">
-									<path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
-									<path stroke-linecap="round" stroke-linejoin="round" d="M24 4q-.15 10.003-4.912 15.004Q14.328 24.007 4 24.008" />
-									<path stroke-linecap="round" d="M43.968 25.005q-9.768-.67-14.929 4.176Q23.88 34.026 24.004 44" />
-								</g>
-							</svg>
+							<CheckIcon size={16} class="text-primary flex-shrink-0 mt-1" />
 							<div>
 								<h3 class="font-semibold mb-1">{feature.title()}</h3>
 								<p class="text-base text-muted-foreground">{feature.description()}</p>
@@ -42,7 +37,7 @@
 
 			<!-- Right Column - Image -->
 			<div class="relative">
-				<div class="card-media aspect-[4/3] w-full overflow-hidden rounded-xl">
+				<div class="card-media aspect-[4/3] w-full overflow-hidden rounded-2xl">
 					<img
 						src={asset("/zuzana-ondraskova-2.webp")}
 						alt="Tennis training session"

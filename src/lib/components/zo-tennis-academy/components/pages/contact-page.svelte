@@ -63,7 +63,7 @@
 	<section class="py-16 md:py-24">
 		<div class="mx-auto max-w-[1180px] px-6 md:px-12">
 			<div class="grid gap-10 lg:grid-cols-[1.1fr_1fr] items-stretch">
-				<Card class="h-full rounded-3xl border border-border/50 bg-card/95 shadow-soft">
+				<Card class="h-full rounded-2xl border border-border/50 bg-card/95 shadow-soft">
 					<CardContent class="flex h-full flex-col gap-10 p-10 lg:p-12">
 						<div class="space-y-4">
 							<span class="text-xs font-semibold uppercase tracking-[0.35em] text-primary/70">{m["contact_page.contact_card_title"]()}</span>
@@ -99,7 +99,7 @@
 					</CardContent>
 				</Card>
 
-				<Card class="h-full rounded-3xl border border-border/50 bg-card/95 shadow-soft overflow-hidden">
+				<Card class="h-full rounded-2xl border border-border/50 bg-card/95 shadow-soft overflow-hidden">
 					<CardHeader class="p-8 pb-4">
 						<CardTitle class="text-2xl">{m["contact_page.map_title"]()}</CardTitle>
 					</CardHeader>
@@ -111,7 +111,7 @@
 				</Card>
 			</div>
 
-			<Card class="mt-12 rounded-3xl border border-border/50 bg-card/95 shadow-soft">
+			<Card class="mt-12 rounded-2xl border border-border/50 bg-card/95 shadow-soft">
 				<CardHeader class="px-8 pt-8 pb-4">
 					<CardTitle class="text-2xl">{m["contact_page.faq_title"]()}</CardTitle>
 				</CardHeader>

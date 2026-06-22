@@ -19,13 +19,13 @@
 				// Brand-primary (token-driven, theme-aware) for light/dark backgrounds
 				cta: "rounded-lg bg-primary text-primary-foreground font-bold text-base uppercase tracking-wide shadow-lg hover:bg-primary/90 hover:shadow-xl active:scale-[0.98]",
 				// White button for orange/colored backgrounds
-				"cta-inverse": "rounded-lg bg-white text-primary font-bold text-base uppercase tracking-wide shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]",
+				"cta-inverse": "rounded-lg bg-white text-primary font-bold text-base uppercase tracking-wide shadow-lg hover:shadow-xl active:scale-[0.98]",
 
 				// SECONDARY BUTTONS - Consistent styling with minimal animation
 				// Outline for light backgrounds
-				outline: "rounded-lg bg-transparent border-2 border-primary text-primary font-semibold text-base uppercase tracking-wide shadow-sm hover:bg-primary hover:text-white hover:shadow-md hover:scale-[1.02] active:scale-[0.98]",
+				outline: "rounded-lg bg-transparent border-2 border-primary text-primary font-semibold text-base uppercase tracking-wide shadow-sm hover:bg-primary hover:text-white hover:shadow-md active:scale-[0.98]",
 				// Outline for colored backgrounds
-				"outline-inverse": "rounded-lg bg-transparent border-2 border-white text-white font-semibold text-base uppercase tracking-wide shadow-sm hover:bg-white hover:text-primary hover:shadow-md hover:scale-[1.02] active:scale-[0.98]",
+				"outline-inverse": "rounded-lg bg-transparent border-2 border-white text-white font-semibold text-base uppercase tracking-wide shadow-sm hover:bg-white hover:text-primary hover:shadow-md active:scale-[0.98]",
 			},
 			size: {
 				default: "h-9 px-4 py-2 has-[>svg]:px-3",

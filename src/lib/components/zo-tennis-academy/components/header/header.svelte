@@ -95,18 +95,20 @@
 			</button>
 		</div>
 	</div>
-
-	<!-- Mobile Menu -->
-	{#if isMobileMenuOpen}
-		<MobileMenu
-			{navItems}
-			{currentPage}
-			themeMode={themeMode}
-			{setThemeMode}
-			onclose={() => (isMobileMenuOpen = false)}
-		/>
-	{/if}
 </header>
+
+<!-- Mobile Menu — rendered as a sibling of <header> (NOT a child): the scrolled header's
+	 backdrop-filter would otherwise become the containing block for this fixed overlay,
+	 collapsing it to the header's height and exposing the page behind it. -->
+{#if isMobileMenuOpen}
+	<MobileMenu
+		{navItems}
+		{currentPage}
+		themeMode={themeMode}
+		{setThemeMode}
+		onclose={() => (isMobileMenuOpen = false)}
+	/>
+{/if}
 
 <style>
 	/* Transparent over the hero; fades into a dark frosted-glass bar once scrolled.

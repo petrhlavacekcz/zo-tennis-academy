@@ -1,10 +1,8 @@
 <script lang="ts">
 	import { Card, CardContent } from "$lib/components/ui/card";
 	import { Button } from "$lib/components/ui/button";
-	import Users from "@lucide/svelte/icons/users";
-	import Trophy from "@lucide/svelte/icons/trophy";
-	import Clock from "@lucide/svelte/icons/clock";
 	import ArrowRight from "@lucide/svelte/icons/arrow-right";
+	import CheckIcon from "./check-icon.svelte";
 	import { asset } from "$app/paths";
 	import { localizeHref } from "$lib/utils/localize";
 	import * as m from "$lib/paraglide/messages";
@@ -15,8 +13,6 @@
 			title: m["programs_page.junior.title"](),
 			subtitle: m["programs_page.junior.subtitle"](),
 			description: m["programs_page.junior.description"](),
-			icon: Users,
-			color: "text-blue-500",
 			image: asset("/junior.webp"),
 			features: [
 				m["programs_page.junior.features.group_training"](),
@@ -28,8 +24,6 @@
 			title: m["programs_page.adult.title"](),
 			subtitle: m["programs_page.adult.subtitle"](),
 			description: m["programs_page.adult.description"](),
-			icon: Trophy,
-			color: "text-green-500",
 			image: asset("/adult.webp"),
 			features: [
 				m["programs_page.adult.features.technique"](),
@@ -41,8 +35,6 @@
 			title: m["programs_page.private.title"](),
 			subtitle: m["programs_page.private.subtitle"](),
 			description: m["programs_page.private.description"](),
-			icon: Clock,
-			color: "text-purple-500",
 			image: asset("/private.webp"),
 			features: [
 				m["programs_page.private.features.full_attention"](),
@@ -58,8 +50,6 @@
 			title: m["programs_page.professional.title"](),
 			subtitle: m["programs_page.professional.subtitle"](),
 			description: m["programs_page.professional.description"](),
-			icon: Trophy,
-			color: "text-primary",
 			image: asset("/professional.webp"),
 			features: [
 				m["programs_page.professional.features.competitive_level"](),
@@ -71,8 +61,6 @@
 			title: m["programs_page.camps.title"](),
 			subtitle: m["programs_page.camps.subtitle"](),
 			description: m["programs_page.camps.description"](),
-			icon: Trophy,
-			color: "text-primary",
 			image: asset("/camps.webp"),
 			features: [
 				m["programs_page.camps.features.full_day"](),
@@ -107,7 +95,7 @@
 						<!-- Program Details -->
 						<div class="p-6">
 							<div class="mb-4">
-								<h3 class="text-xl font-semibold leading-tight tracking-wide">{program.title}</h3>
+								<h3 class="font-space text-2xl font-semibold uppercase tracking-wide leading-tight">{program.title}</h3>
 								<p class="text-base text-muted-foreground mt-1">{program.subtitle}</p>
 							</div>
 
@@ -119,13 +107,7 @@
 							<div class="space-y-2 mb-6">
 								{#each program.features as feature}
 									<div class="flex items-center gap-3">
-										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="text-primary flex-shrink-0">
-											<g fill="none" stroke="currentColor" stroke-width="4">
-												<path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
-												<path stroke-linecap="round" stroke-linejoin="round" d="M24 4q-.15 10.003-4.912 15.004Q14.328 24.007 4 24.008" />
-												<path stroke-linecap="round" d="M43.968 25.005q-9.768-.67-14.929 4.176Q23.88 34.026 24.004 44" />
-											</g>
-										</svg>
+										<CheckIcon size={14} />
 										<span class="text-sm leading-relaxed">{feature}</span>
 									</div>
 								{/each}
@@ -150,7 +132,7 @@
 						<!-- Program Details -->
 						<div class="p-6">
 							<div class="mb-4">
-								<h3 class="text-xl font-semibold leading-tight tracking-wide">{program.title}</h3>
+								<h3 class="font-space text-2xl font-semibold uppercase tracking-wide leading-tight">{program.title}</h3>
 								<p class="text-base text-muted-foreground mt-1">{program.subtitle}</p>
 							</div>
 
@@ -162,13 +144,7 @@
 							<div class="space-y-2">
 								{#each program.features as feature}
 									<div class="flex items-center gap-3">
-										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 48 48" class="text-primary flex-shrink-0">
-											<g fill="none" stroke="currentColor" stroke-width="4">
-												<path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
-												<path stroke-linecap="round" stroke-linejoin="round" d="M24 4q-.15 10.003-4.912 15.004Q14.328 24.007 4 24.008" />
-												<path stroke-linecap="round" d="M43.968 25.005q-9.768-.67-14.929 4.176Q23.88 34.026 24.004 44" />
-											</g>
-										</svg>
+										<CheckIcon size={14} />
 										<span class="text-sm leading-relaxed">{feature}</span>
 									</div>
 								{/each}

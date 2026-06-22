@@ -88,7 +88,7 @@
 								<!-- Coach Information -->
 								<div class="lg:col-span-3 p-8 lg:p-12">
 									<div class="mb-6">
-										<h2 class="text-3xl font-bold mb-2 text-foreground">{coach.name}</h2>
+										<h2 class="font-space text-3xl md:text-4xl font-semibold uppercase tracking-wide mb-2 text-foreground">{coach.name}</h2>
 										<p class="text-primary text-base font-semibold uppercase tracking-wide">{coach.role}</p>
 									</div>
 
@@ -99,7 +99,7 @@
 
 									<!-- Achievements -->
 									<div class="mb-10">
-										<h3 class="text-xl font-bold mb-6 text-foreground">
+										<h3 class="font-space text-xl font-semibold uppercase tracking-wide mb-6 text-foreground">
 											{m["coaches_page.achievements_title"]()}
 										</h3>
 										<div class="grid gap-3">

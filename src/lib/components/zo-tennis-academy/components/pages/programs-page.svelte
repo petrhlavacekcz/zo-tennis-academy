@@ -174,7 +174,7 @@
 							<!-- Program Details -->
 							<div class="p-6">
 								<div class="mb-4">
-									<h3 class="text-xl font-semibold leading-tight tracking-wide">{program.title}</h3>
+									<h3 class="font-space text-2xl font-semibold uppercase tracking-wide leading-tight">{program.title}</h3>
 									<p class="text-base text-muted-foreground mt-1">{program.subtitle}</p>
 								</div>
 
@@ -246,7 +246,7 @@
 						<!-- Program Details -->
 						<div class="p-6">
 							<div class="mb-4">
-								<h3 class="text-xl font-semibold leading-tight tracking-wide">{program.title}</h3>
+								<h3 class="font-space text-2xl font-semibold uppercase tracking-wide leading-tight">{program.title}</h3>
 								<p class="text-base text-muted-foreground mt-1">{program.subtitle}</p>
 							</div>
 

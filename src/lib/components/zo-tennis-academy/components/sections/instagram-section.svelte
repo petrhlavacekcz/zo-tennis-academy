@@ -61,7 +61,7 @@
 	}
 </script>
 
-<section class="py-16 md:py-24 bg-neutral-950 text-white">
+<section class="py-16 md:py-24 bg-[hsl(30_9%_6%)] text-white">
 	<div class="mx-auto max-w-[1320px] px-6 md:px-12">
 		<!-- Section Header -->
 		<div class="text-center mb-12">

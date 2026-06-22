@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Quote } from "@lucide/svelte";
+	import { Quote, ChevronLeft, ChevronRight } from "@lucide/svelte";
+	import { Card, CardContent } from "$lib/components/ui/card";
 	import * as m from "$lib/paraglide/messages";
 
 	interface Review {
@@ -70,6 +71,14 @@
 			text: m["testimonials.reviews.veronika_hlavackova.text"](),
 		},
 	];
+
+	let track: HTMLDivElement;
+
+	function scrollByDir(dir: 1 | -1) {
+		if (!track) return;
+		const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		track.scrollBy({ left: track.clientWidth * 0.9 * dir, behavior: reduce ? "auto" : "smooth" });
+	}
 </script>
 
 <section class="py-16 md:py-24 bg-card">
@@ -83,33 +92,62 @@
 			</p>
 		</div>
 
-		<!-- Testimonials Grid -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+		<!-- Desktop carousel controls -->
+		<div class="hidden sm:flex justify-end gap-2 mb-6">
+			<button
+				type="button"
+				onclick={() => scrollByDir(-1)}
+				class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:border-primary hover:text-primary"
+				aria-label="Previous testimonials"
+			>
+				<ChevronLeft size={20} />
+			</button>
+			<button
+				type="button"
+				onclick={() => scrollByDir(1)}
+				class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:border-primary hover:text-primary"
+				aria-label="Next testimonials"
+			>
+				<ChevronRight size={20} />
+			</button>
+		</div>
+
+		<!-- Swipeable testimonials track -->
+		<div
+			bind:this={track}
+			class="carousel-track flex gap-6 overflow-x-auto snap-x snap-mandatory pb-2"
+			role="region"
+			aria-roledescription="carousel"
+			aria-label="Testimonials"
+		>
 			{#each testimonials as testimonial}
-				<div class="group relative">
-					<!-- Large decorative quote mark -->
-					<div class="absolute -top-2 -left-2 text-primary/10 transition-all duration-300 group-hover:text-primary/20 group-hover:scale-110">
-						<Quote size={64} strokeWidth={2.5} />
-					</div>
-
-					<!-- Content -->
-					<div class="relative pt-8 px-2">
-						<!-- Testimonial text -->
-						<blockquote class="text-base leading-relaxed text-foreground mb-6 relative z-10">
-							{testimonial.text}
-						</blockquote>
-
-						<!-- Author with accent line -->
-						<div class="relative pl-4">
-							<!-- Orange accent line -->
-							<div class="absolute left-0 top-1 bottom-1 w-0.5 bg-gradient-to-b from-primary to-primary/40"></div>
-
-							<div class="font-semibold text-foreground text-base leading-tight">{testimonial.name}</div>
-							<div class="text-xs text-muted-foreground mt-1">{testimonial.role}</div>
-						</div>
-					</div>
-				</div>
+				<article class="snap-start shrink-0 basis-[85%] sm:basis-[calc(50%-0.75rem)] lg:basis-[calc(33.333%-1rem)]">
+					<Card class="h-full shadow-soft">
+						<CardContent class="flex h-full flex-col p-6">
+							<Quote size={28} strokeWidth={2.5} class="text-primary mb-4 shrink-0" />
+							<blockquote class="text-base leading-relaxed text-foreground mb-6 flex-1">
+								{testimonial.text}
+							</blockquote>
+							<div class="relative pl-4">
+								<div class="absolute left-0 top-1 bottom-1 w-0.5 rounded-full bg-primary"></div>
+								<div class="font-semibold text-foreground text-base leading-tight">{testimonial.name}</div>
+								<div class="text-xs text-muted-foreground mt-1">{testimonial.role}</div>
+							</div>
+						</CardContent>
+					</Card>
+				</article>
 			{/each}
 		</div>
 	</div>
 </section>
+
+<style>
+	.carousel-track {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+		scroll-padding: 0;
+	}
+	.carousel-track::-webkit-scrollbar {
+		display: none;
+	}
+</style>
